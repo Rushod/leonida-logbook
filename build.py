@@ -236,7 +236,7 @@ if D["cheats"]:
     rows = "".join(f"<tr><td><b>{e(c['name'])}</b></td><td class=\"n\">{e(c['ps5'])}</td><td class=\"n\">{e(c['xbox'])}</td><td>{e(c['effect'])}</td></tr>" for c in D["cheats"])
     verified = f'<h2>Tested in GTA VI</h2><div class="scroll"><table><tr><th>Cheat</th><th>PS5</th><th>Xbox</th><th>Effect</th></tr>{rows}</table></div>'
 else:
-    verified = '<div class="empty"><b>No GTA VI codes yet</b>Codes tested in GTA VI appear here from November 19.</div>'
+    verified = ''
 CHEATS = f"""
   <div class="stack"><span class="eyebrow">PS5 · Xbox · PC</span><h1>GTA 6 cheat codes</h1>
   <p class="lede">No GTA VI cheats are confirmed yet. Below are all of GTA V's cheat codes, the most likely to return, with buttons for PS5 and Xbox, PC codes and phone numbers.</p></div>
