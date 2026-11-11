@@ -14,6 +14,22 @@ CONTACT = "contact@leonidalogbook.com"
 TODAY = "2026-11-11"
 ADSENSE = "ca-pub-6848827685182284"
 
+
+BG = "#120824"
+_sky = [(150,46,38),(200,34,70),(238,52,52),(294,30,96),(328,58,60),(390,40,84),(434,36,44),(474,54,112),(532,30,66),(566,44,88),(614,50,54),(668,34,104),(706,56,72),(766,38,48),(808,46,92),(858,32,62),(894,60,80),(958,40,50),(1002,48,68)]
+_palms = [(18,1.25),(96,0.95),(168,1.1),(292,0.78),(868,0.8),(960,1.12),(1040,0.95),(1104,1.3)]
+SCENE = (
+    '<svg class="scene" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs>'
+    '<linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3b0"/><stop offset=".55" stop-color="#ffb14a"/><stop offset="1" stop-color="#ff5fa2"/></linearGradient>'
+    '<radialGradient id="glow"><stop offset="0" stop-color="#ffd98a" stop-opacity=".6"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>'
+    '<g id="palm"><path d="M50 172C47 126 55 86 50 42" fill="none" stroke-width="5" stroke-linecap="round"/>'
+    '<path d="M50 42Q24 14 0 38Q28 28 50 42ZM50 42Q30 4 8 8Q34 14 50 42ZM50 42Q48 6 30-8Q56 6 50 42ZM50 42Q66 2 90 0Q66 14 50 42ZM50 42Q80 16 102 34Q74 28 50 42ZM50 42Q78 36 96 62Q70 44 50 42ZM50 42Q24 38 6 64Q30 46 50 42Z"/></g></defs>'
+    '<circle cx="600" cy="205" r="240" fill="url(#glow)"/><circle cx="600" cy="208" r="88" fill="url(#sun)"/>'
+    '<g fill="#3a1166">' + "".join(f'<rect x="{x}" y="{222-h}" width="{w}" height="{h}"/>' for x, w, h in _sky) + '</g>'
+    f'<g fill="{BG}" stroke="{BG}"><rect x="0" y="218" width="1200" height="24" stroke="none"/>'
+    + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
+)
+
 NAV = [("/", "Home"), ("/launch/", "Launch"), ("/guide/", "Guide"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
 
 
@@ -21,6 +37,11 @@ def layout(path, title, desc, body, index=True):
     nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == path else ""}>{t}</a>' for h, t in NAV)
     url = SITE + path
     robots = "" if index else '<meta name="robots" content="noindex">\n'
+    if "<!--hero-end-->" in body:
+        hero, body = body.split("<!--hero-end-->", 1)
+        sky = f'<div class="sky sky-hero"><div class="wrap">{hero}</div>{SCENE}</div>'
+    else:
+        sky = f'<div class="sky" aria-hidden="true">{SCENE}</div>'
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -36,18 +57,20 @@ def layout(path, title, desc, body, index=True):
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE}/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#120824">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Yellowtail&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE}" crossorigin="anonymous"></script>
 </head>
 <body>
 <header><div class="wrap">
-  <a class="brand" href="/">Leonida Logbook<small>UNOFFICIAL GTA VI COMPANION</small></a>
+  <a class="brand" href="/">Leonida <i>Logbook</i><small>UNOFFICIAL GTA VI COMPANION</small></a>
   <nav aria-label="Sections">{nav}</nav>
 </div></header>
+{sky}
 <main class="wrap"><div class="view">
 {body}
 </div></main>
@@ -88,6 +111,7 @@ HOME = f"""
     </div>
     <p class="note" id="clockNote">Counting down to midnight on November 19 on your device's clock. Unlock times can differ by region, so check your console store for yours.</p>
   </div>
+<!--hero-end-->
   <div class="facts">
     <div><span>Platforms</span><b>PS5 · Xbox Series X|S</b></div>
     <div><span>Standard</span><b>$79.99</b></div>
@@ -303,5 +327,5 @@ for path, title, desc, body in PAGES:
 urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES)
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
 (OUT / "ads.txt").write_text(f"google.com, {ADSENSE[3:]}, DIRECT, f08c47fec0942fa0\n")
-(OUT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="5" fill="#08727a"/><path d="M16 5l3.2 6.9 7.3.9-5.4 5.1 1.4 7.3L16 21.5l-6.5 3.7 1.4-7.3-5.4-5.1 7.3-.9z" fill="#fff"/></svg>\n')
+(OUT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1268"/><stop offset=".6" stop-color="#e2437f"/><stop offset="1" stop-color="#ffb14a"/></linearGradient></defs><rect width="32" height="32" rx="6" fill="url(#g)"/><path d="M16 5l3.2 6.9 7.3.9-5.4 5.1 1.4 7.3L16 21.5l-6.5 3.7 1.4-7.3-5.4-5.1 7.3-.9z" fill="#fff"/></svg>\n')
 print("built", len(PAGES), "pages")
