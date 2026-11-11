@@ -119,3 +119,5 @@ footer nav{margin:0;gap:4px 18px}
 footer nav a{font-family:var(--body);font-weight:500;font-size:14px;letter-spacing:0;text-transform:none;color:var(--aqua);padding:0;border:0;text-decoration:underline}
 footer nav a:hover{border:0}
 
+.prose table{max-width:66ch}
+.prose .btn{margin-top:4px}

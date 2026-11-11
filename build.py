@@ -4,6 +4,7 @@ Run:  python3 build.py   (then commit and push; Cloudflare deploys ./public)"""
 import json, shutil, urllib.parse
 from html import escape as e
 from pathlib import Path
+from articles import ARTICLES, GUIDE_LINKS
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -268,6 +269,9 @@ NOTFOUND = """
   <p class="lede">That page does not exist. It may have moved when the site was reorganized.</p>
   <div><a class="btn" href="/">Back to home</a></div></div>"""
 
+HOME += GUIDE_LINKS
+LAUNCH += GUIDE_LINKS
+
 PAGES = [
     ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
@@ -278,6 +282,8 @@ PAGES = [
     ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
 ]
+
+PAGES += ARTICLES
 
 # ---------- write ----------
 keep = {"og.png"}
