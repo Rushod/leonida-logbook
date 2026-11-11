@@ -207,3 +207,10 @@ code.pc{font:700 17px var(--label);letter-spacing:.1em;background:var(--bg);bord
 .cheat-in small{color:var(--muted);font-size:13px}
 .phone{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14.5px}
 .cheats[data-show="ps"] [data-plat]:not([data-plat="ps"]),.cheats[data-show="xbox"] [data-plat]:not([data-plat="xbox"]),.cheats[data-show="pc"] [data-plat]:not([data-plat="pc"]){display:none}
+table.vs td{min-width:150px}
+table.vs td:first-child{min-width:110px}
+table.vs td:nth-child(3){color:var(--ink)}
+table.vs td:nth-child(2){color:var(--muted)}
+table.vs a{white-space:nowrap}
+.tips{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;max-width:72ch}
+.tips li::marker{color:var(--sun);font-weight:700}

@@ -32,7 +32,7 @@ SCENE = (
     + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
 )
 
-NAV = [("/", "Home"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "Systems"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
+NAV = [("/", "Home"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "What's new"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
 
 
 def layout(path, title, desc, body, index=True):
@@ -136,7 +136,7 @@ HOME = f"""
     <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
       <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>The six regions of Leonida, with markers you can tick off.</span></a>
       <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
-      <a class="tile" href="/guide/"><em>Read before you play</em><h3>How the new systems work</h3><span>Wanted levels, car theft, weapons and money, from the hands-on previews.</span></a>
+      <a class="tile" href="/guide/"><em>Read before you play</em><h3>GTA 6 vs GTA 5: what's new</h3><span>The ten biggest changes in one table, plus tips for your first hours.</span></a>
       <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
       <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
     </div>
@@ -180,28 +180,45 @@ LAUNCH = """
     </div>
   </div>"""
 
-guide_grid = "".join(f"<section><h3>{e(t)}</h3><ul>{''.join(f'<li>{e(x)}</li>' for x in items)}</ul></section>" for t, items in D["guide"])
+CHANGES = [  # (area, GTA V, GTA VI, link, link text)
+    ("Main characters", "Three leads: Michael, Franklin and Trevor, each with their own money.", "Two leads, Jason and Lucia, who work as a pair and share one bank account.", "/characters/", "Characters"),
+    ("Wanted level", "Five stars. Police know who you are as soon as you commit a crime.", "Six stars, and only if someone sees or reports the crime. Hollow stars mean police do not know it was you yet.", "/wanted-level/", "Wanted level guide"),
+    ("Weapons", "Carry every gun you own through the weapon wheel.", "Carry two handguns and two long guns. The rest stay in your car's trunk or an Ammu-Nation locker.", "/weapons/", "Weapons guide"),
+    ("Stealing cars", "Press a button and you are in.", "Older cars need a slim jim or a smashed window. Modern ones need a key cloner or phone hacking tool.", "/vehicles/", "Vehicles guide"),
+    ("Keeping a car", "Any car you park in your garage is yours.", "A stolen car disappears unless you register it at Pay & Spray. Cars also need fuel or charging.", "/vehicles/", "Vehicles guide"),
+    ("Making money", "Big story heists that pay out at set points.", "Rob any store whenever you like, and sell stolen goods and cars to fences.", "/robberies/", "Robbery guide"),
+    ("Getting around", "Taxis, and driving everywhere.", "The RydeMe app, buses and a working train line.", "/map/", "Interactive map"),
+    ("Getting stronger", "Stats rise slowly as you do activities.", "Gym sessions, and strength only rises if you train three days in a row.", "/gym/", "Gym guide"),
+    ("Online", "GTA Online arrived about two weeks after launch.", "No online mode at launch and no date announced.", "/online/", "Online at launch"),
+    ("Story length", "About 30 to 35 hours for the main story.", "About 80 hours, going by one Rockstar developer's playthrough.", "/story-length/", "Story length"),
+]
+TIPS = [
+    ("Bank your cash", "Getting arrested costs you the money you are carrying. Deposit it at an ATM before anything risky."),
+    ("Mask up before a robbery", "Cameras and witnesses cannot identify a masked face, so you may get hollow stars instead of solid ones."),
+    ("Register cars you want to keep", "Stolen cars vanish unless you register them at Pay & Spray. High-end cars need their tracker removed at a fence first."),
+    ("Watch your fuel", "Cars and bikes can run dry, which is the worst thing that can happen in a chase."),
+    ("Keep long guns out of sight", "Walking around with a rifle on show makes people nervous and draws police."),
+    ("Use your trunk as an armory", "You carry only four guns. Store spares and outfits in your car."),
+    ("Change clothes to lose the police", "Police chase a description. A new outfit, haircut or car can break it."),
+    ("Train three days in a row", "One gym session does nothing for strength. Plan for three consecutive in-game days."),
+]
+rows = "".join(f'<tr><td><b>{e(a)}</b></td><td>{e(v)}</td><td>{e(vi)}</td><td><a href="{l}">{e(lt)}</a></td></tr>' for a, v, vi, l, lt in CHANGES)
+tips = "".join(f'<li><b>{e(t)}.</b> {e(d)}</li>' for t, d in TIPS)
 GUIDE = f"""
-  <div class="stack"><span class="eyebrow">Know before you play</span><h1>How GTA VI works</h1>
-  <p class="lede">What press previews have reported about the new systems. Every section gets re-tested against the real game on launch day.</p></div>
-  <div class="panel stack">
-    <h2>The wanted level</h2>
-    <div class="legend">
-      <div><span class="stars">{star(1) * 6}</span> Six stars is the maximum</div>
-      <div><span class="stars">{star(0) * 2}</span> Hollow stars: police know about the crime, but not who did it</div>
-    </div>
-    <p>You only get stars when someone sees the crime, a victim reports it, or a security system catches it. Police build a description of your face, outfit, weapons and vehicle. Change clothes or hair, drop the weapon they identified, wear a mask, or split up from your partner to shake it.</p>
-  </div>
-  <div class="guide">{guide_grid}</div>
-  <div class="stack">
-    <h2>The map: state of Leonida</h2>
-    <p>The map is reported to be about three times the playable area of Red Dead Redemption 2, with unexplored areas hidden until you visit. The story opens in the Leonida Keys.</p>
-    <div class="cast">{pairs(D['regions'])}</div>
-  </div>
-  <div class="stack">
-    <h2>Who's who</h2>
-    <div class="cast">{pairs(D['cast'])}</div>
-  </div>"""
+  <div class="stack"><span class="eyebrow">What's new</span><h1>GTA 6 vs GTA 5: what's new</h1>
+  <p class="lede">If you played GTA V, a lot works differently in GTA VI. This page sums up the ten biggest changes in one table, with a link to the full guide for each, plus tips for your first hours.</p>
+  <p class="note">Based on hands-on previews. Every row is re-checked in the finished game on November 19.</p></div>
+  <div class="stack"><h2>The 10 biggest changes</h2>
+  <div class="scroll"><table class="vs"><tr><th>Area</th><th>GTA V</th><th>GTA VI</th><th>Full guide</th></tr>{rows}</table></div></div>
+  <div class="panel stack"><h2>Tips for your first hours</h2><ol class="tips">{tips}</ol></div>
+  <div class="stack"><h2>Know the world</h2>
+  <div class="tiles">
+    <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>900+ places across Leonida you can search and tick off.</span></a>
+    <a class="tile" href="/characters/"><em>The story</em><h3>Who's who</h3><span>Jason, Lucia and the people around them.</span></a>
+    <a class="tile" href="/activities/"><em>Things to do</em><h3>Activities</h3><span>All twelve reported side activities.</span></a>
+    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>GTA V's codes to try on November 19.</span></a>
+  </div></div>
+"""
 
 groups = ""
 for g in D["track"]:
@@ -303,7 +320,7 @@ LAUNCH += GUIDE_LINKS
 PAGES = [
     ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
-    ("/guide/", "GTA 6 Guide: Wanted Level, Cars, Weapons and Map | Leonida Logbook", "How GTA VI's wanted level, car theft, weapons, money and fast travel work, plus the regions of Leonida and the main cast.", GUIDE),
+    ("/guide/", "GTA 6 vs GTA 5: Every Big Gameplay Change | Leonida Logbook", "The ten biggest differences between GTA 6 and GTA 5, from the six-star wanted level to the four-gun limit, plus tips for your first hours.", GUIDE),
     ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
     ("/cheats/", "GTA 6 Cheat Codes for PS5, Xbox and PC (GTA V Codes to Try) | Leonida Logbook", "No GTA VI cheats are confirmed yet. All 34 GTA V cheat codes for PS5, Xbox and PC, with phone numbers, ready to test in GTA VI on November 19, 2026.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
