@@ -39,7 +39,12 @@ def layout(path, title, desc, body, index=True):
     nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == path else ""}>{t}</a>' for h, t in NAV)
     url = SITE + path
     robots = "" if index else '<meta name="robots" content="noindex">\n'
-    if "<!--hero-end-->" in body:
+    head_extra = ""
+    if "<!--map-->" in body:
+        top, body = body.split("<!--map-->", 1)
+        sky = top
+        head_extra = '<link rel="stylesheet" href="/assets/map-app.css">\n'
+    elif "<!--hero-end-->" in body:
         hero, body = body.split("<!--hero-end-->", 1)
         sky = f'<div class="sky sky-hero"><div class="wrap">{hero}</div>{SCENE}</div>'
     else:
@@ -65,7 +70,7 @@ def layout(path, title, desc, body, index=True):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Yellowtail&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE}" crossorigin="anonymous"></script>
+{head_extra}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE}" crossorigin="anonymous"></script>
 </head>
 <body>
 <header><div class="wrap">
@@ -314,7 +319,7 @@ PAGES += ARTICLES + ARTICLES2 + EXTRA
 PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
 # ---------- write ----------
-keep = {"og.png"}
+keep = {"og.png", "tiles"}
 for p in OUT.iterdir():
     if p.name in keep:
         continue
@@ -322,7 +327,10 @@ for p in OUT.iterdir():
 (OUT / "assets").mkdir(parents=True)
 shutil.copy(ROOT / "src/site.css", OUT / "assets/site.css")
 shutil.copy(ROOT / "src/site.js", OUT / "assets/site.js")
-shutil.copy(ROOT / "src/map.js", OUT / "assets/map.js")
+shutil.copy(ROOT / "map-app/dist/map-app.js", OUT / "assets/map-app.js")
+shutil.copy(ROOT / "map-app/dist/map-app.css", OUT / "assets/map-app.css")
+(OUT / "data").mkdir(exist_ok=True)
+shutil.copy(ROOT / "content/locations.json", OUT / "data/locations.json")
 for path, title, desc, body in PAGES:
     d = OUT / path.strip("/")
     d.mkdir(parents=True, exist_ok=True)

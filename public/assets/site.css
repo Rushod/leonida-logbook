@@ -171,3 +171,7 @@ footer nav a:hover{background:none}
 .mapctl{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;gap:6px}
 .mapctl button{font-family:var(--label);font-weight:700;font-size:18px;color:var(--ink);background:rgba(18,8,36,.85);border:1px solid var(--line);border-radius:8px;min-width:40px;height:40px;padding:0 10px;cursor:pointer}
 .mapctl button:hover{border-color:var(--accent)}
+.maptitle{padding-block:14px 12px;border-bottom:1px solid var(--line)}
+.maptitle .wrap{display:flex;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
+.maptitle h1{font-size:clamp(24px,4.5vw,36px)}
+#leonida-map{display:block}

@@ -229,63 +229,27 @@ WEAPONS = page("/weapons/", "Database", "GTA 6 weapons list",
   </ul>""")
 
 # ---------------- interactive map ----------------
-CATS = [("region", "Regions"), ("story", "Story"), ("landmark", "Landmarks")]
-SOON = ["Collectibles", "Stores", "Activities", "Wildlife"]
-MARKERS = [
-    dict(id="keys", cat="region", key="regions-0", name="Leonida Keys", x=520, y=915, d="Island chain in the south, linked by bridges. The story begins here."),
-    dict(id="vc", cat="region", key="regions-1", name="Vice City", x=790, y=690, d="The main city on the southeast coast, reported at about twice the size of Los Santos."),
-    dict(id="grass", cat="region", key="regions-2", name="Grassrivers", x=590, y=705, d="Wetlands and swamp in the south. Alligators and flamingos have been shown here."),
-    dict(id="gell", cat="region", key="regions-3", name="Port Gellhorn", x=200, y=232, d="A worn coastal town in the northwest."),
-    dict(id="amb", cat="region", key="regions-4", name="Ambrosia", x=555, y=415, d="Industrial heartland in the middle of the state, beside Lake Leonida."),
-    dict(id="kalaga", cat="region", key="regions-5", name="Mount Kalaga", x=590, y=172, d="National park in the north, with forest and hills."),
-    dict(id="start", cat="story", key="map-start", name="Where the story starts", x=612, y=872, d="The game opens near Jason's house in the Leonida Keys before the map opens up."),
-    dict(id="lake", cat="landmark", key="map-lake", name="Lake Leonida", x=690, y=468, d="The large lake beside Ambrosia."),
-    dict(id="sugar", cat="landmark", key="map-sugar", name="Allied Crystal sugar refinery", x=600, y=490, d="The refinery that dominates Ambrosia."),
-    dict(id="base", cat="landmark", key="map-base", name="Military base", x=438, y=948, d="Previews place a military base near the far end of the Keys."),
-]
-ZONES = [("#ff4fa3", 520, 905, 150, 60), ("#ff8f3f", 780, 690, 95, 120), ("#5fe6a8", 600, 700, 95, 100),
-         ("#4fe3e8", 215, 205, 150, 62), ("#ffc35a", 590, 440, 150, 95), ("#b48cff", 590, 185, 210, 70)]
-
-
-def map_svg():
-    land = "M60 170 L120 130 L420 110 L760 120 L800 200 L790 330 L830 470 L850 620 L800 760 L720 820 L620 800 L540 720 L500 600 L470 480 L430 380 L380 300 L260 270 L140 260 L60 220Z"
-    keys = "".join(f'<ellipse cx="{x}" cy="{y}" rx="{rx}" ry="13" class="land"/>' for x, y, rx in [(650, 850, 30), (598, 876, 34), (540, 902, 32), (486, 926, 30), (436, 946, 26)])
-    bridges = '<path d="M700 822 L650 850 L598 876 L540 902 L486 926 L436 946" fill="none" class="road"/>'
-    zones = "".join(f'<ellipse cx="{x}" cy="{y}" rx="{rx}" ry="{ry}" fill="{c}" fill-opacity=".16" stroke="{c}" stroke-opacity=".5" stroke-width="2" stroke-dasharray="8 6"/>' for c, x, y, rx, ry in ZONES)
-    marks = ""
-    for m in MARKERS:
-        label = f'<text y="-26" text-anchor="middle" class="mk-label">{e(m["name"].upper())}</text>' if m["cat"] == "region" else ""
-        marks += (f'<g class="mk" data-id="{m["id"]}" data-cat="{m["cat"]}" transform="translate({m["x"]} {m["y"]})" tabindex="0" role="button" aria-label="{e(m["name"])}">'
-                  f'<g class="inv"><circle r="18" class="mk-dot c-{m["cat"]}"/><circle r="6" class="mk-core"/>{label}</g></g>')
-    return (f'<svg id="map" viewBox="0 0 1000 1000" role="application" aria-label="Schematic map of Leonida"><rect width="1000" height="1000" class="sea"/>'
-            f'<g id="vp"><path d="{land}" class="land"/>{bridges}{keys}<ellipse cx="690" cy="468" rx="62" ry="40" class="lake"/>{zones}{marks}</g></svg>')
-
-
 def map_page():
-    filters = "".join(f'<label class="chip on"><input type="checkbox" data-cat="{c}" checked> {n}</label>' for c, n in CATS)
-    soon = "".join(f'<span class="chip off">{n}</span>' for n in SOON)
-    data = json.dumps({"markers": MARKERS, "cats": dict(CATS)}).replace("</", "<\\/")
-    return f"""
-  <div class="stack"><span class="eyebrow">Interactive map</span><h1>GTA VI map of Leonida</h1>
-  <p class="lede">Drag to move, scroll or pinch to zoom, and tap a marker for details. Exact locations are added from launch day, November 19.</p></div>
-  <div class="mapgrid">
-    <div class="mapbox">{map_svg()}
-      <div class="mapctl"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">&minus;</button><button type="button" id="zreset" aria-label="Reset view">Reset</button></div>
-    </div>
-    <div class="stack">
-      <div class="panel stack"><h3>Show</h3><div class="chips" id="mapFilters">{filters}</div>
-        <h3>Added at launch</h3><div class="chips">{soon}</div></div>
-      <div class="panel stack" id="mapInfo" aria-live="polite"><h3>Pick a marker</h3><p class="note">Tap any marker on the map to see what is there and mark it as visited.</p></div>
-      <p class="note"><b>This is a schematic.</b> Region positions are approximate and drawn from official descriptions, so distances and coastlines are not to scale. It is replaced with exact positions once the game is out.</p>
-    </div>
+    """Full-width React Leaflet map (map-app/) above a short explainer. Everything before <!--map--> renders under the header."""
+    return f"""<div class="maptitle"><div class="wrap"><span class="eyebrow">Interactive map</span><h1>GTA VI map of Leonida</h1></div></div>
+<div id="leonida-map" data-src="/data/locations.json" data-tiles="/tiles/v17/{{z}}/{{z}},{{y}},{{x}}.jpg"><noscript><p class="wrap note">The interactive map needs JavaScript.</p></noscript></div>
+<script src="/assets/map-app.js" defer></script>
+<!--map-->
+  <div class="prose"><span class="eyebrow">About this map</span><h2>A pre-launch map, clearly labelled</h2>
+  <p>GTA VI is out on November 19, 2026. Until then, no one has an official map of Leonida, so this one uses the best community reconstruction available: the GTA VI Mapping Community's hand-traced map, built over several years from trailers, screenshots and other pre-release material.</p>
+  <ul>
+    <li><b>Every marker is speculative today.</b> The 900+ named places come from the same community project and have not been checked in the game.</li>
+    <li><b>From launch day</b>, locations we check in the released game are marked Verified, and missions, collectibles, vehicles and weapons are added.</li>
+    <li><b>Found markers</b> are saved in your browser, so you can track your progress as you play.</li>
+  </ul>
+  <h2>Credits</h2>
+  <p>Map tiles and landmark data: GTA VI Mapping Community (YANIS v17), distributed by <a href="https://map.gtadb.org" rel="noopener">gtadb.org</a> under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>. We removed the map's legend panel, recategorised the data and rewrote the descriptions. Leonida Logbook is not affiliated with Rockstar Games or Take-Two Interactive.</p>
   </div>
-  <script type="application/json" id="mapData">{data}</script>
-  <script src="/assets/map.js" defer></script>
   {links("/map/")}"""
 
 
 EXTRA = [
-    ("/map/", "GTA 6 Interactive Map of Leonida" + BRAND, "Interactive GTA VI map: the six regions of Leonida with markers you can filter and tick off. Exact locations are added from launch day.", map_page()),
+    ("/map/", "GTA 6 Interactive Map of Leonida" + BRAND, "Interactive GTA VI map of Leonida with 900+ landmarks, stores and activities you can filter, search and tick off. Pre-launch community map, verified locations from launch day.", map_page()),
     ("/activities/", "GTA 6 Activities and Mini-Games: Full List" + BRAND, "The twelve side activities reported for GTA VI, from pool and mini-golf to scuba diving, plus robberies, dates and random events.", ACTIVITIES),
     ("/gym/", "GTA 6 Gym Guide: Workouts and How to Gain Strength" + BRAND, "How gym workouts work in GTA VI: three-exercise sessions, timing inputs, the three-day rule for strength and items that help.", GYM),
     ("/robberies/", "GTA 6 Robberies: How to Make Money" + BRAND, "How store robberies and bigger scores work in GTA VI: the Snap Gun, cameras, safes, marked banknotes, fences and payouts.", ROBBERIES),
