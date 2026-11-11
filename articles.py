@@ -18,6 +18,14 @@ GUIDES = [
     ("/characters/", "GTA 6 characters", "Jason, Lucia and the six characters around them."),
     ("/platforms/", "GTA 6 on PS4, Xbox One or PC?", "Which systems run the game at launch."),
     ("/wanted-level/", "GTA 6 wanted level", "How stars work and every way to lose the police."),
+    ("/activities/", "GTA 6 activities", "All twelve reported side activities and more to do."),
+    ("/robberies/", "GTA 6 robberies", "How store robberies, safes and fences pay out."),
+    ("/gym/", "GTA 6 gym guide", "How workouts work and how to gain strength."),
+    ("/wildlife/", "GTA 6 animals and zoo", "The wildlife checklist, the zoo and dogs."),
+    ("/vehicles/", "GTA 6 vehicles list", "Confirmed vehicles, garages, fuel and mod shops."),
+    ("/weapons/", "GTA 6 weapons list", "Carry limits, Ammu-Nation lockers and Focus."),
+    ("/missions/", "GTA 6 missions list", "Story structure now, every mission at launch."),
+    ("/collectibles/", "GTA 6 collectibles", "What there is to find, with locations at launch."),
 ]
 LAUNCH_PATHS = ["/release-time/", "/preload/", "/storage/", "/editions/"]
 

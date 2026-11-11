@@ -46,6 +46,22 @@
     };
   }
 
+  [].forEach.call(document.querySelectorAll("[data-db]"), function (db) {
+    var q = db.querySelector("input[type=search]"), chips = db.querySelectorAll(".chip"), rows = db.querySelectorAll("tr[data-type]"), type = "";
+    function run() {
+      var t = (q.value || "").toLowerCase(), n = 0;
+      [].forEach.call(rows, function (r) {
+        var ok = (!type || r.getAttribute("data-type") === type) && r.textContent.toLowerCase().indexOf(t) !== -1;
+        r.hidden = !ok; if (ok) n++;
+      });
+      db.querySelector("[data-empty]").hidden = n > 0;
+    }
+    q.addEventListener("input", run);
+    [].forEach.call(chips, function (c) { c.addEventListener("click", function () {
+      type = c.getAttribute("data-type"); [].forEach.call(chips, function (x) { x.classList.toggle("on", x === c); }); run();
+    }); });
+  });
+
   if ($("clock")) {
     var pad = function (n) { return String(n).padStart(2, "0"); };
     var tick = function () {

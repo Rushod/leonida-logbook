@@ -6,6 +6,7 @@ from html import escape as e
 from pathlib import Path
 from articles import ARTICLES, GUIDE_LINKS, ALL_GUIDES, GUIDES_PAGE
 from articles2 import ARTICLES2
+from extra import EXTRA
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -31,7 +32,7 @@ SCENE = (
     + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
 )
 
-NAV = [("/", "Home"), ("/launch/", "Launch"), ("/guides/", "Guides"), ("/guide/", "Systems"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
+NAV = [("/", "Home"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "Systems"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
 
 
 def layout(path, title, desc, body, index=True):
@@ -76,7 +77,7 @@ def layout(path, title, desc, body, index=True):
 {body}
 </div></main>
 <footer><div class="wrap stack">
-  <nav aria-label="Site"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/gear/">Gear</a></nav>
+  <nav aria-label="Site"><a href="/launch/">Launch details</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/gear/">Gear</a></nav>
   <p>Leonida Logbook is an unofficial fan site. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto and all related names are trademarks of their owners.</p>
   <p>As an Amazon Associate I earn from qualifying purchases. Launch details last checked {D['last_checked']}.</p>
 </div></footer>
@@ -128,6 +129,7 @@ HOME = f"""
       <p class="note">Your ticks are saved in this browser.</p>
     </div>
     <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
+      <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>The six regions of Leonida, with markers you can tick off.</span></a>
       <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
       <a class="tile" href="/guide/"><em>Read before you play</em><h3>How the new systems work</h3><span>Wanted levels, car theft, weapons and money, from the hands-on previews.</span></a>
       <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
@@ -308,7 +310,7 @@ PAGES = [
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
 ]
 
-PAGES += ARTICLES + ARTICLES2
+PAGES += ARTICLES + ARTICLES2 + EXTRA
 PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
 # ---------- write ----------
@@ -320,6 +322,7 @@ for p in OUT.iterdir():
 (OUT / "assets").mkdir(parents=True)
 shutil.copy(ROOT / "src/site.css", OUT / "assets/site.css")
 shutil.copy(ROOT / "src/site.js", OUT / "assets/site.js")
+shutil.copy(ROOT / "src/map.js", OUT / "assets/map.js")
 for path, title, desc, body in PAGES:
     d = OUT / path.strip("/")
     d.mkdir(parents=True, exist_ok=True)

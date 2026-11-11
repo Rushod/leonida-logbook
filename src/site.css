@@ -140,3 +140,34 @@ footer nav a:hover{background:none}
 .art{margin:6px 0;max-width:760px}
 .art svg{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
 .art figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--label);font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--raised);border:1px solid var(--line);border-radius:99px;padding:5px 13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip.on{background:var(--grad);color:var(--on-accent);border-color:transparent}
+.chip.off{cursor:default;border-style:dashed;background:transparent}
+.chip input{accent-color:var(--on-accent);margin:0}
+.db{display:flex;flex-direction:column;gap:12px}
+.dbbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.dbbar input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 12px;min-width:0;flex:1 1 220px;max-width:340px}
+.prose .cast{max-width:none}
+.mapgrid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:24px;align-items:start}
+.mapgrid>*{min-width:0}
+@media (max-width:860px){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+.mapbox{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0d0620}
+#map{display:block;width:100%;height:auto;max-height:78vh;aspect-ratio:1/1;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+#map:active{cursor:grabbing}
+.sea{fill:#170b3a}
+.land{fill:#33186a;stroke:#6b45b0;stroke-width:3;stroke-linejoin:round}
+.lake{fill:#170b3a;stroke:#4fe3e8;stroke-opacity:.5;stroke-width:2}
+.road{stroke:#6b45b0;stroke-width:5;stroke-linecap:round}
+.mk{cursor:pointer}
+.mk:focus{outline:none}
+.mk-dot{stroke:#120824;stroke-width:4}
+.c-region{fill:#ff4fa3}.c-story{fill:#ffc35a}.c-landmark{fill:#4fe3e8}
+.mk-core{fill:#120824}
+.mk.done .mk-core{fill:#5fe6a8}
+.mk.on .mk-dot,.mk:focus-visible .mk-dot{stroke:#fff;stroke-width:5}
+.mk-label{font-family:var(--label);font-weight:700;font-size:30px;letter-spacing:1.5px;fill:#f7effd;paint-order:stroke;stroke:#120824;stroke-width:7px;stroke-linejoin:round}
+.mapctl{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;gap:6px}
+.mapctl button{font-family:var(--label);font-weight:700;font-size:18px;color:var(--ink);background:rgba(18,8,36,.85);border:1px solid var(--line);border-radius:8px;min-width:40px;height:40px;padding:0 10px;cursor:pointer}
+.mapctl button:hover{border-color:var(--accent)}
