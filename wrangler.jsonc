@@ -2,5 +2,12 @@
   // Cloudflare settings: serve the static site in ./public
   "name": "leonida-logbook",
   "compatibility_date": "2025-09-01",
-  "assets": { "directory": "./public" }
+  "assets": { "directory": "./public" },
+  "workers_dev": true,
+  "preview_urls": true,
+  // Custom domain (must be in the same Cloudflare account)
+  "routes": [
+    { "pattern": "leonidalogbook.com", "custom_domain": true },
+    { "pattern": "www.leonidalogbook.com", "custom_domain": true }
+  ]
 }
