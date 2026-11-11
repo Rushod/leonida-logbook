@@ -1,0 +1,53 @@
+{
+  "affiliate_tag": "leonidalogboo-20",
+  "last_checked": "November 11, 2026",
+  "prep": [
+    ["Pre-order or buy the game", "Buy before Nov 20 to get the Vintage Vice City Pack."],
+    ["Free up 212 GB", "Delete or move games you are not playing."],
+    ["Start the preload", "Digital pre-orders can download now; boxed codes from Nov 12."],
+    ["Update your console", "Install system updates before launch night."],
+    ["Charge your controller", "And check your headset."],
+    ["Check your unlock time", "Look at the game's page in your console store."]
+  ],
+  "track": [
+    {"id": "regions", "title": "Regions visited", "items": ["Leonida Keys", "Vice City", "Grassrivers", "Port Gellhorn", "Ambrosia", "Mount Kalaga National Park"]},
+    {"id": "activities", "title": "Activities tried", "items": ["Pool", "Mini-golf", "Kayaking", "Zoo visit", "Scuba diving", "Parachuting", "Off-road racing", "Monster truck racing", "Gym workout", "Hunting", "Fishing", "Shipwreck treasure hunt"]},
+    {"id": "missions", "title": "Story missions", "locked": "Mission list goes live on launch day."},
+    {"id": "wildlife", "title": "Wildlife checklist", "locked": "Animals are added as players find them."},
+    {"id": "collectibles", "title": "Collectibles", "locked": "Added in launch week with locations."}
+  ],
+  "guide": [
+    ["Two leads, one account", ["Switch between Jason and Lucia at any time, in free roam and in missions.", "Cash goes into a shared account. Deposit it at an ATM.", "If one of them is Wasted in a shared fight, both are out."]],
+    ["Stealing cars", ["Older cars: use a slim jim or smash a window.", "Modern cars need a key cloner or a phone hacking tool.", "The WAINK phone scanner shows a car's locks, value, alarm and tracker.", "Garages start with three slots and can be expanded."]],
+    ["Weapons", ["You carry two concealed handguns and two visible long guns. The weapon wheel is gone.", "Extra guns are stored in your vehicle.", "Ammu-Nation lockers give back weapons you dropped.", "Focus slows time for aiming and highlights escape routes."]],
+    ["Making money", ["Every store in Leonida can be robbed.", "Bigger scores include jewelry stores, small banks and gang compounds.", "Stolen goods must be sold to a fence."]],
+    ["Getting around", ["Fast travel uses the RydeMe taxi app, buses and trains.", "Pay & Spray is back, along with Mod Shops and nitrous.", "Police do not normally show on the minimap during a chase."]],
+    ["Things to do", ["Pool, mini-golf, kayaking, scuba diving and parachuting.", "Hunting, fishing and shipwreck treasure hunting.", "Off-road and monster truck racing, gym workouts and a zoo."]]
+  ],
+  "regions": [
+    ["Leonida Keys", "Island chain in the south, where the story starts."],
+    ["Vice City", "The main city, reported at twice the size of GTA V's Los Santos."],
+    ["Grassrivers", "Swamp and wetland country."],
+    ["Port Gellhorn", "A faded coastal town on the panhandle."],
+    ["Ambrosia", "Industrial heartland in the middle of the state."],
+    ["Mount Kalaga National Park", "Forest and hills in the north."]
+  ],
+  "cast": [
+    ["Jason Duval", "Playable lead. Ex-Army, running jobs in the Keys."],
+    ["Lucia Caminos", "Playable lead. Fresh out of prison and planning the next move."],
+    ["Cal Hampton", "Jason's friend in the Keys."],
+    ["Boobie Ike", "Vice City businessman with a hand in everything."],
+    ["Dre'Quan Priest", "Runs the Only Raw Records label."],
+    ["Real Dimez", "Rap duo Bae-Luxe and Roxy."],
+    ["Raul Bautista", "Veteran bank robber."],
+    ["Brian Heder", "Long-time smuggler in the Keys."]
+  ],
+  "cheats": [],
+  "gear": [
+    ["PS5 internal SSD, 1 TB or more", "Fits the PS5's M.2 expansion slot. Look for one with a heatsink.", "ps5 m.2 ssd heatsink 1tb"],
+    ["Xbox storage expansion card", "Plugs into the back of Series X|S and runs games directly.", "xbox series storage expansion card"],
+    ["External USB drive", "Cheap space to park older games you move off the console.", "external ssd 1tb usb"],
+    ["Controller charging dock", "Keeps a second controller ready for long sessions.", "controller charging dock ps5 xbox"],
+    ["Gaming headset", "For late-night play without waking the house.", "gaming headset ps5 xbox"]
+  ]
+}

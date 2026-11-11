@@ -3,143 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Leonida Logbook: Unofficial GTA VI Companion</title>
-<meta name="description" content="GTA VI launch countdown, preload and edition details, a guide to the new systems, a progress tracker and verified cheat codes.">
+<title>GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook</title>
+<meta name="description" content="Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.">
+<link rel="canonical" href="https://leonidalogbook.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Leonida Logbook">
+<meta property="og:title" content="GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook">
+<meta property="og:description" content="Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.">
+<meta property="og:url" content="https://leonidalogbook.com/">
+<meta property="og:image" content="https://leonidalogbook.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
-<style>
-/* Layout: highway-sign header over a single reading column; tool pages (tracker, launch) use a two-column grid that stacks on phones. */
-:root{
-  --bg:#f2f6f7; --surface:#ffffff; --ink:#0f1f2a; --muted:#516672; --line:#d2dde2;
-  --accent:#d92a62; --on-accent:#ffffff; --aqua:#08727a; --on-aqua:#ffffff; --sun:#b86a00; --good:#177a54; --slot:#e6edf0;
-  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --body:"Barlow","Segoe UI",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0b151e; --surface:#12222f; --ink:#e8f0f3; --muted:#93a9b5; --line:#243a4b;
-  --accent:#ff5c8a; --on-accent:#1a0810; --aqua:#3fcfd3; --on-aqua:#04262a; --sun:#ffb85a; --good:#4fd39b; --slot:#172a39; color-scheme:dark } }
-:root[data-theme="dark"]{
-  --bg:#0b151e; --surface:#12222f; --ink:#e8f0f3; --muted:#93a9b5; --line:#243a4b;
-  --accent:#ff5c8a; --on-accent:#1a0810; --aqua:#3fcfd3; --on-aqua:#04262a; --sun:#ffb85a; --good:#4fd39b; --slot:#172a39; color-scheme:dark }
-
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0}
-img{max-width:100%}
-[hidden]{display:none!important}
-@media (max-width:480px){nav{margin-left:0}nav a{font-size:15px;padding:4px 7px}.clock{gap:6px}.clock div{min-width:0;flex:1;padding:10px 4px 6px}.clock span{font-size:12px;letter-spacing:.08em}}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--aqua)}
-a{color:var(--aqua)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-
-/* header: one green-sign style band */
-header{background:var(--aqua);color:var(--on-aqua);position:sticky;top:env(safe-area-inset-top,0px);z-index:9}
-header .wrap{display:flex;align-items:center;gap:8px 20px;flex-wrap:wrap;padding-block:10px}
-.brand{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.04em;text-transform:uppercase;color:inherit;text-decoration:none;line-height:1}
-.brand small{display:block;font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.14em;opacity:.85;margin-top:3px}
-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-nav a{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:inherit;text-decoration:none;padding:5px 10px;border:2px solid transparent;border-radius:4px}
-nav a:hover{border-color:currentColor}
-nav a[aria-current="page"]{background:var(--on-aqua);color:var(--aqua)}
-
-main{padding-block:28px 48px}
-.view{display:flex;flex-direction:column;gap:28px}
-h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.02em;line-height:1;margin:0;text-wrap:balance}
-h1{font-size:clamp(40px,8vw,72px);font-weight:800}
-h2{font-size:30px;font-weight:700}
-h3{font-size:21px;font-weight:700;letter-spacing:.04em}
-p{margin:0;max-width:66ch}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.lede{font-size:18px;color:var(--muted)}
-.note{font-size:14px;color:var(--muted)}
-.stack{display:flex;flex-direction:column;gap:12px}
-
-/* countdown */
-.clock{display:flex;gap:10px;flex-wrap:wrap}
-.clock div{background:var(--ink);color:var(--bg);padding:12px 14px 8px;min-width:84px;text-align:center;border-radius:4px}
-.clock b{display:block;font-family:var(--mono);font-size:clamp(30px,7vw,48px);font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
-.clock span{font-family:var(--display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
-.facts{display:flex;flex-wrap:wrap;gap:8px 28px;border-block:2px solid var(--ink);padding-block:12px}
-.facts div{display:flex;flex-direction:column}
-.facts span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.facts b{font-family:var(--display);font-size:24px;font-weight:700;letter-spacing:.02em}
-
-.cols{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:28px;align-items:start}
-.cols>*{min-width:0}
-@media (max-width:760px){.cols{grid-template-columns:minmax(0,1fr)}}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px}
-
-/* checklists */
-.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.check li{border-top:1px solid var(--line)}
-.check li:first-child{border-top:0}
-.check label{display:flex;gap:12px;align-items:flex-start;padding:10px 2px;cursor:pointer}
-.check input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--accent);flex:none}
-.check small{display:block;color:var(--muted);font-size:14px}
-.check input:checked+span{color:var(--muted);text-decoration:line-through}
-.check input:checked+span small{text-decoration:none}
-.locked{display:flex;gap:12px;padding:10px 2px;color:var(--muted);border-top:1px solid var(--line)}
-.bar{height:10px;background:var(--slot);border-radius:2px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
-@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
-.grouphead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
-.count{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-.big{font-family:var(--mono);font-size:44px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
-
-/* link tiles */
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-.tile{display:flex;flex-direction:column;gap:6px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:4px;text-decoration:none;color:var(--ink)}
-.tile:hover{border-color:var(--accent)}
-.tile span{color:var(--muted);font-size:14.5px}
-.tile em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
-
-table{border-collapse:collapse;width:100%;font-size:15px}
-.scroll{overflow-x:auto}
-th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
-td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-
-.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px 32px}
-.guide section{display:flex;flex-direction:column;gap:8px;min-width:0}
-.guide ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
-.stars{display:flex;gap:4px;align-items:center;color:var(--sun)}
-.stars svg{width:22px;height:22px}
-.legend{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--muted)}
-.legend>div{display:flex;align-items:center;gap:8px}
-.cast{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 28px}
-.cast div{border-top:1px solid var(--line);padding:9px 0}
-.cast b{font-family:var(--display);font-size:19px;letter-spacing:.03em;text-transform:uppercase;display:block}
-.cast span{font-size:14.5px;color:var(--muted)}
-
-.empty{border:2px dashed var(--line);border-radius:4px;padding:28px 18px;text-align:center;color:var(--muted)}
-.empty b{display:block;font-family:var(--display);font-size:24px;text-transform:uppercase;color:var(--ink);letter-spacing:.03em}
-.adslot{background:var(--slot);border:1px dashed var(--line);border-radius:4px;min-height:90px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;padding:8px}
-.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);padding:9px 16px;border-radius:4px;text-decoration:none;border:0;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:7px 14px}
-.tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid currentColor;border-radius:3px;padding:1px 6px;color:var(--sun);white-space:nowrap}
-footer{border-top:1px solid var(--line);padding-block:20px 28px;font-size:13.5px;color:var(--muted)}
-footer p{max-width:80ch}
-</style>
-
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <header><div class="wrap">
-  <a class="brand" href="#home">Leonida Logbook<small>UNOFFICIAL GTA VI COMPANION</small></a>
-  <nav id="nav" aria-label="Sections">
-    <a href="#home">Home</a><a href="#launch">Launch</a><a href="#guide">Guide</a><a href="#tracker">Tracker</a><a href="#cheats">Cheats</a><a href="#gear">Gear</a>
-  </nav>
+  <a class="brand" href="/">Leonida Logbook<small>UNOFFICIAL GTA VI COMPANION</small></a>
+  <nav aria-label="Sections"><a href="/" aria-current="page">Home</a><a href="/launch/">Launch</a><a href="/guide/">Guide</a><a href="/tracker/">Tracker</a><a href="/cheats/">Cheats</a><a href="/gear/">Gear</a></nav>
 </div></header>
+<main class="wrap"><div class="view">
 
-<main class="wrap">
-
-<!-- HOME -->
-<div class="view" id="v-home">
   <div class="stack">
     <span class="eyebrow" id="heroEyebrow">Thursday, November 19, 2026</span>
     <h1 id="heroTitle">GTA VI unlocks in</h1>
-    <div class="clock" id="clock" aria-live="off">
+    <div class="clock" id="clock">
       <div><b id="cd">--</b><span>Days</span></div><div><b id="ch">--</b><span>Hours</span></div>
       <div><b id="cm">--</b><span>Minutes</span></div><div><b id="cs">--</b><span>Seconds</span></div>
     </div>
@@ -153,290 +43,25 @@ footer p{max-width:80ch}
     <div><span>Preload</span><b>Open now</b></div>
   </div>
   <div class="cols">
-    <div class="panel stack">
-      <div class="grouphead"><h2>Launch-day checklist</h2><span class="count" id="prepCount"></span></div>
-      <div class="bar"><i id="prepBar"></i></div>
-      <ul class="check" id="prepList"></ul>
+    <div class="panel stack" data-group="prep">
+      <div class="grouphead"><h2>Launch-day checklist</h2><span class="count"></span></div>
+      <div class="bar"><i></i></div>
+      <ul class="check"><li><label><input type="checkbox" id="c-prep-0" data-key="prep-0"><span>Pre-order or buy the game<small>Buy before Nov 20 to get the Vintage Vice City Pack.</small></span></label></li><li><label><input type="checkbox" id="c-prep-1" data-key="prep-1"><span>Free up 212 GB<small>Delete or move games you are not playing.</small></span></label></li><li><label><input type="checkbox" id="c-prep-2" data-key="prep-2"><span>Start the preload<small>Digital pre-orders can download now; boxed codes from Nov 12.</small></span></label></li><li><label><input type="checkbox" id="c-prep-3" data-key="prep-3"><span>Update your console<small>Install system updates before launch night.</small></span></label></li><li><label><input type="checkbox" id="c-prep-4" data-key="prep-4"><span>Charge your controller<small>And check your headset.</small></span></label></li><li><label><input type="checkbox" id="c-prep-5" data-key="prep-5"><span>Check your unlock time<small>Look at the game&#x27;s page in your console store.</small></span></label></li></ul>
       <p class="note">Your ticks are saved in this browser.</p>
     </div>
-    <div class="stack">
-      <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
-        <a class="tile" href="#guide"><em>Read before you play</em><h3>How the new systems work</h3><span>Wanted levels, car theft, weapons and money, from the hands-on previews.</span></a>
-        <a class="tile" href="#tracker"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
-        <a class="tile" href="#cheats"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
-      </div>
-      <div class="adslot" data-ad="home-sidebar">Ad slot · 300 × 250</div>
+    <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
+      <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
+      <a class="tile" href="/guide/"><em>Read before you play</em><h3>How the new systems work</h3><span>Wanted levels, car theft, weapons and money, from the hands-on previews.</span></a>
+      <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
+      <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
     </div>
   </div>
-</div>
-
-<!-- LAUNCH -->
-<div class="view" id="v-launch" hidden>
-  <div class="stack"><span class="eyebrow">Launch details</span><h1>Date, price and preload</h1>
-  <p class="lede">The facts you need before November 19, checked against launch coverage on November 10, 2026.</p></div>
-  <div class="cols">
-    <div class="stack">
-      <h2>Key dates</h2>
-      <div class="scroll"><table>
-        <tr><th>When</th><th>What happens</th></tr>
-        <tr><td class="n">Nov 10</td><td>Preload opens for digital pre-orders</td></tr>
-        <tr><td class="n">Nov 12</td><td>Preload opens for boxed copies, which contain a download code and no disc</td></tr>
-        <tr><td class="n">Nov 19</td><td>Release day on PS5 and Xbox Series X|S</td></tr>
-        <tr><td class="n">Nov 20</td><td>Buy before this date to get the Vintage Vice City Pack</td></tr>
-      </table></div>
-      <h2>Editions</h2>
-      <div class="scroll"><table>
-        <tr><th>Edition</th><th>Price</th><th>What you get</th></tr>
-        <tr><td><b>Standard</b></td><td class="n">$79.99</td><td>The full game</td></tr>
-        <tr><td><b>Ultimate</b></td><td class="n">$99.99</td><td>The game plus extra vehicles, weapons, clothing, shops and a safehouse garage, including the '67 Vapid Dominator Buggy, '95 Grotti Cheetah and Shitzu Squalo</td></tr>
-        <tr><td><b>Pre-order bonus</b></td><td class="n">Free</td><td>Vintage Vice City Pack: a two-tone '55 Vapid Stanier, Shore Court Garage, and two outfits and hairstyles each for Jason and Lucia</td></tr>
-      </table></div>
-      <p class="note">There is no PC version at launch. Rockstar has not announced one.</p>
-    </div>
-    <div class="stack">
-      <div class="panel stack">
-        <h3>Do you have the space?</h3>
-        <p class="big">212 GB</p>
-        <p>That is the most the game needs, depending on your console. It does not include the day-one update.</p>
-        <div class="scroll"><table>
-          <tr><th>Console</th><th>Usable storage</th></tr>
-          <tr><td>PS5 (original)</td><td class="n">667 GB</td></tr>
-          <tr><td>PS5 Slim</td><td class="n">842 GB</td></tr>
-          <tr><td>PS5 Pro</td><td class="n">1.89 TB</td></tr>
-          <tr><td>Xbox Series X</td><td class="n">802 GB</td></tr>
-          <tr><td>Xbox Series S (512 GB)</td><td class="n">364 GB</td></tr>
-        </table></div>
-        <a class="btn" href="#gear">Storage upgrades</a>
-      </div>
-      <div class="adslot" data-ad="launch-sidebar">Ad slot · 300 × 250</div>
-    </div>
-  </div>
-</div>
-
-<!-- GUIDE -->
-<div class="view" id="v-guide" hidden>
-  <div class="stack"><span class="eyebrow">Know before you play</span><h1>How GTA VI works</h1>
-  <p class="lede">What press previews have reported about the new systems. Every section gets re-tested against the real game on launch day.</p></div>
-
-  <div class="panel stack">
-    <h2>The wanted level</h2>
-    <div class="legend">
-      <div><span class="stars" id="starsFull"></span> Six stars is the maximum</div>
-      <div><span class="stars" id="starsHollow"></span> Hollow stars: police know about the crime, but not who did it</div>
-    </div>
-    <p>You only get stars when someone sees the crime, a victim reports it, or a security system catches it. Police build a description of your face, outfit, weapons and vehicle. Change clothes or hair, drop the weapon they identified, wear a mask, or split up from your partner to shake it.</p>
-  </div>
-
-  <div class="guide" id="guideGrid"></div>
-
-  <div class="stack">
-    <h2>The map: state of Leonida</h2>
-    <p>The map is reported to be about three times the playable area of Red Dead Redemption 2, with unexplored areas hidden until you visit. The story opens in the Leonida Keys.</p>
-    <div class="cast" id="regions"></div>
-  </div>
-  <div class="stack">
-    <h2>Who's who</h2>
-    <div class="cast" id="cast"></div>
-  </div>
-  <div class="adslot" data-ad="guide-footer">Ad slot · 728 × 90</div>
-</div>
-
-<!-- TRACKER -->
-<div class="view" id="v-tracker" hidden>
-  <div class="stack"><span class="eyebrow">Your save file, on paper</span><h1>Progress tracker</h1>
-  <p class="lede">Tick things off as you play. Missions, collectibles and wildlife lists go live once the game is out and the lists can be verified.</p></div>
-  <div class="cols">
-    <div class="stack" id="trackGroups"></div>
-    <div class="stack">
-      <div class="panel stack">
-        <h3>Overall</h3>
-        <p class="big" id="totalPct">0%</p>
-        <div class="bar"><i id="totalBar"></i></div>
-        <p class="note" id="totalNote"></p>
-        <div id="resetWrap"><button class="btn ghost" id="resetBtn" type="button">Reset progress</button></div>
-        <div id="resetConfirm" hidden class="stack"><p class="note">Clear every tick on this device?</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="resetYes" type="button">Yes, clear</button><button class="btn ghost" id="resetNo" type="button">Keep</button></div></div>
-      </div>
-      <div class="panel stack">
-        <h3>Logbook Pro <span class="tag">Coming soon</span></h3>
-        <p>No ads, progress synced across your phone and console browser, and extra map filters.</p>
-      </div>
-      <div class="adslot" data-ad="tracker-sidebar">Ad slot · 300 × 250</div>
-    </div>
-  </div>
-</div>
-
-<!-- CHEATS -->
-<div class="view" id="v-cheats" hidden>
-  <div class="stack"><span class="eyebrow">Verified codes only</span><h1>GTA VI cheat codes</h1>
-  <p class="lede">Rockstar has not confirmed whether GTA VI has cheat codes. Any list you see before launch is made up.</p></div>
-  <div id="cheatsBody"></div>
-  <div class="stack">
-    <h2>How this page will work</h2>
-    <p>From November 19, each code is tested on PS5 and Xbox before it is listed, with the button sequence for both consoles and whether it blocks trophies or achievements.</p>
-  </div>
-  <div class="adslot" data-ad="cheats-footer">Ad slot · 728 × 90</div>
-</div>
-
-<!-- GEAR -->
-<div class="view" id="v-gear" hidden>
-  <div class="stack"><span class="eyebrow">Launch gear</span><h1>Make room for 212 GB</h1>
-  <p class="lede">Storage is the one upgrade many players need for this game. Links open a store search in a new tab.</p></div>
-  <div class="tiles" id="gearTiles"></div>
-  <p class="note">As an Amazon Associate I earn from qualifying purchases.</p>
-</div>
-
-</main>
-
+</div></main>
 <footer><div class="wrap stack">
+  <nav aria-label="Site"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/gear/">Gear</a></nav>
   <p>Leonida Logbook is an unofficial fan site. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto and all related names are trademarks of their owners.</p>
-  <p>Launch details last checked November 10, 2026.</p>
+  <p>As an Amazon Associate I earn from qualifying purchases. Launch details last checked November 11, 2026.</p>
 </div></footer>
-
-<script>
-/* ============ SITE DATA: edit here to add content ============ */
-const RELEASE = new Date(2026, 10, 19, 0, 0, 0); // local midnight, Nov 19 2026
-const AFFILIATE_TAG = "leonidalogboo-20"; // e.g. "yourtag-20" once the Amazon Associates account is approved
-
-const PREP = [
-  ["Pre-order or buy the game", "Buy before Nov 20 to get the Vintage Vice City Pack."],
-  ["Free up 212 GB", "Delete or move games you are not playing."],
-  ["Start the preload", "Digital pre-orders can download now; boxed codes from Nov 12."],
-  ["Update your console", "Install system updates before launch night."],
-  ["Charge your controller", "And check your headset."],
-  ["Check your unlock time", "Look at the game's page in your console store."],
-];
-
-const TRACK = [
-  { id:"regions", title:"Regions visited", items:["Leonida Keys","Vice City","Grassrivers","Port Gellhorn","Ambrosia","Mount Kalaga National Park"] },
-  { id:"activities", title:"Activities tried", items:["Pool","Mini-golf","Kayaking","Zoo visit","Scuba diving","Parachuting","Off-road racing","Monster truck racing","Gym workout","Hunting","Fishing","Shipwreck treasure hunt"] },
-  { id:"missions", title:"Story missions", locked:"Mission list goes live on launch day." },
-  { id:"wildlife", title:"Wildlife checklist", locked:"Animals are added as players find them." },
-  { id:"collectibles", title:"Collectibles", locked:"Added in launch week with locations." },
-];
-
-const GUIDE = [
-  ["Two leads, one account", ["Switch between Jason and Lucia at any time, in free roam and in missions.","Cash goes into a shared account. Deposit it at an ATM.","If one of them is Wasted in a shared fight, both are out."]],
-  ["Stealing cars", ["Older cars: use a slim jim or smash a window.","Modern cars need a key cloner or a phone hacking tool.","The WAINK phone scanner shows a car's locks, value, alarm and tracker.","Garages start with three slots and can be expanded."]],
-  ["Weapons", ["You carry two concealed handguns and two visible long guns. The weapon wheel is gone.","Extra guns are stored in your vehicle.","Ammu-Nation lockers give back weapons you dropped.","Focus slows time for aiming and highlights escape routes."]],
-  ["Making money", ["Every store in Leonida can be robbed.","Bigger scores include jewelry stores, small banks and gang compounds.","Stolen goods must be sold to a fence."]],
-  ["Getting around", ["Fast travel uses the RydeMe taxi app, buses and trains.","Pay & Spray is back, along with Mod Shops and nitrous.","Police do not normally show on the minimap during a chase."]],
-  ["Things to do", ["Pool, mini-golf, kayaking, scuba diving and parachuting.","Hunting, fishing and shipwreck treasure hunting.","Off-road and monster truck racing, gym workouts and a zoo."]],
-];
-
-const REGIONS = [
-  ["Leonida Keys","Island chain in the south, where the story starts."],
-  ["Vice City","The main city, reported at twice the size of GTA V's Los Santos."],
-  ["Grassrivers","Swamp and wetland country."],
-  ["Port Gellhorn","A faded coastal town on the panhandle."],
-  ["Ambrosia","Industrial heartland in the middle of the state."],
-  ["Mount Kalaga National Park","Forest and hills in the north."],
-];
-const CAST = [
-  ["Jason Duval","Playable lead. Ex-Army, running jobs in the Keys."],
-  ["Lucia Caminos","Playable lead. Fresh out of prison and planning the next move."],
-  ["Cal Hampton","Jason's friend in the Keys."],
-  ["Boobie Ike","Vice City businessman with a hand in everything."],
-  ["Dre'Quan Priest","Runs the Only Raw Records label."],
-  ["Real Dimez","Rap duo Bae-Luxe and Roxy."],
-  ["Raul Bautista","Veteran bank robber."],
-  ["Brian Heder","Long-time smuggler in the Keys."],
-];
-
-const CHEATS = []; // { name, ps5, xbox, effect, blocksTrophies }
-
-const GEAR = [
-  ["PS5 internal SSD, 1 TB or more","Fits the PS5's M.2 expansion slot. Look for one with a heatsink.","ps5 m.2 ssd heatsink 1tb"],
-  ["Xbox storage expansion card","Plugs into the back of Series X|S and runs games directly.","xbox series storage expansion card"],
-  ["External USB drive","Cheap space to park older games you move off the console.","external ssd 1tb usb"],
-  ["Controller charging dock","Keeps a second controller ready for long sessions.","controller charging dock ps5 xbox"],
-  ["Gaming headset","For late-night play without waking the house.","gaming headset ps5 xbox"],
-];
-/* ============================================================= */
-
-const $ = id => document.getElementById(id);
-const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const KEY = "leonida-logbook-v1";
-let saved = {};
-try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
-const persist = () => { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
-
-function checkItem(key, title, sub){
-  return `<li><label><input type="checkbox" id="c-${key}" data-key="${key}" ${saved[key] ? "checked" : ""}><span>${esc(title)}${sub ? `<small>${esc(sub)}</small>` : ""}</span></label></li>`;
-}
-
-function renderStatic(){
-  $("prepList").innerHTML = PREP.map((p, i) => checkItem("prep-" + i, p[0], p[1])).join("");
-  $("trackGroups").innerHTML = TRACK.map(g => g.locked
-    ? `<div class="panel"><div class="grouphead"><h3>${esc(g.title)}</h3><span class="tag">At launch</span></div><div class="locked" style="border-top:0">${esc(g.locked)}</div></div>`
-    : `<div class="panel"><div class="grouphead"><h3>${esc(g.title)}</h3><span class="count" id="n-${g.id}"></span></div><div class="bar"><i id="b-${g.id}"></i></div><ul class="check">${g.items.map((t, i) => checkItem(g.id + "-" + i, t)).join("")}</ul></div>`).join("");
-  $("guideGrid").innerHTML = GUIDE.map(g => `<section><h3>${esc(g[0])}</h3><ul>${g[1].map(x => `<li>${esc(x)}</li>`).join("")}</ul></section>`).join("");
-  const pair = a => a.map(x => `<div><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div>`).join("");
-  $("regions").innerHTML = pair(REGIONS);
-  $("cast").innerHTML = pair(CAST);
-  const star = fill => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z" fill="${fill ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>`;
-  $("starsFull").innerHTML = star(1).repeat(6);
-  $("starsHollow").innerHTML = star(0).repeat(2);
-  $("cheatsBody").innerHTML = CHEATS.length
-    ? `<div class="scroll"><table><tr><th>Cheat</th><th>PS5</th><th>Xbox</th><th>Effect</th></tr>${CHEATS.map(c => `<tr><td><b>${esc(c.name)}</b></td><td class="n">${esc(c.ps5)}</td><td class="n">${esc(c.xbox)}</td><td>${esc(c.effect)}</td></tr>`).join("")}</table></div>`
-    : `<div class="empty"><b>No verified codes yet</b>The first tested codes appear here on November 19.</div>`;
-  $("gearTiles").innerHTML = GEAR.map(g => {
-    const url = "https://www.amazon.com/s?k=" + encodeURIComponent(g[2]) + (AFFILIATE_TAG ? "&tag=" + AFFILIATE_TAG : "");
-    return `<a class="tile" href="${url}" target="_blank" rel="noopener sponsored"><h3>${esc(g[0])}</h3><span>${esc(g[1])}</span><em>Search on Amazon</em></a>`;
-  }).join("");
-}
-
-function updateProgress(){
-  const prepDone = PREP.filter((_, i) => saved["prep-" + i]).length;
-  $("prepCount").textContent = prepDone + " / " + PREP.length;
-  $("prepBar").style.width = (100 * prepDone / PREP.length) + "%";
-  let done = 0, total = 0;
-  TRACK.forEach(g => { if (g.locked) return;
-    const d = g.items.filter((_, i) => saved[g.id + "-" + i]).length;
-    done += d; total += g.items.length;
-    $("n-" + g.id).textContent = d + " / " + g.items.length;
-    $("b-" + g.id).style.width = (100 * d / g.items.length) + "%";
-  });
-  const pct = total ? Math.round(100 * done / total) : 0;
-  $("totalPct").textContent = pct + "%";
-  $("totalBar").style.width = pct + "%";
-  $("totalNote").textContent = done + " of " + total + " items ticked. More lists unlock at launch.";
-}
-
-document.addEventListener("change", e => {
-  const k = e.target.dataset && e.target.dataset.key; if (!k) return;
-  if (e.target.checked) saved[k] = 1; else delete saved[k];
-  persist(); updateProgress();
-});
-$("resetBtn").onclick = () => { $("resetWrap").hidden = true; $("resetConfirm").hidden = false; };
-$("resetNo").onclick = () => { $("resetWrap").hidden = false; $("resetConfirm").hidden = true; };
-$("resetYes").onclick = () => {
-  Object.keys(saved).forEach(k => { if (!k.startsWith("prep-")) delete saved[k]; });
-  persist(); document.querySelectorAll("#trackGroups input").forEach(i => i.checked = false);
-  updateProgress(); $("resetNo").onclick();
-};
-
-function tick(){
-  const ms = RELEASE - Date.now();
-  if (ms <= 0){
-    $("heroEyebrow").textContent = "Released November 19, 2026";
-    $("heroTitle").textContent = "GTA VI is out now";
-    $("clock").hidden = true; $("clockNote").hidden = true; return;
-  }
-  const s = Math.floor(ms / 1000), p = n => String(n).padStart(2, "0");
-  $("cd").textContent = Math.floor(s / 86400); $("ch").textContent = p(Math.floor(s % 86400 / 3600));
-  $("cm").textContent = p(Math.floor(s % 3600 / 60)); $("cs").textContent = p(s % 60);
-}
-
-const VIEWS = ["home","launch","guide","tracker","cheats","gear"];
-function route(){
-  const h = location.hash.slice(1), v = VIEWS.includes(h) ? h : "home";
-  VIEWS.forEach(n => $("v-" + n).hidden = n !== v);
-  document.querySelectorAll("#nav a").forEach(a => a.getAttribute("href") === "#" + v ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
-  window.scrollTo(0, 0);
-}
-
-renderStatic(); updateProgress(); tick(); setInterval(tick, 1000);
-route(); addEventListener("hashchange", route);
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

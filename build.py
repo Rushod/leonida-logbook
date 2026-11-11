@@ -1,0 +1,298 @@
+#!/usr/bin/env python3
+"""Builds the static site into ./public from content/data.json and src/.
+Run:  python3 build.py   (then commit and push; Cloudflare deploys ./public)"""
+import json, shutil, urllib.parse
+from html import escape as e
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+OUT = ROOT / "public"
+D = json.loads((ROOT / "content/data.json").read_text())
+SITE = "https://leonidalogbook.com"
+CONTACT = "contact@leonidalogbook.com"
+TODAY = "2026-11-11"
+
+NAV = [("/", "Home"), ("/launch/", "Launch"), ("/guide/", "Guide"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
+
+
+def layout(path, title, desc, body, index=True):
+    nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == path else ""}>{t}</a>' for h, t in NAV)
+    url = SITE + path
+    robots = "" if index else '<meta name="robots" content="noindex">\n'
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{e(title)}</title>
+<meta name="description" content="{e(desc)}">
+{robots}<link rel="canonical" href="{url}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Leonida Logbook">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{SITE}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="/">Leonida Logbook<small>UNOFFICIAL GTA VI COMPANION</small></a>
+  <nav aria-label="Sections">{nav}</nav>
+</div></header>
+<main class="wrap"><div class="view">
+{body}
+</div></main>
+<footer><div class="wrap stack">
+  <nav aria-label="Site"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/gear/">Gear</a></nav>
+  <p>Leonida Logbook is an unofficial fan site. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto and all related names are trademarks of their owners.</p>
+  <p>As an Amazon Associate I earn from qualifying purchases. Launch details last checked {D['last_checked']}.</p>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
+"""
+
+
+def check(key, title, sub=None):
+    small = f"<small>{e(sub)}</small>" if sub else ""
+    return f'<li><label><input type="checkbox" id="c-{key}" data-key="{key}"><span>{e(title)}{small}</span></label></li>'
+
+
+def pairs(rows):
+    return "".join(f"<div><b>{e(a)}</b><span>{e(b)}</span></div>" for a, b in rows)
+
+
+def star(fill):
+    f = "currentColor" if fill else "none"
+    return f'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z" fill="{f}" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>'
+
+
+# ---------- pages ----------
+prep = "".join(check(f"prep-{i}", t, s) for i, (t, s) in enumerate(D["prep"]))
+HOME = f"""
+  <div class="stack">
+    <span class="eyebrow" id="heroEyebrow">Thursday, November 19, 2026</span>
+    <h1 id="heroTitle">GTA VI unlocks in</h1>
+    <div class="clock" id="clock">
+      <div><b id="cd">--</b><span>Days</span></div><div><b id="ch">--</b><span>Hours</span></div>
+      <div><b id="cm">--</b><span>Minutes</span></div><div><b id="cs">--</b><span>Seconds</span></div>
+    </div>
+    <p class="note" id="clockNote">Counting down to midnight on November 19 on your device's clock. Unlock times can differ by region, so check your console store for yours.</p>
+  </div>
+  <div class="facts">
+    <div><span>Platforms</span><b>PS5 · Xbox Series X|S</b></div>
+    <div><span>Standard</span><b>$79.99</b></div>
+    <div><span>Ultimate</span><b>$99.99</b></div>
+    <div><span>Storage</span><b>Up to 212 GB</b></div>
+    <div><span>Preload</span><b>Open now</b></div>
+  </div>
+  <div class="cols">
+    <div class="panel stack" data-group="prep">
+      <div class="grouphead"><h2>Launch-day checklist</h2><span class="count"></span></div>
+      <div class="bar"><i></i></div>
+      <ul class="check">{prep}</ul>
+      <p class="note">Your ticks are saved in this browser.</p>
+    </div>
+    <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
+      <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
+      <a class="tile" href="/guide/"><em>Read before you play</em><h3>How the new systems work</h3><span>Wanted levels, car theft, weapons and money, from the hands-on previews.</span></a>
+      <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
+      <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
+    </div>
+  </div>"""
+
+LAUNCH = """
+  <div class="stack"><span class="eyebrow">Launch details</span><h1>GTA VI release date, price and preload</h1>
+  <p class="lede">The facts you need before November 19, checked against launch coverage on November 10, 2026.</p></div>
+  <div class="cols">
+    <div class="stack">
+      <h2>Key dates</h2>
+      <div class="scroll"><table>
+        <tr><th>When</th><th>What happens</th></tr>
+        <tr><td class="n">Nov 10</td><td>Preload opens for digital pre-orders</td></tr>
+        <tr><td class="n">Nov 12</td><td>Preload opens for boxed copies, which contain a download code and no disc</td></tr>
+        <tr><td class="n">Nov 19</td><td>Release day on PS5 and Xbox Series X|S</td></tr>
+        <tr><td class="n">Nov 20</td><td>Buy before this date to get the Vintage Vice City Pack</td></tr>
+      </table></div>
+      <h2>Editions</h2>
+      <div class="scroll"><table>
+        <tr><th>Edition</th><th>Price</th><th>What you get</th></tr>
+        <tr><td><b>Standard</b></td><td class="n">$79.99</td><td>The full game</td></tr>
+        <tr><td><b>Ultimate</b></td><td class="n">$99.99</td><td>The game plus extra vehicles, weapons, clothing, shops and a safehouse garage, including the '67 Vapid Dominator Buggy, '95 Grotti Cheetah and Shitzu Squalo</td></tr>
+        <tr><td><b>Pre-order bonus</b></td><td class="n">Free</td><td>Vintage Vice City Pack: a two-tone '55 Vapid Stanier, Shore Court Garage, and two outfits and hairstyles each for Jason and Lucia</td></tr>
+      </table></div>
+      <p class="note">There is no PC version at launch. Rockstar has not announced one.</p>
+    </div>
+    <div class="panel stack">
+      <h3>Do you have the space?</h3>
+      <p class="big">212 GB</p>
+      <p>That is the most the game needs, depending on your console. It does not include the day-one update.</p>
+      <div class="scroll"><table>
+        <tr><th>Console</th><th>Usable storage</th></tr>
+        <tr><td>PS5 (original)</td><td class="n">667 GB</td></tr>
+        <tr><td>PS5 Slim</td><td class="n">842 GB</td></tr>
+        <tr><td>PS5 Pro</td><td class="n">1.89 TB</td></tr>
+        <tr><td>Xbox Series X</td><td class="n">802 GB</td></tr>
+        <tr><td>Xbox Series S (512 GB)</td><td class="n">364 GB</td></tr>
+      </table></div>
+      <a class="btn" href="/gear/">Storage upgrades</a>
+    </div>
+  </div>"""
+
+guide_grid = "".join(f"<section><h3>{e(t)}</h3><ul>{''.join(f'<li>{e(x)}</li>' for x in items)}</ul></section>" for t, items in D["guide"])
+GUIDE = f"""
+  <div class="stack"><span class="eyebrow">Know before you play</span><h1>How GTA VI works</h1>
+  <p class="lede">What press previews have reported about the new systems. Every section gets re-tested against the real game on launch day.</p></div>
+  <div class="panel stack">
+    <h2>The wanted level</h2>
+    <div class="legend">
+      <div><span class="stars">{star(1) * 6}</span> Six stars is the maximum</div>
+      <div><span class="stars">{star(0) * 2}</span> Hollow stars: police know about the crime, but not who did it</div>
+    </div>
+    <p>You only get stars when someone sees the crime, a victim reports it, or a security system catches it. Police build a description of your face, outfit, weapons and vehicle. Change clothes or hair, drop the weapon they identified, wear a mask, or split up from your partner to shake it.</p>
+  </div>
+  <div class="guide">{guide_grid}</div>
+  <div class="stack">
+    <h2>The map: state of Leonida</h2>
+    <p>The map is reported to be about three times the playable area of Red Dead Redemption 2, with unexplored areas hidden until you visit. The story opens in the Leonida Keys.</p>
+    <div class="cast">{pairs(D['regions'])}</div>
+  </div>
+  <div class="stack">
+    <h2>Who's who</h2>
+    <div class="cast">{pairs(D['cast'])}</div>
+  </div>"""
+
+groups = ""
+for g in D["track"]:
+    if "locked" in g:
+        groups += f'<div class="panel"><div class="grouphead"><h3>{e(g["title"])}</h3><span class="tag">At launch</span></div><div class="locked" style="border-top:0">{e(g["locked"])}</div></div>'
+    else:
+        items = "".join(check(f'{g["id"]}-{i}', t) for i, t in enumerate(g["items"]))
+        groups += f'<div class="panel" data-group="{g["id"]}"><div class="grouphead"><h3>{e(g["title"])}</h3><span class="count"></span></div><div class="bar"><i></i></div><ul class="check">{items}</ul></div>'
+TRACKER = f"""
+  <div class="stack"><span class="eyebrow">Your save file, on paper</span><h1>GTA VI progress tracker</h1>
+  <p class="lede">Tick things off as you play. Missions, collectibles and wildlife lists go live once the game is out and the lists can be verified.</p></div>
+  <div class="cols">
+    <div class="stack">{groups}</div>
+    <div class="stack">
+      <div class="panel stack">
+        <h3>Overall</h3>
+        <p class="big" id="totalPct">0%</p>
+        <div class="bar"><i id="totalBar"></i></div>
+        <p class="note" id="totalNote">Your ticks are saved in this browser.</p>
+        <div id="resetWrap"><button class="btn ghost" id="resetBtn" type="button">Reset progress</button></div>
+        <div id="resetConfirm" hidden class="stack"><p class="note">Clear every tick on this device?</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="resetYes" type="button">Yes, clear</button><button class="btn ghost" id="resetNo" type="button">Keep</button></div></div>
+      </div>
+      <div class="panel stack">
+        <h3>Logbook Pro <span class="tag">Coming soon</span></h3>
+        <p>No ads, progress synced across your phone and console browser, and extra map filters.</p>
+      </div>
+    </div>
+  </div>"""
+
+if D["cheats"]:
+    rows = "".join(f"<tr><td><b>{e(c['name'])}</b></td><td class=\"n\">{e(c['ps5'])}</td><td class=\"n\">{e(c['xbox'])}</td><td>{e(c['effect'])}</td></tr>" for c in D["cheats"])
+    cheats_body = f'<div class="scroll"><table><tr><th>Cheat</th><th>PS5</th><th>Xbox</th><th>Effect</th></tr>{rows}</table></div>'
+    cheats_lede = "Every code below was tested before it was listed."
+else:
+    cheats_body = '<div class="empty"><b>No verified codes yet</b>The first tested codes appear here on November 19.</div>'
+    cheats_lede = "Rockstar has not confirmed whether GTA VI has cheat codes. Any list you see before launch is made up."
+CHEATS = f"""
+  <div class="stack"><span class="eyebrow">Verified codes only</span><h1>GTA VI cheat codes</h1>
+  <p class="lede">{cheats_lede}</p></div>
+  {cheats_body}
+  <div class="stack">
+    <h2>How this page works</h2>
+    <p>From November 19, each code is tested on PS5 and Xbox before it is listed, with the button sequence for both consoles and whether it blocks trophies or achievements.</p>
+  </div>"""
+
+tiles = ""
+for name, blurb, q in D["gear"]:
+    url = "https://www.amazon.com/s?k=" + urllib.parse.quote(q) + "&tag=" + D["affiliate_tag"]
+    tiles += f'<a class="tile" href="{e(url)}" target="_blank" rel="noopener sponsored"><h3>{e(name)}</h3><span>{e(blurb)}</span><em>Search on Amazon</em></a>'
+GEAR = f"""
+  <div class="stack"><span class="eyebrow">Launch gear</span><h1>Make room for 212 GB</h1>
+  <p class="lede">Storage is the one upgrade many players need for this game. Links open an Amazon search in a new tab.</p></div>
+  <div class="tiles">{tiles}</div>
+  <p class="note">As an Amazon Associate I earn from qualifying purchases.</p>"""
+
+ABOUT = f"""
+  <div class="prose"><span class="eyebrow">About</span><h1>About Leonida Logbook</h1>
+  <p class="lede">An independent fan-made companion for Grand Theft Auto VI.</p>
+  <p>Leonida Logbook is built for players who want quick, checked answers: when the game unlocks, how its systems work, what is left to find, and which cheat codes are real.</p>
+  <h2>How information is checked</h2>
+  <p>Before launch, pages are based on official announcements and press previews, and each page says so. From launch day, guides, cheat codes and checklists are tested against the game before they are listed. Nothing is published from leaks or rumor lists.</p>
+  <h2>Who runs it</h2>
+  <p>The site is run by an independent fan. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive.</p>
+  <h2>How the site is funded</h2>
+  <p>The site earns money from advertising and from affiliate links. As an Amazon Associate I earn from qualifying purchases. This does not change what you pay.</p>
+  <h2>Contact</h2>
+  <p>Corrections and questions: {CONTACT}</p></div>"""
+
+PRIVACY = f"""
+  <div class="prose"><span class="eyebrow">Privacy</span><h1>Privacy policy</h1>
+  <p class="note">Last updated November 11, 2026</p>
+  <p>This policy explains what information Leonida Logbook (leonidalogbook.com) handles when you visit.</p>
+  <h2>What the site stores</h2>
+  <ul>
+    <li><b>Checklist progress.</b> Your ticks are saved in your own browser's local storage. They are not sent to us, and you can clear them with the Reset button or by clearing your browser's site data.</li>
+    <li><b>No accounts.</b> The site has no sign-up, and we do not ask for your name, email address or payment details.</li>
+  </ul>
+  <h2>Services that receive data when you visit</h2>
+  <ul>
+    <li><b>Cloudflare</b> hosts the site and processes technical data such as your IP address and browser type to deliver pages and protect against abuse.</li>
+    <li><b>Google Fonts</b> supplies the typefaces. Your browser requests them from Google, which receives your IP address.</li>
+  </ul>
+  <h2>Advertising</h2>
+  <p>The site may show ads served by Google AdSense. When ads are shown, third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and other sites on the internet.</p>
+  <p>You can opt out of personalized advertising at <a href="https://www.google.com/settings/ads" rel="noopener">Google Ads Settings</a>, or opt out of some third-party vendors' cookies at <a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>.</p>
+  <h2>Affiliate links</h2>
+  <p>Some links go to Amazon. As an Amazon Associate I earn from qualifying purchases. When you follow one of these links, Amazon may set cookies and handles your data under its own privacy notice.</p>
+  <h2>Children</h2>
+  <p>The site covers a game rated for mature audiences and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version is posted on this page with a new date.</p>
+  <h2>Contact</h2>
+  <p>Questions about this policy: {CONTACT}</p></div>"""
+
+NOTFOUND = """
+  <div class="stack"><span class="eyebrow">404</span><h1>Wrong turn</h1>
+  <p class="lede">That page does not exist. It may have moved when the site was reorganized.</p>
+  <div><a class="btn" href="/">Back to home</a></div></div>"""
+
+PAGES = [
+    ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
+    ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
+    ("/guide/", "GTA 6 Guide: Wanted Level, Cars, Weapons and Map | Leonida Logbook", "How GTA VI's wanted level, car theft, weapons, money and fast travel work, plus the regions of Leonida and the main cast.", GUIDE),
+    ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
+    ("/cheats/", "GTA 6 Cheat Codes for PS5 and Xbox: Verified List | Leonida Logbook", "GTA VI cheat codes for PS5 and Xbox Series X|S. Only codes tested in the game are listed, starting November 19, 2026.", CHEATS),
+    ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
+    ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
+    ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
+]
+
+# ---------- write ----------
+keep = {"og.png"}
+for p in OUT.iterdir():
+    if p.name in keep:
+        continue
+    shutil.rmtree(p) if p.is_dir() else p.unlink()
+(OUT / "assets").mkdir(parents=True)
+shutil.copy(ROOT / "src/site.css", OUT / "assets/site.css")
+shutil.copy(ROOT / "src/site.js", OUT / "assets/site.js")
+for path, title, desc, body in PAGES:
+    d = OUT / path.strip("/")
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(layout(path, title, desc, body))
+(OUT / "404.html").write_text(layout("/404.html", "Page not found | Leonida Logbook", "Page not found.", NOTFOUND, index=False))
+(OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES)
+(OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+(OUT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="5" fill="#08727a"/><path d="M16 5l3.2 6.9 7.3.9-5.4 5.1 1.4 7.3L16 21.5l-6.5 3.7 1.4-7.3-5.4-5.1 7.3-.9z" fill="#fff"/></svg>\n')
+print("built", len(PAGES), "pages")
