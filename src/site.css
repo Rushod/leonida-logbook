@@ -175,3 +175,35 @@ footer nav a:hover{background:none}
 .maptitle .wrap{display:flex;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
 .maptitle h1{font-size:clamp(24px,4.5vw,36px)}
 #leonida-map{display:block}
+.tight{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px;max-width:70ch}
+.tag-v{color:var(--accent)}
+.cheat-bar{padding-block:10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;align-self:flex-start}
+.seg button{font:700 16px var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:0;padding:9px 16px;cursor:pointer;min-height:42px}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--grad);color:var(--on-accent)}
+.cheat-toc{display:flex;gap:6px 14px;flex-wrap:wrap;font-size:14px;margin:0}
+.cheat-toc a{color:var(--muted);text-decoration:none;font:600 15px var(--label);letter-spacing:.06em;text-transform:uppercase;padding:0;border:0}
+.cheat-toc a:hover{color:var(--ink);background:none}
+.cheat-toc b{color:var(--sun)}
+.cheats{display:flex;flex-direction:column;gap:30px}
+.cheats section{scroll-margin-top:90px}
+.cheat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px 24px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+@media (max-width:700px){.cheat{grid-template-columns:minmax(0,1fr)}}
+.cheat-h{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+.cheat-h p{color:var(--muted);font-size:14.5px}
+.cheat-in{display:flex;flex-direction:column;gap:10px;min-width:0}
+.cheat-in>div{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.plat{font:700 12.5px var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);min-width:72px}
+.btn-seq{display:flex;flex-wrap:wrap;gap:5px}
+.btn-k{font-style:normal;display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;padding:0 7px;border-radius:99px;background:var(--raised);border:1px solid var(--line);font:700 14px var(--label);letter-spacing:.04em;color:var(--ink)}
+.b-sh{border-radius:8px}
+.b-dir{color:var(--sun)}
+.b-o,.b-xb{color:#ff6a7d}.b-x,.b-xx{color:#6ab7ff}.b-s{color:#ff8fd8}.b-t,.b-xa{color:#5fe6a8}.b-xy{color:#ffd35a}
+.b-o,.b-x,.b-s,.b-t{font-size:17px}
+code.pc{font:700 17px var(--label);letter-spacing:.1em;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 11px;color:var(--ink)}
+.copy{font:700 13px var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:99px;padding:5px 12px;cursor:pointer;min-height:32px}
+.copy:hover{border-color:var(--accent)}
+.cheat-in small{color:var(--muted);font-size:13px}
+.phone{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14.5px}
+.cheats[data-show="ps"] [data-plat]:not([data-plat="ps"]),.cheats[data-show="xbox"] [data-plat]:not([data-plat="xbox"]),.cheats[data-show="pc"] [data-plat]:not([data-plat="pc"]){display:none}

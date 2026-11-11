@@ -62,6 +62,26 @@
     }); });
   });
 
+  var cheats = document.querySelector(".cheats");
+  if (cheats) {
+    var segs = document.querySelectorAll(".seg button");
+    var setShow = function (v) {
+      cheats.setAttribute("data-show", v);
+      [].forEach.call(segs, function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-show") === v)); });
+      try { localStorage.setItem("leonida-cheat-platform", v); } catch (e) {}
+    };
+    [].forEach.call(segs, function (b) { b.addEventListener("click", function () { setShow(b.getAttribute("data-show")); }); });
+    try { var pv = localStorage.getItem("leonida-cheat-platform"); if (pv) setShow(pv); } catch (e) {}
+    document.addEventListener("click", function (ev) {
+      var b = ev.target.closest && ev.target.closest("[data-copy]"); if (!b) return;
+      var code = b.getAttribute("data-copy");
+      var done = function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, function () { selectCode(b); });
+      else selectCode(b);
+    });
+    var selectCode = function (b) { var c = b.previousElementSibling; var r = document.createRange(); r.selectNodeContents(c); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  }
+
   if ($("clock")) {
     var pad = function (n) { return String(n).padStart(2, "0"); };
     var tick = function () {

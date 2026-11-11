@@ -231,21 +231,17 @@ TRACKER = f"""
     </div>
   </div>"""
 
+from cheats import render as gta5_cheats
 if D["cheats"]:
     rows = "".join(f"<tr><td><b>{e(c['name'])}</b></td><td class=\"n\">{e(c['ps5'])}</td><td class=\"n\">{e(c['xbox'])}</td><td>{e(c['effect'])}</td></tr>" for c in D["cheats"])
-    cheats_body = f'<div class="scroll"><table><tr><th>Cheat</th><th>PS5</th><th>Xbox</th><th>Effect</th></tr>{rows}</table></div>'
-    cheats_lede = "Every code below was tested before it was listed."
+    verified = f'<h2>Tested in GTA VI</h2><div class="scroll"><table><tr><th>Cheat</th><th>PS5</th><th>Xbox</th><th>Effect</th></tr>{rows}</table></div>'
 else:
-    cheats_body = '<div class="empty"><b>No verified codes yet</b>The first tested codes appear here on November 19.</div>'
-    cheats_lede = "Rockstar has not confirmed whether GTA VI has cheat codes. Any list you see before launch is made up."
+    verified = '<div class="empty"><b>No GTA VI codes yet</b>Codes tested in GTA VI appear here from November 19.</div>'
 CHEATS = f"""
-  <div class="stack"><span class="eyebrow">Verified codes only</span><h1>GTA VI cheat codes</h1>
-  <p class="lede">{cheats_lede}</p></div>
-  {cheats_body}
-  <div class="stack">
-    <h2>How this page works</h2>
-    <p>From November 19, each code is tested on PS5 and Xbox before it is listed, with the button sequence for both consoles and whether it blocks trophies or achievements.</p>
-  </div>"""
+  <div class="stack"><span class="eyebrow">PS5 · Xbox · PC</span><h1>GTA 6 cheat codes</h1>
+  <p class="lede">No GTA VI cheats are confirmed yet. Below are all of GTA V's cheat codes, the most likely to return, with buttons for PS5 and Xbox, PC codes and phone numbers.</p></div>
+  {verified}
+  {gta5_cheats()}"""
 
 tiles = ""
 for name, blurb, q in D["gear"]:
@@ -309,7 +305,7 @@ PAGES = [
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
     ("/guide/", "GTA 6 Guide: Wanted Level, Cars, Weapons and Map | Leonida Logbook", "How GTA VI's wanted level, car theft, weapons, money and fast travel work, plus the regions of Leonida and the main cast.", GUIDE),
     ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
-    ("/cheats/", "GTA 6 Cheat Codes for PS5 and Xbox: Verified List | Leonida Logbook", "GTA VI cheat codes for PS5 and Xbox Series X|S. Only codes tested in the game are listed, starting November 19, 2026.", CHEATS),
+    ("/cheats/", "GTA 6 Cheat Codes for PS5, Xbox and PC (GTA V Codes to Try) | Leonida Logbook", "No GTA VI cheats are confirmed yet. All 34 GTA V cheat codes for PS5, Xbox and PC, with phone numbers, ready to test in GTA VI on November 19, 2026.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
     ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
