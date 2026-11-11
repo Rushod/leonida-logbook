@@ -8,18 +8,39 @@ GUIDES = [
     ("/preload/", "GTA 6 preload guide", "Preload dates and the steps for PS5 and Xbox."),
     ("/storage/", "How much storage does GTA 6 need?", "The 212 GB requirement against every console."),
     ("/editions/", "GTA 6 Standard vs Ultimate", "What each edition includes and what the extra $20 buys."),
+    ("/pc-release/", "Is GTA 6 coming to PC?", "What Take-Two has said, and how long past games took."),
+    ("/online/", "Does GTA 6 have online at launch?", "What is confirmed about multiplayer and GTA Online."),
+    ("/frame-rate/", "Is GTA 6 30 or 60 fps?", "Reported performance on PS5, PS5 Pro and Xbox."),
+    ("/reviews/", "When do GTA 6 reviews come out?", "The reported review date and where to find scores."),
+    ("/story-length/", "How long is GTA 6?", "The 80-hour figure and how it compares."),
+    ("/radio-stations/", "GTA 6 radio stations", "All six revealed stations, genres and hosts."),
+    ("/map-size/", "How big is the GTA 6 map?", "Leonida's size against GTA V and Red Dead 2."),
+    ("/characters/", "GTA 6 characters", "Jason, Lucia and the six characters around them."),
+    ("/platforms/", "GTA 6 on PS4, Xbox One or PC?", "Which systems run the game at launch."),
+    ("/wanted-level/", "GTA 6 wanted level", "How stars work and every way to lose the police."),
 ]
+LAUNCH_PATHS = ["/release-time/", "/preload/", "/storage/", "/editions/"]
+
+
+def tiles(paths):
+    by = {p: (t, d) for p, t, d in GUIDES}
+    return "".join(f'<a class="tile" href="{p}"><h3>{by[p][0]}</h3><span>{by[p][1]}</span></a>' for p in paths)
 
 
 def links(exclude=None):
-    items = "".join(
-        f'<a class="tile" href="{p}"><h3>{t}</h3><span>{d}</span></a>'
-        for p, t, d in GUIDES if p != exclude
-    )
-    return f'<div class="stack"><h2>Launch guides</h2><div class="tiles">{items}</div></div>'
+    """Four related guides: the next four after this one, wrapping round."""
+    paths = [p for p, _, _ in GUIDES]
+    i = paths.index(exclude) if exclude in paths else -1
+    pick = [paths[(i + k) % len(paths)] for k in range(1, 5)]
+    return f'<div class="stack"><h2>More guides</h2><div class="tiles">{tiles(pick)}</div><p><a class="btn ghost" href="/guides/">All guides</a></p></div>'
 
 
-GUIDE_LINKS = links()
+GUIDE_LINKS = f'<div class="stack"><h2>Launch guides</h2><div class="tiles">{tiles(LAUNCH_PATHS)}</div></div>'
+ALL_GUIDES = f'<div class="stack"><h2>All guides</h2><div class="tiles">{tiles([p for p, _, _ in GUIDES])}</div></div>'
+GUIDES_PAGE = f"""
+  <div class="stack"><span class="eyebrow">Guides</span><h1>GTA VI guides</h1>
+  <p class="lede">Short, checked answers to the questions players are asking before launch.</p></div>
+  <div class="tiles">{tiles([p for p, _, _ in GUIDES])}</div>"""
 
 RELEASE_TIME = f"""
   <div class="prose"><span class="eyebrow">Launch guide</span><h1>What time does GTA 6 unlock?</h1>

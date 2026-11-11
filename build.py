@@ -4,7 +4,8 @@ Run:  python3 build.py   (then commit and push; Cloudflare deploys ./public)"""
 import json, shutil, urllib.parse
 from html import escape as e
 from pathlib import Path
-from articles import ARTICLES, GUIDE_LINKS
+from articles import ARTICLES, GUIDE_LINKS, ALL_GUIDES, GUIDES_PAGE
+from articles2 import ARTICLES2
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -30,7 +31,7 @@ SCENE = (
     + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
 )
 
-NAV = [("/", "Home"), ("/launch/", "Launch"), ("/guide/", "Guide"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
+NAV = [("/", "Home"), ("/launch/", "Launch"), ("/guides/", "Guides"), ("/guide/", "Systems"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
 
 
 def layout(path, title, desc, body, index=True):
@@ -254,7 +255,7 @@ ABOUT = f"""
   <p class="lede">An independent fan-made companion for Grand Theft Auto VI.</p>
   <p>Leonida Logbook is built for players who want quick, checked answers: when the game unlocks, how its systems work, what is left to find, and which cheat codes are real.</p>
   <h2>How information is checked</h2>
-  <p>Before launch, pages are based on official announcements and press previews, and each page says so. From launch day, guides, cheat codes and checklists are tested against the game before they are listed. Nothing is published from leaks or rumor lists.</p>
+  <p>Before launch, pages are based on official announcements and press previews, and each page says so. From launch day, guides, cheat codes and checklists are tested against the game before they are listed. Unconfirmed reports are labelled as unconfirmed and never presented as fact.</p>
   <h2>Who runs it</h2>
   <p>The site is run by an independent fan. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive.</p>
   <h2>How the site is funded</h2>
@@ -293,7 +294,7 @@ NOTFOUND = """
   <p class="lede">That page does not exist. It may have moved when the site was reorganized.</p>
   <div><a class="btn" href="/">Back to home</a></div></div>"""
 
-HOME += GUIDE_LINKS
+HOME += ALL_GUIDES
 LAUNCH += GUIDE_LINKS
 
 PAGES = [
@@ -307,7 +308,8 @@ PAGES = [
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
 ]
 
-PAGES += ARTICLES
+PAGES += ARTICLES + ARTICLES2
+PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
 # ---------- write ----------
 keep = {"og.png"}

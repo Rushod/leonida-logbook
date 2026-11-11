@@ -137,3 +137,6 @@ footer nav a:hover{background:none}
   .sky{height:120px}.sky-hero{height:auto}.sky-hero .wrap{padding-block:24px 150px}
   .scene{height:170px}.sky:not(.sky-hero) .scene{height:150px}
 }
+.art{margin:6px 0;max-width:760px}
+.art svg{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.art figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
