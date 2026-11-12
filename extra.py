@@ -528,7 +528,22 @@ VEHICLE_CARDS += [
     ("night-sedan", "Sedan at night", "Car", "Sedan", DESCRIPTIVE, "A dark sedan in night traffic, with its tail lights glowing. The shot is blurry."),
     ("red-light-wagon", "Wagon in red light", "Car", "Wagon", DESCRIPTIVE, "A dark wagon sliding through a red-lit street. The shot is blurry."),
 ]
-PLURAL = {"Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("sedan-taxi", "Taxi", "Service", "Taxi", DESCRIPTIVE, "An orange taxi with a Honeyz advert on the roof and doors, driving along a seafront road."),
+    ("minivan-taxi", "Minivan taxi", "Service", "Taxi", DESCRIPTIVE, "An orange minivan taxi with a roof light, passing through a neon-lit street at night."),
+    ("orange-suv-taxi", "Orange SUV", "Service", "Taxi", DESCRIPTIVE, "An orange SUV, possibly a taxi, in traffic behind a dark sedan. The shot is soft."),
+    ("city-bus", "City bus", "Service", "Bus", DESCRIPTIVE, "A white-and-blue city bus full of passengers, seen from above."),
+    ("vice-city-coach", "Vice City coach", "Service", "Bus", DESCRIPTIVE, "A green-and-blue coach with \"Vice City\" painted on the side, turning at a junction."),
+    ("shuttle-bus", "Shuttle bus", "Service", "Bus", DESCRIPTIVE, "A white shuttle bus with people getting off by the roadside."),
+    ("airport-bus", "Airport bus", "Service", "Bus", DESCRIPTIVE, "A white airport bus seen through a terminal window."),
+    ("metrorail", "Metrorail train", "Service", "Train", DESCRIPTIVE, "An elevated metro train running along a viaduct above the streets."),
+    ("metromover", "People mover", "Service", "Train", DESCRIPTIVE, "A small elevated people-mover car on a raised track. The shot is blurry."),
+    ("passenger-train", "Passenger train", "Service", "Train", DESCRIPTIVE, "A long passenger train with lit windows, running past a town at night."),
+    ("freight-train", "Freight train", "Service", "Train", DESCRIPTIVE, "A yellow freight locomotive crossing a steel bridge."),
+    ("caged-truck", "Caged off-road truck", "Service", "Utility", DESCRIPTIVE, "Shown here as GTA V's rusty caged off-road truck. Not seen in GTA VI yet."),
+]
+IMG_CREDIT["caged-truck"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
@@ -539,12 +554,13 @@ CAT_TEXT = {
     "Military": ("Military vehicles", "Military vehicles in past GTA games were usually found at army bases or called in at the highest wanted levels. What GTA VI has, and how to get it, is confirmed from launch day."),
     "Bike": ("Motorcycles", "Motorcycles use fuel, just like cars. Where to buy, store and modify each bike is confirmed from launch day."),
     "Off-road": ("Off-roading in Leonida", "Leonida has swamps, back roads, beaches and dirt trails. Off-roaders are among the reported vehicle types, and monster truck racing is a reported activity. Where to buy each one is confirmed from launch day."),
+    "Service": ("Public transport and taxis", "Taxis, buses and trains move people around Vice City and beyond. Whether you can ride them, drive them or call a cab is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Off-road", "Bike", "Cycle", "Emergency", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Off-road", "Bike", "Cycle", "Emergency", "Service", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
