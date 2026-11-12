@@ -35,10 +35,26 @@ SCENE = (
 NAV = [("/", "Home"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "What's new"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
 
 
+def jsonld(path, title, desc):
+    import json as _j
+    page = title.split(" | ")[0]
+    graph = [{"@type": "WebSite", "@id": SITE + "/#site", "name": "Leonida Logbook", "url": SITE + "/",
+              "description": "Unofficial GTA VI companion: guides, interactive map, tracker and cheat codes."}]
+    if path != "/":
+        graph.append({"@type": "Article", "headline": page, "description": desc, "url": SITE + path,
+                      "dateModified": TODAY, "inLanguage": "en", "image": SITE + "/og.png",
+                      "author": {"@type": "Organization", "name": "Leonida Logbook", "url": SITE + "/about/"},
+                      "publisher": {"@id": SITE + "/#site"}, "isPartOf": {"@id": SITE + "/#site"}})
+        graph.append({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": page, "item": SITE + path}]})
+    return '<script type="application/ld+json">' + _j.dumps({"@context": "https://schema.org", "@graph": graph}).replace("</", "<\\/") + "</script>"
+
+
 def layout(path, title, desc, body, index=True):
     nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == path else ""}>{t}</a>' for h, t in NAV)
     url = SITE + path
-    robots = "" if index else '<meta name="robots" content="noindex">\n'
+    robots = ""
     head_extra = ""
     if "<!--map-->" in body:
         top, body = body.split("<!--map-->", 1)
@@ -56,6 +72,9 @@ def layout(path, title, desc, body, index=True):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<meta name="robots" content="{"index, follow, max-image-preview:large, max-snippet:-1" if index else "noindex"}">
+<meta property="article:modified_time" content="{TODAY}">
+{jsonld(path, title, desc) if index else ""}
 {robots}<link rel="canonical" href="{url}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Leonida Logbook">
