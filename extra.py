@@ -230,8 +230,103 @@ def db_table(rows, kind):
   <p class="note">{len(rows)} confirmed so far. Prices, stats and locations are added from launch day.</p></div>"""
 
 
+
+# Vehicles seen in Rockstar's trailers and screenshots. Names are descriptive unless the name is official or shown on the vehicle.
+# (slug, name, category, kind, name status, description)
+OFFICIAL, ON_HULL, DESCRIPTIVE = "Official name", "Name shown on the vehicle", "Official name not revealed yet"
+VEHICLE_CARDS = [
+    ("shitzu-squalo", "Shitzu Squalo", "Boat", "Cabin cruiser", OFFICIAL, "A white cabin cruiser running past the Vice City skyline at dusk. It comes with the Ultimate Edition."),
+    ("seashark", "Seashark", "Boat", "Jet ski", ON_HULL, "A lime-green and purple jet ski with its name across the side, carrying two riders."),
+    ("lurepredator-l35p", "Lurepredator L35P", "Boat", "Fishing boat", ON_HULL, "A fishing boat with twin outboard motors and rods set up, with three people fishing off the back."),
+    ("superyacht", "Superyacht", "Boat", "Yacht", DESCRIPTIVE, "A large multi-deck motor yacht cruising through open blue water."),
+    ("harbour-yacht", "Harbour yacht", "Boat", "Yacht", DESCRIPTIVE, "A big motor yacht moored in a hazy harbour at sunset."),
+    ("party-cruiser", "Party cruiser", "Boat", "Yacht", DESCRIPTIVE, "A sleek day cruiser packed with swimmers, with inflatables and jet skis alongside."),
+    ("cabin-cruiser", "Cabin cruiser", "Boat", "Cabin cruiser", DESCRIPTIVE, "A white express cruiser flying an American flag, with a jet ski pulled up beside it."),
+    ("power-catamaran", "Power catamaran", "Boat", "Cabin cruiser", DESCRIPTIVE, "A twin-hull cruising catamaran with a large cabin, seen from above."),
+    ("abandoned-cruiser", "Abandoned cruiser", "Boat", "Cabin cruiser", DESCRIPTIVE, "An old cabin cruiser sitting on dry land in the undergrowth. Whether boats like this can be repaired and used is not known yet."),
+    ("wooden-speedboat", "Wooden speedboat", "Boat", "Speedboat", DESCRIPTIVE, "A classic wood-deck speedboat at sunset, with a passenger aiming a gun off the back."),
+    ("yellow-powerboat", "Yellow powerboat", "Boat", "Speedboat", DESCRIPTIVE, "A yellow-and-black powerboat cutting a hard turn in front of a container ship."),
+    ("racing-catamaran", "Racing catamaran", "Boat", "Speedboat", DESCRIPTIVE, "A blue-and-white twin-hull racing boat skimming past the side of a ship."),
+    ("sports-cruiser", "Sports cruiser", "Boat", "Speedboat", DESCRIPTIVE, "A long, dark sports boat with a tan deck, seen from above in clear water."),
+    ("runabout", "Runabout", "Boat", "Speedboat", DESCRIPTIVE, "A small open boat crossing green water, seen from straight above."),
+    ("bowrider", "Bowrider", "Boat", "Speedboat", DESCRIPTIVE, "An open bowrider shown in red light."),
+    ("center-console", "Center-console boat", "Boat", "Fishing boat", DESCRIPTIVE, "A crowded center-console boat at a busy sandbar party, surrounded by jet skis."),
+    ("bay-boat", "Bay boat", "Boat", "Fishing boat", DESCRIPTIVE, "A black-and-yellow boat with a shade top, with people climbing on and off it."),
+    ("rib", "Rigid inflatable", "Boat", "Small boat", DESCRIPTIVE, "A grey rigid inflatable boat with a big outboard, carrying a group across green water."),
+    ("black-rib", "Black inflatable", "Boat", "Small boat", DESCRIPTIVE, "A black rigid inflatable racing through shallow turquoise water."),
+    ("patrol-boat", "Patrol boat", "Boat", "Small boat", DESCRIPTIVE, "A dark, enclosed rigid-hull boat moving fast across open water."),
+    ("kayak", "Kayak", "Boat", "Small boat", DESCRIPTIVE, "An orange sit-on kayak, paddled across calm water at sunset."),
+    ("airboat", "Airboat", "Boat", "Small boat", DESCRIPTIVE, "A fan-driven airboat in a cage, racing down a clear swamp channel."),
+    ("jet-skis", "Jet skis", "Boat", "Jet ski", DESCRIPTIVE, "Orange and yellow jet skis parked together at the water's edge."),
+    ("police-boat", "Police boat", "Boat", "Emergency", DESCRIPTIVE, "A marked police boat with blue trim and twin outboards, seen from above."),
+    ("water-taxi", "Water taxi", "Boat", "Public transport", DESCRIPTIVE, "A yellow open-sided water taxi carrying passengers along a city waterway."),
+    ("container-ship", "Container ship", "Boat", "Ship", ON_HULL, "A container ship with \"BTN Delmar\" on its hull, docked in the port under the cranes."),
+    ("port-work-boat", "Port work boat", "Boat", "Ship", DESCRIPTIVE, "A boxy work boat moving through the port beneath the container cranes."),
+    ("river-barge", "River barge", "Boat", "Ship", DESCRIPTIVE, "A low barge carrying cargo along the river at night."),
+    ("cruise-ship", "Cruise ship", "Boat", "Ship", DESCRIPTIVE, "A huge cruise ship seen from the highway, behind an East 404 sign."),
+]
+
+
+def vehicle_cards():
+    cats = [c for c in ["Car", "Bike", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    kinds = []
+    for v in VEHICLE_CARDS:
+        if v[3] not in kinds:
+            kinds.append(v[3])
+    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{k}">{k}</button>' for k in kinds)
+    cards = "".join(
+        f'<a class="wcard" href="/vehicles/{f}/" data-type="{k}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
+        f'<div class="wbody"><span class="wtype">{c} · {k}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
+        f'<p class="wname">{st} · Image: Rockstar Games</p></div></a>'
+        for f, n, c, k, st, d in VEHICLE_CARDS)
+    return f"""<div class="db" data-db data-cards>
+  <h2>Boats</h2>
+  <div class="dbbar"><div class="chips">{chips}</div></div>
+  <div class="wcards">{cards}</div>
+  <p class="note">{len(VEHICLE_CARDS)} vehicles seen so far. Cars and bikes are being added next. Official names, stats and prices come from launch day.</p></div>"""
+
+
+def vehicle_pages():
+    out = []
+    for f, n, c, k, st, d in VEHICLE_CARDS:
+        same = [v for v in VEHICLE_CARDS if v[3] == k and v[0] != f][:3]
+        if len(same) < 3:
+            same += [v for v in VEHICLE_CARDS if v[0] != f and v not in same][:3 - len(same)]
+        tiles = "".join(f'<a class="tile" href="/vehicles/{v[0]}/"><em>{v[3]}</em><h3>{e(v[1])}</h3></a>' for v in same)
+        get = "Ultimate Edition" if f == "shitzu-squalo" else "Revealed on launch day"
+        stats = "".join(f"<tr><td><b>{x}</b></td><td>From November 19</td></tr>" for x in ["Top speed", "Acceleration", "Handling", "Seats", "Price"])
+        extra = ""
+        if f == "shitzu-squalo":
+            extra = '<h2>How to get it</h2><p>It comes with the Ultimate Edition of GTA VI. See <a href="/editions/">Standard vs Ultimate</a> for the full list of what that edition adds.</p>'
+        elif st == ON_HULL:
+            extra = "<h2>About the name</h2><p>The name is shown on the vehicle itself in Rockstar's footage. We will confirm it in the game on launch day.</p>"
+        body = f"""
+  <article class="prose">
+  <span class="eyebrow">Vehicles · {c}s · {k}</span><h1>{e(n)}</h1>
+  <p class="lede">{e(d)}</p>
+  <figure class="photo"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="eager" decoding="async"><figcaption>Image: Rockstar Games</figcaption></figure>
+  <h2>Quick facts</h2>
+  <div class="scroll"><table>
+    <tr><td><b>Type</b></td><td>{c} · {k}</td></tr>
+    <tr><td><b>Name</b></td><td>{st}</td></tr>
+    <tr><td><b>How to get it</b></td><td>{get}</td></tr>
+    <tr><td><b>Seen in</b></td><td>Rockstar's pre-launch trailers or screenshots</td></tr>
+  </table></div>
+  {extra}
+  <h2>Boats in Leonida</h2>
+  <p>Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day.</p>
+  <h2>Stats and price</h2>
+  <p>Rockstar has not published vehicle stats. We add them from the game on launch day.</p>
+  <div class="scroll"><table>{stats}</table></div>
+  </article>
+  <div class="stack"><h2>More vehicles</h2><div class="tiles">{tiles}</div><p><a class="btn ghost" href="/vehicles/">All vehicles</a></p></div>"""
+        out.append((f"/vehicles/{f}/", f"GTA 6 {n}: What We Know" + BRAND,
+                    f"The {n} in GTA VI ({k.lower()}): {d} How to get it, and stats from launch day."[:300], body))
+    return out
+
+
 VEHICLES = page("/vehicles/", "Database", "GTA 6 vehicles list",
-                "GTA VI is reported to have hundreds of vehicles. This list holds the ones named officially so far and grows from launch day.", "", db_table(VEHICLE_ROWS, "vehicles") + PREVIEW_NOTE + """
+                "Every vehicle seen in GTA VI's trailers and screenshots so far, starting with boats. Tap any card for more.", "", vehicle_cards() + "<h2>Officially named so far</h2>" + db_table(VEHICLE_ROWS, "vehicles") + PREVIEW_NOTE + """
   <h2>How vehicles work</h2>
   <ul>
     <li><b>Fuel.</b> Cars and motorcycles have a fuel gauge, and electric vehicles use charging stations.</li>
@@ -370,3 +465,4 @@ EXTRA = [
     ("/weapons/", "GTA 6 Weapons List and How Combat Works" + BRAND, "GTA VI weapons confirmed so far, the two-handgun and two-long-gun carry limit, Ammu-Nation lockers, Focus and non-lethal options.", WEAPONS),
 ]
 EXTRA += weapon_pages()
+EXTRA += vehicle_pages()
