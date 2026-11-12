@@ -371,12 +371,24 @@ VEHICLE_CARDS += [
     ("ambulance", "Ambulance", "Emergency", "Medical", DESCRIPTIVE, "An ambulance with its lights on, parked on a city street at night."),
     ("lifeguard-pickup", "Lifeguard pickup", "Emergency", "Lifeguard", DESCRIPTIVE, "A white-and-red lifeguard pickup parked on a crowded beach."),
 ]
+VEHICLE_CARDS += [
+    ("vice-city-police-helicopter", "Vice City police helicopter", "Aircraft", "Police helicopter", DESCRIPTIVE, "A Vice City police helicopter hovering low over dark water, with an officer in the open door."),
+    ("coastal-police-helicopter", "Coastal police helicopter", "Aircraft", "Police helicopter", DESCRIPTIVE, "A green-and-white police helicopter chasing a wooden speedboat across the water at sunset."),
+    ("gunship-helicopter", "Gunship helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "An olive helicopter with mounted guns, a gunner leaning out as it skims low over the swamp."),
+    ("camera-helicopter", "Camera helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "A red-and-white helicopter with someone filming from the open door above the clouds."),
+    ("executive-helicopter", "Executive helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "A sleek twin-engine helicopter flying against a purple evening sky."),
+    ("gold-helicopter", "Gold helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "A man climbs out of a gold-and-silver helicopter high above the city lights at night."),
+    ("dusk-helicopter", "Dusk helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "A blue-and-white helicopter at dusk with its red lights on. The shot is soft, so details are hard to make out."),
+    ("float-helicopter", "Float helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "Artwork of a small bubble-cockpit helicopter on pontoons, fitted with a mounted minigun, flying over the city."),
+]
+IMG_CREDIT["float-helicopter"] = "Artwork, source unconfirmed"
 PLURAL = {"Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
     "Cycle": ("Bikes and scooters", "Bicycles and electric scooters are part of Leonida's streets, and electric scooters are one of the reported vehicle types. How you rent, buy or store them is confirmed from launch day."),
     "Emergency": ("Emergency services", "Police, sheriff's deputies, firefighters, paramedics and lifeguards all work Leonida's streets and beaches. See the <a href=\"/wanted-level/\">wanted level guide</a> for how police respond and how to escape them."),
+    "Aircraft": ("Helicopters and aircraft", "Helicopters show up in the trailers as police chasers and in action scenes. Which ones you can fly, buy and store is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
