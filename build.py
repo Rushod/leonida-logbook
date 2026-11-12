@@ -142,6 +142,7 @@ HOME = f"""
     <p class="note" id="clockNote">Counting down to midnight on November 19 on your device's clock. Unlock times can differ by region, so check your console store for yours.</p>
   </div>
 <!--hero-end-->
+  <figure class="keyart"><img src="/img/home-key-art.webp" srcset="/img/home-key-art-800.webp 800w, /img/home-key-art.webp 1600w" sizes="(max-width:1100px) 100vw, 1100px" alt="Official Grand Theft Auto VI key art: Lucia and Jason, the GTA VI logo, a speedboat, an alligator, a supercar and other Leonida characters" width="1600" height="900" decoding="async" fetchpriority="high"><figcaption>Official artwork. Image: Rockstar Games</figcaption></figure>
   <div class="facts">
     <div><span>Platforms</span><b>PS5 · Xbox Series X|S</b></div>
     <div><span>Standard</span><b>$79.99</b></div>
