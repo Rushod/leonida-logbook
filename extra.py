@@ -182,12 +182,32 @@ WEAPON_CARDS = [
      "A short AK-style rifle with gold-plated metal and white grips, a sign that custom finishes exist."),
     ("rifle-wall", "Rifle wall", "Rifle", False,
      "A wall display of AK-style and AR-style rifles, suggesting a large choice of long guns."),
+    ("neon-pistol", "Neon pistol", "Handgun", False,
+     "A pistol finished in bright green and black, held by a character in pink gloves. Another sign that custom finishes exist."),
+    ("palm-machine-pistol", "Palm-print machine pistol", "SMG", False,
+     "A compact machine pistol wrapped in a blue palm-leaf print, held up by a man in tinted glasses."),
+    ("camo-smg", "Camo SMG", "SMG", False,
+     "A compact submachine gun in a blue camouflage finish, lying on a car seat."),
+    ("smg", "Submachine gun", "SMG", False,
+     "A full-size SMG with a fixed stock, held by a masked robber under red light."),
+    ("double-barrel-shotgun", "Double-barrel shotgun", "Shotgun", False,
+     "A long side-by-side shotgun, pointed from a boat at an alligator in the swamp."),
+    ("hunting-rifle", "Hunting rifle", "Rifle", False,
+     "A wood-stock rifle carried over the shoulder by a hunter in the woods."),
+    ("battle-rifle", "Battle rifle", "Rifle", False,
+     "A wood-and-steel semi-automatic rifle with a scope, held next to a No Trespassing sign."),
+    ("bolt-action-rifle", "Bolt-action rifle", "Rifle", False,
+     "A scoped bolt-action rifle with a wooden stock, held low in tall grass."),
+    ("machine-gun", "Machine gun", "Heavy", False,
+     "A belt-fed machine gun on a shop counter, in a store with more guns on the wall behind."),
+    ("grenade-launcher", "Grenade launcher", "Heavy", False,
+     "Fired out of a moving car's window during a chase, blowing a police car into the air."),
 ]
 
 
 def weapon_cards():
-    types = ["Handgun", "Rifle"]
-    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t}s</button>' for t in types)
+    types = [t for t in ["Handgun", "SMG", "Shotgun", "Rifle", "Heavy"] if any(c[2] == t for c in WEAPON_CARDS)]
+    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t if t == "Heavy" else t + "s"}</button>' for t in types)
     cards = "".join(
         f'<article class="wcard" data-type="{t}"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
         f'<div class="wbody"><span class="wtype">{t}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
