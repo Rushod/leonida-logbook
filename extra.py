@@ -382,19 +382,30 @@ VEHICLE_CARDS += [
     ("float-helicopter", "Float helicopter", "Aircraft", "Helicopter", DESCRIPTIVE, "Artwork of a small bubble-cockpit helicopter on pontoons, fitted with a mounted minigun, flying over the city."),
 ]
 IMG_CREDIT["float-helicopter"] = "Artwork, source unconfirmed"
-PLURAL = {"Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("excavator", "Excavator", "Industrial", "Construction", DESCRIPTIVE, "A tracked excavator, its arm raised over a street in the middle of a gunfight."),
+    ("dump-truck", "Dump truck", "Industrial", "Construction", DESCRIPTIVE, "A dark dump truck with a high steel body, stuck in traffic on a city street."),
+    ("six-wheel-tipper", "Six-wheel tipper", "Industrial", "Construction", DESCRIPTIVE, "A tipper truck at a work site, with workers in hi-vis vests around it. The shot is blurry."),
+    ("rubble-truck", "Rubble truck", "Industrial", "Construction", DESCRIPTIVE, "A dump truck seen from above. The shot is very blurry, so details are hard to make out."),
+    ("bulldozer", "Bulldozer", "Industrial", "Construction", DESCRIPTIVE, "Shown here as GTA V's tracked bulldozer. A bulldozer has not been seen in GTA VI footage yet."),
+    ("gta-v-cement-mixer", "Cement mixer (GTA V)", "Industrial", "Construction", DESCRIPTIVE, "GTA V's cement mixer, shown for comparison. For the GTA VI version, see the cement mixer under Commercial."),
+]
+IMG_CREDIT["bulldozer"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["gta-v-cement-mixer"] = "Image: GTA V screenshot, for comparison"
+PLURAL = {"Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
     "Cycle": ("Bikes and scooters", "Bicycles and electric scooters are part of Leonida's streets, and electric scooters are one of the reported vehicle types. How you rent, buy or store them is confirmed from launch day."),
     "Emergency": ("Emergency services", "Police, sheriff's deputies, firefighters, paramedics and lifeguards all work Leonida's streets and beaches. See the <a href=\"/wanted-level/\">wanted level guide</a> for how police respond and how to escape them."),
     "Aircraft": ("Helicopters and aircraft", "Helicopters show up in the trailers as police chasers and in action scenes. Which ones you can fly, buy and store is confirmed from launch day."),
+    "Industrial": ("Industrial vehicles", "Construction and industrial vehicles work Leonida's building sites, docks and roads. Whether you can drive them is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Bike", "Cycle", "Emergency", "Commercial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Bike", "Cycle", "Emergency", "Commercial", "Industrial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
