@@ -355,17 +355,34 @@ VEHICLE_CARDS += [
     ("bmx", "BMX", "Cycle", "Bicycle", DESCRIPTIVE, "A small BMX with a yellow seat, parked at a bike rack on the pavement."),
     ("bike-share-bikes", "Bike-share bikes", "Cycle", "Bike share", DESCRIPTIVE, "Blue bike-share bikes lined up at a docking station. Whether you can rent them is not known yet."),
 ]
-PLURAL = {"Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("vice-city-police-cruiser", "Vice City police cruiser", "Emergency", "Police", DESCRIPTIVE, "A white Vice City Police sedan with blue stripes, splashing down a wet street lined with cafes."),
+    ("sheriff-patrol-car", "Sheriff patrol car", "Emergency", "Sheriff", DESCRIPTIVE, "A white sheriff's car with green stripes and county markings, lights on."),
+    ("sheriff-cruiser", "Sheriff cruiser", "Emergency", "Sheriff", DESCRIPTIVE, "A green-and-white sheriff's sedan with its headlights blazing."),
+    ("sheriff-suv", "Sheriff SUV", "Emergency", "Sheriff", DESCRIPTIVE, "A mud-splattered white sheriff's SUV in a chase off-road at night."),
+    ("police-suv", "Police SUV", "Emergency", "Police", DESCRIPTIVE, "A grey police SUV with blue lights, tearing through water and brush."),
+    ("police-pickup", "Police pickup", "Emergency", "Police", DESCRIPTIVE, "A dark police pickup truck with a heavy push bar on the front."),
+    ("damaged-police-sedan", "Damaged police sedan", "Emergency", "Police", DESCRIPTIVE, "A battered dark police sedan scraping along with sparks flying from a wheel."),
+    ("police-muscle-car", "Police muscle car", "Emergency", "Police", DESCRIPTIVE, "A white muscle-style police car with its lights on, seen from above at night."),
+    ("unmarked-police-car", "Unmarked police car", "Emergency", "Police", DESCRIPTIVE, "A black sedan with a hidden blue light, stopped with its doors open."),
+    ("unmarked-police-suv", "Unmarked police SUV", "Emergency", "Police", DESCRIPTIVE, "A black SUV flashing red and blue lights in traffic."),
+    ("armored-police-truck", "Armored police truck", "Emergency", "Police", DESCRIPTIVE, "A heavy armored police truck pushing through gunfire. Likely a sign of a high wanted level."),
+    ("fire-truck", "Fire truck", "Emergency", "Fire", DESCRIPTIVE, "A lime-green fire engine with its lights on, crossing a bridge."),
+    ("ambulance", "Ambulance", "Emergency", "Medical", DESCRIPTIVE, "An ambulance with its lights on, parked on a city street at night."),
+    ("lifeguard-pickup", "Lifeguard pickup", "Emergency", "Lifeguard", DESCRIPTIVE, "A white-and-red lifeguard pickup parked on a crowded beach."),
+]
+PLURAL = {"Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
     "Cycle": ("Bikes and scooters", "Bicycles and electric scooters are part of Leonida's streets, and electric scooters are one of the reported vehicle types. How you rent, buy or store them is confirmed from launch day."),
+    "Emergency": ("Emergency services", "Police, sheriff's deputies, firefighters, paramedics and lifeguards all work Leonida's streets and beaches. See the <a href=\"/wanted-level/\">wanted level guide</a> for how police respond and how to escape them."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Bike", "Cycle", "Commercial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Bike", "Cycle", "Emergency", "Commercial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
