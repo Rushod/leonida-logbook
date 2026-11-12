@@ -469,7 +469,7 @@ VEHICLE_CARDS += [
     ("patriot-race-car", "Patriot race car", "Car", "Race car", DESCRIPTIVE, "A black number 18 race car in Patriot Beer livery, racing in a pack. Along with the Takio car, a strong hint of circuit racing."),
     ("purple-hi-rider", "Purple hi-rider", "Car", "Custom", DESCRIPTIVE, "Artwork of a purple classic on lifted suspension and gold wheels, with a 305 plate."),
     ("hot-rod", "Hot rod", "Car", "Classic", DESCRIPTIVE, "Shown here as GTA V's red hot rod. Not seen in GTA VI yet."),
-    ("minivan", "Minivan", "Car", "Van", DESCRIPTIVE, "Shown here as GTA V's two-tone minivan. Not seen in GTA VI yet."),
+    ("minivan", "Minivan (GTA V)", "Car", "Van", DESCRIPTIVE, "Shown here as GTA V's two-tone minivan. Not seen in GTA VI yet."),
 ]
 IMG_CREDIT["purple-hi-rider"] = "Artwork, source unconfirmed"
 IMG_CREDIT["hot-rod"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
@@ -542,7 +542,7 @@ VEHICLE_CARDS += [
     ("grey-sedan", "Grey sedan", "Car", "Sedan", DESCRIPTIVE, "A grey modern sedan turning across a street."),
     ("dark-sedan", "Dark sedan", "Car", "Sedan", DESCRIPTIVE, "A dark sedan seen from above under red light."),
     ("sedan-on-lift", "Sedan on a lift", "Car", "Sedan", DESCRIPTIVE, "A red sedan raised on a garage lift while a mechanic works below. Possibly a hint of a mod shop or repair garage."),
-    ("grey-police-style-sedan", "Grey sedan", "Car", "Sedan", DESCRIPTIVE, "A grey sedan with LED headlights in traffic. The shot is blurry."),
+    ("grey-police-style-sedan", "Grey LED-light sedan", "Car", "Sedan", DESCRIPTIVE, "A grey sedan with LED headlights in traffic. The shot is blurry."),
     ("maroon-sedan", "Maroon sedan", "Car", "Sedan", DESCRIPTIVE, "A maroon sedan in traffic. The shot is blurry."),
     ("wood-panel-wagon", "Wood-panel wagon", "Car", "Wagon", DESCRIPTIVE, "A brown station wagon with wood-panel sides, in a busy street scene."),
     ("blue-wagon", "Blue wagon", "Car", "Wagon", DESCRIPTIVE, "Shown here as GTA V's blue station wagon. Not seen in GTA VI yet."),
