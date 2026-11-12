@@ -264,26 +264,35 @@ VEHICLE_CARDS = [
     ("port-work-boat", "Port work boat", "Boat", "Ship", DESCRIPTIVE, "A boxy work boat moving through the port beneath the container cranes."),
     ("river-barge", "River barge", "Boat", "Ship", DESCRIPTIVE, "A low barge carrying cargo along the river at night."),
     ("cruise-ship", "Cruise ship", "Boat", "Ship", DESCRIPTIVE, "A huge cruise ship seen from the highway, behind an East 404 sign."),
+    ("armored-truck", "Armored truck", "Commercial", "Armored", DESCRIPTIVE, "A Gruppe 6 armored security truck with its doors open, held up by masked robbers."),
+    ("box-semi-truck", "Box semi-truck", "Commercial", "Semi-truck", DESCRIPTIVE, "A white semi-truck cab pulling a box trailer, stopped next to a red muscle car."),
+    ("tanker-truck", "Tanker truck", "Commercial", "Semi-truck", DESCRIPTIVE, "A semi-truck hauling a rust-coloured tanker trailer along the highway."),
+    ("beer-semi-truck", "Beer delivery semi", "Commercial", "Semi-truck", DESCRIPTIVE, "A semi-truck with a Patriot Beer trailer, rolling down the highway under red light."),
+    ("red-box-truck", "Red box truck", "Commercial", "Truck", DESCRIPTIVE, "A red medium-duty truck with a box body, parked at the roadside."),
+    ("beverage-truck", "Beverage truck", "Commercial", "Truck", DESCRIPTIVE, "A red delivery truck with a drinks advert on its body, parked by a store."),
+    ("azteca-gold-truck", "Azteca Gold truck", "Commercial", "Truck", DESCRIPTIVE, "A cab-over box truck in yellow and green Azteca Gold livery."),
+    ("cement-mixer", "Cement mixer", "Commercial", "Truck", DESCRIPTIVE, "A red cement mixer truck driving past shops on a city street."),
+    ("stake-bed-truck", "Stake-bed truck", "Commercial", "Truck", DESCRIPTIVE, "A yellow-cab truck with a slatted cargo bed, partly hidden behind a passing car."),
 ]
+PLURAL = {"Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
+CAT_TEXT = {
+    "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
+    "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
+}
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Bike", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
-    kinds = []
-    for v in VEHICLE_CARDS:
-        if v[3] not in kinds:
-            kinds.append(v[3])
-    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{k}">{k}</button>' for k in kinds)
+    cats = [c for c in ["Car", "Bike", "Commercial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
-        f'<a class="wcard" href="/vehicles/{f}/" data-type="{k}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
+        f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
         f'<div class="wbody"><span class="wtype">{c} · {k}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
         f'<p class="wname">{st} · Image: Rockstar Games</p></div></a>'
         for f, n, c, k, st, d in VEHICLE_CARDS)
     return f"""<div class="db" data-db data-cards>
-  <h2>Boats</h2>
   <div class="dbbar"><div class="chips">{chips}</div></div>
   <div class="wcards">{cards}</div>
-  <p class="note">{len(VEHICLE_CARDS)} vehicles seen so far. Cars and bikes are being added next. Official names, stats and prices come from launch day.</p></div>"""
+  <p class="note">{len(VEHICLE_CARDS)} vehicles seen so far. Cars and bikes are coming next. Official names, stats and prices come from launch day.</p></div>"""
 
 
 def vehicle_pages():
@@ -298,11 +307,13 @@ def vehicle_pages():
         extra = ""
         if f == "shitzu-squalo":
             extra = '<h2>How to get it</h2><p>It comes with the Ultimate Edition of GTA VI. See <a href="/editions/">Standard vs Ultimate</a> for the full list of what that edition adds.</p>'
+        elif f == "armored-truck":
+            extra = '<h2>Robberies</h2><p>Armored trucks appear in robbery scenes in the trailers. See the <a href="/robberies/">robberies guide</a> for how robberies and payouts work.</p>'
         elif st == ON_HULL:
             extra = "<h2>About the name</h2><p>The name is shown on the vehicle itself in Rockstar's footage. We will confirm it in the game on launch day.</p>"
         body = f"""
   <article class="prose">
-  <span class="eyebrow">Vehicles · {c}s · {k}</span><h1>{e(n)}</h1>
+  <span class="eyebrow">Vehicles · {PLURAL[c]} · {k}</span><h1>{e(n)}</h1>
   <p class="lede">{e(d)}</p>
   <figure class="photo"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="eager" decoding="async"><figcaption>Image: Rockstar Games</figcaption></figure>
   <h2>Quick facts</h2>
@@ -313,8 +324,8 @@ def vehicle_pages():
     <tr><td><b>Seen in</b></td><td>Rockstar's pre-launch trailers or screenshots</td></tr>
   </table></div>
   {extra}
-  <h2>Boats in Leonida</h2>
-  <p>Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day.</p>
+  <h2>{CAT_TEXT[c][0]}</h2>
+  <p>{CAT_TEXT[c][1]}</p>
   <h2>Stats and price</h2>
   <p>Rockstar has not published vehicle stats. We add them from the game on launch day.</p>
   <div class="scroll"><table>{stats}</table></div>
@@ -326,7 +337,7 @@ def vehicle_pages():
 
 
 VEHICLES = page("/vehicles/", "Database", "GTA 6 vehicles list",
-                "Every vehicle seen in GTA VI's trailers and screenshots so far, starting with boats. Tap any card for more.", "", vehicle_cards() + "<h2>Officially named so far</h2>" + db_table(VEHICLE_ROWS, "vehicles") + PREVIEW_NOTE + """
+                "Every vehicle seen in GTA VI's trailers and screenshots so far. Tap any card for more.", "", vehicle_cards() + "<h2>Officially named so far</h2>" + db_table(VEHICLE_ROWS, "vehicles") + PREVIEW_NOTE + """
   <h2>How vehicles work</h2>
   <ul>
     <li><b>Fuel.</b> Cars and motorcycles have a fuel gauge, and electric vehicles use charging stations.</li>
