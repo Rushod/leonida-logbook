@@ -443,6 +443,18 @@ VEHICLE_CARDS += [
 IMG_CREDIT["purple-hi-rider"] = "Artwork, source unconfirmed"
 IMG_CREDIT["hot-rod"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 IMG_CREDIT["minivan"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("red-classic-convertible", "Red classic convertible", "Car", "Classic", DESCRIPTIVE, "Jason drives a red classic convertible along a coastal road, with Lucia beside him holding a pistol."),
+    ("teal-fastback", "Teal fastback", "Car", "Muscle", DESCRIPTIVE, "A teal classic fastback with a brown side stripe and a rear wing."),
+    ("red-hood-classic", "Red-hood classic", "Car", "Muscle", DESCRIPTIVE, "A grey classic with a red hood and round headlights, cruising past a roadside sign."),
+    ("silver-muscle-convertible", "Silver muscle convertible", "Car", "Muscle", DESCRIPTIVE, "A modern silver muscle convertible with two people inside, parked at the roadside."),
+    ("pink-donk", "Pink donk", "Car", "Custom", DESCRIPTIVE, "A hot pink classic coupe on big custom wheels at a street car meet."),
+    ("cream-classic", "Cream classic", "Car", "Classic", DESCRIPTIVE, "A close-up of a cream classic car rushing past. The shot is blurred."),
+    ("orange-muscle-coupe", "Orange muscle coupe", "Car", "Muscle", DESCRIPTIVE, "Shown here as GTA V's orange muscle coupe with a white stripe. Not seen in GTA VI yet."),
+    ("grey-classic-coupe", "Grey classic coupe", "Car", "Muscle", DESCRIPTIVE, "Shown here as GTA V's grey classic coupe. Not seen in GTA VI yet."),
+]
+IMG_CREDIT["orange-muscle-coupe"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["grey-classic-coupe"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 PLURAL = {"Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
