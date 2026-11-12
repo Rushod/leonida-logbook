@@ -396,7 +396,29 @@ VEHICLE_CARDS += [
     ("tank", "Tank", "Military", "Tank", DESCRIPTIVE, "Shown here as GTA V's desert-camo battle tank. A tank has not been seen in GTA VI footage yet, but every recent GTA has had one."),
 ]
 IMG_CREDIT["tank"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
-PLURAL = {"Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("green-superbike", "Green superbike", "Bike", "Sportbike", DESCRIPTIVE, "A green-and-white superbike with race numbers, with a man in a tank top standing beside it."),
+    ("white-superbike", "White superbike", "Bike", "Sportbike", DESCRIPTIVE, "A white superbike with pink wheels, parked on a neon-lit street."),
+    ("yellow-sportbike", "Yellow sportbike", "Bike", "Sportbike", DESCRIPTIVE, "A woman in a leather jacket sits on a yellow sportbike outside a liquor bar at night."),
+    ("lime-sportbike", "Lime sportbike", "Bike", "Sportbike", DESCRIPTIVE, "A rider on a lime-green sportbike next to a pink one at a street meet-up."),
+    ("teal-sportbike", "Sportbike", "Bike", "Sportbike", DESCRIPTIVE, "Two riders on a sportbike outside a cafe, in a teal-tinted shot."),
+    ("street-bike", "Street bike", "Bike", "Sportbike", DESCRIPTIVE, "A dark naked street bike parked by a wall. The shot is blurry."),
+    ("touring-cruiser", "Touring cruiser", "Bike", "Cruiser", DESCRIPTIVE, "A heavy touring motorcycle ridden by a biker in a club vest."),
+    ("red-cruiser", "Red cruiser", "Bike", "Cruiser", DESCRIPTIVE, "A red cruiser with a big chrome headlight, ridden under a blue sky."),
+    ("chopper", "Chopper", "Bike", "Cruiser", DESCRIPTIVE, "A long-fork chopper parked at night with bikers standing around it."),
+    ("tattoo-shop-motorcycle", "Tattoo shop motorcycle", "Bike", "Cruiser", DESCRIPTIVE, "A motorcycle parked outside a neon-lit tattoo shop at night."),
+    ("bobber", "Bobber", "Bike", "Cruiser", DESCRIPTIVE, "Shown here as a GTA V bobber-style bike in blue and white. Not seen in GTA VI yet."),
+    ("muddy-dirt-bike", "Muddy dirt bike", "Bike", "Dirt bike", DESCRIPTIVE, "A rider on a mud-caked dirt bike, splashing through the swamp."),
+    ("neon-dirt-bike", "Neon dirt bike", "Bike", "Dirt bike", DESCRIPTIVE, "A pink-and-black dirt bike carrying two riders through a smoky crowd."),
+    ("scrambler", "Scrambler", "Bike", "Dirt bike", DESCRIPTIVE, "An olive-green scrambler with knobbly tyres, parked by a teal garage door."),
+    ("moped", "Moped", "Bike", "Scooter", DESCRIPTIVE, "A black moped ridden along a palm-lined street."),
+    ("retro-scooter", "Retro scooter", "Bike", "Scooter", DESCRIPTIVE, "A mint-green retro scooter on a dark street."),
+    ("mobility-scooter", "Mobility scooter", "Bike", "Scooter", DESCRIPTIVE, "A blue three-wheel mobility scooter ridden by an older man in a bright shirt."),
+    ("police-motorcycle", "Police motorcycle", "Bike", "Police", DESCRIPTIVE, "Shown here as GTA V's police motorcycle. A police bike has not been seen in GTA VI footage yet."),
+]
+IMG_CREDIT["bobber"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["police-motorcycle"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+PLURAL = {"Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
@@ -405,6 +427,7 @@ CAT_TEXT = {
     "Aircraft": ("Helicopters and aircraft", "Helicopters show up in the trailers as police chasers and in action scenes. Which ones you can fly, buy and store is confirmed from launch day."),
     "Industrial": ("Industrial vehicles", "Construction and industrial vehicles work Leonida's building sites, docks and roads. Whether you can drive them is confirmed from launch day."),
     "Military": ("Military vehicles", "Military vehicles in past GTA games were usually found at army bases or called in at the highest wanted levels. What GTA VI has, and how to get it, is confirmed from launch day."),
+    "Bike": ("Motorcycles", "Motorcycles use fuel, just like cars. Where to buy, store and modify each bike is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
