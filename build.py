@@ -383,7 +383,7 @@ PHOTOS = {
     "/vehicles/": ("convertible-drive", "A red convertible driving down a palm-lined street", 1200, 675, "Image: shared online, source unconfirmed"),
     "/weapons/": ("weapons/jason-pistols", "Two custom pistols in GTA VI, one engraved J. Duval with Sua Sponte grips, the other with red rose grips", 1200, 675),
     "/wanted-level/": ("bike-chase-fan-art", "Fan artwork of Lucia and Jason on a dirt bike chased by police", 1200, 675, "Fan art, not an official Rockstar image"),
-    "/news/": ("lucia-jason-fan-art", "Fan illustration of Lucia and Jason against a sunset skyline", 596, 335, "Fan art, not an official Rockstar image"),
+    "/news/": ("news-hero", "Official GTA VI artwork of Lucia and Jason in bandanas outside a Leonida gas station", 1200, 675),
 }
 
 
