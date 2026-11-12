@@ -235,3 +235,10 @@ table.vs a{white-space:nowrap}
 a.wcard{color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}
 a.wcard:hover,a.wcard:focus-visible{transform:translateY(-3px);border-color:var(--pink,#ff4fa3)}
 a.wcard h3{color:var(--ink)}
+/* wide screens: grow the scene with the width so palms and sun are never cut off */
+@media (min-width:1200px){
+  .scene{height:20vw}
+  .sky-hero .wrap{padding-bottom:calc(20vw - 30px)}
+  .sky:not(.sky-hero){height:calc(20vw - 30px)}
+  .sky:not(.sky-hero) .scene{height:20vw}
+}
