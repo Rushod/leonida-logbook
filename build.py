@@ -314,6 +314,7 @@ PRIVACY = f"""
   <h2>Services that receive data when you visit</h2>
   <ul>
     <li><b>Cloudflare</b> hosts the site and processes technical data such as your IP address and browser type to deliver pages and protect against abuse.</li>
+    <li><b>Cloudflare Web Analytics</b> counts page views to show which pages are popular. It does not use cookies or track individual visitors across sites.</li>
     <li><b>Google Fonts</b> supplies the typefaces. Your browser requests them from Google, which receives your IP address.</li>
   </ul>
   <h2>Advertising</h2>
