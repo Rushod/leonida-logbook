@@ -75,7 +75,7 @@ def layout(path, title, desc, body, index=True):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
-<meta name="robots" content="{"index, follow, max-image-preview:large, max-snippet:-1" if index else "noindex"}">
+<meta name="robots" content="{"index, follow, max-image-preview:large, max-snippet:-1" if index else "noindex, follow"}">
 <meta property="article:modified_time" content="{TODAY}">
 {jsonld(path, title, desc) if index else ""}
 {robots}<link rel="canonical" href="{url}">
@@ -388,6 +388,12 @@ PHOTOS = {
 }
 
 
+def is_detail(path):
+    """Individual vehicle and weapon pages stay out of search until launch-day data is added."""
+    parts = path.strip("/").split("/")
+    return len(parts) == 2 and parts[0] in ("vehicles", "weapons")
+
+
 def with_photo(path, body):
     if path not in PHOTOS:
         return body
@@ -407,7 +413,7 @@ def with_photo(path, body):
 for path, title, desc, body in PAGES:
     d = OUT / path.strip("/")
     d.mkdir(parents=True, exist_ok=True)
-    html = layout(path, title, desc, with_photo(path, body))
+    html = layout(path, title, desc, with_photo(path, body), index=not is_detail(path))
     if path in PHOTOS:
         html = html.replace(f"{SITE}/og.png", f"{SITE}/img/{PHOTOS[path][0]}.webp")
     (d / "index.html").write_text(html)
@@ -416,7 +422,7 @@ for path, title, desc, body in PAGES:
 (OUT / "news/feed.xml").write_text(news.feed(SITE))
 (OUT / "_redirects").write_text("/guide/ /guides/ 301\n/guide /guides/ 301\n/vehicles-weapons/ /weapons/ 301\n/vehicles-weapons /weapons/ 301\n")
 (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES)
+urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES if not is_detail(p))
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
 (OUT / "ads.txt").write_text(f"google.com, {ADSENSE[3:]}, DIRECT, f08c47fec0942fa0\n")
 (OUT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1268"/><stop offset=".6" stop-color="#e2437f"/><stop offset="1" stop-color="#ffb14a"/></linearGradient></defs><rect width="32" height="32" rx="6" fill="url(#g)"/><path d="M16 5l3.2 6.9 7.3.9-5.4 5.1 1.4 7.3L16 21.5l-6.5 3.7 1.4-7.3-5.4-5.1 7.3-.9z" fill="#fff"/></svg>\n')
