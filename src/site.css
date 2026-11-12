@@ -223,3 +223,12 @@ table.vs a{white-space:nowrap}
 @media (max-width:600px){.photo.tall{max-width:240px}}
 .photo figcaption{margin-top:6px;font-size:13px;color:var(--muted)}
 .photo.sq{max-width:420px}
+.wcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:14px}
+.wcard{background:var(--card,#1d1238);border:1px solid var(--line,rgba(255,255,255,.12));border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wcard img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#120a26}
+.wcard[hidden]{display:none}
+.wbody{padding:12px 14px 14px}
+.wbody h3{margin:4px 0 6px}
+.wbody p{margin:0 0 8px;font-size:15px}
+.wtype{font-family:var(--label);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--sun)}
+.wname{font-size:12px!important;color:var(--muted);margin:0!important}

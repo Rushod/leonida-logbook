@@ -158,6 +158,47 @@ WEAPON_ROWS = [
 ]
 
 
+# Weapons seen in Rockstar's trailers, screenshots and artwork. Names are descriptive unless Rockstar has named the gun.
+WEAPON_CARDS = [
+    ("hawk-little-morgan", "Hawk & Little Morgan Revolver", "Handgun", True,
+     "A long-barrel revolver with a mounted scope. It is part of the Ultimate Edition, along with personalized weapon variants."),
+    ("compact-pistol", "Compact pistol", "Handgun", False,
+     "A polymer-frame pistol with an extended magazine, shown lying on a table. A likely everyday sidearm."),
+    ("service-pistol", "Service pistol", "Handgun", False,
+     "A full-size semi-automatic with an exposed hammer, carried at the hip."),
+    ("heavy-pistol", "Heavy pistol", "Handgun", False,
+     "A two-tone steel pistol with a long slide, held in a gloved hand."),
+    ("revolver", "Revolver", "Handgun", False,
+     "A short-barrel revolver held by a character with a rose tattoo on her hand."),
+    ("nipper-38", "Nipper 38", "Handgun", False,
+     "A compact pistol with \"Nipper38\" engraved on the slide in Rockstar's official artwork. The in-game name may differ."),
+    ("carbine-rifle", "Carbine rifle", "Rifle", False,
+     "An AR-style rifle with a carry handle, aimed from a rooftop over the city at night."),
+    ("short-carbine", "Short carbine", "Rifle", False,
+     "A short-barrel AR-style rifle with a railed handguard, held in gloved hands."),
+    ("assault-rifle", "Assault rifle", "Rifle", False,
+     "An AK-style rifle carried by a masked crew under blue light."),
+    ("gold-compact-rifle", "Gold compact rifle", "Rifle", False,
+     "A short AK-style rifle with gold-plated metal and white grips, a sign that custom finishes exist."),
+    ("rifle-wall", "Rifle wall", "Rifle", False,
+     "A wall display of AK-style and AR-style rifles, suggesting a large choice of long guns."),
+]
+
+
+def weapon_cards():
+    types = ["Handgun", "Rifle"]
+    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t}s</button>' for t in types)
+    cards = "".join(
+        f'<article class="wcard" data-type="{t}"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
+        f'<div class="wbody"><span class="wtype">{t}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
+        f'<p class="wname">{"Official name" if named else "Official name not revealed yet"} · Image: Rockstar Games</p></div></article>'
+        for f, n, t, named, d in WEAPON_CARDS)
+    return f"""<div class="db" data-db data-cards>
+  <div class="dbbar"><div class="chips">{chips}</div></div>
+  <div class="wcards">{cards}</div>
+  <p class="note">{len(WEAPON_CARDS)} weapons seen so far. Official names, stats, prices and where to buy each one are added from launch day.</p></div>"""
+
+
 def db_table(rows, kind):
     types = sorted({r[1] for r in rows})
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{e(t)}">{e(t)}</button>' for t in types)
@@ -198,7 +239,7 @@ VEHICLES = page("/vehicles/", "Database", "GTA 6 vehicles list",
   </ul>""")
 
 WEAPONS = page("/weapons/", "Database", "GTA 6 weapons list",
-               "GTA VI drops the weapon wheel: you carry two handguns and two long guns, and keep the rest in your vehicle. This list grows from launch day.", "", db_table(WEAPON_ROWS, "weapons") + PREVIEW_NOTE + """
+               "Every gun seen in GTA VI's trailers, screenshots and artwork so far. You carry two handguns and two long guns, and keep the rest in your vehicle.", "", weapon_cards() + PREVIEW_NOTE + """
   <h2>What you can carry</h2>
   <ul>
     <li>Up to two concealed handguns and two visible long guns.</li>

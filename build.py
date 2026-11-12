@@ -33,7 +33,7 @@ SCENE = (
     + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
 )
 
-NAV = [("/", "Home"), ("/news/", "News"), ("/map/", "Map"), ("/guides/", "Guides"), ("/vehicles-weapons/", "Vehicles & Weapons"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats")]
+NAV = [("/", "Home"), ("/news/", "News"), ("/map/", "Map"), ("/guides/", "Guides"), ("/vehicles/", "Vehicles"), ("/weapons/", "Weapons"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats")]
 
 
 def jsonld(path, title, desc):
@@ -355,15 +355,6 @@ PAGES = [
 PAGES += ARTICLES + ARTICLES2 + EXTRA + news.pages(" | Leonida Logbook")
 PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
-VW = """
-  <div class="stack"><span class="eyebrow">Database</span><h1>GTA 6 vehicles and weapons</h1>
-  <p class="lede">Every confirmed car, bike, boat and gun in GTA VI, with full stats, prices and locations added from launch day.</p></div>
-  <div class="tiles">
-    <a class="tile" href="/vehicles/"><em>Garage</em><h3>Vehicles</h3><span>Confirmed vehicles, garages, fuel and mod shops. Top speed, price and class for each one from November 19.</span></a>
-    <a class="tile" href="/weapons/"><em>Arsenal</em><h3>Weapons</h3><span>The four-gun carry limit, Ammu-Nation lockers and every confirmed weapon. Damage and range stats from November 19.</span></a>
-  </div>
-  <p class="note">Nothing goes in these lists until we have seen it in the finished game.</p>"""
-PAGES.append(("/vehicles-weapons/", "GTA 6 Vehicles and Weapons: Full List and Stats | Leonida Logbook", "Every confirmed GTA VI vehicle and weapon in one place, with stats, prices and locations added from launch day.", VW))
 
 # ---------- write ----------
 keep = {"og.png", "tiles"}
@@ -390,7 +381,7 @@ PHOTOS = {
     "/activities/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 415),
     "/wildlife/": ("airboat", "An airboat crossing a swamp channel in GTA VI with birds overhead", 415, 415),
     "/vehicles/": ("convertible-drive", "A red convertible driving down a palm-lined street", 1200, 675, "Image: shared online, source unconfirmed"),
-    "/weapons/": ("ocean-view-hotel", "A couple holding pistols outside a neon Ocean View Hotel sign", 1200, 675, "Image: shared online, source unconfirmed"),
+    "/weapons/": ("weapons/rifle-silhouette", "A rifleman crouched in a smoky tunnel in GTA VI", 640, 360),
     "/wanted-level/": ("bike-chase-fan-art", "Fan artwork of Lucia and Jason on a dirt bike chased by police", 1200, 675, "Fan art, not an official Rockstar image"),
     "/news/": ("lucia-jason-fan-art", "Fan illustration of Lucia and Jason against a sunset skyline", 596, 335, "Fan art, not an official Rockstar image"),
 }
