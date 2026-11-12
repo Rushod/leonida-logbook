@@ -214,3 +214,6 @@ table.vs td:nth-child(2){color:var(--muted)}
 table.vs a{white-space:nowrap}
 .tips{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;max-width:72ch}
 .tips li::marker{color:var(--sun);font-weight:700}
+.byline{font-family:var(--label);font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.byline a{color:var(--ink)}
+.news .art{margin-block:4px 8px}

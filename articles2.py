@@ -184,7 +184,7 @@ CAST = page("/characters/", "The story", "GTA 6 characters: who's who",
   <p>Rockstar has not announced the actors behind Jason and Lucia. Names circulating online are fan theories and reports, so they are not listed here. This page will be updated when the cast is confirmed.</p>""")
 
 PLATFORMS = page("/platforms/", "Platforms", "Can you play GTA 6 on PS4, Xbox One or PC?",
-                 "No. GTA VI launches on November 19, 2026 for PS5 and Xbox Series X|S only. It is not coming to PS4 or Xbox One.",
+                 "GTA VI launches on November 19, 2026 for PS5 and Xbox Series X|S. Xbox One owners can stream it through Xbox Cloud Gaming. There is no PS4 or PC version.",
                  art.platforms(), """
   <h2>Console by console</h2>
   <div class="scroll"><table>
@@ -193,7 +193,8 @@ PLATFORMS = page("/platforms/", "Platforms", "Can you play GTA 6 on PS4, Xbox On
     <tr><td><b>PS5 Pro</b></td><td>Yes, listed as PS5 Pro Enhanced</td></tr>
     <tr><td><b>Xbox Series X</b></td><td>Yes</td></tr>
     <tr><td><b>Xbox Series S</b></td><td>Yes, but check storage: the game needs up to 212 GB</td></tr>
-    <tr><td><b>PS4 and Xbox One</b></td><td>No</td></tr>
+    <tr><td><b>Xbox One</b></td><td>Streaming only, through Xbox Cloud Gaming from November 19 at 1am ET. You must buy the game. <a href="/news/gta-6-xbox-one-cloud-gaming/">Details</a></td></tr>
+    <tr><td><b>PS4</b></td><td>No</td></tr>
     <tr><td><b>PC</b></td><td>Not announced. See <a href="/pc-release/">the PC page</a></td></tr>
     <tr><td><b>Nintendo Switch 2</b></td><td>Not announced</td></tr>
   </table></div>
@@ -241,6 +242,6 @@ ARTICLES2 = [
     ("/radio-stations/", "GTA 6 Radio Stations: All Six Stations and Hosts" + BRAND, "The six GTA VI radio stations revealed so far, their genres and reported hosts, plus podcasts and listening on foot.", RADIO),
     ("/map-size/", "How Big Is the GTA 6 Map? Leonida Size and Regions" + BRAND, "The GTA VI map is reported at about three times Red Dead Redemption 2's. Size comparisons, the six regions of Leonida and how the map works.", MAP),
     ("/characters/", "GTA 6 Characters: Jason, Lucia and the Full Cast" + BRAND, "Who's who in GTA VI: playable leads Jason Duval and Lucia Caminos and the six characters around them, plus what is known about the voice cast.", CAST),
-    ("/platforms/", "Can You Play GTA 6 on PS4, Xbox One or PC?" + BRAND, "GTA VI is only on PS5 and Xbox Series X|S at launch. A console-by-console list, plus what to know before buying a console for it.", PLATFORMS),
+    ("/platforms/", "Can You Play GTA 6 on PS4, Xbox One or PC?" + BRAND, "GTA VI launches on PS5 and Xbox Series X|S, and streams to Xbox One through Xbox Cloud Gaming. A console-by-console list.", PLATFORMS),
     ("/wanted-level/", "GTA 6 Wanted Level: How It Works and How to Lose It" + BRAND, "How GTA VI's six-star wanted level works, what hollow stars mean, and every reported way to lose the police.", WANTED),
 ]

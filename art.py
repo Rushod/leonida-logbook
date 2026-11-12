@@ -129,18 +129,19 @@ def cast():
 
 
 def platforms():
-    cols = [("PLAYS GTA VI", GOOD, ["PS5", "PS5 PRO", "XBOX SERIES X", "XBOX SERIES S"]),
-            ("NOT AT LAUNCH", PINK, ["PS4", "XBOX ONE", "PC", "SWITCH 2"])]
+    cols = [("PLAYS GTA VI", GOOD, ["PS5 / PS5 PRO", "SERIES X", "SERIES S", "XBOX ONE*"]),
+            ("NOT AT LAUNCH", PINK, ["PS4", "PC", "SWITCH 2"])]
     b = t(400, 62, "WHERE YOU CAN PLAY", 34)
     for i, (h, c, names) in enumerate(cols):
         x = 40 + i * 370
-        b += panel(x, 96, 350, 280, dashed=(i == 1)) + t(x + 24, 140, h, 28, c, anchor="start", font=L)
+        b += panel(x, 96, 350, 268, dashed=(i == 1)) + t(x + 24, 140, h, 28, c, anchor="start", font=L)
         for j, n in enumerate(names):
             y = 190 + j * 52
             mark = (f'<path d="M{x + 26} {y - 10}l8 8 14-17" fill="none" stroke="{c}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' if i == 0
                     else f'<path d="M{x + 28} {y - 20}l18 18m0-18l-18 18" stroke="{c}" stroke-width="5" stroke-linecap="round"/>')
             b += mark + t(x + 66, y, n, 32, anchor="start")
-    return fig(b, "GTA VI plays on PS5, PS5 Pro, Xbox Series X and Series S. It is not on PS4, Xbox One, PC or Switch 2 at launch")
+    b += t(400, 392, "* STREAMING THROUGH XBOX CLOUD GAMING", 20, MUTED, font=L)
+    return fig(b, "GTA VI plays on PS5, PS5 Pro, Xbox Series X and Series S, and streams to Xbox One through the cloud. It is not on PS4, PC or Switch 2 at launch")
 
 
 def wanted():
@@ -152,3 +153,31 @@ def wanted():
         b += star(215 + i * 74, 282, 30, False)
     b += t(400, 352, "HOLLOW: THEY KNOW THE CRIME, NOT WHO", 28, font=L)
     return fig(b, "Six solid stars mean police have identified you; hollow stars mean they know a crime happened but not who did it")
+
+
+def cloud():
+    b = t(400, 62, "GTA VI ON XBOX ONE", 34)
+    b += panel(40, 110, 230, 240) + t(155, 165, "YOUR XBOX ONE", 24, SUN, font=L)
+    b += f'<rect x="85" y="200" width="140" height="60" rx="10" fill="none" stroke="{INK}" stroke-width="4"/><circle cx="200" cy="230" r="7" fill="{INK}"/>' + t(155, 310, "STREAMS IT", 28, font=L)
+    b += f'<path d="M290 230 H500" stroke="#ff6fa0" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round"/><path d="M495 215 L515 230 L495 245" fill="none" stroke="#ff8f3f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'
+    b += t(395, 205, "INTERNET", 24, MUTED, font=L)
+    b += f'<path d="M560 255 a40 40 0 0 1 10 -78 a55 55 0 0 1 104 -12 a42 42 0 0 1 56 40 a36 36 0 0 1 -6 50 Z" fill="none" stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>'
+    b += t(640, 310, "MICROSOFT SERVERS", 22, font=L) + t(640, 345, "RUN THE GAME", 22, SUN, font=L)
+    return fig(b, "Diagram: an Xbox One streams GTA VI over the internet from Microsoft's servers, which run the game")
+
+
+def preload_bar():
+    b = t(400, 62, "PRELOAD IS OPEN", 34)
+    b += f'<rect x="80" y="120" width="640" height="56" rx="28" fill="#120824" stroke="#ffffff" stroke-opacity=".3" stroke-width="2"/><rect x="86" y="126" width="420" height="44" rx="22" fill="url(#aBar)"/>'
+    b += f'<text x="400" y="290" font-family="{D}" font-size="110" fill="url(#aNum)" text-anchor="middle">212 GB</text>'
+    b += t(400, 345, "THE MOST THE GAME NEEDS, BEFORE THE DAY-ONE PATCH", 22, MUTED, font=L)
+    return fig(b, "Progress bar for the GTA VI preload, with the 212 GB maximum download size")
+
+
+def cheats_check():
+    b = t(400, 62, "LEAKED GTA 6 CHEATS?", 34)
+    b += panel(40, 100, 340, 250) + t(210, 150, "VIRAL LISTS", 28, SUN, font=L)
+    b += f'<text x="210" y="262" font-family="{D}" font-size="100" fill="{INK}" text-anchor="middle">GTA V</text>' + t(210, 318, "CODES FROM 2013", 26, MUTED, font=L)
+    b += f'<rect x="420" y="100" width="340" height="250" rx="14" fill="#120824" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>' + t(590, 150, "CONFIRMED IN GTA VI", 22, SUN, font=L)
+    b += f'<text x="590" y="275" font-family="{D}" font-size="130" fill="url(#aNum)" text-anchor="middle">0</text>' + t(590, 318, "SO FAR", 26, MUTED, font=L)
+    return fig(b, "Comparison: viral leaked cheat lists are GTA V codes; zero cheats are confirmed for GTA VI")

@@ -7,6 +7,7 @@ from pathlib import Path
 from articles import ARTICLES, GUIDE_LINKS, ALL_GUIDES, GUIDES_PAGE
 from articles2 import ARTICLES2
 from extra import EXTRA
+import news
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -32,7 +33,7 @@ SCENE = (
     + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
 )
 
-NAV = [("/", "Home"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "What's new"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats"), ("/gear/", "Gear")]
+NAV = [("/", "Home"), ("/news/", "News"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "What's new"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats")]
 
 
 def jsonld(path, title, desc):
@@ -41,10 +42,12 @@ def jsonld(path, title, desc):
     graph = [{"@type": "WebSite", "@id": SITE + "/#site", "name": "Leonida Logbook", "url": SITE + "/",
               "description": "Unofficial GTA VI companion: guides, interactive map, tracker and cheat codes."}]
     if path != "/":
-        graph.append({"@type": "Article", "headline": page, "description": desc, "url": SITE + path,
-                      "dateModified": TODAY, "inLanguage": "en", "image": SITE + "/og.png",
-                      "author": {"@type": "Organization", "name": "Leonida Logbook", "url": SITE + "/about/"},
-                      "publisher": {"@id": SITE + "/#site"}, "isPartOf": {"@id": SITE + "/#site"}})
+        art_ = {"@type": "Article", "headline": page, "description": desc, "url": SITE + path,
+                "dateModified": TODAY, "inLanguage": "en", "image": SITE + "/og.png",
+                "author": {"@type": "Organization", "name": "Leonida Logbook", "url": SITE + "/about/"},
+                "publisher": {"@id": SITE + "/#site"}, "isPartOf": {"@id": SITE + "/#site"}}
+        art_.update(news.meta(path) or {})
+        graph.append(art_)
         graph.append({"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": page, "item": SITE + path}]})
@@ -84,6 +87,7 @@ def layout(path, title, desc, body, index=True):
 <meta property="og:image" content="{SITE}/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#120824">
+<link rel="alternate" type="application/rss+xml" title="Leonida Logbook news" href="/news/feed.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -295,6 +299,8 @@ ABOUT = f"""
   <p>Leonida Logbook is built for players who want quick, checked answers: when the game unlocks, how its systems work, what is left to find, and which cheat codes are real.</p>
   <h2>How information is checked</h2>
   <p>Before launch, pages are based on official announcements and press previews, and each page says so. From launch day, guides, cheat codes and checklists are tested against the game before they are listed. Unconfirmed reports are labelled as unconfirmed and never presented as fact.</p>
+  <h2 id="adrian">Who writes it</h2>
+  <p>{news.AUTHOR_BIO}</p>
   <h2>Who runs it</h2>
   <p>The site is run by an independent fan. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive.</p>
   <h2>How the site is funded</h2>
@@ -334,7 +340,7 @@ NOTFOUND = """
   <p class="lede">That page does not exist. It may have moved when the site was reorganized.</p>
   <div><a class="btn" href="/">Back to home</a></div></div>"""
 
-HOME += ALL_GUIDES
+HOME += news.home_block() + ALL_GUIDES
 LAUNCH += GUIDE_LINKS
 
 PAGES = [
@@ -348,7 +354,7 @@ PAGES = [
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
 ]
 
-PAGES += ARTICLES + ARTICLES2 + EXTRA
+PAGES += ARTICLES + ARTICLES2 + EXTRA + news.pages(" | Leonida Logbook")
 PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
 # ---------- write ----------
@@ -369,6 +375,8 @@ for path, title, desc, body in PAGES:
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(layout(path, title, desc, body))
 (OUT / "404.html").write_text(layout("/404.html", "Page not found | Leonida Logbook", "Page not found.", NOTFOUND, index=False))
+(OUT / "news").mkdir(exist_ok=True)
+(OUT / "news/feed.xml").write_text(news.feed(SITE))
 (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES)
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
