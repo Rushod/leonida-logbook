@@ -620,6 +620,13 @@ VEHICLE_CARDS += [
     ("tan-pickup-truck", "Tan pickup", "Off-road", "Pickup", DESCRIPTIVE, "A tan crew-cab pickup crossing a junction as a woman walks past."),
     ("illustrated-suv", "Illustrated SUV", "Car", "SUV", DESCRIPTIVE, "A cream SUV in Rockstar's flat illustrated artwork style, parked outside a store."),
 ]
+VEHICLE_CARDS += [
+    ("olive-super-suv", "Olive super SUV", "Car", "SUV", DESCRIPTIVE, "An olive-green high-performance SUV with sharp LED headlights, driving through traffic."),
+    ("navy-sport-suv", "Navy sport SUV", "Car", "SUV", DESCRIPTIVE, "A navy sport SUV seen from behind on a city street."),
+    ("compact-crossover", "Compact crossover", "Car", "SUV", DESCRIPTIVE, "A dark compact crossover passing an orange traffic barrel."),
+    ("dark-crossover", "Dark crossover", "Car", "SUV", DESCRIPTIVE, "A dark crossover crossing a junction. The shot is slightly blurred."),
+    ("neon-street-suv", "SUV on a neon street", "Car", "SUV", DESCRIPTIVE, "An SUV on a busy neon-lit street at night. The shot is very blurry."),
+]
 PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
