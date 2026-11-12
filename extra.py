@@ -455,7 +455,32 @@ VEHICLE_CARDS += [
 ]
 IMG_CREDIT["orange-muscle-coupe"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 IMG_CREDIT["grey-classic-coupe"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
-PLURAL = {"Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("vapid-dominator-buggy", "'67 Vapid Dominator Buggy", "Off-road", "Buggy", OFFICIAL, "A lifted classic muscle car turned mud buggy, with roof lights and racing stripes, tearing through a muddy trail. It comes with the Ultimate Edition, along with Paradise Garage."),
+    ("reclaimer", "Reclaimer", "Off-road", "Pickup", ON_HULL, "A silver full-size pickup with \"Reclaimer\" across the tailgate, driving down the highway."),
+    ("off-road-pickup", "Off-road pickup", "Off-road", "Pickup", DESCRIPTIVE, "A grey off-road pickup with a black hood stripe, parked next to a man in a work shirt."),
+    ("grey-pickup", "Grey pickup", "Off-road", "Pickup", DESCRIPTIVE, "A big grey pickup rolling through city traffic."),
+    ("silver-pickup", "Silver pickup", "Off-road", "Pickup", DESCRIPTIVE, "A silver four-door pickup crossing an intersection."),
+    ("two-tone-pickup", "Two-tone pickup", "Off-road", "Pickup", DESCRIPTIVE, "A red-and-white classic pickup covered in bumper stickers, carrying two men in cowboy hats."),
+    ("lifted-classic-pickup", "Lifted classic pickup", "Off-road", "Pickup", DESCRIPTIVE, "A cream lifted classic pickup with roof lights, driving down a country road."),
+    ("lifted-lime-pickup", "Lifted lime pickup", "Off-road", "Pickup", DESCRIPTIVE, "A lime-green pickup on huge off-road tyres, parked under red light."),
+    ("orange-pickup", "Orange pickup", "Off-road", "Pickup", DESCRIPTIVE, "An orange pickup glimpsed through a haze. The shot is very blurry."),
+    ("classic-suv", "Classic SUV", "Off-road", "SUV", DESCRIPTIVE, "A dark brown boxy SUV splashing through a puddle past white arches."),
+    ("white-4x4", "White 4x4", "Off-road", "SUV", DESCRIPTIVE, "A white 4x4 with people in front of it. The shot is very blurry."),
+    ("military-style-4x4", "Military-style 4x4", "Off-road", "SUV", DESCRIPTIVE, "Shown here as GTA V's red military-style 4x4 with a grille guard. Not seen in GTA VI yet."),
+    ("canis-4x4", "Canis 4x4", "Off-road", "SUV", DESCRIPTIVE, "A green lifted 4x4 with \"Canis\" on the grille, shown as GTA Online promo art. Not seen in GTA VI yet."),
+    ("monster-truck", "Monster truck", "Off-road", "Monster truck", DESCRIPTIVE, "A monster truck in a flag livery, blurred in motion. Monster truck racing is one of the reported activities."),
+    ("six-wheel-off-roader", "Six-wheel off-roader", "Off-road", "Monster truck", DESCRIPTIVE, "A large six-wheel off-road vehicle in an orange haze. The shot is very blurry."),
+    ("quad-bike", "Quad bike", "Off-road", "ATV", DESCRIPTIVE, "A rider in a helmet launching a lime-green quad bike into the air."),
+    ("beach-atv", "Beach ATV", "Off-road", "ATV", DESCRIPTIVE, "A red utility ATV with racks, parked on the beach."),
+    ("lime-buggy", "Lime buggy", "Off-road", "Buggy", DESCRIPTIVE, "A lime-green off-road buggy kicking up dirt. The shot is blurry."),
+    ("beach-bug", "Beach bug", "Off-road", "Buggy", DESCRIPTIVE, "Shown here as GTA V's orange off-road beetle with big tyres. Not seen in GTA VI yet."),
+    ("beach-vehicle", "Beach vehicle", "Off-road", "Buggy", DESCRIPTIVE, "Two beachgoers walk in front of a blue vehicle on the sand. The vehicle is too blurred to identify."),
+]
+for _s in ["military-style-4x4", "beach-bug"]:
+    IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["canis-4x4"] = "Image: GTA Online artwork, for reference. Not yet seen in GTA VI"
+PLURAL = {"Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
@@ -465,12 +490,13 @@ CAT_TEXT = {
     "Industrial": ("Industrial vehicles", "Construction and industrial vehicles work Leonida's building sites, docks and roads. Whether you can drive them is confirmed from launch day."),
     "Military": ("Military vehicles", "Military vehicles in past GTA games were usually found at army bases or called in at the highest wanted levels. What GTA VI has, and how to get it, is confirmed from launch day."),
     "Bike": ("Motorcycles", "Motorcycles use fuel, just like cars. Where to buy, store and modify each bike is confirmed from launch day."),
+    "Off-road": ("Off-roading in Leonida", "Leonida has swamps, back roads, beaches and dirt trails. Off-roaders are among the reported vehicle types, and monster truck racing is a reported activity. Where to buy each one is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Bike", "Cycle", "Emergency", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Off-road", "Bike", "Cycle", "Emergency", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
@@ -490,10 +516,10 @@ def vehicle_pages():
         if len(same) < 3:
             same += [v for v in VEHICLE_CARDS if v[0] != f and v not in same][:3 - len(same)]
         tiles = "".join(f'<a class="tile" href="/vehicles/{v[0]}/"><em>{v[3]}</em><h3>{e(v[1])}</h3></a>' for v in same)
-        get = "Ultimate Edition" if f in ("shitzu-squalo", "vapid-ganado") else "Revealed on launch day"
+        get = "Ultimate Edition" if f in ("shitzu-squalo", "vapid-ganado", "vapid-dominator-buggy") else "Revealed on launch day"
         stats = "".join(f"<tr><td><b>{x}</b></td><td>From November 19</td></tr>" for x in ["Top speed", "Acceleration", "Handling", "Seats", "Price"])
         extra = ""
-        if f in ("shitzu-squalo", "vapid-ganado"):
+        if f in ("shitzu-squalo", "vapid-ganado", "vapid-dominator-buggy"):
             extra = '<h2>How to get it</h2><p>It comes with the Ultimate Edition of GTA VI. See <a href="/editions/">Standard vs Ultimate</a> for the full list of what that edition adds.</p>'
         elif f == "armored-truck":
             extra = '<h2>Robberies</h2><p>Armored trucks appear in robbery scenes in the trailers. See the <a href="/robberies/">robberies guide</a> for how robberies and payouts work.</p>'
