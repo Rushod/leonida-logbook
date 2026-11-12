@@ -693,18 +693,72 @@ CAT_TEXT = {
 }
 
 
+CAR_CLASS = {"Supercar": "Super", "Sports": "Sports", "Race car": "Sports", "Tuner": "Sports", "Sports classic": "Sports classics",
+             "Classic": "Classics", "Muscle": "Muscle", "Lowrider": "Muscle", "Custom": "Muscle", "Sedan": "Sedans", "Wagon": "Sedans",
+             "SUV": "SUVs", "Coupe": "Coupes", "Convertible": "Coupes", "Compact": "Compacts", "Van": "Vans"}
+CAT_CLASS = {"Off-road": "Off-road", "Bike": "Motorcycles", "Cycle": "Cycles", "Boat": "Boats", "Emergency": "Emergency", "Service": "Service",
+             "Utility": "Utility", "Commercial": "Commercial", "Industrial": "Industrial", "Military": "Military", "Van": "Vans"}
+
+
+def vclass(c, k):
+    if c == "Car":
+        return CAR_CLASS.get(k, "Sedans")
+    if c == "Aircraft":
+        return "Helicopters" if "elicopter" in k else "Planes"
+    return CAT_CLASS[c]
+
+
+_P = 'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"'
+_CAR = '<path d="M3 15h18M4 15v-2l2-4h9l4 4h1v2"/><circle cx="7.5" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/>'
+ICONS = {
+    "Super": '<path d="M2 15h20M3 15l2-3 7-2 5 1 4 3v1"/><circle cx="7" cy="16" r="1.6"/><circle cx="17.5" cy="16" r="1.6"/>',
+    "Sports": '<path d="M2 15h20M3 15v-1l3-3h8l4 2h3v2"/><circle cx="7" cy="16" r="1.6"/><circle cx="17.5" cy="16" r="1.6"/>',
+    "Muscle": '<path d="M2 15h20M2 15v-2h5l2-3h6l2 3h5v2"/><circle cx="6.5" cy="16" r="1.7"/><circle cx="17.5" cy="16" r="1.7"/>',
+    "Sports classics": '<path d="M2 15h20M3 15v-2c2 0 3-3 6-3h4c2 0 3 3 5 3h3v2"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/>',
+    "Classics": '<path d="M2 15h20M2 15v-2h3l2-3h8l2 3h4v2"/><path d="M2 13h3M19 13h3"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/>',
+    "Coupes": _CAR, "Compacts": '<path d="M4 15h15M4 15v-3l3-3h7l3 3h2v3"/><circle cx="7.5" cy="16" r="1.6"/><circle cx="15.5" cy="16" r="1.6"/>',
+    "Sedans": '<path d="M2 15h20M3 15v-2l3-1 2-3h8l2 3 3 1v2"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/>',
+    "SUVs": '<path d="M2 16h20M3 16v-4l2-4h12l3 4h1v4"/><path d="M5 12h15"/><circle cx="7" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/>',
+    "Off-road": '<path d="M3 13h18M4 13V9h9l3 2h4v2M7 6h6"/><circle cx="7" cy="16.5" r="2.6"/><circle cx="17" cy="16.5" r="2.6"/>',
+    "Vans": '<path d="M2 16h20M3 16V7h12l5 4h1v5"/><path d="M15 7v4h5"/><circle cx="7" cy="17" r="1.7"/><circle cx="17" cy="17" r="1.7"/>',
+    "Motorcycles": '<circle cx="5.5" cy="16" r="3"/><circle cx="18.5" cy="16" r="3"/><path d="M5.5 16l4-6h5l4 6M9 10l-1-2h-2M14 10l2-3h2"/>',
+    "Cycles": '<circle cx="5.5" cy="16" r="3.2"/><circle cx="18.5" cy="16" r="3.2"/><path d="M5.5 16L9 9h6l3.5 7M9 9l3 7h-6M12 9V7h-2M15 9l1-3h2"/>',
+    "Emergency": '<path d="M2 16h20M3 16v-4l2-3h13l3 3v4"/><rect x="9" y="6" width="5" height="3" rx="1"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/>',
+    "Service": '<rect x="3" y="6" width="18" height="10" rx="2"/><path d="M3 11h18M7 6v5M12 6v5M17 6v5"/><circle cx="7" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/>',
+    "Utility": '<path d="M5 16V8h4l3 4M5 12h7M14 4v12h6M14 10h6"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="12" cy="17.5" r="1.5"/>',
+    "Commercial": '<rect x="2" y="6" width="13" height="10"/><path d="M15 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.6"/><circle cx="18" cy="17.5" r="1.6"/>',
+    "Industrial": '<path d="M3 17h10v-4H6l-1 4M8 13l4-6 6 2 2 5M20 14l-2 2"/><circle cx="5" cy="18" r="1"/><circle cx="11" cy="18" r="1"/>',
+    "Military": '<path d="M3 17h17l-2-3H5zM7 14v-3h8v3M15 12h6"/><circle cx="7" cy="18" r="1"/><circle cx="12" cy="18" r="1"/><circle cx="17" cy="18" r="1"/>',
+    "Boats": '<path d="M2 14h20l-3 4H5zM6 14v-3h8l3 3M9 11V8h4"/>',
+    "Helicopters": '<path d="M4 5h16M12 5v3M6 11c0-2 2-3 5-3h3c2 0 4 2 4 4v1H8c-1 0-2-1-2-2zM18 11h4M8 16h10M10 13v3M16 13v3"/>',
+    "Planes": '<path d="M2 13l8-1 4-6h2l-2 6 6-1 2 2-8 2-2 5h-2l1-5-5 1-2 1z"/>',
+}
+CLASS_ORDER = ["Super", "Sports", "Muscle", "Sports classics", "Classics", "Coupes", "Compacts", "Sedans", "SUVs", "Off-road", "Vans",
+               "Motorcycles", "Cycles", "Emergency", "Service", "Utility", "Commercial", "Industrial", "Military", "Boats", "Helicopters", "Planes"]
+
+
 def vehicle_cards():
-    cats = [c for c in ["Car", "Van", "Off-road", "Bike", "Cycle", "Emergency", "Service", "Utility", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
-    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
+    from collections import Counter
+    cnt = Counter(vclass(v[2], v[3]) for v in VEHICLE_CARDS)
+    tiles = "".join(
+        f'<button class="vtile" type="button" data-class="{e(c)}" aria-pressed="false"><svg viewBox="0 0 24 24" {_P} aria-hidden="true">{ICONS[c]}</svg>'
+        f'<span>{e(c)} <b>({cnt[c]})</b></span></button>'
+        for c in CLASS_ORDER if cnt[c])
     cards = "".join(
-        f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
-        f'<div class="wbody"><span class="wtype">{c} · {k}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
+        f'<a class="wcard" href="/vehicles/{f}/" data-class="{e(vclass(c, k))}" data-status="{e(st)}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
+        f'<div class="wbody"><span class="wtype">{e(vclass(c, k))} · {k}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
         f'<p class="wname">{st} · {credit(f)}</p></div></a>'
         for f, n, c, k, st, d in VEHICLE_CARDS)
-    return f"""<div class="db" data-db data-cards>
-  <div class="dbbar"><div class="chips">{chips}</div></div>
+    return f"""<div class="vfinder" data-vfinder>
+  <div class="vfields">
+    <label>Vehicle name<input type="search" data-vq placeholder="Search by name or description" autocomplete="off"></label>
+    <label>Name<select data-vstatus><option value="">All names</option><option>{OFFICIAL}</option><option>{ON_HULL}</option><option>{DESCRIPTIVE}</option></select></label>
+  </div>
+  <div class="vtiles">{tiles}</div>
+  <p class="vcount" aria-live="polite"><span data-vshown>{len(VEHICLE_CARDS)}</span> of {len(VEHICLE_CARDS)} vehicles <button type="button" class="vreset" data-vreset hidden>Clear filters</button></p>
   <div class="wcards">{cards}</div>
-  <p class="note">{len(VEHICLE_CARDS)} vehicles seen so far. Cars and bikes are coming next. Official names, stats and prices come from launch day.</p></div>"""
+  <p class="note" data-vempty hidden>No vehicles match. Try another class or clear the search.</p>
+  <p class="note">{len(VEHICLE_CARDS)} vehicles seen so far. Official names, stats and prices come from launch day.</p></div>"""
 
 
 def vehicle_pages():

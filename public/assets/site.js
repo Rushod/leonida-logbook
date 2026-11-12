@@ -98,3 +98,32 @@
     tick(); setInterval(tick, 1000);
   }
 })();
+
+(function () {
+  var f = document.querySelector("[data-vfinder]");
+  if (!f) return;
+  var q = f.querySelector("[data-vq]"), st = f.querySelector("[data-vstatus]"), tiles = f.querySelectorAll(".vtile"),
+      cards = f.querySelectorAll(".wcard"), shown = f.querySelector("[data-vshown]"), empty = f.querySelector("[data-vempty]"),
+      reset = f.querySelector("[data-vreset]"), on = {};
+  function run() {
+    var t = (q.value || "").toLowerCase().trim(), s = st.value, any = Object.keys(on).length > 0, n = 0;
+    [].forEach.call(cards, function (c) {
+      var ok = (!any || on[c.getAttribute("data-class")]) && (!s || c.getAttribute("data-status") === s) &&
+               (!t || c.textContent.toLowerCase().indexOf(t) !== -1);
+      c.hidden = !ok; if (ok) n++;
+    });
+    shown.textContent = n; empty.hidden = n > 0; reset.hidden = !(any || t || s);
+  }
+  [].forEach.call(tiles, function (b) {
+    b.addEventListener("click", function () {
+      var c = b.getAttribute("data-class");
+      if (on[c]) delete on[c]; else on[c] = 1;
+      b.setAttribute("aria-pressed", on[c] ? "true" : "false"); run();
+    });
+  });
+  q.addEventListener("input", run); st.addEventListener("change", run);
+  reset.addEventListener("click", function () {
+    on = {}; q.value = ""; st.value = "";
+    [].forEach.call(tiles, function (b) { b.setAttribute("aria-pressed", "false"); }); run();
+  });
+})();
