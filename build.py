@@ -376,11 +376,11 @@ shutil.copytree(ROOT / "src/img", OUT / "img")
 PHOTOS = {
     "/news/gta-6-xbox-one-cloud-gaming/": ("lucia-jason-car", "Lucia and Jason in a convertible in Vice City", 780, 438),
     "/news/gta-6-preload-live/": ("vice-beach", "A crowded Vice Beach in GTA VI with hotels behind", 1200, 675),
-    "/news/gta-6-leaked-cheats-explained/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 739),
+    "/news/gta-6-leaked-cheats-explained/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 415),
     "/characters/": ("lucia-jason-car", "Lucia and Jason in a convertible in Vice City", 780, 438),
     "/map-size/": ("vice-beach", "A crowded Vice Beach in GTA VI with hotels behind", 1200, 675),
-    "/activities/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 739),
-    "/wildlife/": ("airboat", "An airboat crossing a swamp channel in GTA VI with birds overhead", 415, 739),
+    "/activities/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 415),
+    "/wildlife/": ("airboat", "An airboat crossing a swamp channel in GTA VI with birds overhead", 415, 415),
     "/vehicles/": ("convertible-drive", "A red convertible driving down a palm-lined street", 1200, 675, "Image: shared online, source unconfirmed"),
     "/weapons/": ("ocean-view-hotel", "A couple holding pistols outside a neon Ocean View Hotel sign", 1200, 675, "Image: shared online, source unconfirmed"),
     "/wanted-level/": ("bike-chase-fan-art", "Fan artwork of Lucia and Jason on a dirt bike chased by police", 1200, 675, "Fan art, not an official Rockstar image"),
@@ -393,7 +393,7 @@ def with_photo(path, body):
         return body
     f, alt, w, h, *cap = PHOTOS[path]
     cap = cap[0] if cap else "Image: Rockstar Games"
-    tall = " tall" if h > w else ""
+    tall = " tall" if h > w else (" sq" if h == w else "")
     fig = (f'<figure class="photo{tall}"><img src="/img/{f}.webp" alt="{alt}" width="{w}" height="{h}" loading="eager" decoding="async">'
            f'<figcaption>{cap}</figcaption></figure>')
     a = body.find('<figure class="art"')

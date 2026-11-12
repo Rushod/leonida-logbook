@@ -222,3 +222,4 @@ table.vs a{white-space:nowrap}
 .photo.tall{max-width:300px}
 @media (max-width:600px){.photo.tall{max-width:240px}}
 .photo figcaption{margin-top:6px;font-size:13px;color:var(--muted)}
+.photo.sq{max-width:420px}
