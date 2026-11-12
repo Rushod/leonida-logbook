@@ -664,6 +664,17 @@ VEHICLE_CARDS += [
 ]
 for _s in ["blue-minivan", "motorhome"]:
     IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("red-heavy-duty-pickup", "Red heavy-duty pickup", "Van", "Pickup", DESCRIPTIVE, "A red-and-white heavy-duty pickup with a chrome grille, on a wet street."),
+    ("company-van", "Company van", "Van", "Cargo van", DESCRIPTIVE, "A white full-size van with company lettering, seen from above in a parking lot."),
+    ("classic-van", "Classic van", "Van", "Cargo van", DESCRIPTIVE, "A 1970s-style van with a stripe down the side, backing into a loading dock."),
+    ("white-van-red-light", "White van", "Van", "Cargo van", DESCRIPTIVE, "A white van in a red-tinted shot by a wall."),
+    ("box-truck-yard", "Box truck in a yard", "Van", "Delivery van", DESCRIPTIVE, "A white box truck behind a wooden fence, with a man in sunglasses driving an old car in front."),
+    ("off-road-van", "Off-road van", "Van", "Cargo van", DESCRIPTIVE, "Shown here as GTA V's lifted black van with a roof rack and lights. Not seen in GTA VI yet."),
+    ("passenger-van", "Passenger van", "Van", "Passenger van", DESCRIPTIVE, "Shown here as GTA V's grey passenger van. Not seen in GTA VI yet."),
+]
+for _s in ["off-road-van", "passenger-van"]:
+    IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 PLURAL = {"Van": "Vans and pickups", "Utility": "Utility", "Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
