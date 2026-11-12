@@ -370,10 +370,39 @@ shutil.copy(ROOT / "map-app/dist/map-app.js", OUT / "assets/map-app.js")
 shutil.copy(ROOT / "map-app/dist/map-app.css", OUT / "assets/map-app.css")
 (OUT / "data").mkdir(exist_ok=True)
 shutil.copy(ROOT / "content/locations.json", OUT / "data/locations.json")
+shutil.copytree(ROOT / "src/img", OUT / "img")
+
+# Official Rockstar Games images supplied by the site owner, shown with credit.
+PHOTOS = {
+    "/news/gta-6-xbox-one-cloud-gaming/": ("lucia-jason-car", "Lucia and Jason in a convertible in Vice City", 780, 438),
+    "/news/gta-6-preload-live/": ("vice-beach", "A crowded Vice Beach in GTA VI with hotels behind", 1200, 675),
+    "/news/gta-6-leaked-cheats-explained/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 739),
+    "/characters/": ("lucia-jason-car", "Lucia and Jason in a convertible in Vice City", 780, 438),
+    "/map-size/": ("vice-beach", "A crowded Vice Beach in GTA VI with hotels behind", 1200, 675),
+    "/activities/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 739),
+    "/wildlife/": ("airboat", "An airboat crossing a swamp channel in GTA VI with birds overhead", 415, 739),
+}
+
+
+def with_photo(path, body):
+    if path not in PHOTOS:
+        return body
+    f, alt, w, h = PHOTOS[path]
+    tall = " tall" if h > w else ""
+    fig = (f'<figure class="photo{tall}"><img src="/img/{f}.webp" alt="{alt}" width="{w}" height="{h}" loading="eager" decoding="async">'
+           f'<figcaption>Image: Rockstar Games</figcaption></figure>')
+    i = body.find('class="lede"')
+    i = body.find("</p>", i) + 4 if i != -1 else body.find("</h1>") + 5
+    return body[:i] + fig + body[i:] if i > 4 else fig + body
+
+
 for path, title, desc, body in PAGES:
     d = OUT / path.strip("/")
     d.mkdir(parents=True, exist_ok=True)
-    (d / "index.html").write_text(layout(path, title, desc, body))
+    html = layout(path, title, desc, with_photo(path, body))
+    if path in PHOTOS:
+        html = html.replace(f"{SITE}/og.png", f"{SITE}/img/{PHOTOS[path][0]}.webp")
+    (d / "index.html").write_text(html)
 (OUT / "404.html").write_text(layout("/404.html", "Page not found | Leonida Logbook", "Page not found.", NOTFOUND, index=False))
 (OUT / "news").mkdir(exist_ok=True)
 (OUT / "news/feed.xml").write_text(news.feed(SITE))
