@@ -480,6 +480,10 @@ VEHICLE_CARDS += [
 for _s in ["military-style-4x4", "beach-bug"]:
     IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 IMG_CREDIT["canis-4x4"] = "Image: GTA Online artwork, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("mud-run-pickup", "Mud-run pickup", "Off-road", "Pickup", DESCRIPTIVE, "A lifted red pickup with roof lights and a snorkel, with a mud-covered couple leaning on it at an off-road meet."),
+    ("green-pickup", "Green pickup", "Off-road", "Pickup", DESCRIPTIVE, "A green pickup on a street, behind a cyclist and a dog."),
+]
 PLURAL = {"Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
