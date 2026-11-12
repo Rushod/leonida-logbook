@@ -627,7 +627,20 @@ VEHICLE_CARDS += [
     ("dark-crossover", "Dark crossover", "Car", "SUV", DESCRIPTIVE, "A dark crossover crossing a junction. The shot is slightly blurred."),
     ("neon-street-suv", "SUV on a neon street", "Car", "SUV", DESCRIPTIVE, "An SUV on a busy neon-lit street at night. The shot is very blurry."),
 ]
-PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("heavy-tow-truck", "Heavy tow truck", "Utility", "Tow truck", DESCRIPTIVE, "A dark blue heavy-duty tow truck with a boom, parked on a city street."),
+    ("pickup-tow-truck", "Pickup tow truck", "Utility", "Tow truck", DESCRIPTIVE, "A battered old pickup fitted with a tow rig, parked in front of a flag mural."),
+    ("bucket-truck", "Bucket truck", "Utility", "Utility truck", DESCRIPTIVE, "A white utility truck with an aerial bucket arm, parked at a junction."),
+    ("pipe-hauler", "Pipe hauler", "Utility", "Utility truck", DESCRIPTIVE, "A semi hauling a load of large pipes along a canyon road, with motorbikes alongside."),
+    ("forklift", "Forklift", "Utility", "Forklift", DESCRIPTIVE, "A small forklift seen from high above on a loading area."),
+    ("blurry-forklift", "Forklift (close-up)", "Utility", "Forklift", DESCRIPTIVE, "A forklift seen through a car window. The shot is very blurry."),
+    ("night-utility-vehicle", "Utility vehicle at night", "Utility", "Utility truck", DESCRIPTIVE, "A dark vehicle against city lights at night. It is too dark and blurry to identify."),
+    ("red-work-pickup", "Red work pickup", "Utility", "Pickup", DESCRIPTIVE, "Shown here as GTA V's red heavy-duty work pickup. Not seen in GTA VI yet."),
+    ("tractor", "Tractor", "Utility", "Farm", DESCRIPTIVE, "Shown here as GTA V's red farm tractor with yellow wheels. Not seen in GTA VI yet."),
+]
+for _s in ["red-work-pickup", "tractor"]:
+    IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+PLURAL = {"Utility": "Utility", "Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
@@ -639,12 +652,13 @@ CAT_TEXT = {
     "Bike": ("Motorcycles", "Motorcycles use fuel, just like cars. Where to buy, store and modify each bike is confirmed from launch day."),
     "Off-road": ("Off-roading in Leonida", "Leonida has swamps, back roads, beaches and dirt trails. Off-roaders are among the reported vehicle types, and monster truck racing is a reported activity. Where to buy each one is confirmed from launch day."),
     "Service": ("Public transport and taxis", "Taxis, buses and trains move people around Vice City and beyond. Whether you can ride them, drive them or call a cab is confirmed from launch day."),
+    "Utility": ("Utility vehicles", "Tow trucks, forklifts and work trucks keep Leonida running. Whether you can drive them, or use a tow truck to move other cars, is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Off-road", "Bike", "Cycle", "Emergency", "Service", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Off-road", "Bike", "Cycle", "Emergency", "Service", "Utility", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
