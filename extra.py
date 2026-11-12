@@ -598,6 +598,28 @@ VEHICLE_CARDS += [
     ("lime-supercar", "Lime supercar", "Car", "Supercar", DESCRIPTIVE, "A lime-green supercar with gold wheels, waiting at a crossing."),
     ("red-supercar", "Red supercar", "Car", "Supercar", DESCRIPTIVE, "A red supercar with gold wheels, passing a row of shops. The shot is blurry."),
 ]
+VEHICLE_CARDS += [
+    ("blue-luxury-suv", "Blue luxury SUV", "Car", "SUV", DESCRIPTIVE, "A slate-blue luxury SUV with a panoramic roof, seen from above on the highway next to a taxi."),
+    ("black-luxury-suv", "Black luxury SUV", "Car", "SUV", DESCRIPTIVE, "A black luxury SUV pulling away down a busy city street."),
+    ("teal-luxury-suv", "Teal luxury SUV", "Car", "SUV", DESCRIPTIVE, "A teal luxury SUV with its boot open, parked by a mural with two men and a sportbike beside it."),
+    ("silver-luxury-suv", "Silver luxury SUV", "Car", "SUV", DESCRIPTIVE, "A silver full-size luxury SUV with a big chrome grille, driving past palms."),
+    ("grey-full-size-suv", "Grey full-size SUV", "Car", "SUV", DESCRIPTIVE, "A dark grey full-size luxury SUV parked behind traffic cones."),
+    ("champagne-full-size-suv", "Champagne full-size SUV", "Car", "SUV", DESCRIPTIVE, "A champagne-coloured full-size SUV driving past a pedestrian crossing sign."),
+    ("dark-muscle-suv", "Dark sport SUV", "Car", "SUV", DESCRIPTIVE, "A dark three-row sport SUV kicking up tyre smoke at a junction."),
+    ("brown-suv", "Brown SUV", "Car", "SUV", DESCRIPTIVE, "A brown mid-size SUV in a hazy, sun-filtered shot."),
+    ("green-suv", "Green SUV", "Car", "SUV", DESCRIPTIVE, "A dark green SUV seen from behind in traffic."),
+    ("grey-suv", "Grey SUV", "Car", "SUV", DESCRIPTIVE, "A grey mid-size SUV crossing an intersection."),
+    ("silver-90s-suv", "Silver 90s SUV", "Car", "SUV", DESCRIPTIVE, "A silver 1990s-style SUV in a busy street. The shot is blurry."),
+    ("night-suv", "SUV at night", "Car", "SUV", DESCRIPTIVE, "An SUV with smoke around it on a dark street at night."),
+    ("white-crossover", "White crossover", "Car", "SUV", DESCRIPTIVE, "A white crossover behind a man in a leather jacket. The shot is blurry."),
+    ("white-sport-suv", "White sport SUV", "Car", "SUV", DESCRIPTIVE, "A white sport SUV at dusk. The shot is dark and blurry."),
+    ("white-suv-blurry", "White SUV", "Car", "SUV", DESCRIPTIVE, "A white SUV glimpsed through traffic. The shot is very blurry."),
+    ("striped-classic-4x4", "Striped classic 4x4", "Off-road", "SUV", DESCRIPTIVE, "A cream classic 4x4 with orange stripes, splashing through mud at night."),
+    ("boxy-4x4", "Boxy 4x4", "Off-road", "SUV", DESCRIPTIVE, "A dark boxy 4x4 parked outside a pawn shop at night."),
+    ("red-compact-4x4", "Red compact 4x4", "Off-road", "SUV", DESCRIPTIVE, "A small red 4x4 seen from above. The shot is blurry."),
+    ("tan-pickup-truck", "Tan pickup", "Off-road", "Pickup", DESCRIPTIVE, "A tan crew-cab pickup crossing a junction as a woman walks past."),
+    ("illustrated-suv", "Illustrated SUV", "Car", "SUV", DESCRIPTIVE, "A cream SUV in Rockstar's flat illustrated artwork style, parked outside a store."),
+]
 PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
