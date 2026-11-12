@@ -496,6 +496,31 @@ VEHICLE_CARDS += [
     ("jumbo-jet", "Jumbo jet", "Aircraft", "Jet", DESCRIPTIVE, "A four-engine airliner climbing past the clouds."),
     ("blimp", "Blimp", "Aircraft", "Airship", DESCRIPTIVE, "A white blimp floating over an island off the coast."),
 ]
+VEHICLE_CARDS += [
+    ("green-luxury-sedan", "Green luxury sedan", "Car", "Sedan", DESCRIPTIVE, "A metallic green full-size sedan with a big chrome grille, parked by a colourful mural."),
+    ("red-luxury-sedan", "Red luxury sedan", "Car", "Sedan", DESCRIPTIVE, "A red luxury sedan on chrome wire wheels, with people dancing on it under a pink awning."),
+    ("black-luxury-sedan", "Black luxury sedan", "Car", "Sedan", DESCRIPTIVE, "A black luxury sedan with a diamond badge, sliding sideways down a city street."),
+    ("party-sport-sedan", "Party sport sedan", "Car", "Sedan", DESCRIPTIVE, "A dark four-ring-style sport sedan with dancers standing on it at a street party."),
+    ("pink-stanier", "Pink sedan", "Car", "Sedan", DESCRIPTIVE, "A pink sedan seen from above under purple light, with people dancing on its roof."),
+    ("blue-luxury-sedan", "Blue luxury sedan", "Car", "Sedan", DESCRIPTIVE, "A long blue classic luxury sedan with its door open, on a street at night with a fire behind it."),
+    ("blue-sedan", "Blue sedan", "Car", "Sedan", DESCRIPTIVE, "A blue 1990s-style sedan driving past shops."),
+    ("white-90s-sedan", "White 90s sedan", "Car", "Sedan", DESCRIPTIVE, "A white 1990s-style four-door sedan parked at the roadside."),
+    ("white-sedan", "White sedan", "Car", "Sedan", DESCRIPTIVE, "A white mid-size sedan crossing an intersection."),
+    ("silver-sedan", "Silver sedan", "Car", "Sedan", DESCRIPTIVE, "A silver modern sedan on the highway."),
+    ("beige-sedan", "Beige sedan", "Car", "Sedan", DESCRIPTIVE, "A beige 1990s-style sedan pulling out by a white fence."),
+    ("grey-sedan", "Grey sedan", "Car", "Sedan", DESCRIPTIVE, "A grey modern sedan turning across a street."),
+    ("dark-sedan", "Dark sedan", "Car", "Sedan", DESCRIPTIVE, "A dark sedan seen from above under red light."),
+    ("sedan-on-lift", "Sedan on a lift", "Car", "Sedan", DESCRIPTIVE, "A red sedan raised on a garage lift while a mechanic works below. Possibly a hint of a mod shop or repair garage."),
+    ("grey-police-style-sedan", "Grey sedan", "Car", "Sedan", DESCRIPTIVE, "A grey sedan with LED headlights in traffic. The shot is blurry."),
+    ("maroon-sedan", "Maroon sedan", "Car", "Sedan", DESCRIPTIVE, "A maroon sedan in traffic. The shot is blurry."),
+    ("wood-panel-wagon", "Wood-panel wagon", "Car", "Wagon", DESCRIPTIVE, "A brown station wagon with wood-panel sides, in a busy street scene."),
+    ("blue-wagon", "Blue wagon", "Car", "Wagon", DESCRIPTIVE, "Shown here as GTA V's blue station wagon. Not seen in GTA VI yet."),
+    ("cream-wagon", "Cream wagon", "Car", "Wagon", DESCRIPTIVE, "Shown here as GTA V's cream station wagon with a roof rack. Not seen in GTA VI yet."),
+    ("red-gta-iv-sedan", "Red sport sedan", "Car", "Sedan", DESCRIPTIVE, "Shown here as a red sport sedan from GTA IV. Not seen in GTA VI yet."),
+]
+for _s in ["blue-wagon", "cream-wagon"]:
+    IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["red-gta-iv-sedan"] = "Image: GTA IV screenshot, for reference. Not yet seen in GTA VI"
 PLURAL = {"Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
