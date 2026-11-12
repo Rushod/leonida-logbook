@@ -418,6 +418,31 @@ VEHICLE_CARDS += [
 ]
 IMG_CREDIT["bobber"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 IMG_CREDIT["police-motorcycle"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("vapid-ganado", "Vapid Ganado", "Car", "Muscle", OFFICIAL, "A yellow car-based pickup with a striped hood scoop, drifting along the seafront. The Ultimate Edition includes a Vapid Ganado Retro Build at Jason's safehouse."),
+    ("buccaneer", "Buccaneer", "Car", "Lowrider", ON_HULL, "A green metal-flake lowrider convertible with gold trim, gold wire wheels and \"Buccaneer\" on the grille, parked by the bay."),
+    ("deviant", "Deviant", "Car", "Muscle", ON_HULL, "A muscle car in a stars-and-stripes flag livery, with \"Deviant\" script on the side."),
+    ("red-muscle-coupe", "Red muscle coupe", "Car", "Muscle", DESCRIPTIVE, "A 1970s-style red muscle coupe with a shaker hood, parked by a fire hydrant."),
+    ("red-widebody-muscle-car", "Red modern muscle car", "Car", "Muscle", DESCRIPTIVE, "A red modern muscle coupe with a wide stance, rolling through traffic."),
+    ("modern-muscle-car", "Grey modern muscle car", "Car", "Muscle", DESCRIPTIVE, "A dark grey modern muscle coupe crossing an intersection."),
+    ("muscle-sedan", "Muscle sedan", "Car", "Muscle", DESCRIPTIVE, "A grey four-door muscle sedan with LED headlights, driving down a residential street."),
+    ("black-muscle-car", "Black muscle car", "Car", "Muscle", DESCRIPTIVE, "A black muscle car with a gold stripe and wide tail lights. The shot is blurred."),
+    ("striped-muscle-car", "Striped muscle car", "Car", "Muscle", DESCRIPTIVE, "A red muscle car with black stripes, parked in the dirt by a wooden shack. The shot is blurry."),
+    ("airborne-muscle-car", "Airborne muscle car", "Car", "Muscle", DESCRIPTIVE, "A red muscle car flying through the air with its headlights blazing."),
+    ("night-muscle-car", "Muscle car at night", "Car", "Muscle", DESCRIPTIVE, "A muscle car's headlights glaring through the dark. The car itself is hard to make out."),
+    ("pinstriped-lowrider", "Pinstriped lowrider", "Car", "Lowrider", DESCRIPTIVE, "A blue lowrider with pinstriped paint at a busy street car meet."),
+    ("blue-donk", "Blue donk", "Car", "Custom", DESCRIPTIVE, "A blue classic sedan on oversized chrome wheels, kicking up tyre smoke."),
+    ("gold-front-classic", "Gold-front classic", "Car", "Classic", DESCRIPTIVE, "A classic car with a gold front end, blurred by motion as it passes."),
+    ("pink-classic-convertible", "Pink classic convertible", "Car", "Classic", DESCRIPTIVE, "A faded pink 1960s-style convertible cruising past white arched buildings."),
+    ("maroon-coupe", "Maroon coupe", "Car", "Classic", DESCRIPTIVE, "A maroon coupe driving along a quiet road at dusk."),
+    ("patriot-race-car", "Patriot race car", "Car", "Race car", DESCRIPTIVE, "A black number 18 race car in Patriot Beer livery, racing in a pack. Along with the Takio car, a strong hint of circuit racing."),
+    ("purple-hi-rider", "Purple hi-rider", "Car", "Custom", DESCRIPTIVE, "Artwork of a purple classic on lifted suspension and gold wheels, with a 305 plate."),
+    ("hot-rod", "Hot rod", "Car", "Classic", DESCRIPTIVE, "Shown here as GTA V's red hot rod. Not seen in GTA VI yet."),
+    ("minivan", "Minivan", "Car", "Van", DESCRIPTIVE, "Shown here as GTA V's two-tone minivan. Not seen in GTA VI yet."),
+]
+IMG_CREDIT["purple-hi-rider"] = "Artwork, source unconfirmed"
+IMG_CREDIT["hot-rod"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["minivan"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 PLURAL = {"Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
@@ -453,10 +478,10 @@ def vehicle_pages():
         if len(same) < 3:
             same += [v for v in VEHICLE_CARDS if v[0] != f and v not in same][:3 - len(same)]
         tiles = "".join(f'<a class="tile" href="/vehicles/{v[0]}/"><em>{v[3]}</em><h3>{e(v[1])}</h3></a>' for v in same)
-        get = "Ultimate Edition" if f == "shitzu-squalo" else "Revealed on launch day"
+        get = "Ultimate Edition" if f in ("shitzu-squalo", "vapid-ganado") else "Revealed on launch day"
         stats = "".join(f"<tr><td><b>{x}</b></td><td>From November 19</td></tr>" for x in ["Top speed", "Acceleration", "Handling", "Seats", "Price"])
         extra = ""
-        if f == "shitzu-squalo":
+        if f in ("shitzu-squalo", "vapid-ganado"):
             extra = '<h2>How to get it</h2><p>It comes with the Ultimate Edition of GTA VI. See <a href="/editions/">Standard vs Ultimate</a> for the full list of what that edition adds.</p>'
         elif f == "armored-truck":
             extra = '<h2>Robberies</h2><p>Armored trucks appear in robbery scenes in the trailers. See the <a href="/robberies/">robberies guide</a> for how robberies and payouts work.</p>'
