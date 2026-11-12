@@ -568,6 +568,18 @@ VEHICLE_CARDS += [
 for _s in ["orange-speedster", "red-gt-coupe", "red-shooting-brake", "blue-sport-sedan"]:
     IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 IMG_CREDIT["camo-wrap-sports-car"] = "Image: source unconfirmed"
+VEHICLE_CARDS += [
+    ("bronze-crossover-hatch", "Bronze sport hatch", "Car", "Sports", DESCRIPTIVE, "A bronze sporty hatchback with a raised stance and quad exhausts, seen from above on the highway."),
+    ("red-gt-sedan", "Red GT sedan", "Car", "Sports", DESCRIPTIVE, "A red four-door GT sedan on custom wheels, crossing a palm-lined street with a police car behind."),
+    ("teal-sports-coupe", "Teal sports coupe", "Car", "Sports", DESCRIPTIVE, "A teal sports coupe seen from above, blurred by motion."),
+    ("night-livery-coupe", "Livery coupe at night", "Car", "Tuner", DESCRIPTIVE, "A coupe with red and white livery behind a fence at night. The shot is very dark and blurry."),
+    ("green-sedan-above", "Green sport sedan", "Car", "Tuner", DESCRIPTIVE, "A green sport sedan seen from directly above, with its door open."),
+    ("dark-sport-sedan", "Dark sport sedan", "Car", "Sports", DESCRIPTIVE, "A dark grey sport sedan driving away down a city street."),
+    ("blue-electric-gt", "Blue GT", "Car", "Sports", DESCRIPTIVE, "A blue sporty GT car in traffic. The shot is blurry."),
+    ("black-gt-night", "Black GT at night", "Car", "Sports", DESCRIPTIVE, "A black sports car in front of neon-lit bars at night."),
+    ("pink-spotted-coupe", "Pink spotted coupe", "Car", "Sports", DESCRIPTIVE, "A pale pink coupe with paw-print style decals on the hood, seen through a windscreen."),
+    ("white-electric-coupe", "White sports coupe", "Car", "Sports", DESCRIPTIVE, "A white sports coupe in a crowded scene. The shot is blurry."),
+]
 PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
