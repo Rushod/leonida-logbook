@@ -413,7 +413,7 @@ for path, title, desc, body in PAGES:
 (OUT / "404.html").write_text(layout("/404.html", "Page not found | Leonida Logbook", "Page not found.", NOTFOUND, index=False))
 (OUT / "news").mkdir(exist_ok=True)
 (OUT / "news/feed.xml").write_text(news.feed(SITE))
-(OUT / "_redirects").write_text("/guide/ /guides/ 301\n/guide /guides/ 301\n")
+(OUT / "_redirects").write_text("/guide/ /guides/ 301\n/guide /guides/ 301\n/vehicles-weapons/ /weapons/ 301\n/vehicles-weapons /weapons/ 301\n")
 (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES)
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
