@@ -543,6 +543,31 @@ VEHICLE_CARDS += [
     ("caged-truck", "Caged off-road truck", "Service", "Utility", DESCRIPTIVE, "Shown here as GTA V's rusty caged off-road truck. Not seen in GTA VI yet."),
 ]
 IMG_CREDIT["caged-truck"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("buffalo", "Buffalo", "Car", "Sports", ON_HULL, "A dark sedan with \"Buffalo\" across the open boot lid, with Lucia looking into a trunk that holds a person."),
+    ("street-supercars", "Street supercars", "Car", "Sports", DESCRIPTIVE, "A pink supercar in the foreground, with a lime-green and a teal sports car parked behind it on a palm-lined street."),
+    ("green-sports-car", "Green sports car", "Car", "Sports", DESCRIPTIVE, "A green mid-engine sports car with a rear wing, seen from above on a sunny road."),
+    ("blue-striped-roadster", "Blue striped roadster", "Car", "Sports", DESCRIPTIVE, "A blue roadster with a white racing stripe, parked at a busy kerb."),
+    ("sky-blue-sports-convertible", "Sky-blue convertible", "Car", "Sports", DESCRIPTIVE, "A sky-blue rear-engine sports convertible, seen from behind in traffic."),
+    ("silver-sports-coupe", "Silver sports coupe", "Car", "Sports", DESCRIPTIVE, "A silver mid-engine sports coupe parked on a busy street."),
+    ("silver-classic-sports-car", "Silver classic sports car", "Car", "Sports", DESCRIPTIVE, "A silver rear-engine classic sports car seen from above."),
+    ("grey-gt-coupe", "Grey GT coupe", "Car", "Sports", DESCRIPTIVE, "A dark grey four-door GT coupe on a city street."),
+    ("white-sportback", "White sportback", "Car", "Sports", DESCRIPTIVE, "A white four-ring-style sportback in traffic. The shot is blurry."),
+    ("red-sports-convertible", "Red sports convertible", "Car", "Sports", DESCRIPTIVE, "A red front-engine sports convertible driving past. The shot is blurry."),
+    ("blurry-green-sports-car", "Green sports car (blurry)", "Car", "Sports", DESCRIPTIVE, "A green sports car seen from far away. The shot is very blurry."),
+    ("vb-race-car", "VB race car", "Car", "Race car", DESCRIPTIVE, "A white race car with a big rear wing and sponsor decals, on the grid with the Takio and number 18 cars."),
+    ("kemukawa-tuner", "Kemukawa tuner", "Car", "Tuner", DESCRIPTIVE, "A sticker-bombed Japanese tuner car with round pink tail lights and underglow, at a night street meet."),
+    ("80s-hatchback", "80s hatchback", "Car", "Compact", DESCRIPTIVE, "A battered 1980s hatchback parked on a lawn, with a man sitting against it."),
+    ("80s-coupe", "80s coupe", "Car", "Tuner", DESCRIPTIVE, "A grey 1980s coupe parked at the roadside."),
+    ("camo-wrap-sports-car", "Camo-wrap sports car", "Car", "Sports", DESCRIPTIVE, "A mid-engine sports car in a pink and teal camo wrap, parked by the water in front of the skyline."),
+    ("orange-speedster", "Orange speedster", "Car", "Sports", DESCRIPTIVE, "Shown here as GTA V's orange open-top speedster. Not seen in GTA VI yet."),
+    ("red-gt-coupe", "Red GT coupe", "Car", "Sports", DESCRIPTIVE, "Shown here as GTA V's red grand tourer by the sea. Not seen in GTA VI yet."),
+    ("red-shooting-brake", "Red shooting brake", "Car", "Sports", DESCRIPTIVE, "Shown here as GTA V's red shooting-brake sports car. Not seen in GTA VI yet."),
+    ("blue-sport-sedan", "Blue sport sedan", "Car", "Sedan", DESCRIPTIVE, "Shown here as GTA V's blue sport sedan. Not seen in GTA VI yet."),
+]
+for _s in ["orange-speedster", "red-gt-coupe", "red-shooting-brake", "blue-sport-sedan"]:
+    IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+IMG_CREDIT["camo-wrap-sports-car"] = "Image: source unconfirmed"
 PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
