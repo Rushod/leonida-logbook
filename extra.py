@@ -255,18 +255,49 @@ WEAPON_CARDS += [
 ]
 
 
+SNIPERS = {"hunting-rifle", "battle-rifle", "bolt-action-rifle", "sniper-rifle"}
+W_ORDER = ["Handguns", "SMGs", "Shotguns", "Rifles", "Snipers", "Heavy", "Throwables", "Other"]
+W_ICONS = {
+    "Handguns": '<path d="M3 8h15v3H9l-1 2v4H5l1-6H3z"/><path d="M10 11v2h3"/>',
+    "SMGs": '<path d="M2 9h16v3h-6v2h-2l-1 5H6l1-5H3zM18 10h4M11 14v4"/>',
+    "Shotguns": '<path d="M1 10h17v2H8l-3 4H2l2-4H1zM18 10.5h5M11 12v2h3"/>',
+    "Rifles": '<path d="M1 11l5-1h14v2h-6v2h-2l-1 4H8l1-4H5l-4 1zM20 10.5h3M12 7h4v3"/>',
+    "Snipers": '<path d="M1 12l5-1h17v1.5H11l-1 1H5l-4 1zM9 11V8h7v3M8 8h9M12 13v3"/>',
+    "Heavy": '<path d="M2 9h18v5H2zM20 10h3v3h-3M7 14v4h3v-4M14 14v3"/><circle cx="5" cy="11.5" r="1"/>',
+    "Throwables": '<circle cx="11" cy="14" r="6"/><path d="M11 8V5h3M14 5l2-2M8 12h6"/>',
+    "Other": '<path d="M5 19L17 7M14 4l6 6-2 2-6-6zM4 20l2-2"/>',
+}
+
+
+def wclass(f, t):
+    if f in SNIPERS:
+        return "Snipers"
+    return {"Handgun": "Handguns", "SMG": "SMGs", "Shotgun": "Shotguns", "Rifle": "Rifles"}.get(t, t if t in ("Heavy", "Other") else "Throwables")
+
+
 def weapon_cards():
-    types = [t for t in ["Handgun", "SMG", "Shotgun", "Rifle", "Heavy", "Throwable", "Other"] if any(c[2] == t for c in WEAPON_CARDS)]
-    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t if t in ("Heavy", "Other") else t + "s"}</button>' for t in types)
+    from collections import Counter
+    cnt = Counter(wclass(c[0], c[2]) for c in WEAPON_CARDS)
+    tiles = "".join(
+        f'<button class="vtile" type="button" data-class="{c}" aria-pressed="false"><svg viewBox="0 0 24 24" {_P} aria-hidden="true">{W_ICONS[c]}</svg>'
+        f'<span>{c} <b>({cnt[c]})</b></span></button>' for c in W_ORDER if cnt[c])
+    def src(f):
+        return "Seen in GTA VI" if f not in IMG_CREDIT else "Reference image"
     cards = "".join(
-        f'<a class="wcard" href="/weapons/{f}/" data-type="{t}"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
-        f'<div class="wbody"><span class="wtype">{t}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
+        f'<a class="wcard" href="/weapons/{f}/" data-class="{wclass(f, t)}" data-status="{src(f)}"><img src="/img/weapons/{f}.webp" alt="{e(n)}" width="640" height="360" loading="lazy" decoding="async">'
+        f'<div class="wbody"><span class="wtype">{wclass(f, t)}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
         f'<p class="wname">{"Official name" if named else "Official name not revealed yet"} · {credit(f)}</p></div></a>'
         for f, n, t, named, d in WEAPON_CARDS)
-    return f"""<div class="db" data-db data-cards>
-  <div class="dbbar"><div class="chips">{chips}</div></div>
+    return f"""<div class="vfinder" data-vfinder>
+  <div class="vfields">
+    <label>Weapon name<input type="search" data-vq placeholder="Search by name or description" autocomplete="off"></label>
+    <label>Image<select data-vstatus><option value="">All images</option><option>Seen in GTA VI</option><option>Reference image</option></select></label>
+  </div>
+  <div class="vtiles">{tiles}</div>
+  <p class="vcount" aria-live="polite"><span data-vshown>{len(WEAPON_CARDS)}</span> of {len(WEAPON_CARDS)} weapons <button type="button" class="vreset" data-vreset hidden>Clear filters</button></p>
   <div class="wcards">{cards}</div>
-  <p class="note">{len(WEAPON_CARDS)} weapons seen so far. Official names, stats, prices and where to buy each one are added from launch day.</p></div>"""
+  <p class="note" data-vempty hidden>No weapons match. Try another class or clear the search.</p>
+  <p class="note">{len(WEAPON_CARDS)} weapons so far. Official names, stats, prices and where to buy each one are added from launch day.</p></div>"""
 
 
 def db_table(rows, kind):
