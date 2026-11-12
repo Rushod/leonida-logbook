@@ -580,6 +580,16 @@ VEHICLE_CARDS += [
     ("pink-spotted-coupe", "Pink spotted coupe", "Car", "Sports", DESCRIPTIVE, "A pale pink coupe with paw-print style decals on the hood, seen through a windscreen."),
     ("white-electric-coupe", "White sports coupe", "Car", "Sports", DESCRIPTIVE, "A white sports coupe in a crowded scene. The shot is blurry."),
 ]
+VEHICLE_CARDS += [
+    ("white-wedge-sports-car", "White wedge sports car", "Car", "Sports classic", DESCRIPTIVE, "A white 1980s-style wedge sports car with red stripes, parked outside a curved hotel at dusk. It may be the '95 Grotti Cheetah from the Ultimate Edition, but that is not confirmed."),
+    ("green-classic-roadster", "Green classic roadster", "Car", "Sports classic", DESCRIPTIVE, "A green 1960s-style roadster on the beachfront, with a couple leaning on it."),
+    ("number-36-classic", "Number 36 classic", "Car", "Sports classic", DESCRIPTIVE, "A red classic racer with a white stripe and number 36 on the door, seen up close."),
+    ("red-80s-convertible", "Red 80s convertible", "Car", "Sports classic", DESCRIPTIVE, "A red 1980s-style convertible cruising across a causeway with the skyline behind."),
+    ("vb-wedge-supercar", "VB wedge supercar", "Car", "Sports classic", DESCRIPTIVE, "A purple wedge-shaped supercar in VB racing livery with blue underglow, at night."),
+    ("gold-donk", "Gold-trim donk", "Car", "Custom", DESCRIPTIVE, "A mint-green classic coupe with a gold grille, gold bumpers and huge gold wheels, parked by the bay."),
+    ("teal-50s-coupe", "Teal 50s coupe", "Car", "Sports classic", DESCRIPTIVE, "Shown here as GTA V's teal 1950s coupe. Not seen in GTA VI yet."),
+]
+IMG_CREDIT["teal-50s-coupe"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
