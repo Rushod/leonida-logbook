@@ -640,7 +640,31 @@ VEHICLE_CARDS += [
 ]
 for _s in ["red-work-pickup", "tractor"]:
     IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
-PLURAL = {"Utility": "Utility", "Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("hotel-shuttle-van", "Hotel shuttle van", "Van", "Passenger van", DESCRIPTIVE, "A white high-roof passenger van with Banner Hotel &amp; Spa branding, outside a department store."),
+    ("wrapped-van", "Wrapped van", "Van", "Passenger van", DESCRIPTIVE, "A silver-and-sky-blue van with a business wrap, seen from above."),
+    ("dark-cargo-van", "Dark cargo van", "Van", "Cargo van", DESCRIPTIVE, "A dark modern cargo van with LED headlights, partly hidden behind palms."),
+    ("work-van", "Work van", "Van", "Cargo van", DESCRIPTIVE, "A grey full-size work van with a company livery, parked at the kerb."),
+    ("roof-rack-van", "Roof-rack van", "Van", "Cargo van", DESCRIPTIVE, "A dark van with a ladder rack driving down a street at night."),
+    ("step-van", "Step van", "Van", "Delivery van", DESCRIPTIVE, "A white step van, like a parcel or bread truck, driving down the highway."),
+    ("night-van", "Van at night", "Van", "Cargo van", DESCRIPTIVE, "A van with its headlights on at night. The shot is very blurry."),
+    ("minivan-above", "Minivan", "Van", "Minivan", DESCRIPTIVE, "A dark minivan crossing an intersection, seen from high above."),
+    ("motorhome-blurry", "Motorhome", "Van", "Motorhome", DESCRIPTIVE, "A cream motorhome in a parking lot. The shot is very blurry."),
+    ("pickup-with-jet-ski", "Pickup with jet ski", "Van", "Pickup", DESCRIPTIVE, "A silver pickup towing a jet ski on a trailer down a residential street."),
+    ("heavy-duty-pickup", "Heavy-duty pickup", "Van", "Pickup", DESCRIPTIVE, "A white heavy-duty work truck parked behind another pickup."),
+    ("flatbed-pickup", "Flatbed pickup", "Van", "Pickup", DESCRIPTIVE, "A dark blue classic pickup with a slatted flatbed."),
+    ("brown-classic-pickup", "Brown classic pickup", "Van", "Pickup", DESCRIPTIVE, "A brown 1980s-style pickup parked by a wooden fence."),
+    ("green-classic-jeep-pickup", "Green classic 4x4 pickup", "Van", "Pickup", DESCRIPTIVE, "A green classic open-top 4x4 pickup parked by a pool, with a woman in a red outfit beside it."),
+    ("tuckers-pickup", "Tuckers pickup", "Van", "Pickup", DESCRIPTIVE, "A white pickup with Tuckers branding on the tailgate, parked in a grassy yard at dusk."),
+    ("delivery-pickup", "Delivery pickup", "Van", "Pickup", DESCRIPTIVE, "A white pickup loaded with boxes, seen past a store doorway."),
+    ("teal-pickup-blurry", "Teal pickup", "Van", "Pickup", DESCRIPTIVE, "A teal pickup seen behind power lines. The shot is very blurry."),
+    ("white-pickup-blurry", "White pickup", "Van", "Pickup", DESCRIPTIVE, "A white pickup in traffic, seen from inside a car. The shot is very blurry."),
+    ("blue-minivan", "Blue minivan", "Van", "Minivan", DESCRIPTIVE, "Shown here as GTA V's blue minivan. Not seen in GTA VI yet."),
+    ("motorhome", "Motorhome (GTA V)", "Van", "Motorhome", DESCRIPTIVE, "Shown here as GTA V's camper motorhome. Not seen in GTA VI yet."),
+]
+for _s in ["blue-minivan", "motorhome"]:
+    IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+PLURAL = {"Van": "Vans and pickups", "Utility": "Utility", "Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
@@ -653,12 +677,13 @@ CAT_TEXT = {
     "Off-road": ("Off-roading in Leonida", "Leonida has swamps, back roads, beaches and dirt trails. Off-roaders are among the reported vehicle types, and monster truck racing is a reported activity. Where to buy each one is confirmed from launch day."),
     "Service": ("Public transport and taxis", "Taxis, buses and trains move people around Vice City and beyond. Whether you can ride them, drive them or call a cab is confirmed from launch day."),
     "Utility": ("Utility vehicles", "Tow trucks, forklifts and work trucks keep Leonida running. Whether you can drive them, or use a tow truck to move other cars, is confirmed from launch day."),
+    "Van": ("Vans and pickups", "Vans and pickups are everyday traffic in Leonida, and the trunk of a vehicle is where extra weapons and gear are stored. Which ones you can buy, register and modify is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Off-road", "Bike", "Cycle", "Emergency", "Service", "Utility", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Van", "Off-road", "Bike", "Cycle", "Emergency", "Service", "Utility", "Commercial", "Industrial", "Military", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
