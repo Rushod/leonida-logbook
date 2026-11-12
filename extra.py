@@ -590,6 +590,14 @@ VEHICLE_CARDS += [
     ("teal-50s-coupe", "Teal 50s coupe", "Car", "Sports classic", DESCRIPTIVE, "Shown here as GTA V's teal 1950s coupe. Not seen in GTA VI yet."),
 ]
 IMG_CREDIT["teal-50s-coupe"] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("orange-hypercar", "Orange hypercar", "Car", "Supercar", DESCRIPTIVE, "An orange mid-engine hypercar with a huge rear wing and gold wheels, parked by the bay with the skyline behind."),
+    ("police-supercar", "Police supercar", "Car", "Supercar", DESCRIPTIVE, "A black-and-white Vice Beach police supercar numbered #911, with a light bar and red underglow."),
+    ("lime-hypercar", "Lime hypercar", "Car", "Supercar", DESCRIPTIVE, "A lime-green hypercar with a white side stripe and rear wing, on a sunny street of hotels."),
+    ("orange-wedge-hypercar", "Orange wedge hypercar", "Car", "Supercar", DESCRIPTIVE, "An orange hypercar with a sharp wedge tail, on a wet neon-lit street at night."),
+    ("lime-supercar", "Lime supercar", "Car", "Supercar", DESCRIPTIVE, "A lime-green supercar with gold wheels, waiting at a crossing."),
+    ("red-supercar", "Red supercar", "Car", "Supercar", DESCRIPTIVE, "A red supercar with gold wheels, passing a row of shops. The shot is blurry."),
+]
 PLURAL = {"Service": "Service", "Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
