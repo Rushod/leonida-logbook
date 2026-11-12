@@ -204,14 +204,64 @@ WEAPON_CARDS = [
      "Fired out of a moving car's window during a chase, blowing a police car into the air."),
 ]
 
+IMG_CREDIT = {}
+_GTAV = "Image: GTA V render, for reference. Not yet seen in GTA VI"
+_REF = "Reference image, not from GTA VI"
+_REALCAR = "Real-world photo, not from GTA VI"
+for _s in ["rocket-launcher", "micro-smg", "compact-smg", "pump-shotgun", "sniper-rifle", "grenade", "molotov", "smoke-grenade", "sticky-bomb", "stun-gun", "semi-auto-pistol"]:
+    IMG_CREDIT[_s] = _GTAV
+for _s in ["flashbang", "speargun", "golf-club"]:
+    IMG_CREDIT[_s] = _REF
+IMG_CREDIT["classic-sedan-reference"] = _REALCAR
+
+
+def credit(slug):
+    return IMG_CREDIT.get(slug, "Image: Rockstar Games")
+
+
+WEAPON_CARDS += [
+    ("unidentified-long-gun", "Unidentified long gun", "Rifle", False,
+     "A woman carries a long, wooden-handled weapon through an abandoned house. It is not clear yet what it is."),
+    ("stun-gun", "Stun gun", "Handgun", False,
+     "Shown here as GTA V's stun gun. A stun gun has not been seen in GTA VI footage yet, though the game's non-lethal options make one likely."),
+    ("semi-auto-pistol", "Semi-auto pistol", "Handgun", False,
+     "Shown here as GTA V's pistol icon. Expect a basic pistol like this in GTA VI, with its own name and look."),
+    ("micro-smg", "Micro SMG", "SMG", False,
+     "Shown here as GTA V's micro SMG. The GTA VI version has not been seen yet."),
+    ("compact-smg", "Compact SMG", "SMG", False,
+     "Shown here as GTA V's compact SMG with a wooden grip. The GTA VI version has not been seen yet."),
+    ("pump-shotgun", "Pump shotgun", "Shotgun", False,
+     "Shown here as GTA V's pump shotgun. The GTA VI version has not been seen yet."),
+    ("sniper-rifle", "Sniper rifle", "Rifle", False,
+     "Shown here as GTA V's scoped sniper rifle. GTA VI's trailers do show scoped hunting rifles."),
+    ("rocket-launcher", "Rocket launcher", "Heavy", False,
+     "Shown here as GTA V's rocket launcher. A rocket launcher has not been seen in GTA VI footage yet."),
+    ("grenade", "Grenade", "Throwable", False,
+     "Shown here as GTA V's hand grenade. The GTA VI version has not been seen yet."),
+    ("sticky-bomb", "Sticky bomb", "Throwable", False,
+     "Shown here as GTA V's remote sticky bomb. The GTA VI version has not been seen yet."),
+    ("molotov", "Molotov", "Throwable", False,
+     "Shown here as GTA V's Molotov cocktail. The GTA VI version has not been seen yet."),
+    ("smoke-grenade", "Smoke grenade", "Throwable", False,
+     "Shown here as GTA V's smoke grenade. The GTA VI version has not been seen yet."),
+    ("flashbang", "Flashbang", "Throwable", False,
+     "Reference image of a stun grenade, not from the game. A flashbang has not been seen in GTA VI footage yet."),
+    ("speargun", "Speargun", "Other", False,
+     "Reference image of a speargun, not from the game. Scuba diving is a reported activity, so an underwater weapon is possible."),
+    ("golf-club", "Golf club", "Other", False,
+     "Placeholder photo of a golf ball, not from the game. A golf club as a melee weapon has not been shown in GTA VI yet."),
+    ("red-briefcase", "Red briefcase", "Other", False,
+     "A red briefcase carried at sunset in a trailer. Whether it is an item you can use is not known yet."),
+]
+
 
 def weapon_cards():
-    types = [t for t in ["Handgun", "SMG", "Shotgun", "Rifle", "Heavy"] if any(c[2] == t for c in WEAPON_CARDS)]
-    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t if t == "Heavy" else t + "s"}</button>' for t in types)
+    types = [t for t in ["Handgun", "SMG", "Shotgun", "Rifle", "Heavy", "Throwable", "Other"] if any(c[2] == t for c in WEAPON_CARDS)]
+    chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t if t in ("Heavy", "Other") else t + "s"}</button>' for t in types)
     cards = "".join(
         f'<a class="wcard" href="/weapons/{f}/" data-type="{t}"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
         f'<div class="wbody"><span class="wtype">{t}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
-        f'<p class="wname">{"Official name" if named else "Official name not revealed yet"} · Image: Rockstar Games</p></div></a>'
+        f'<p class="wname">{"Official name" if named else "Official name not revealed yet"} · {credit(f)}</p></div></a>'
         for f, n, t, named, d in WEAPON_CARDS)
     return f"""<div class="db" data-db data-cards>
   <div class="dbbar"><div class="chips">{chips}</div></div>
@@ -284,6 +334,19 @@ VEHICLE_CARDS += [
     ("maroon-hatchback", "Hatchback", "Car", "Compact", DESCRIPTIVE, "A maroon five-door hatchback driving through a city street."),
     ("abandoned-classic", "Abandoned classic", "Car", "Classic", DESCRIPTIVE, "A rusted 1950s-style car with tail fins, left to rot in an overgrown yard."),
 ]
+VEHICLE_CARDS += [
+    ("white-coupe", "White coupe", "Car", "Coupe", DESCRIPTIVE, "A white coupe pulling away from a street lined with flowers and palms. The shot is soft, so details are hard to make out."),
+    ("highway-coupe", "Highway coupe", "Car", "Coupe", DESCRIPTIVE, "A dark coupe on the highway behind the barrier, seen at a distance."),
+    ("exploding-coupe", "Exploding coupe", "Car", "Coupe", DESCRIPTIVE, "A coupe caught in an explosion, too blurred by the blast to see its details."),
+    ("classic-sedan-reference", "Classic sedan", "Car", "Classic", DESCRIPTIVE, "A real-world 1960s American sedan, shown for reference only. A car like it may appear in GTA VI, but Rockstar has not shown it."),
+    ("night-semi-truck", "Night semi-truck", "Commercial", "Semi-truck", DESCRIPTIVE, "A semi-truck under a highway at night, with only its lights and outline clear."),
+    ("offshore-speedboat", "Offshore speedboat", "Boat", "Speedboat", DESCRIPTIVE, "A white speedboat bouncing through the waves, seen from far away."),
+    ("sunset-speedboat", "Sunset speedboat", "Boat", "Speedboat", DESCRIPTIVE, "A low speedboat crossing the water in a red-tinted shot."),
+    ("moored-speedboat", "Moored speedboat", "Boat", "Speedboat", DESCRIPTIVE, "A small dark speedboat tied up beside a dock, seen from above."),
+    ("distant-cruiser", "Distant cruiser", "Boat", "Cabin cruiser", DESCRIPTIVE, "A cabin cruiser far out on dark water, seen from a long way off."),
+    ("blue-fishing-boat", "Blue fishing boat", "Boat", "Fishing boat", DESCRIPTIVE, "A blue-and-white fishing boat moored at a dock at night."),
+    ("swamp-airboat", "Swamp airboat", "Boat", "Small boat", DESCRIPTIVE, "An airboat gliding through golden morning fog among the reeds."),
+]
 PLURAL = {"Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
@@ -298,7 +361,7 @@ def vehicle_cards():
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
         f'<div class="wbody"><span class="wtype">{c} · {k}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
-        f'<p class="wname">{st} · Image: Rockstar Games</p></div></a>'
+        f'<p class="wname">{st} · {credit(f)}</p></div></a>'
         for f, n, c, k, st, d in VEHICLE_CARDS)
     return f"""<div class="db" data-db data-cards>
   <div class="dbbar"><div class="chips">{chips}</div></div>
@@ -326,7 +389,7 @@ def vehicle_pages():
   <article class="prose">
   <span class="eyebrow">Vehicles · {PLURAL[c]} · {k}</span><h1>{e(n)}</h1>
   <p class="lede">{e(d)}</p>
-  <figure class="photo"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="eager" decoding="async"><figcaption>Image: Rockstar Games</figcaption></figure>
+  <figure class="photo"><img src="/img/vehicles/{f}.webp" alt="{e(n)}" width="640" height="360" loading="eager" decoding="async"><figcaption>{credit(f)}</figcaption></figure>
   <h2>Quick facts</h2>
   <div class="scroll"><table>
     <tr><td><b>Type</b></td><td>{c} · {k}</td></tr>
@@ -432,6 +495,8 @@ CARRY = {
     "Rifle": "Rifles count as long guns. You can carry two, and they are visible, so walking around with one in view makes people nervous and draws police attention.",
     "Shotgun": "Shotguns count as long guns. You can carry two, and they are visible, so carrying one openly draws attention.",
     "SMG": "It has not been confirmed whether SMGs take a handgun slot or a long-gun slot. Smaller ones may fit the concealed slot. We will confirm this on launch day.",
+    "Throwable": "It has not been confirmed how throwables fit the carry limit, or how many you can hold. We will confirm this on launch day.",
+    "Other": "It is not confirmed yet how this fits the carry limit. We will confirm this on launch day.",
     "Heavy": "It has not been confirmed how heavy weapons fit the carry limit. Expect them to count as long guns or stay in your vehicle's trunk. We will confirm this on launch day.",
 }
 EXTRA_NOTE = {
@@ -454,7 +519,7 @@ def weapon_pages():
   <article class="prose">
   <span class="eyebrow">Weapons · {t}</span><h1>{e(n)}</h1>
   <p class="lede">{e(d)}</p>
-  <figure class="photo"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="eager" decoding="async"><figcaption>Image: Rockstar Games</figcaption></figure>
+  <figure class="photo"><img src="/img/weapons/{f}.webp" alt="{e(n)}" width="640" height="360" loading="eager" decoding="async"><figcaption>{credit(f)}</figcaption></figure>
   <h2>Quick facts</h2>
   <div class="scroll"><table>
     <tr><td><b>Type</b></td><td>{t}</td></tr>
