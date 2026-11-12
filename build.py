@@ -396,6 +396,9 @@ def with_photo(path, body):
     tall = " tall" if h > w else ""
     fig = (f'<figure class="photo{tall}"><img src="/img/{f}.webp" alt="{alt}" width="{w}" height="{h}" loading="eager" decoding="async">'
            f'<figcaption>{cap}</figcaption></figure>')
+    a = body.find('<figure class="art"')
+    if a != -1:  # a real photo replaces the drawn illustration
+        body = body[:a] + body[body.find("</figure>", a) + 9:]
     i = body.find('class="lede"')
     i = body.find("</p>", i) + 4 if i != -1 else body.find("</h1>") + 5
     return body[:i] + fig + body[i:] if i > 4 else fig + body
