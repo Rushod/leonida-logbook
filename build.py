@@ -33,7 +33,7 @@ SCENE = (
     + "".join(f'<use href="#palm" transform="translate({x} {226-172*s:.0f}) scale({s})"/>' for x, s in _palms) + '</g></svg>'
 )
 
-NAV = [("/", "Home"), ("/news/", "News"), ("/map/", "Map"), ("/guides/", "Guides"), ("/guide/", "What's new"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats")]
+NAV = [("/", "Home"), ("/news/", "News"), ("/map/", "Map"), ("/guides/", "Guides"), ("/tracker/", "Tracker"), ("/cheats/", "Cheats")]
 
 
 def jsonld(path, title, desc):
@@ -159,7 +159,6 @@ HOME = f"""
     <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
       <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>The six regions of Leonida, with markers you can tick off.</span></a>
       <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
-      <a class="tile" href="/guide/"><em>Read before you play</em><h3>GTA 6 vs GTA 5: what's new</h3><span>The ten biggest changes in one table, plus tips for your first hours.</span></a>
       <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
       <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
     </div>
@@ -346,7 +345,6 @@ LAUNCH += GUIDE_LINKS
 PAGES = [
     ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
-    ("/guide/", "GTA 6 vs GTA 5: Every Big Gameplay Change | Leonida Logbook", "The ten biggest differences between GTA 6 and GTA 5, from the six-star wanted level to the four-gun limit, plus tips for your first hours.", GUIDE),
     ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
     ("/cheats/", "GTA 6 Cheat Codes for PS5, Xbox and PC (GTA V Codes to Try) | Leonida Logbook", "No GTA VI cheats are confirmed yet. All 34 GTA V cheat codes for PS5, Xbox and PC, with phone numbers, ready to test in GTA VI on November 19, 2026.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
@@ -414,6 +412,7 @@ for path, title, desc, body in PAGES:
 (OUT / "404.html").write_text(layout("/404.html", "Page not found | Leonida Logbook", "Page not found.", NOTFOUND, index=False))
 (OUT / "news").mkdir(exist_ok=True)
 (OUT / "news/feed.xml").write_text(news.feed(SITE))
+(OUT / "_redirects").write_text("/guide/ /guides/ 301\n/guide /guides/ 301\n")
 (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 urls = "".join(f"  <url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod></url>\n" for p, *_ in PAGES)
 (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')

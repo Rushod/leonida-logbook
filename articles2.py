@@ -50,7 +50,7 @@ ONLINE = page("/online/", "Multiplayer", "Does GTA 6 have online at launch?",
   <h2>What happens to GTA Online?</h2>
   <p>Rockstar has not announced any shutdown of the current GTA Online, which runs on GTA V. For now it remains the way to play Grand Theft Auto with other people.</p>
   <h2>Can you play with a friend at all?</h2>
-  <p>Not in the way previews describe it. The teamwork shown so far is between the two story leads, Jason and Lucia, who you switch between. See <a href="/guide/">how GTA VI works</a>.</p>""")
+  <p>Not in the way previews describe it. The teamwork shown so far is between the two story leads, Jason and Lucia, who you switch between. See <a href="/characters/">the characters guide</a>.</p>""")
 
 FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
            "Hands-on previews reported GTA VI running at 1440p with a 30 frames-per-second target on PS5 and Xbox Series X|S. Rockstar has not confirmed a 60 fps mode.",
@@ -169,7 +169,7 @@ CAST = page("/characters/", "The story", "GTA 6 characters: who's who",
     <tr><td><b>Jason Duval</b></td><td>A former soldier who grew up around criminals and has been running drugs in the Keys</td></tr>
     <tr><td><b>Lucia Caminos</b></td><td>A fighter just out of prison who wants a better life for her family</td></tr>
   </table></div>
-  <p>You can switch between them at any time. See <a href="/guide/">how GTA VI works</a>.</p>
+  <p>You can switch between them at any time. See <a href="/characters/">the characters guide</a>.</p>
   <h2>The people around them</h2>
   <div class="scroll"><table>
     <tr><th>Character</th><th>Who they are</th></tr>
