@@ -127,3 +127,52 @@
     [].forEach.call(tiles, function (b) { b.setAttribute("aria-pressed", "false"); }); run();
   });
 })();
+
+(function () {
+  var box = document.querySelector("[data-unlock]");
+  if (!box) return;
+  var ZONES = [
+    ["New Zealand", "Pacific/Auckland"], ["Sydney, Australia", "Australia/Sydney"], ["Tokyo, Japan", "Asia/Tokyo"],
+    ["Singapore", "Asia/Singapore"], ["India", "Asia/Kolkata"], ["Dubai, UAE", "Asia/Dubai"], ["Istanbul, Turkey", "Europe/Istanbul"],
+    ["Central Europe", "Europe/Berlin"], ["UK and Ireland", "Europe/London"], ["Brazil (São Paulo)", "America/Sao_Paulo"],
+    ["US Eastern", "America/New_York"], ["US Central", "America/Chicago"], ["Mexico City", "America/Mexico_City"],
+    ["US Mountain", "America/Denver"], ["US Pacific", "America/Los_Angeles"], ["Alaska", "America/Anchorage"], ["Hawaii", "Pacific/Honolulu"]
+  ];
+  function offset(tz, t) {
+    var p = {}; new Intl.DateTimeFormat("en-US", {timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit"})
+      .formatToParts(new Date(t)).forEach(function (x) { p[x.type] = x.value; });
+    return Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute, +p.second) - t;
+  }
+  function unlockAt(tz) { var g = Date.UTC(2026, 10, 19); var t = g - offset(tz, g); return g - offset(tz, t); }
+  var mine; try { mine = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
+  if (!mine) mine = "America/New_York";
+  var sel = box.querySelector("[data-uzone]"), list = ZONES.slice();
+  if (!list.some(function (z) { return z[1] === mine; })) list.unshift(["Your time zone (" + mine.replace(/_/g, " ") + ")", mine]);
+  list.forEach(function (z) { var o = document.createElement("option"); o.value = z[1]; o.textContent = z[0]; if (z[1] === mine) o.selected = true; sel.appendChild(o); });
+  function fmt(t, tz, withDay) {
+    return new Intl.DateTimeFormat(undefined, {timeZone: tz, weekday: withDay ? "short" : undefined, month: withDay ? "short" : undefined, day: withDay ? "numeric" : undefined, hour: "numeric", minute: "2-digit"}).format(new Date(t));
+  }
+  var target;
+  function table(viewTz) {
+    var rows = ZONES.map(function (z) { return [z, unlockAt(z[1])]; }).sort(function (a, b) { return a[1] - b[1]; });
+    box.parentNode.querySelector("[data-utable]").innerHTML = rows.map(function (r) {
+      var me = r[0][1] === viewTz ? ' class="me"' : "";
+      return "<tr" + me + "><td><b>" + r[0][0] + "</b></td><td>Thu Nov 19, 12:00 am</td><td>" + fmt(r[1], viewTz, true) + "</td></tr>";
+    }).join("");
+  }
+  function pick() {
+    var tz = sel.value; target = unlockAt(tz);
+    box.querySelector("[data-uwhen]").textContent = fmt(target, mine, true) + (tz === mine ? " your time" : " your time (midnight in " + sel.options[sel.selectedIndex].text + ")");
+    table(mine); tick();
+  }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function tick() {
+    var d = Math.max(0, target - Date.now()), s = Math.floor(d / 1000);
+    box.querySelector("[data-ud]").textContent = Math.floor(s / 86400);
+    box.querySelector("[data-uh]").textContent = pad(Math.floor(s / 3600) % 24);
+    box.querySelector("[data-um]").textContent = pad(Math.floor(s / 60) % 60);
+    box.querySelector("[data-us]").textContent = pad(s % 60);
+    if (d === 0) box.querySelector("[data-unote]").textContent = "It is unlocked in this time zone. Go play.";
+  }
+  sel.addEventListener("change", pick); pick(); setInterval(tick, 1000);
+})();

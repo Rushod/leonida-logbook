@@ -53,23 +53,40 @@ GUIDES_PAGE = f"""
 RELEASE_TIME = f"""
   <div class="prose"><span class="eyebrow">Launch guide</span><h1>What time does GTA 6 unlock?</h1>
   <p class="note">{UPDATED}</p>
-  <p class="lede">GTA VI releases on Thursday, November 19, 2026 on PS5 and Xbox Series X|S. The exact unlock time for each region is still reported differently by different outlets.</p>
-  <h2>What has been reported</h2>
+  <p class="lede">GTA VI unlocks at <b>midnight local time on Thursday, November 19, 2026</b>, on both PS5 and Xbox Series X|S. Rockstar confirmed this on its support site. New Zealand plays first and Hawaii plays last.</p>
+  </div>
+  <div class="unlock panel" data-unlock>
+    <span class="eyebrow">Your unlock time</span>
+    <label class="uzone">Time zone <select data-uzone></select></label>
+    <p class="ubig" data-uwhen>Midnight, Thursday November 19</p>
+    <div class="clock ucount" data-ucount>
+      <div><b data-ud>--</b><span>Days</span></div><div><b data-uh>--</b><span>Hours</span></div>
+      <div><b data-um>--</b><span>Minutes</span></div><div><b data-us>--</b><span>Seconds</span></div>
+    </div>
+    <p class="note" data-unote>We picked your time zone from your device. Change it above to check a friend's.</p>
+  </div>
+  <div class="prose">
+  <h2>When it unlocks around the world</h2>
+  <p>Every region unlocks at its own midnight. The right-hand column shows each one in <b data-uyour>your time</b>, so you can see who plays before you.</p>
+  <div class="scroll"><table class="utable"><thead><tr><th>Region</th><th>Local time</th><th>In your time</th></tr></thead><tbody data-utable></tbody></table></div>
+  <p class="note">Times follow Rockstar's rule of local midnight. If your console is set to a different region or time zone from where you are, check the countdown on the game's store page.</p>
+  <h2>Exceptions</h2>
   <ul>
-    <li><b>Midnight local time.</b> Some coverage says the game unlocks at midnight on November 19 in each region, which would make New Zealand the first country to play.</li>
-    <li><b>Not fully confirmed.</b> Other coverage, updated on November 10, says Rockstar has not published a region-by-region schedule yet.</li>
+    <li><b>Xbox Cloud Gaming</b> (including Xbox One): Microsoft says streaming starts on November 19 at <b>1am ET</b>. See <a href="/news/gta-6-xbox-one-cloud-gaming/">our cloud streaming story</a>.</li>
+    <li><b>Boxed copies</b> contain a download code, so they unlock at the same time as digital once the download is done. See the <a href="/preload/">preload guide</a>.</li>
   </ul>
-  <p>Until Rockstar posts a full schedule, treat any site that lists exact times for every country as a guess. This page will be updated as soon as official times are published.</p>
-  <h2>How to check your own unlock time</h2>
-  <p>The store on your console is the most reliable source, because it shows the time for your account and region.</p>
+  <h2>How to check on your console</h2>
   <ul>
-    <li><b>PS5:</b> open GTA VI from your Game Library or the PlayStation Store. Pre-ordered games show a countdown on the game's page.</li>
-    <li><b>Xbox Series X|S:</b> open GTA VI in the Microsoft Store on your console and check the release date and time on its page.</li>
+    <li><b>PS5:</b> open GTA VI from your Game Library. Pre-ordered games show a countdown on the game's page.</li>
+    <li><b>Xbox Series X|S:</b> open GTA VI in the Microsoft Store on your console and check the release date and time.</li>
   </ul>
   <h2>Does preloading let you play early?</h2>
-  <p>No. Preloading only downloads the game ahead of time. It stays locked until the unlock time for your region.</p>
-  <h2>Countdown</h2>
-  <p>The <a href="/">home page</a> runs a live countdown to midnight on November 19 on your device's clock.</p>
+  <p>No. Preloading only downloads the game. It stays locked until midnight on November 19 where you are.</p>
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://support.rockstargames.com/articles/29jV3Cv2cCgvwM1XgtMO5o/grand-theft-auto-vi-regional-pre-load-and-release-times-on-playstation-5-and-xbox-series-x-or-s" rel="noopener">Rockstar Games Support: regional pre-load and release times</a></li>
+    <li><a href="https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/" rel="noopener">Xbox Wire: GTA VI comes to Xbox Cloud Gaming</a></li>
+  </ul>
   </div>
   {links("/release-time/")}"""
 
@@ -183,7 +200,7 @@ EDITIONS = f"""
   {links("/editions/")}"""
 
 ARTICLES = [
-    ("/release-time/", "What Time Does GTA 6 Unlock? Release Time Explained | Leonida Logbook", "GTA VI releases November 19, 2026. What is confirmed about the unlock time, why sites disagree, and how to check the exact time on your PS5 or Xbox.", RELEASE_TIME),
+    ("/release-time/", "What Time Does GTA 6 Unlock? Countdown for Your Time Zone | Leonida Logbook", "GTA 6 unlocks at midnight local time on November 19 on PS5 and Xbox. See the exact time and a live countdown for your time zone, plus every region worldwide.", RELEASE_TIME),
     ("/preload/", "GTA 6 Preload Guide: Dates and Steps for PS5 and Xbox | Leonida Logbook", "When GTA VI preload opens, how to start the download on PS5 and Xbox Series X|S, and how to redeem a boxed copy's code.", PRELOAD),
     ("/storage/", "How Much Storage Does GTA 6 Need? PS5 and Xbox Space Guide | Leonida Logbook", "GTA VI needs up to 212 GB. How that compares with each PS5 and Xbox model, how to check free space, and how to make room.", STORAGE),
     ("/editions/", "GTA 6 Standard vs Ultimate Edition: Price and Contents | Leonida Logbook", "GTA VI Standard is $79.99 and Ultimate is $99.99. What the Ultimate Edition adds, the pre-order bonus, and which edition fits you.", EDITIONS),
