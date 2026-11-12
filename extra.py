@@ -209,9 +209,9 @@ def weapon_cards():
     types = [t for t in ["Handgun", "SMG", "Shotgun", "Rifle", "Heavy"] if any(c[2] == t for c in WEAPON_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{t}">{t if t == "Heavy" else t + "s"}</button>' for t in types)
     cards = "".join(
-        f'<article class="wcard" data-type="{t}"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
+        f'<a class="wcard" href="/weapons/{f}/" data-type="{t}"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
         f'<div class="wbody"><span class="wtype">{t}</span><h3>{e(n)}</h3><p>{e(d)}</p>'
-        f'<p class="wname">{"Official name" if named else "Official name not revealed yet"} · Image: Rockstar Games</p></div></article>'
+        f'<p class="wname">{"Official name" if named else "Official name not revealed yet"} · Image: Rockstar Games</p></div></a>'
         for f, n, t, named, d in WEAPON_CARDS)
     return f"""<div class="db" data-db data-cards>
   <div class="dbbar"><div class="chips">{chips}</div></div>
@@ -309,6 +309,55 @@ def map_page():
   {links("/map/")}"""
 
 
+
+CARRY = {
+    "Handgun": "Handguns are the concealed slot. You can carry up to two, hidden on your body, so they do not alarm people around you.",
+    "Rifle": "Rifles count as long guns. You can carry two, and they are visible, so walking around with one in view makes people nervous and draws police attention.",
+    "Shotgun": "Shotguns count as long guns. You can carry two, and they are visible, so carrying one openly draws attention.",
+    "SMG": "It has not been confirmed whether SMGs take a handgun slot or a long-gun slot. Smaller ones may fit the concealed slot. We will confirm this on launch day.",
+    "Heavy": "It has not been confirmed how heavy weapons fit the carry limit. Expect them to count as long guns or stay in your vehicle's trunk. We will confirm this on launch day.",
+}
+EXTRA_NOTE = {
+    "hawk-little-morgan": '<h2>How to get it</h2><p>It comes with the Ultimate Edition of GTA VI. See <a href="/editions/">Standard vs Ultimate</a> for everything else that edition adds.</p>',
+    "nipper-38": "<h2>About the name</h2><p>\"Nipper38\" is engraved on the gun in Rockstar's official artwork. Artwork names do not always match the game, so we will confirm it in the weapon menu on launch day.</p>",
+    "gold-compact-rifle": "<h2>Custom finishes</h2><p>The gold plating and white grips point to weapon finishes you can apply or buy. Whether this is a separate gun or a skin for a standard rifle will be clear on launch day.</p>",
+    "neon-pistol": "<h2>Custom finishes</h2><p>The bright green finish points to weapon colours you can choose. Whether it is its own gun or a skin will be clear on launch day.</p>",
+    "rifle-wall": "<h2>Where to buy guns</h2><p>Ammu-Nation sells weapons, and some branches stock guns unique to their region. Dropped weapons can be collected again from any Ammu-Nation locker.</p>",
+}
+
+
+def weapon_pages():
+    out = []
+    for f, n, t, named, d in WEAPON_CARDS:
+        same = [c for c in WEAPON_CARDS if c[2] == t and c[0] != f][:3] or [c for c in WEAPON_CARDS if c[0] != f][:3]
+        tiles = "".join(f'<a class="tile" href="/weapons/{c[0]}/"><em>{c[2]}</em><h3>{e(c[1])}</h3></a>' for c in same)
+        get = "Ultimate Edition" if f == "hawk-little-morgan" else "Revealed on launch day"
+        stats = "".join(f"<tr><td><b>{k}</b></td><td>From November 19</td></tr>" for k in ["Damage", "Fire rate", "Range", "Accuracy", "Magazine", "Price"])
+        body = f"""
+  <article class="prose">
+  <span class="eyebrow">Weapons · {t}</span><h1>{e(n)}</h1>
+  <p class="lede">{e(d)}</p>
+  <figure class="photo"><img src="/img/weapons/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="eager" decoding="async"><figcaption>Image: Rockstar Games</figcaption></figure>
+  <h2>Quick facts</h2>
+  <div class="scroll"><table>
+    <tr><td><b>Type</b></td><td>{t}</td></tr>
+    <tr><td><b>Name</b></td><td>{"Official" if named else "Descriptive. Rockstar has not revealed the in-game name yet"}</td></tr>
+    <tr><td><b>How to get it</b></td><td>{get}</td></tr>
+    <tr><td><b>Seen in</b></td><td>Rockstar's pre-launch trailers, screenshots or artwork</td></tr>
+  </table></div>
+  {EXTRA_NOTE.get(f, "")}
+  <h2>Carrying it</h2>
+  <p>{CARRY[t]} Anything you cannot carry goes in your vehicle's trunk.</p>
+  <h2>Stats and price</h2>
+  <p>Rockstar has not published weapon stats. We add them from the in-game weapon screen on launch day.</p>
+  <div class="scroll"><table>{stats}</table></div>
+  </article>
+  <div class="stack"><h2>More weapons</h2><div class="tiles">{tiles}</div><p><a class="btn ghost" href="/weapons/">All weapons</a></p></div>"""
+        title = f"GTA 6 {n}: What We Know" + BRAND
+        desc = f"The {n.lower()} in GTA VI: {d} Carry rules, how to get it, and stats from launch day."[:300]
+        out.append((f"/weapons/{f}/", title, desc, body))
+    return out
+
 EXTRA = [
     ("/map/", "GTA 6 Interactive Map of Leonida" + BRAND, "Interactive GTA VI map of Leonida with 900+ landmarks, stores and activities you can filter, search and tick off. Pre-launch community map, verified locations from launch day.", map_page()),
     ("/activities/", "GTA 6 Activities and Mini-Games: Full List" + BRAND, "The twelve side activities reported for GTA VI, from pool and mini-golf to scuba diving, plus robberies, dates and random events.", ACTIVITIES),
@@ -320,3 +369,4 @@ EXTRA = [
     ("/vehicles/", "GTA 6 Vehicles List: All Cars, Boats and Bikes" + BRAND, "Every GTA VI vehicle confirmed so far and how to get it, plus how fuel, garages, registration, trackers and mod shops work.", VEHICLES),
     ("/weapons/", "GTA 6 Weapons List and How Combat Works" + BRAND, "GTA VI weapons confirmed so far, the two-handgun and two-long-gun carry limit, Ammu-Nation lockers, Focus and non-lethal options.", WEAPONS),
 ]
+EXTRA += weapon_pages()

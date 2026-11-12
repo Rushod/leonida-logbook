@@ -232,3 +232,6 @@ table.vs a{white-space:nowrap}
 .wbody p{margin:0 0 8px;font-size:15px}
 .wtype{font-family:var(--label);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--sun)}
 .wname{font-size:12px!important;color:var(--muted);margin:0!important}
+a.wcard{color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}
+a.wcard:hover,a.wcard:focus-visible{transform:translateY(-3px);border-color:var(--pink,#ff4fa3)}
+a.wcard h3{color:var(--ink)}
