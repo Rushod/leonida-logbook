@@ -484,13 +484,25 @@ VEHICLE_CARDS += [
     ("mud-run-pickup", "Mud-run pickup", "Off-road", "Pickup", DESCRIPTIVE, "A lifted red pickup with roof lights and a snorkel, with a mud-covered couple leaning on it at an off-road meet."),
     ("green-pickup", "Green pickup", "Off-road", "Pickup", DESCRIPTIVE, "A green pickup on a street, behind a cyclist and a dog."),
 ]
+VEHICLE_CARDS += [
+    ("stunt-biplane", "Stunt biplane", "Aircraft", "Plane", DESCRIPTIVE, "A pink biplane in a crypto-coin livery, with a wing walker holding a smoke flare as it flies over the beach."),
+    ("seaplane", "Seaplane", "Aircraft", "Plane", DESCRIPTIVE, "A white-and-yellow floatplane flying low over turquoise water near the coast."),
+    ("crop-duster", "Crop duster", "Aircraft", "Plane", DESCRIPTIVE, "A crop-dusting plane banking low through a dusty sky."),
+    ("light-plane", "Light plane", "Aircraft", "Plane", DESCRIPTIVE, "A small high-wing propeller plane in a pale sky."),
+    ("twin-prop-plane", "Twin-prop plane", "Aircraft", "Plane", DESCRIPTIVE, "A small twin-propeller plane among the clouds. The shot is blurry."),
+    ("business-jet", "Business jet", "Aircraft", "Jet", DESCRIPTIVE, "A twin-engine business jet climbing at sunset, seen from below."),
+    ("private-jet", "Private jet", "Aircraft", "Jet", DESCRIPTIVE, "A private jet parked outside a hangar at dusk, with another behind it."),
+    ("autograph-jet", "Autograph jet", "Aircraft", "Jet", DESCRIPTIVE, "A black-and-gold private jet with \"Autograph\" on the tail, seen through an airport lounge window."),
+    ("jumbo-jet", "Jumbo jet", "Aircraft", "Jet", DESCRIPTIVE, "A four-engine airliner climbing past the clouds."),
+    ("blimp", "Blimp", "Aircraft", "Airship", DESCRIPTIVE, "A white blimp floating over an island off the coast."),
+]
 PLURAL = {"Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
     "Cycle": ("Bikes and scooters", "Bicycles and electric scooters are part of Leonida's streets, and electric scooters are one of the reported vehicle types. How you rent, buy or store them is confirmed from launch day."),
     "Emergency": ("Emergency services", "Police, sheriff's deputies, firefighters, paramedics and lifeguards all work Leonida's streets and beaches. See the <a href=\"/wanted-level/\">wanted level guide</a> for how police respond and how to escape them."),
-    "Aircraft": ("Helicopters and aircraft", "Helicopters show up in the trailers as police chasers and in action scenes. Which ones you can fly, buy and store is confirmed from launch day."),
+    "Aircraft": ("Helicopters and aircraft", "Helicopters and planes show up across the trailers, from police choppers to seaplanes, private jets and a stunt biplane. Which ones you can fly, buy and store is confirmed from launch day."),
     "Industrial": ("Industrial vehicles", "Construction and industrial vehicles work Leonida's building sites, docks and roads. Whether you can drive them is confirmed from launch day."),
     "Military": ("Military vehicles", "Military vehicles in past GTA games were usually found at army bases or called in at the highest wanted levels. What GTA VI has, and how to get it, is confirmed from launch day."),
     "Bike": ("Motorcycles", "Motorcycles use fuel, just like cars. Where to buy, store and modify each bike is confirmed from launch day."),
