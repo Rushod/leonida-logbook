@@ -521,6 +521,13 @@ VEHICLE_CARDS += [
 for _s in ["blue-wagon", "cream-wagon"]:
     IMG_CREDIT[_s] = "Image: GTA V screenshot, for reference. Not yet seen in GTA VI"
 IMG_CREDIT["red-gta-iv-sedan"] = "Image: GTA IV screenshot, for reference. Not yet seen in GTA VI"
+VEHICLE_CARDS += [
+    ("vapid-stanier-55", "'55 Vapid Stanier", "Car", "Classic", OFFICIAL, "A yellow-and-white 1950s sedan with chrome trim and \"Stanier\" script on the door, cruising a neon-lit street at night with Jason and Lucia inside. It comes in the Vintage Vice City Pack with any edition bought by launch day."),
+    ("white-compact-sedan", "White compact sedan", "Car", "Sedan", DESCRIPTIVE, "A white compact sedan with a four-ring-style badge, driving down a city street."),
+    ("bronze-sedan", "Bronze sedan", "Car", "Sedan", DESCRIPTIVE, "A bronze compact sedan with LED running lights, crossing an intersection."),
+    ("night-sedan", "Sedan at night", "Car", "Sedan", DESCRIPTIVE, "A dark sedan in night traffic, with its tail lights glowing. The shot is blurry."),
+    ("red-light-wagon", "Wagon in red light", "Car", "Wagon", DESCRIPTIVE, "A dark wagon sliding through a red-lit street. The shot is blurry."),
+]
 PLURAL = {"Off-road": "Off-road", "Military": "Military", "Industrial": "Industrial", "Emergency": "Emergency", "Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Motorcycles", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
@@ -557,10 +564,12 @@ def vehicle_pages():
         if len(same) < 3:
             same += [v for v in VEHICLE_CARDS if v[0] != f and v not in same][:3 - len(same)]
         tiles = "".join(f'<a class="tile" href="/vehicles/{v[0]}/"><em>{v[3]}</em><h3>{e(v[1])}</h3></a>' for v in same)
-        get = "Ultimate Edition" if f in ("shitzu-squalo", "vapid-ganado", "vapid-dominator-buggy") else "Revealed on launch day"
+        get = "Vintage Vice City Pack (buy by launch day)" if f == "vapid-stanier-55" else "Ultimate Edition" if f in ("shitzu-squalo", "vapid-ganado", "vapid-dominator-buggy") else "Revealed on launch day"
         stats = "".join(f"<tr><td><b>{x}</b></td><td>From November 19</td></tr>" for x in ["Top speed", "Acceleration", "Handling", "Seats", "Price"])
         extra = ""
-        if f in ("shitzu-squalo", "vapid-ganado", "vapid-dominator-buggy"):
+        if f == "vapid-stanier-55":
+            extra = '<h2>How to get it</h2><p>It is part of the Vintage Vice City Pack, which comes with any edition of GTA VI bought by launch day. See <a href="/editions/">Standard vs Ultimate</a> for the full pre-order details.</p>'
+        elif f in ("shitzu-squalo", "vapid-ganado", "vapid-dominator-buggy"):
             extra = '<h2>How to get it</h2><p>It comes with the Ultimate Edition of GTA VI. See <a href="/editions/">Standard vs Ultimate</a> for the full list of what that edition adds.</p>'
         elif f == "armored-truck":
             extra = '<h2>Robberies</h2><p>Armored trucks appear in robbery scenes in the trailers. See the <a href="/robberies/">robberies guide</a> for how robberies and payouts work.</p>'
