@@ -347,16 +347,25 @@ VEHICLE_CARDS += [
     ("blue-fishing-boat", "Blue fishing boat", "Boat", "Fishing boat", DESCRIPTIVE, "A blue-and-white fishing boat moored at a dock at night."),
     ("swamp-airboat", "Swamp airboat", "Boat", "Small boat", DESCRIPTIVE, "An airboat gliding through golden morning fog among the reeds."),
 ]
-PLURAL = {"Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
+VEHICLE_CARDS += [
+    ("electric-scooter", "Electric scooter", "Cycle", "Scooter", DESCRIPTIVE, "A rental-style electric scooter ridden down a sunny street past mural-covered shops."),
+    ("mountain-bike", "Mountain bike", "Cycle", "Bicycle", DESCRIPTIVE, "A blue and purple mountain bike with knobbly tyres, parked at a wavy rack by a tiled wall."),
+    ("road-bike", "Road bike", "Cycle", "Bicycle", DESCRIPTIVE, "A thin-tyred bike parked at a wavy bike rack, half hidden behind a post."),
+    ("beach-cruiser", "Beach cruiser", "Cycle", "Bicycle", DESCRIPTIVE, "A rusty red beach cruiser with wide handlebars, leaning on a bike rack."),
+    ("bmx", "BMX", "Cycle", "Bicycle", DESCRIPTIVE, "A small BMX with a yellow seat, parked at a bike rack on the pavement."),
+    ("bike-share-bikes", "Bike-share bikes", "Cycle", "Bike share", DESCRIPTIVE, "Blue bike-share bikes lined up at a docking station. Whether you can rent them is not known yet."),
+]
+PLURAL = {"Cycle": "Cycles", "Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
     "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
+    "Cycle": ("Bikes and scooters", "Bicycles and electric scooters are part of Leonida's streets, and electric scooters are one of the reported vehicle types. How you rent, buy or store them is confirmed from launch day."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
 
 def vehicle_cards():
-    cats = [c for c in ["Car", "Bike", "Commercial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
+    cats = [c for c in ["Car", "Bike", "Cycle", "Commercial", "Boat", "Aircraft"] if any(v[2] == c for v in VEHICLE_CARDS)]
     chips = '<button class="chip on" type="button" data-type="">All</button>' + "".join(f'<button class="chip" type="button" data-type="{c}">{PLURAL[c]}</button>' for c in cats)
     cards = "".join(
         f'<a class="wcard" href="/vehicles/{f}/" data-type="{c}"><img src="/img/vehicles/{f}.webp" alt="{e(n)} in GTA VI" width="640" height="360" loading="lazy" decoding="async">'
