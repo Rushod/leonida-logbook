@@ -274,9 +274,20 @@ VEHICLE_CARDS = [
     ("cement-mixer", "Cement mixer", "Commercial", "Truck", DESCRIPTIVE, "A red cement mixer truck driving past shops on a city street."),
     ("stake-bed-truck", "Stake-bed truck", "Commercial", "Truck", DESCRIPTIVE, "A yellow-cab truck with a slatted cargo bed, partly hidden behind a passing car."),
 ]
+VEHICLE_CARDS += [
+    ("luxury-coupe", "Luxury coupe", "Car", "Coupe", DESCRIPTIVE, "A dark grey two-door luxury coupe parked at the kerb next to a parking meter."),
+    ("takio-race-car", "Takio race car", "Car", "Coupe", DESCRIPTIVE, "A battered coupe in Takio race livery, lined up with other race cars. A hint that street or circuit racing is in the game."),
+    ("green-luxury-convertible", "Luxury convertible", "Car", "Convertible", DESCRIPTIVE, "A pale green luxury convertible stopped beside a police car on a sunny street of cafes."),
+    ("red-convertible", "Red convertible", "Car", "Convertible", DESCRIPTIVE, "A red two-door convertible with the roof up, driving past a row of portable toilets."),
+    ("black-convertible", "Black convertible", "Car", "Convertible", DESCRIPTIVE, "A black convertible pulling away at night with its tail lights glowing through tyre smoke."),
+    ("party-convertible", "Party convertible", "Car", "Convertible", DESCRIPTIVE, "An open convertible with a passenger dancing on the back as it drives under a highway."),
+    ("maroon-hatchback", "Hatchback", "Car", "Compact", DESCRIPTIVE, "A maroon five-door hatchback driving through a city street."),
+    ("abandoned-classic", "Abandoned classic", "Car", "Classic", DESCRIPTIVE, "A rusted 1950s-style car with tail fins, left to rot in an overgrown yard."),
+]
 PLURAL = {"Boat": "Boats", "Commercial": "Commercial", "Car": "Cars", "Bike": "Bikes", "Aircraft": "Aircraft"}
 CAT_TEXT = {
     "Boat": ("Boats in Leonida", "Leonida has a long coastline, the Leonida Keys and inland swamps, so boats are a big part of getting around. Where to buy, store and dock each boat is added from launch day."),
+    "Car": ("Cars in Leonida", "Cars use fuel and electric cars use charging stations. A stolen car is only yours once you register it at Pay &amp; Spray, and you start with three garage slots. See the <a href=\"/vehicles/\">vehicles guide</a> for how stealing, trackers and mod shops work."),
     "Commercial": ("Commercial vehicles", "Trucks, vans and work vehicles fill Leonida's roads and docks. Whether you can store them in a garage, and whether any are tied to jobs or missions, is confirmed from launch day."),
 }
 
