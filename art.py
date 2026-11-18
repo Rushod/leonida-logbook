@@ -75,20 +75,20 @@ def online_status():
 
 
 def fps():
-    b = t(400, 62, "WHAT PREVIEWS REPORTED", 34)
-    b += f'<text x="215" y="235" font-family="{D}" font-size="170" fill="url(#aNum)" text-anchor="middle">30</text>' + t(215, 280, "FPS TARGET", 30, font=L)
-    b += f'<text x="570" y="220" font-family="{D}" font-size="110" fill="url(#aNum)" text-anchor="middle">1440p</text>' + t(570, 280, "RESOLUTION", 30, font=L)
-    b += panel(140, 312, 520, 62, dashed=True) + t(400, 353, "60 FPS MODE: NOT CONFIRMED", 28, SUN, font=L)
-    return fig(b, "Previews reported a 30 frames per second target at 1440p; a 60 fps mode is not confirmed")
+    b = t(400, 62, "GTA VI PERFORMANCE AT LAUNCH", 34)
+    b += f'<text x="215" y="235" font-family="{D}" font-size="170" fill="url(#aNum)" text-anchor="middle">30</text>' + t(215, 280, "FPS, ALL CONSOLES", 26, font=L)
+    b += f'<text x="570" y="220" font-family="{D}" font-size="110" fill="url(#aNum)" text-anchor="middle">1440p</text>' + t(570, 280, "PS5 + PRO RENDER", 26, font=L)
+    b += panel(140, 312, 520, 62, dashed=True) + t(400, 353, "NO 60 FPS MODE, EVEN ON PS5 PRO", 28, SUN, font=L)
+    return fig(b, "GTA VI runs at 30 frames per second on every console, renders internally at 1440p on PS5 and PS5 Pro, and has no 60 fps mode")
 
 
 def reviews_cal():
     b = t(400, 62, "REVIEW TIMING", 34)
-    b += panel(110, 100, 260, 270, dashed=True) + t(240, 146, "NOVEMBER", 28, SUN, font=L)
-    b += f'<text x="240" y="268" font-family="{D}" font-size="120" fill="{INK}" text-anchor="middle">18</text>' + t(240, 322, "REVIEWS?", 25, font=L) + t(240, 354, "UNCONFIRMED", 26, MUTED, font=L)
+    b += f'<rect x="110" y="100" width="260" height="270" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>' + t(240, 146, "NOVEMBER", 28, SUN, font=L)
+    b += f'<text x="240" y="268" font-family="{D}" font-size="120" fill="url(#aNum)" text-anchor="middle">18</text>' + t(240, 322, "REVIEWS LIVE", 25, font=L) + t(240, 354, "HAPPENED", 26, GOOD, font=L)
     b += f'<rect x="430" y="100" width="260" height="270" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>' + t(560, 146, "NOVEMBER", 28, SUN, font=L)
     b += f'<text x="560" y="268" font-family="{D}" font-size="120" fill="url(#aNum)" text-anchor="middle">19</text>' + t(560, 322, "GAME UNLOCKS", 25, font=L) + t(560, 354, "CONFIRMED", 26, GOOD, font=L)
-    return fig(b, "Calendar: reviews are reported but unconfirmed for November 18; the game unlocks November 19")
+    return fig(b, "Calendar: reviews went live on November 18; the game unlocks at local midnight on November 19")
 
 
 def radio():
@@ -181,3 +181,25 @@ def cheats_check():
     b += f'<rect x="420" y="100" width="340" height="250" rx="14" fill="#120824" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>' + t(590, 150, "CONFIRMED IN GTA VI", 22, SUN, font=L)
     b += f'<text x="590" y="275" font-family="{D}" font-size="130" fill="url(#aNum)" text-anchor="middle">0</text>' + t(590, 318, "SO FAR", 26, MUTED, font=L)
     return fig(b, "Comparison: viral leaked cheat lists are GTA V codes; zero cheats are confirmed for GTA VI")
+
+
+def nz_first():
+    b = t(400, 62, "WHO PLAYS GTA VI FIRST", 34)
+    rows = [("NEW ZEALAND", "NOV 18, 11:00 UTC", 600), ("SYDNEY", "2 HOURS LATER", 520), ("LONDON", "13 HOURS LATER", 300), ("NEW YORK", "18 HOURS LATER", 170), ("LOS ANGELES", "21 HOURS LATER", 110)]
+    for i, (n, w, px) in enumerate(rows):
+        y = 100 + i * 56
+        fill = "url(#aBar)" if i == 0 else "#ffffff"
+        op = "1" if i == 0 else ".25"
+        b += t(40, y + 32, n, 24, INK if i == 0 else MUTED, anchor="start", font=L)
+        b += f'<rect x="330" y="{y + 8}" width="{px * 0.3:.0f}" height="34" rx="17" fill="{fill}" fill-opacity="{op}"/>'
+        b += t(770, y + 32, w, 22, SUN if i == 0 else MUTED, anchor="end", font=L)
+    return fig(b, "Chart: GTA VI unlocked first in New Zealand at 11:00 UTC on November 18, hours ahead of Australia, the UK and the US")
+
+
+def metascore():
+    b = t(400, 62, "WHAT CRITICS SAY", 34)
+    b += f'<rect x="60" y="100" width="300" height="270" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>'
+    b += f'<text x="210" y="265" font-family="{D}" font-size="170" fill="url(#aNum)" text-anchor="middle">99</text>' + t(210, 310, "METASCORE, PS5", 26, font=L) + t(210, 345, "98 REVIEWS, EARLY", 24, MUTED, font=L)
+    b += panel(400, 100, 340, 125) + t(570, 148, "PRAISED", 26, GOOD, font=L) + t(570, 196, "WORLD · DRIVING · STORY", 22, font=L)
+    b += panel(400, 245, 340, 125) + t(570, 293, "CRITICISED", 26, SUN, font=L) + t(570, 341, "CONTROLS · 30 FPS · GUNS", 22, font=L)
+    return fig(b, "GTA VI has a 99 Metascore on PS5 from an early sample of 98 reviews; critics praise the world, driving and story and criticise controls, the 30 fps cap and gunplay")

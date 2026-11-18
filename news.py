@@ -8,6 +8,93 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-out-in-new-zealand",
+        date="2026-11-18",
+        title="GTA 6 is out in New Zealand: what players are finding inside the game",
+        desc="Kiwi players got GTA VI first, at 11:00 UTC on November 18. Here's what the first hours show, from the prologue to Snapmatic, with spoilers kept behind a warning.",
+        fig=art.nz_first,
+        body="""
+  <p>The 13-year wait is over in at least one country. GTA VI unlocked at midnight on November 19 in New Zealand, which was 11:00 UTC on November 18 (6am Eastern), and streams from the first players filled X and Twitch within minutes. Everyone else unlocks at their own local midnight. See <a href="/release-time/">your exact unlock time</a>.</p>
+  <h2>The basics, now confirmed in the released game</h2>
+  <ul>
+    <li><b>Platforms:</b> PS5 and Xbox Series X|S. No PC version at launch.</li>
+    <li><b>Single-player only.</b> There is no online mode on day one. See <a href="/online/">what we know about online</a>.</li>
+    <li><b>Download:</b> up to 212 GB. New Zealand's main broadband network operator, Chorus, called the size unprecedented, and said one download is more than a quarter of what an average home uses in a month.</li>
+  </ul>
+  <h2>What the opening hours look like (no story spoilers)</h2>
+  <ul>
+    <li><b>It starts with a prologue.</b> A flashback doubles as the tutorial, teaching you to move, handle a weapon and survive an on-foot police chase.</li>
+    <li><b>Jason's first mission covers a lot of ground.</b> It mixes in stealth and puts you at the controls of a boat and then a plane before you ever reach a road and a car.</li>
+    <li><b>The game shows how Jason and Lucia met</b> early on, and yes, it involves a stolen car.</li>
+  </ul>
+  <h2>Snapmatic is huge, and it is laughing at us</h2>
+  <p>The phone's Instagram-style app, Snapmatic, holds hundreds of posts, videos and comments, and new ones appear as the story moves on and Leonida reacts to what you have done. One early post has already gone viral: a character complains that a game based on a kids' cartoon came out before "Race and Chase 7". Race'n'Chase was GTA's original working title, so it's Rockstar's joke about everyone who spent years saying they got something before GTA 6.</p>
+  <details class="spoiler">
+    <summary><b>Story spoilers from the prologue</b> (tap to show)</summary>
+    <ul>
+      <li>The game opens with Lucia in prison. You can talk to other inmates before she is called to see her counsellor, which leads into the flashback.</li>
+      <li>The flashback is the armed convenience-store robbery that put her there. She runs, and the police tackle and taser her.</li>
+      <li>The big surprise: Jason and Lucia have a child, who was waiting in a nearby coffee shop during the robbery and has been taken by child protective services. None of the trailers showed this.</li>
+    </ul>
+  </details>
+  <h2>The "New Zealand trick": does it work?</h2>
+  <ul>
+    <li><b>Xbox:</b> players on Reddit say the game unlocked after they set their console's location to New Zealand. Microsoft and Rockstar have not said whether that will keep working.</li>
+    <li><b>PS5:</b> changing settings does not work. You would need a separate New Zealand PlayStation account and a second copy bought from that store.</li>
+    <li><b>Bans:</b> posts claim some accounts were suspended, but none has been confirmed. Separately, Twitch reportedly warned a German streamer that using the trick on stream could lead to a ban.</li>
+  </ul>
+  <h2>What we still don't know</h2>
+  <p>Proper performance tests on Xbox, how bad any launch bugs are, and whether a day-one patch changes anything. Critic reviews and Digital Foundry's PS5 test are already out: <a href="/news/gta-6-reviews-metacritic-99/">here is what they say</a>.</p>
+  <h2>What we are updating</h2>
+  <p>As GTA VI unlocks around the world, we are checking our <a href="/map/">map</a>, <a href="/cheats/">cheats</a>, <a href="/missions/">missions</a> and <a href="/collectibles/">collectibles</a> against the finished game. Anything we confirm gets marked as verified.</p>""",
+        sources=[("PC Guide: GTA 6 launches in NZ, including an early plot surprise", "https://www.pcguide.com/news/gta-6-launches-in-nz-with-millions-of-viewers-tuning-in-to-discover-the-game-including-an-early-plot-surprise/"),
+                 ("AP via WRBL: Grand Theft Auto VI finally arrives", "https://www.wrbl.com/news/national/grand-theft-auto-vi-finally-arrives-heres-what-one-early-player-thinks/"),
+                 ("Gulf News: GTA 6 early reactions and the New Zealand trick", "https://gulfnews.com/technology/gaming/gta-6-early-reviews-set-internet-alight-first-driving-clips-99-metacritic-claim-fuel-unprecedented-hype-1.500752451"),
+                 ("Kotaku: Grand Theft Auto 6 includes a joke about GTA 7", "https://kotaku.com/grand-theft-auto-6-includes-a-joke-about-gta-7-2000755921"),
+                 ("Notebookcheck: Streamer faces ban for using GTA 6 early unlock trick", "https://www.notebookcheck.net/Streamer-faces-ban-for-using-GTA-6-early-unlock-time-trick-on-release-date.1451653.0.html")],
+    ),
+    dict(
+        slug="gta-6-reviews-metacritic-99",
+        date="2026-11-18",
+        title="GTA 6 reviews are in: a 99 on Metacritic, and the complaints worth knowing",
+        desc="GTA VI's PS5 Metascore stood at 99 from 98 early reviews. What critics loved, what they didn't, and what Digital Foundry found about 30 fps.",
+        fig=art.metascore,
+        body="""
+  <p>Reviews for GTA VI went live on November 18, the day before launch, and the early numbers are about as high as they go. On the morning of November 18, the PS5 version held a <b>99 Metascore from 98 critic reviews</b>. The Xbox Series X score was also 99, but from only nine reviews. Both will move as more reviews come in.</p>
+  <p>For comparison, GTA IV sits at 98 and GTA V at 97, so GTA VI is on course to be the best-reviewed game in the series.</p>
+  <h2>Perfect scores so far</h2>
+  <p>IGN, VICE, Push Square and Cultured Vultures all gave 10 out of 10, and Creative Bloq gave 5 stars.</p>
+  <h2>What critics loved</h2>
+  <ul>
+    <li><b>Leonida itself.</b> Reviewers describe a dense, handcrafted world full of detail and places to go.</li>
+    <li><b>Driving.</b> IGN calls the handling the best in the series, with more weight and more convincing damage.</li>
+    <li><b>Jason and Lucia.</b> The writing, the performances and their relationship get wide praise, as does a more grown-up story than past GTAs.</li>
+    <li><b>Robberies you plan yourself</b> rather than follow a script, and smarter police. See our <a href="/robberies/">robberies guide</a> and <a href="/wanted-level/">wanted level guide</a>.</li>
+  </ul>
+  <h2>What they didn't</h2>
+  <ul>
+    <li><b>Controls.</b> The Guardian says complicated button inputs can start fights you didn't mean to, and Kotaku calls some controls cumbersome.</li>
+    <li><b>Guns.</b> GamingBolt finds the smaller firearms clunky, and The Verge found switching weapons in a fight frustrating.</li>
+    <li><b>Driving early on.</b> GamingBible found the heavier handling hard at first, especially when crashes cost money to repair.</li>
+    <li><b>Pacing.</b> Kotaku says the later chapters of the story drag.</li>
+    <li><b>No mission replays.</b> IGN notes you can't replay finished story missions one at a time, which you could in GTA V.</li>
+  </ul>
+  <h2>Performance: 30 fps everywhere</h2>
+  <p>There is no 60 fps mode on any console, including PS5 Pro. Push Square gave the game a 10 but still flagged that. Digital Foundry's tests found:</p>
+  <ul>
+    <li><b>PS5 Pro:</b> a "near flawless" 30 fps with perfect frame pacing over more than 50 hours. It only fell to 24 fps when the tester set off huge numbers of explosions on purpose.</li>
+    <li><b>PS5:</b> small dips throughout, and longer drops below 30 in heavy action.</li>
+    <li><b>Xbox Series X|S:</b> not tested yet.</li>
+  </ul>
+  <p>Full details by console are in our <a href="/frame-rate/">frame rate guide</a>.</p>
+  <h2>Should the complaints change your mind?</h2>
+  <p>Probably not, if you were already excited. Most of the criticism is about controls and feel, which you get used to. If smooth frame rates matter a lot to you, the 30 fps cap is the one thing that won't change with practice.</p>""",
+        sources=[("The PC Enthusiast: GTA 6 reviews hit 99 on Metacritic", "https://thepcenthusiast.com/gta-6-reviews-metascore-critic-reactions/"),
+                 ("PlayStationInfo: GTA 6 achieves 99 points (citing Insider Gaming and Push Square)", "https://www.playstationinfo.de/en/2026/11/18/gta-6-achieves-an-incredible-99-points-and-even-the-ps5-pro-has-a-catch/"),
+                 ("TweakTown: Digital Foundry on GTA 6 at 30 fps on PS5 and PS5 Pro", "https://www.tweaktown.com/news/114764/gta-6-struggles-to-hold-30-fps-on-base-ps5-more-often-than-expected/index.html"),
+                 ("Dexerto: GTA 6's PS5 Pro upgrade", "https://www.dexerto.com/gta/gta-6s-ps5-pro-upgrade-is-bigger-than-you-might-expect-3429387/")],
+    ),
+    dict(
         slug="gta-6-xbox-one-cloud-gaming",
         date="2026-11-11",
         title="GTA 6 is coming to Xbox One after all, through cloud streaming",

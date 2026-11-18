@@ -53,43 +53,50 @@ ONLINE = page("/online/", "Multiplayer", "Does GTA 6 have online at launch?",
   <p>Not in the way previews describe it. The teamwork shown so far is between the two story leads, Jason and Lucia, who you switch between. See <a href="/characters/">the characters guide</a>.</p>""")
 
 FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
-           "Hands-on previews reported GTA VI running at 1440p with a 30 frames-per-second target on PS5 and Xbox Series X|S. Rockstar has not confirmed a 60 fps mode.",
+           "GTA VI runs at 30 frames per second on PS5, PS5 Pro and Xbox Series X|S. There is no 60 fps or 40 fps mode, not even on PS5 Pro.",
            art.fps(), """
   <h2>By console</h2>
   <div class="scroll"><table>
-    <tr><th>Console</th><th>What is known</th></tr>
-    <tr><td><b>PS5</b></td><td>Previews: 30 fps target at 1440p</td></tr>
-    <tr><td><b>Xbox Series X</b></td><td>Previews: 30 fps target at 1440p</td></tr>
-    <tr><td><b>Xbox Series S</b></td><td>30 fps target reported. Resolution on this console has not been detailed</td></tr>
-    <tr><td><b>PS5 Pro</b></td><td>Listed as PS5 Pro Enhanced. The actual improvements have not been confirmed</td></tr>
+    <tr><th>Console</th><th>What testing shows</th></tr>
+    <tr><td><b>PS5 Pro</b></td><td>30 fps, held almost perfectly. Digital Foundry played for more than 50 hours without a noticeable dip. Renders at 1440p and upscales with PSSR for a sharper, near-4K look</td></tr>
+    <tr><td><b>PS5</b></td><td>30 fps target with small dips throughout, and longer drops below 30 in heavy action such as big explosions. Renders at 1440p</td></tr>
+    <tr><td><b>Xbox Series X</b></td><td>30 fps target. Not yet tested by Digital Foundry</td></tr>
+    <tr><td><b>Xbox Series S</b></td><td>30 fps target. Resolution not detailed yet</td></tr>
   </table></div>
+  <p class="note">PS5 and PS5 Pro results from Digital Foundry's launch testing, reported November 18, 2026. The 1440p figure is as reported by TweakTown. We will add Xbox results when they are published.</p>
+  <h2>How bad are the drops?</h2>
+  <p>On PS5 Pro, the only drop Digital Foundry found was to 24 fps, and only when the tester deliberately set off huge numbers of explosions at once. On the standard PS5, the dips are minor in normal play but noticeable, and heavy fights can keep it below 30 until you leave the area. Some reviewers also mention frame rate dips in chases on PS5.</p>
   <h2>Why not 60?</h2>
-  <p>Technical analysts quoted across the games press expect 30 fps because of the processor in current consoles. A world this dense leans on the CPU, and the PS5 Pro uses the same CPU as the standard PS5, so its stronger graphics chip does not solve that limit. This is analysis, not a statement from Rockstar.</p>
-  <h2>Could 60 fps come later?</h2>
-  <p>Possibly, but nothing has been announced. Any site that promises a 60 fps patch date is guessing.</p>
+  <p>A world this dense leans on the processor, and the PS5 Pro has the same CPU as the standard PS5, so its stronger graphics chip does not lift that limit. Digital Foundry's John Linneman doubts 60 fps is possible in a game of this scope on current consoles.</p>
+  <h2>Could a 40 or 60 fps mode come later?</h2>
+  <p>Nothing has been announced. Any site that promises a patch date is guessing.</p>
   <h2>Get the smoothest picture you can</h2>
   <ul>
     <li><b>Switch your TV to Game Mode.</b> It cuts the delay between pressing a button and seeing the result.</li>
     <li><b>Turn off motion smoothing.</b> It adds delay and visual glitches in games.</li>
     <li><b>Use an HDMI port that supports your TV's best features</b> if your set has only some ports marked for gaming.</li>
-  </ul>""")
+  </ul>
+  <p>What critics made of the 30 fps cap: <a href="/news/gta-6-reviews-metacritic-99/">GTA 6 reviews round-up</a>.</p>""")
 
-REVIEWS = page("/reviews/", "Before you buy", "When do GTA 6 reviews come out?",
-               "Rockstar has not announced a review date. One unconfirmed report says reviews could appear on November 18, 2026, the day before release.",
+REVIEWS = page("/reviews/", "Before you buy", "GTA 6 reviews: what critics say",
+               "Reviews went live on November 18, 2026, the day before launch. The PS5 version opened with a 99 Metascore from 98 reviews, an early figure that will move as more arrive.",
                art.reviews_cal(), """
-  <h2>What the report says</h2>
+  <h2>The scores so far</h2>
   <ul>
-    <li>Reviews would be allowed from the morning of Wednesday, November 18, around 6 to 7 a.m. Eastern time.</li>
-    <li>Some sites and video channels would have a later slot, around midnight Eastern as November 19 begins.</li>
+    <li><b>Metacritic, PS5:</b> 99 from 98 critic reviews (morning of November 18).</li>
+    <li><b>Metacritic, Xbox Series X:</b> 99 from 9 reviews.</li>
+    <li><b>Perfect scores:</b> IGN, VICE, Push Square and Cultured Vultures gave 10/10, and Creative Bloq gave 5/5.</li>
   </ul>
-  <p>This traces back to a single forum post that several sites repeated. Neither Rockstar nor Take-Two has confirmed it, so the date could be wrong.</p>
-  <h2>Where to look once reviews land</h2>
+  <p>For comparison, GTA IV has a 98 and GTA V a 97.</p>
+  <h2>In one line</h2>
+  <p>Critics love the world, the driving and Jason and Lucia's story. The common complaints are fiddly controls, clunky small guns, slow later chapters and the 30 fps cap. Our <a href="/news/gta-6-reviews-metacritic-99/">full reviews round-up</a> has who said what.</p>
+  <h2>Where to check the latest scores</h2>
   <ul>
-    <li><b>Metacritic and OpenCritic</b> collect critic scores in one place.</li>
-    <li><b>Performance breakdowns</b> from technical channels are worth waiting for if frame rate matters to you. See <a href="/frame-rate/">what is known about fps</a>.</li>
+    <li><b>Metacritic and OpenCritic</b> collect critic scores in one place. Look at how many reviews a score is based on.</li>
+    <li><b>Performance:</b> see our <a href="/frame-rate/">frame rate guide</a> for tested results by console.</li>
   </ul>
-  <h2>If you pre-ordered and want to wait</h2>
-  <p>Check the refund rules for the PlayStation Store or Microsoft Store before launch day. Stores generally treat a pre-order differently once the game is released and downloaded.</p>""")
+  <h2>If you pre-ordered and changed your mind</h2>
+  <p>Check the refund rules for the PlayStation Store or Microsoft Store now. Stores generally treat a pre-order differently once the game is released and downloaded.</p>""")
 
 LENGTH = page("/story-length/", "The story", "How long is GTA 6?",
               "About 80 hours for the main story, going by one Rockstar developer's own playthrough. That is far longer than GTA V.",
@@ -236,8 +243,8 @@ WANTED = page("/wanted-level/", "Gameplay", "GTA 6 wanted level: how it works an
 ARTICLES2 = [
     ("/pc-release/", "Is GTA 6 Coming to PC? Release Date Status" + BRAND, "GTA VI launches on PS5 and Xbox Series X|S only. What Take-Two has said about PC, how long GTA V and Red Dead 2 took, and whether to wait.", PC),
     ("/online/", "Does GTA 6 Have Online at Launch? Multiplayer Explained" + BRAND, "GTA VI is listed as single-player for November 19, 2026. What is confirmed about an online mode, what is only reported, and what happens to GTA Online.", ONLINE),
-    ("/frame-rate/", "Is GTA 6 30 or 60 FPS? PS5, PS5 Pro and Xbox Performance" + BRAND, "Previews reported GTA VI at 1440p and 30 fps on PS5 and Xbox Series X|S. What is known for each console and whether 60 fps is confirmed.", FPS),
-    ("/reviews/", "When Do GTA 6 Reviews Come Out? Embargo Date" + BRAND, "Rockstar has not announced a GTA VI review date. What the unconfirmed November 18 report says and where to find scores.", REVIEWS),
+    ("/frame-rate/", "Is GTA 6 30 or 60 FPS? PS5, PS5 Pro and Xbox Performance" + BRAND, "GTA VI runs at 30 fps on every console, with no 60 fps mode even on PS5 Pro. Tested results for PS5 and PS5 Pro, and what to expect on Xbox.", FPS),
+    ("/reviews/", "GTA 6 Reviews: Metacritic Score and What Critics Say" + BRAND, "GTA VI reviews went live on November 18. The early Metacritic score, the perfect scores, and the most common complaints.", REVIEWS),
     ("/story-length/", "How Long Is GTA 6? Story Length in Hours" + BRAND, "GTA VI's story took a Rockstar developer about 80 hours. Where that number comes from and how it compares with GTA V and Red Dead Redemption 2.", LENGTH),
     ("/radio-stations/", "GTA 6 Radio Stations: All Six Stations and Hosts" + BRAND, "The six GTA VI radio stations revealed so far, their genres and reported hosts, plus podcasts and listening on foot.", RADIO),
     ("/map-size/", "How Big Is the GTA 6 Map? Leonida Size and Regions" + BRAND, "The GTA VI map is reported at about three times Red Dead Redemption 2's. Size comparisons, the six regions of Leonida and how the map works.", MAP),
