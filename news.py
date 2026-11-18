@@ -8,6 +8,36 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-xbox-series-x-s-performance",
+        date="2026-11-18",
+        title="GTA 6 on Xbox: Series X holds up, Series S drops to 720p and below 30 fps",
+        desc="The first Xbox Series X|S tests are in. Series X looks close to PS5, while Series S renders at 720p and dips toward 20 fps in heavy action.",
+        fig=art.xbox_res,
+        body="""
+  <p>This morning the Xbox versions were the big gap in GTA VI's launch coverage. Digital Foundry and Xbox-focused reviewers have now filled it in. The short version: <b>Series X is in good shape, and Series S works but makes real sacrifices.</b></p>
+  <h2>Xbox Series X</h2>
+  <ul>
+    <li><b>Resolution:</b> renders at 1440p and upscales to 4K, the same starting point as PS5.</li>
+    <li><b>Frame rate:</b> a 30 fps target that Pure Xbox's reviewer found largely smooth, with the occasional dropped frame. BGR, rounding up reviewer testing, puts the worst moments in the mid-20s.</li>
+    <li><b>Small issues:</b> Pure Xbox noticed some pop-in and a handful of minor bugs, nothing that got in the way.</li>
+  </ul>
+  <h2>Xbox Series S</h2>
+  <ul>
+    <li><b>Resolution:</b> renders at 720p and upscales to 1080p. Rockstar told Wccftech it uses AMD's FSR 4 upscaler for this.</li>
+    <li><b>Frame rate:</b> Digital Foundry found everyday shootouts and car chases running around 25 fps, bigger scenes nearer 20, and one explosive firefight dipping to 18 or 19. Quieter moments, walking around and cutscenes, usually hold 30.</li>
+    <li><b>What you lose:</b> according to BGR's summary of the tests, rougher or missing shadows, more pop-in at a distance, a shallower depth-of-field effect and lower-detail textures on things like clouds and water. Rockstar says the lighting itself matches the other consoles.</li>
+  </ul>
+  <h2>So which console is best?</h2>
+  <p>Digital Foundry still rates the PS5 Pro as the best version, with a near-flawless 30 fps. Series X sits roughly alongside the standard PS5. Series S is very playable, but if you are sensitive to frame drops it is the version to avoid if you have a choice. BGR's verdict is that the game is still worth playing on Series S, with compromises.</p>
+  <h2>Can I get a better result on Series S?</h2>
+  <p>There is no performance mode or graphics setting that changes this on console. Turning on Game Mode and switching off motion smoothing on your TV helps with responsiveness, and our <a href="/frame-rate/">frame rate guide</a> has the full table for every console.</p>
+  <p class="note">None of this includes a patch yet. Rockstar's 1.002 update arrived before launch with no patch notes, and no launch-day performance fix has been announced.</p>""",
+        sources=[("VGTimes: Digital Foundry's GTA 6 analysis, Series S dips below 20 fps", "https://vgtimes.com/gaming-news/175053-gta-6-can-drop-below-20-fps-on-xbox-series-s-analysis-finds.html"),
+                 ("Pure Xbox: GTA 6 comparison between Xbox Series X and Series S", "https://www.purexbox.com/news/2026/11/gta-6-comparison-shows-difference-between-xbox-series-x-and-series-s"),
+                 ("BGR: Is GTA 6 worth playing on Xbox Series S?", "https://www.bgr.com/2321133/gta-6-worth-playing-xbox-series-s-explained/"),
+                 ("ComicBook: GTA 6 update 1.002 released ahead of launch", "https://comicbook.com/gaming/news/gta-6-update-patch-notes-1002000/")],
+    ),
+    dict(
         slug="gta-6-out-in-new-zealand",
         date="2026-11-18",
         title="GTA 6 is out in New Zealand: what players are finding inside the game",
@@ -44,7 +74,7 @@ POSTS = [
     <li><b>Bans:</b> posts claim some accounts were suspended, but none has been confirmed. Separately, Twitch reportedly warned a German streamer that using the trick on stream could lead to a ban.</li>
   </ul>
   <h2>What we still don't know</h2>
-  <p>Proper performance tests on Xbox, how bad any launch bugs are, and whether a day-one patch changes anything. Critic reviews and Digital Foundry's PS5 test are already out: <a href="/news/gta-6-reviews-metacritic-99/">here is what they say</a>.</p>
+  <p>How bad any launch bugs are, and whether a day-one patch changes anything. Critic reviews and Digital Foundry's PS5 test are already out: <a href="/news/gta-6-reviews-metacritic-99/">here is what they say</a>.</p>
   <h2>What we are updating</h2>
   <p>As GTA VI unlocks around the world, we are checking our <a href="/map/">map</a>, <a href="/cheats/">cheats</a>, <a href="/missions/">missions</a> and <a href="/collectibles/">collectibles</a> against the finished game. Anything we confirm gets marked as verified.</p>""",
         sources=[("PC Guide: GTA 6 launches in NZ, including an early plot surprise", "https://www.pcguide.com/news/gta-6-launches-in-nz-with-millions-of-viewers-tuning-in-to-discover-the-game-including-an-early-plot-surprise/"),
@@ -84,7 +114,7 @@ POSTS = [
   <ul>
     <li><b>PS5 Pro:</b> a "near flawless" 30 fps with perfect frame pacing over more than 50 hours. It only fell to 24 fps when the tester set off huge numbers of explosions on purpose.</li>
     <li><b>PS5:</b> small dips throughout, and longer drops below 30 in heavy action.</li>
-    <li><b>Xbox Series X|S:</b> not tested yet.</li>
+    <li><b>Xbox Series X|S:</b> tested later the same day. Series X holds up well, while Series S renders at 720p and dips toward 20 fps: <a href="/news/gta-6-xbox-series-x-s-performance/">full Xbox results</a>.</li>
   </ul>
   <p>Full details by console are in our <a href="/frame-rate/">frame rate guide</a>.</p>
   <h2>Should the complaints change your mind?</h2>

@@ -10,7 +10,7 @@ GUIDES = [
     ("/editions/", "GTA 6 Standard vs Ultimate", "What each edition includes and what the extra $20 buys."),
     ("/pc-release/", "Is GTA 6 coming to PC?", "What Take-Two has said, and how long past games took."),
     ("/online/", "Does GTA 6 have online at launch?", "What is confirmed about multiplayer and GTA Online."),
-    ("/frame-rate/", "Is GTA 6 30 or 60 fps?", "30 fps on every console. Tested results for PS5 and PS5 Pro."),
+    ("/frame-rate/", "Is GTA 6 30 or 60 fps?", "30 fps on every console. Tested results for PS5, PS5 Pro and Xbox."),
     ("/reviews/", "GTA 6 reviews: what critics say", "Reviews are out: the Metascore and what critics said."),
     ("/story-length/", "How long is GTA 6?", "The 80-hour figure and how it compares."),
     ("/radio-stations/", "GTA 6 radio stations", "All six revealed stations, genres and hosts."),
