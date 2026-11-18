@@ -203,3 +203,18 @@ def metascore():
     b += panel(400, 100, 340, 125) + t(570, 148, "PRAISED", 26, GOOD, font=L) + t(570, 196, "WORLD · DRIVING · STORY", 22, font=L)
     b += panel(400, 245, 340, 125) + t(570, 293, "CRITICISED", 26, SUN, font=L) + t(570, 341, "CONTROLS · 30 FPS · GUNS", 22, font=L)
     return fig(b, "GTA VI has a 99 Metascore on PS5 from an early sample of 98 reviews; critics praise the world, driving and story and criticise controls, the 30 fps cap and gunplay")
+
+
+def xbox_res():
+    b = t(400, 62, "WHERE EACH CONSOLE STARTS", 34)
+    rows = [("PS5 PRO", "1440p → 4K", 1440, "PSSR"), ("PS5", "1440p → 4K", 1440, ""), ("SERIES X", "1440p → 4K", 1440, ""), ("SERIES S", "720p → 1080p", 720, "FSR 4")]
+    for i, (n, txt, px, up) in enumerate(rows):
+        y = 92 + i * 66
+        last = i == 3
+        b += t(40, y + 38, n, 26, SUN if last else INK, anchor="start", font=L)
+        b += f'<rect x="210" y="{y + 10}" width="{px / 1440 * 220:.0f}" height="40" rx="10" fill="url(#aBar)" fill-opacity="{1 if last else .55}"/>'
+        b += t(450, y + 40, txt, 26, SUN if last else INK, anchor="start", font=L)
+        if up:
+            b += t(770, y + 40, up, 22, MUTED, anchor="end", font=L)
+    b += t(400, 382, "ALL TARGET 30 FPS", 24, GOOD, font=L)
+    return fig(b, "Chart: GTA VI renders at 1440p on PS5 Pro, PS5 and Xbox Series X before upscaling to 4K, and at 720p on Xbox Series S before upscaling to 1080p with FSR 4; all target 30 fps")
