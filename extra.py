@@ -112,23 +112,32 @@ WILDLIFE = page("/wildlife/", "The world", "GTA 6 animals, wildlife and the zoo"
   <p>Animal locations get added to the <a href="/map/">interactive map</a> as they are found.</p>""")
 
 MISSIONS = page("/missions/", "The story", "GTA 6 missions list",
-                "The full GTA VI mission list goes live here once the game is out on November 19, 2026. This is what is known about the story's structure so far.", "", """
-  <div class="empty"><b>Mission list at launch</b>Every mission is added in order as it is played and verified.</div>
-  <h2>What is known</h2>
+                "GTA VI's main story has 91 missions split across five chapters. Here is how they are spread out, with no mission names or plot details.", "", """
+  <div class="facts">
+    <div><span>Story missions</span><b>91</b></div>
+    <div><span>Chapters</span><b>5</b></div>
+    <div><span>Replay single missions</span><b>No</b></div>
+  </div>
+  <h2>Missions per chapter</h2>
+  <div class="scroll"><table>
+    <tr><th>Chapter</th><th>Missions</th></tr>
+    <tr><td>Chapter 1</td><td class="n">22</td></tr>
+    <tr><td>Chapter 2</td><td class="n">11</td></tr>
+    <tr><td>Chapter 3</td><td class="n">26</td></tr>
+    <tr><td>Chapter 4</td><td class="n">25</td></tr>
+    <tr><td>Chapter 5</td><td class="n">7</td></tr>
+  </table></div>
+  <p class="note">Counts from the mission lists published by Dexerto and Red Bull Gaming on launch day, which agree. We leave out chapter and mission names to avoid spoilers.</p>
+  <h2>What else is known</h2>
   <ul>
-    <li>The story is split into chapters and took one Rockstar developer about 80 hours. See <a href="/story-length/">how long GTA 6 is</a>.</li>
-    <li>It opens in the Leonida Keys, near Jason's house, before the rest of the map opens up.</li>
-    <li>Previews describe missions as less restrictive than in GTA V, with more than one way to complete them.</li>
+    <li><b>Length:</b> Red Bull Gaming puts the main story at about 65 to 70 hours, and 90 to 100 with side content. Rockstar North's studio head took about 80. See <a href="/story-length/">how long GTA 6 is</a>.</li>
+    <li><b>No mission replays.</b> IGN's review notes you can't replay finished story missions one at a time, unlike GTA V.</li>
+    <li><b>Finishing the story unlocks cheats.</b> Every cheat stays locked until the last mission. See <a href="/cheats/">cheats</a>.</li>
+    <li>It opens with a prologue that doubles as the tutorial, then Jason's first mission in the Leonida Keys.</li>
     <li>You switch between Jason and Lucia in free roam and during missions.</li>
-    <li>Some tools arrive through the story. Certain cars stay locked until you have them.</li>
   </ul>
-  <h2>What each mission entry will include</h2>
-  <ul>
-    <li>Where it starts and how to unlock it</li>
-    <li>Objectives and any optional goals</li>
-    <li>Rewards</li>
-    <li>A tick box that saves to your <a href="/tracker/">progress tracker</a></li>
-  </ul>""")
+  <h2>Coming next</h2>
+  <p>Each mission will get an entry with where it starts, objectives, optional goals and rewards, plus a tick box that saves to your <a href="/tracker/">progress tracker</a>. We add them as we play and verify them.</p>""")
 
 COLLECTIBLES = page("/collectibles/", "Completion", "GTA 6 collectibles and hidden items",
                     "Previews have not described a traditional collectibles set yet. Here is what is known about things to find, and how this page will work at launch.", "", """
@@ -971,7 +980,7 @@ EXTRA = [
     ("/gym/", "GTA 6 Gym Guide: Workouts and How to Gain Strength" + BRAND, "How gym workouts work in GTA VI: three-exercise sessions, timing inputs, the three-day rule for strength and items that help.", GYM),
     ("/robberies/", "GTA 6 Robberies: How to Make Money" + BRAND, "How store robberies and bigger scores work in GTA VI: the Snap Gun, cameras, safes, marked banknotes, fences and payouts.", ROBBERIES),
     ("/wildlife/", "GTA 6 Animals, Wildlife Checklist and Zoo" + BRAND, "Every animal in GTA VI can be studied for a checklist. What is known about wildlife, the zoo, dogs, hunting and fishing.", WILDLIFE),
-    ("/missions/", "GTA 6 Missions List: All Story Missions" + BRAND, "The GTA VI mission list, added in order from launch day, plus what is known about chapters and story structure.", MISSIONS),
+    ("/missions/", "GTA 6 Missions: How Many Story Missions and Chapters" + BRAND, "GTA VI has 91 story missions in five chapters. Missions per chapter, story length and replay rules, without spoilers.", MISSIONS),
     ("/collectibles/", "GTA 6 Collectibles and Hidden Items" + BRAND, "What there is to find in GTA VI so far: shipwreck treasure, wildlife, hidden areas and hideouts. Locations are added at launch.", COLLECTIBLES),
     ("/vehicles/", "GTA 6 Vehicles List: All Cars, Boats and Bikes" + BRAND, "Every GTA VI vehicle confirmed so far and how to get it, plus how fuel, garages, registration, trackers and mod shops work.", VEHICLES),
     ("/weapons/", "GTA 6 Weapons List and How Combat Works" + BRAND, "GTA VI weapons confirmed so far, the two-handgun and two-long-gun carry limit, Ammu-Nation lockers, Focus and non-lethal options.", WEAPONS),

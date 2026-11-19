@@ -161,7 +161,7 @@ HOME = f"""
       <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>The six regions of Leonida, with markers you can tick off.</span></a>
       <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
       <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
-      <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
+      <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>The GTA VI codes found so far and how to unlock them.</span></a>
     </div>
   </div>"""
 
@@ -239,7 +239,7 @@ GUIDE = f"""
     <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>900+ places across Leonida you can search and tick off.</span></a>
     <a class="tile" href="/characters/"><em>The story</em><h3>Who's who</h3><span>Jason, Lucia and the people around them.</span></a>
     <a class="tile" href="/activities/"><em>Things to do</em><h3>Activities</h3><span>All twelve reported side activities.</span></a>
-    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>GTA V's codes to try on November 19.</span></a>
+    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>61 cheats, unlocked after the story. Codes found so far.</span></a>
   </div></div>
 """
 
@@ -271,15 +271,34 @@ TRACKER = f"""
     </div>
   </div>"""
 
-from cheats import render as gta5_cheats
+from cheats import render as gta5_cheats, chips as cheat_chips
 if D["cheats"]:
-    rows = "".join(f"<tr><td><b>{e(c['name'])}</b></td><td class=\"n\">{e(c['ps5'])}</td><td class=\"n\">{e(c['xbox'])}</td><td>{e(c['effect'])}</td></tr>" for c in D["cheats"])
-    verified = f'<h2>Tested in GTA VI</h2><div class="scroll"><table><tr><th>Cheat</th><th>PS5</th><th>Xbox</th><th>Effect</th></tr>{rows}</table></div>'
+    rows = "".join(f"""<div class="cheat">
+  <div class="cheat-h"><h3>{e(c['name'])}</h3><span class="tag">GTA VI · reported</span><p>{e(c['effect'])}</p></div>
+  <div class="cheat-in">
+    <div><span class="plat">Code</span>{cheat_chips(c['code'])}</div>
+    <div><span class="plat">Unlock</span><span>{e(c['unlock'])}</span></div>
+  </div></div>""" for c in D["cheats"])
+    verified = f"""<div class="facts">
+    <div><span>GTA VI cheats</span><b>61</b></div>
+    <div><span>Codes found, listed here</span><b>{len(D["cheats"])}</b></div>
+    <div><span>Unlocks</span><b>After the story</b></div>
+  </div>
+  <section class="stack" id="gta6"><h2>GTA VI cheats found so far</h2>
+  <p><b>How to enter them:</b> press Up on the D-pad to take out the phone, hold <b>L1 + R1</b> (<b>LB + RB</b> on Xbox), then enter the D-pad code. The codes are the same on PS5 and Xbox.</p>
+  <ul>
+    <li><b>Finish the main story first.</b> No cheat works until then, and most also need the challenge listed below.</li>
+    <li><b>Cheats turn off trophies, achievements and saving</b> for the rest of that session.</li>
+    <li>GTA VI has 61 cheats. These are the {len(D["cheats"])} codes that GamesRadar+ and Red Bull Gaming both list identically. We have not tested them ourselves yet. <a href="/news/gta-6-cheats-confirmed-how-to-unlock/">More on how cheats work</a>.</li>
+  </ul>
+  <div class="cheats">{rows}</div></section>
+  <h2>GTA V's cheat codes</h2>
+  <p>These are GTA V's codes, kept here for reference. They do not work in GTA VI.</p>"""
 else:
     verified = ''
 CHEATS = f"""
-  <div class="stack"><span class="eyebrow">PS5 · Xbox · PC</span><h1>GTA 6 cheat codes</h1>
-  <p class="lede">No GTA VI cheats are confirmed yet. Below are all of GTA V's cheat codes, the most likely to return, with buttons for PS5 and Xbox, PC codes and phone numbers.</p></div>
+  <div class="stack"><span class="eyebrow">PS5 · Xbox</span><h1>GTA 6 cheat codes</h1>
+  <p class="lede">GTA VI has 61 cheats, entered on the phone with a D-pad code once you finish the story. Here are the codes found so far, and how to unlock them.</p></div>
   {verified}
   {gta5_cheats()}"""
 
@@ -344,10 +363,10 @@ HOME += news.home_block() + ALL_GUIDES
 LAUNCH += GUIDE_LINKS
 
 PAGES = [
-    ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
+    ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and GTA VI cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
     ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
-    ("/cheats/", "GTA 6 Cheat Codes for PS5, Xbox and PC (GTA V Codes to Try) | Leonida Logbook", "No GTA VI cheats are confirmed yet. All 34 GTA V cheat codes for PS5, Xbox and PC, with phone numbers, ready to test in GTA VI on November 19, 2026.", CHEATS),
+    ("/cheats/", "GTA 6 Cheat Codes for PS5 and Xbox and How to Unlock Them | Leonida Logbook", "GTA VI has 61 cheats, entered on the phone with a D-pad code after you finish the story. The codes found so far, how to unlock each one, and what cheats switch off.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
     ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
