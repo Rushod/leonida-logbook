@@ -203,3 +203,26 @@ def metascore():
     b += panel(400, 100, 340, 125) + t(570, 148, "PRAISED", 26, GOOD, font=L) + t(570, 196, "WORLD · DRIVING · STORY", 22, font=L)
     b += panel(400, 245, 340, 125) + t(570, 293, "CRITICISED", 26, SUN, font=L) + t(570, 341, "CONTROLS · 30 FPS · GUNS", 22, font=L)
     return fig(b, "GTA VI has a 99 Metascore on PS5 from an early sample of 98 reviews; critics praise the world, driving and story and criticise controls, the 30 fps cap and gunplay")
+
+
+def xbox_fps():
+    b = t(400, 62, "GTA VI ON XBOX, TESTED", 34)
+    b += panel(40, 96, 345, 278) + t(212, 140, "SERIES X", 30, SUN, font=L)
+    b += f'<text x="212" y="238" font-family="{D}" font-size="96" fill="url(#aNum)" text-anchor="middle">1440p</text>'
+    b += t(212, 290, "MOSTLY HOLDS 30 FPS", 25, font=L) + t(212, 332, "CLOSE TO BASE PS5", 24, GOOD, font=L)
+    b += f'<rect x="415" y="96" width="345" height="278" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>' + t(587, 140, "SERIES S", 30, SUN, font=L)
+    b += f'<text x="587" y="238" font-family="{D}" font-size="96" fill="url(#aNum)" text-anchor="middle">720p</text>'
+    b += t(587, 290, "OFTEN 25 TO 30 FPS", 25, font=L) + t(587, 332, "AROUND 20 AT WORST", 24, PINK, font=L)
+    return fig(b, "Digital Foundry's Xbox results: Series X renders at about 1440p and mostly holds 30 fps; Series S renders at 720p, often runs at 25 to 30 fps and drops to about 20 at worst")
+
+
+def cheats_real():
+    b = t(400, 62, "GTA VI CHEATS ARE REAL", 34)
+    b += f'<rect x="40" y="96" width="300" height="278" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>'
+    b += f'<text x="190" y="252" font-family="{D}" font-size="150" fill="url(#aNum)" text-anchor="middle">61</text>' + t(190, 300, "CHEATS IN TOTAL", 25, font=L) + t(190, 336, "PER GUIDES", 22, MUTED, font=L)
+    steps = [("1", "PRESS UP: PHONE OUT"), ("2", "HOLD L1 + R1 (LB + RB)"), ("3", "ENTER THE D-PAD CODE")]
+    for i, (n, s) in enumerate(steps):
+        y = 96 + i * 72
+        b += panel(370, y, 390, 60) + t(400, y + 41, n, 30, SUN) + t(425, y + 40, s, 23, anchor="start", font=L)
+    b += panel(370, 312, 390, 62, dashed=True) + t(565, 352, "UNLOCK: BEAT THE STORY", 23, SUN, font=L)
+    return fig(b, "GTA VI has 61 cheats. Press Up to take out the phone, hold L1 and R1 (LB and RB on Xbox), then enter a D-pad code. Cheats unlock after the main story")

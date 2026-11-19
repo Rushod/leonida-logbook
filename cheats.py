@@ -1,6 +1,6 @@
 """GTA V cheat codes shown on /cheats/ as the codes most likely to return in GTA VI.
 Sequences are GTA V's own (PlayStation layout); Xbox sequences are derived by button mapping.
-None of these is confirmed for GTA VI."""
+They do not work in GTA VI, which has its own codes (see content/data.json)."""
 from html import escape as e
 
 XBOX = {"O": "B", "X": "A", "S": "X", "T": "Y", "L1": "LB", "R1": "RB", "L2": "LT", "R2": "RT"}
@@ -101,11 +101,6 @@ def render():
                    for n, d, p, pc, note in PHONE_ONLY)
     total = sum(len(i) for _, i in GROUPS) + len(PHONE_ONLY)
     return f"""
-  <div class="facts">
-    <div><span>GTA VI cheats confirmed</span><b>0 so far</b></div>
-    <div><span>GTA V codes below</span><b>{total}</b></div>
-    <div><span>Launch</span><b>Nov 19, 2026</b></div>
-  </div>
   <div class="cheat-bar">
     <div class="seg" role="group" aria-label="Show buttons for">
       <button type="button" data-show="ps" aria-pressed="true">PS5</button><button type="button" data-show="xbox" aria-pressed="false">Xbox</button><button type="button" data-show="pc" aria-pressed="false">PC</button><button type="button" data-show="all" aria-pressed="false">All</button>
