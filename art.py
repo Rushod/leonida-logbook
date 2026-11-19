@@ -226,3 +226,29 @@ def cheats_real():
         b += panel(370, y, 390, 60) + t(400, y + 41, n, 30, SUN) + t(425, y + 40, s, 23, anchor="start", font=L)
     b += panel(370, 312, 390, 62, dashed=True) + t(565, 352, "UNLOCK: BEAT THE STORY", 23, SUN, font=L)
     return fig(b, "GTA VI has 61 cheats. Press Up to take out the phone, hold L1 and R1 (LB and RB on Xbox), then enter a D-pad code. Cheats unlock after the main story")
+
+
+def trophies():
+    b = t(400, 62, "THE GTA VI TROPHY LIST", 34)
+    b += f'<rect x="40" y="96" width="300" height="278" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>'
+    b += f'<text x="190" y="252" font-family="{D}" font-size="150" fill="url(#aNum)" text-anchor="middle">55</text>' + t(190, 300, "TROPHIES IN TOTAL", 25, font=L) + t(190, 336, "1,000G ON XBOX", 22, MUTED, font=L)
+    tiers = [("PLATINUM", "1", INK), ("GOLD", "2", SUN), ("SILVER", "6", MUTED), ("BRONZE", "46", "#ff8f3f")]
+    for i, (name, n, col) in enumerate(tiers):
+        y = 96 + i * 52
+        b += panel(370, y, 390, 44) + t(395, y + 31, name, 23, col, anchor="start", font=L) + t(735, y + 32, n, 28, col, anchor="end")
+    b += panel(370, 312, 390, 62, dashed=True) + t(565, 352, "PLATINUM NEEDS 100%", 23, SUN, font=L)
+    return fig(b, "GTA VI has 55 trophies: 1 platinum, 2 gold, 6 silver and 46 bronze, worth 1,000 Gamerscore on Xbox. The platinum needs 100% completion")
+
+
+def sales_estimate():
+    b = t(400, 62, "COPIES SOLD BY LAUNCH, ESTIMATED", 34)
+    rows = [("GTA V", 11.2, "11.2M", "FIRST 24 HOURS, 2013"), ("GTA VI", 19.1, "19.1M", "SENSOR TOWER ESTIMATE")]
+    for i, (name, val, txt, note) in enumerate(rows):
+        y = 112 + i * 120
+        w = val * 22
+        b += t(40, y + 40, name, 32, anchor="start")
+        b += f'<rect x="200" y="{y}" width="{w:.0f}" height="56" rx="10" fill="url(#aBar)"/>'
+        b += t(200 + w + 14, y + 41, txt, 32, SUN, anchor="start")
+        b += t(200, y + 88, note, 22, MUTED, anchor="start", font=L)
+    b += t(400, 376, "NO OFFICIAL GTA VI NUMBER YET", 24, PINK, font=L)
+    return fig(b, "GTA V sold 11.2 million copies in its first 24 hours. Sensor Tower estimates GTA VI sold about 19.1 million by the morning of launch day. There is no official GTA VI figure yet")

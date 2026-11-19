@@ -114,7 +114,7 @@ LENGTH = page("/story-length/", "The story", "How long is GTA 6?",
   <h2>How many missions are there?</h2>
   <p>91 story missions in five chapters. Red Bull Gaming estimates the main story at about 65 to 70 hours at a normal pace, shorter than Rob Nelson's 80, which included optional goals. See the <a href="/missions/">missions page</a> for the count per chapter.</p>
   <h2>How long for 100%?</h2>
-  <p>Red Bull Gaming's early estimate is 90 to 100 hours with side content and more than 200 for 100%. Treat that as a first guess until more players finish. See <a href="/map-size/">how big the map is</a>.</p>""")
+  <p>Red Bull Gaming's early estimate is 90 to 100 hours with side content and more than 200 for 100%. Treat that as a first guess until more players finish. GTABase estimates about 200 hours for the platinum trophy, which needs 100% completion. See the <a href="/news/gta-6-trophy-list-platinum-100-percent/">trophy list</a>. See <a href="/map-size/">how big the map is</a>.</p>""")
 
 RADIO = page("/radio-stations/", "Music", "GTA 6 radio stations and hosts",
              "Rockstar has revealed six GTA VI radio stations so far, with previews on its official music page. The full song list has not been published.",
