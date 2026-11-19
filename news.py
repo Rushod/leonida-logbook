@@ -8,6 +8,125 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-sales-19-million-estimate",
+        date="2026-11-19",
+        title="GTA 6 sold an estimated 19 million copies by launch morning, but there's no official number yet",
+        desc="Market data firm Sensor Tower puts GTA VI at about 19.1 million copies and $1.84 billion by the morning of November 19. Take-Two has not shared figures.",
+        fig=art.sales_estimate,
+        body="""
+  <p>The first sales number for GTA VI is out, and it is not from Rockstar. Market data firm Sensor Tower estimates the game had sold about <b>19.1 million copies</b>, worth about <b>$1.84 billion</b>, by the morning of launch day. Reuters reported the figure first.</p>
+  <h2>What the estimate says</h2>
+  <ul>
+    <li><b>About 19.1 million copies</b> sold by the morning of November 19, counting pre-orders.</li>
+    <li><b>About $1.84 billion</b> in revenue, more than $1.5 billion of it from pre-orders, according to 80 Level's summary.</li>
+    <li><b>Roughly three in four copies were on PlayStation</b>, the rest on Xbox.</li>
+  </ul>
+  <h2>Is it official?</h2>
+  <p>No. Sensor Tower estimates sales from store and market data, and Take-Two and Rockstar have not released a number. Take-Two has only said that pre-orders were tracking far above its expectations. Its CEO, Strauss Zelnick, said on an earnings call earlier in November, "we still aren't ready to declare victory." Some reports suggest official figures could come within days, but Take-Two has not given a date.</p>
+  <h2>How it compares with GTA V</h2>
+  <p>GTA V sold 11.21 million copies and made $815.7 million in its first 24 hours in September 2013, a Guinness world record at the time. The GTA VI estimate is already well above that, but the two numbers are not measured the same way: GTA V's covers a full day of sales, while GTA VI's is mostly pre-orders counted before most of the world could play.</p>
+  <h2>Why it matters</h2>
+  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. We will update this post when Take-Two shares its own numbers. Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
+        sources=[("Men's Journal: GTA 6 sold an estimated 19 million copies by launch day", "https://www.mensjournal.com/news/gta-6-sales-19-million-copies-gta-v-record"),
+                 ("80 Level: Report says GTA 6 generated nearly $2B in sales by launch day", "https://80.lv/articles/report-gta-6-generated-nearly-usd2b-in-sales-by-launch-day")],
+    ),
+    dict(
+        slug="gta-6-trophy-list-platinum-100-percent",
+        date="2026-11-19",
+        title="GTA 6 trophy list: 55 trophies, and the platinum needs 100% completion",
+        desc="GTA VI has 55 trophies and achievements, all single-player, worth 1,000 Gamerscore. The platinum needs 100% completion, which guides put at about 200 hours.",
+        fig=art.trophies,
+        body="""
+  <p>Trophy hunters, clear your calendar. GTA VI's full list of trophies and achievements is now public on PS5 and Xbox, and the platinum asks for everything.</p>
+  <h2>The list at a glance</h2>
+  <ul>
+    <li><b>55 in total:</b> 1 platinum, 2 gold, 6 silver and 46 bronze on PS5. On Xbox the same list is worth 1,000 Gamerscore.</li>
+    <li><b>All single-player.</b> There are no online trophies, since GTA VI has no online mode at launch.</li>
+    <li><b>About half are hidden.</b> GTABase counts 28 secret entries. GamesRadar+ warns that some of their names give away mild story spoilers, so we're not listing them here.</li>
+    <li><b>The platinum needs 100% completion.</b> The trophy for reaching 100% is itself one of the two golds. Push Square's verdict: "Strap in for the long haul."</li>
+  </ul>
+  <h2>What counts toward 100%</h2>
+  <p>GTABase's breakdown is the most detailed so far. Some things must be done in full, others only in part:</p>
+  <ul>
+    <li><b>All of them:</b> robberies (including the bank vaults), underwater discoveries, a gold medal at every shooting-range challenge, and every drone race.</li>
+    <li><b>Most of them:</b> scanning 200 of the vehicles, studying 100 of the animals, a set number of optional missions, stunts and challenges.</li>
+  </ul>
+  <h2>Side trophies worth knowing about</h2>
+  <ul>
+    <li><b>Master of None:</b> try each of the 9 activity types once.</li>
+    <li><b>Top Fun:</b> win a drone race at all 14 locations.</li>
+    <li><b>Positive Mental Attitude:</b> meditate at all 18 spots. GTABase says one of them may be missable early in the story, but hasn't confirmed it.</li>
+    <li><b>Whip It Good:</b> discover 100 vehicles.</li>
+    <li><b>Cunning Stunts:</b> complete 250 stunts.</li>
+    <li><b>Maximum Withdrawal:</b> rob five bank vaults and get away.</li>
+    <li><b>Stick Fiddler:</b> beat an arcade game.</li>
+  </ul>
+  <h2>How long will it take?</h2>
+  <p>GTABase estimates about 200 hours for the platinum, in line with Red Bull Gaming's early guess of more than 200 hours for 100%. One more warning: <a href="/news/gta-6-cheats-confirmed-how-to-unlock/">using a cheat</a> turns trophies off for that session. We've added the completion counts to our <a href="/collectibles/">collectibles page</a>, and the <a href="/story-length/">story length guide</a> has the main-story estimates.</p>""",
+        sources=[("Push Square: GTA 6 PS5 trophies revealed, 100% completion needed for the platinum", "https://www.pushsquare.com/news/2026/11/gta-6-ps5-trophies-revealed-100percent-completion-needed-for-the-platinum"),
+                 ("GamesRadar+: Complete GTA 6 trophy and achievement list", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-trophy-achievement-list/"),
+                 ("GTABase: GTA 6 trophy guide and achievements list", "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series")],
+    ),
+    dict(
+        slug="gta-6-cheats-confirmed-how-to-unlock",
+        date="2026-11-19",
+        title="GTA 6 does have cheats: 61 of them, and you have to beat the story first",
+        desc="GTA VI's cheats are entered on the phone with a D-pad code, unlock after the main story, and turn off trophies and saving. The 11 codes two guides agree on so far.",
+        fig=art.cheats_real,
+        body="""
+  <p>Good news for anyone who spent launch week typing GTA V codes into the wrong game: GTA VI does have cheats. Bad news for anyone hoping to spawn a tank on day one: you have to finish the main story before any of them work.</p>
+  <p>Guides from GamesRadar+ and Red Bull Gaming, both updated since the game unlocked, agree on how the system works. Rockstar itself has not published a list.</p>
+  <h2>How cheats work in GTA VI</h2>
+  <ul>
+    <li><b>61 cheats in five groups:</b> player, combat, vehicle spawns, environment and screen filters.</li>
+    <li><b>No phone numbers and no PC-style typing.</b> Press Up on the D-pad to take out the phone, hold L1 and R1 (LB and RB on Xbox), then enter a D-pad sequence. The codes are the same on PS5 and Xbox.</li>
+    <li><b>They are earned.</b> Every cheat stays locked until the Jason and Lucia story is complete. Most then need a challenge or stat as well, such as shooting-range medals, workouts or shopping challenges. GamesRadar+ says the Cheats list sits in the pause menu's Progress tab.</li>
+    <li><b>There's a price.</b> Activating a cheat turns off trophies and achievements, and saving, for the rest of that session.</li>
+  </ul>
+  <h2>Codes found so far</h2>
+  <p>Most codes are still unknown: GamesRadar+ lists 19 of 61, and its list is still growing. We have added the <b>11 codes that both guides give identically</b> to our <a href="/cheats/">cheats page</a>, including the $250,000 money cheat, Infinite Ammo and Body Armor. We have not tested them ourselves yet, so we mark them as reported rather than verified.</p>
+  <h2>Do the GTA V codes work?</h2>
+  <p>No. GTA VI uses its own sequences, and the old phone numbers do nothing. That matches what <a href="/news/gta-6-leaked-cheats-explained/">we said about the "leaked" lists</a> last week.</p>
+  <h2>Why it matters</h2>
+  <p>Locking cheats behind the ending makes them a post-game toy rather than a shortcut. With the main story at 91 missions (see our <a href="/missions/">missions page</a>), most players will not see a single cheat for weeks.</p>""",
+        sources=[("GamesRadar+: All GTA 6 cheats and how to unlock them for PS5 and Xbox", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-cheats/"),
+                 ("Red Bull Gaming: GTA 6 cheats, all the codes and how to unlock them", "https://www.redbull.com/int-en/gta-6-cheat-codes"),
+                 ("IBTimes Australia: GTA 6 cheat codes and how to unlock them", "https://www.ibtimes.com.au/gta-6-cheat-codes-how-unlock-use-cheats-1878899")],
+    ),
+    dict(
+        slug="gta-6-xbox-series-x-s-digital-foundry",
+        date="2026-11-19",
+        title="GTA 6 on Xbox tested: Series X matches PS5, Series S runs at 720p and drops to 20 fps",
+        desc="Digital Foundry's Xbox results are in. Series X looks and runs much like a base PS5. Series S renders at 720p and often sits below 30 fps.",
+        fig=art.xbox_fps,
+        body="""
+  <p>The last gap in the launch performance picture is filled. Digital Foundry has now tested GTA VI on Xbox Series X and Series S, and the two consoles have very different stories.</p>
+  <h2>Xbox Series X: about the same as a PS5</h2>
+  <ul>
+    <li><b>Resolution:</b> about 1440p internally, the same as PS5.</li>
+    <li><b>Frame rate:</b> a 30 fps target it mostly holds, with dropped frames in especially busy chases and firefights.</li>
+    <li><b>Verdict:</b> VGC sums up DF's view as performing similarly to the standard PS5. PS5 Pro is still the best place to play.</li>
+  </ul>
+  <h2>Xbox Series S: the weakest version</h2>
+  <ul>
+    <li><b>Resolution:</b> 720p internally by DF's counts, output at 1080p. Pure Xbox reports Rockstar told Wccftech it uses AMD's FSR 4 upscaling, and DF says the final image looks a lot better than 720p suggests.</li>
+    <li><b>Frame rate:</b> cutscenes and walking are usually fine, but slow driving sits in the mid-to-upper 20s for long stretches, typical combat holds in the mid-20s, and the hardest fights fall to about 20 fps.</li>
+    <li><b>What's cut:</b> it keeps ray-traced reflections and detailed hair, but lighting is less precise, reflections are softer, shadows messier, and clouds, water and draw distance are lower quality.</li>
+    <li><b>Verdict:</b> DF's Oliver Mackenzie said he'd "advise players to play the game on other console platforms for now."</li>
+  </ul>
+  <h2>What if Series S is all you have?</h2>
+  <ul>
+    <li><b>It's still playable.</b> DF admires how much of the game survives, and it is the same GTA VI, just rougher.</li>
+    <li><b>Turn on VRR if your TV has it.</b> Variable refresh rate can make small dips feel less jarring. That's general advice: DF's results don't cover it.</li>
+    <li><b>A fix is not promised.</b> Rockstar has not announced a performance patch, and VGC says it's unclear how much Series S can improve after launch.</li>
+  </ul>
+  <p>All four consoles side by side are in our <a href="/frame-rate/">frame rate guide</a>. Planning to play on Series S? Check <a href="/storage/">how much space you need</a> too.</p>""",
+        sources=[("VGC: GTA 6 Xbox Series S performance analysis says significant frame drops are a problem", "https://www.videogameschronicle.com/news/gta-6-xbox-series-s-performance-analysis-admires-the-effort-but-says-significant-frame-drops-are-a-problem/"),
+                 ("Pure Xbox: Three big takeaways from Digital Foundry's GTA 6 analysis for Xbox Series X|S", "https://www.purexbox.com/news/2026/11/three-big-takeaways-from-digital-foundrys-gta-6-analysis-for-xbox-series-xs"),
+                 ("Pure Xbox: GTA 6 comparison shows difference between Xbox Series X and Series S", "https://www.purexbox.com/news/2026/11/gta-6-comparison-shows-difference-between-xbox-series-x-and-series-s"),
+                 ("TweakTown: GTA 6 drops to 720p and below 30 fps on one console", "https://www.tweaktown.com/news/114779/gta-6-drops-to-720p-and-below-30-fps-on-one-console-gamers-advised-to-play-elsewhere/index.html")],
+    ),
+    dict(
         slug="gta-6-out-in-new-zealand",
         date="2026-11-18",
         title="GTA 6 is out in New Zealand: what players are finding inside the game",
