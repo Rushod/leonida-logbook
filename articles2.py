@@ -60,11 +60,12 @@ FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
     <tr><th>Console</th><th>What testing shows</th></tr>
     <tr><td><b>PS5 Pro</b></td><td>30 fps, held almost perfectly. Digital Foundry played for more than 50 hours without a noticeable dip. Renders at 1440p and upscales with PSSR for a sharper, near-4K look</td></tr>
     <tr><td><b>PS5</b></td><td>30 fps target with small dips throughout, and longer drops below 30 in heavy action such as big explosions. Renders at 1440p</td></tr>
-    <tr><td><b>Xbox Series X</b></td><td>30 fps target. Not yet tested by Digital Foundry</td></tr>
-    <tr><td><b>Xbox Series S</b></td><td>30 fps target. Resolution not detailed yet</td></tr>
+    <tr><td><b>Xbox Series X</b></td><td>30 fps, generally held, with dips in busy chases and firefights. Renders at about 1440p. Close to the standard PS5, and slightly smoother on a 120Hz TV with VRR</td></tr>
+    <tr><td><b>Xbox Series S</b></td><td>30 fps target, but often runs in the mid to upper 20s, and around 20 fps in heavy combat or when vehicles are destroyed. Renders at about 720p</td></tr>
   </table></div>
-  <p class="note">PS5 and PS5 Pro results from Digital Foundry's launch testing, reported November 18, 2026. The 1440p figure is as reported by TweakTown. We will add Xbox results when they are published.</p>
+  <p class="note">All results from Digital Foundry's launch testing, published November 18, 2026, as reported by VGC, Pure Xbox and Kotaku. The PS5 1440p figure is as reported by TweakTown. Full Xbox details: <a href="/news/gta-6-xbox-series-x-s-performance-tested/">GTA 6 on Xbox, tested</a>.</p>
   <h2>How bad are the drops?</h2>
+  <p>Xbox Series S has the biggest problem: Digital Foundry found it slips below 30 fps during much of normal play, not only in big fights. On Series X, drops are limited to the busiest moments, much like PS5.</p>
   <p>On PS5 Pro, the only drop Digital Foundry found was to 24 fps, and only when the tester deliberately set off huge numbers of explosions at once. On the standard PS5, the dips are minor in normal play but noticeable, and heavy fights can keep it below 30 until you leave the area. Some reviewers also mention frame rate dips in chases on PS5.</p>
   <h2>Why not 60?</h2>
   <p>A world this dense leans on the processor, and the PS5 Pro has the same CPU as the standard PS5, so its stronger graphics chip does not lift that limit. Digital Foundry's John Linneman doubts 60 fps is possible in a game of this scope on current consoles.</p>

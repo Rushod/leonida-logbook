@@ -102,7 +102,7 @@ def render():
     total = sum(len(i) for _, i in GROUPS) + len(PHONE_ONLY)
     return f"""
   <div class="facts">
-    <div><span>GTA VI cheats confirmed</span><b>0 so far</b></div>
+    <div><span>GTA VI codes we have tested</span><b>0 so far</b></div>
     <div><span>GTA V codes below</span><b>{total}</b></div>
     <div><span>Launch</span><b>Nov 19, 2026</b></div>
   </div>

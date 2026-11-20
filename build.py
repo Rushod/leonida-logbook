@@ -161,7 +161,7 @@ HOME = f"""
       <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>The six regions of Leonida, with markers you can tick off.</span></a>
       <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
       <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
-      <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>Verified codes only, added as they are tested.</span></a>
+      <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>How GTA VI cheats unlock, and verified codes as we test them.</span></a>
     </div>
   </div>"""
 
@@ -239,7 +239,7 @@ GUIDE = f"""
     <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>900+ places across Leonida you can search and tick off.</span></a>
     <a class="tile" href="/characters/"><em>The story</em><h3>Who's who</h3><span>Jason, Lucia and the people around them.</span></a>
     <a class="tile" href="/activities/"><em>Things to do</em><h3>Activities</h3><span>All twelve reported side activities.</span></a>
-    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>GTA V's codes to try on November 19.</span></a>
+    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>They unlock after the story. How they work.</span></a>
   </div></div>
 """
 
@@ -279,7 +279,17 @@ else:
     verified = ''
 CHEATS = f"""
   <div class="stack"><span class="eyebrow">PS5 · Xbox · PC</span><h1>GTA 6 cheat codes</h1>
-  <p class="lede">No GTA VI cheats are confirmed yet. Below are all of GTA V's cheat codes, the most likely to return, with buttons for PS5 and Xbox, PC codes and phone numbers.</p></div>
+  <p class="lede">GTA VI does have cheats, but they stay locked until you finish the story. We have not yet confirmed any GTA VI button codes ourselves, so none are listed as tested. GTA V's codes are further down for reference.</p></div>
+  <section class="prose stack" id="how-gta6-cheats-work"><h2>How cheats work in GTA VI</h2>
+  <p>Several outlets that played the released game describe the same system. Rockstar has not published an official list.</p>
+  <ul>
+    <li><b>Finish the story first.</b> The cheat list sits in the map's Progress tab and stays locked until every main mission is done. Some cheats also have their own extra requirement, shown with a lock icon.</li>
+    <li><b>Entered on the phone.</b> Open the phone with Up on the d-pad, hold L1 (LB on Xbox), press R1 (RB), then put in a d-pad code.</li>
+    <li><b>About 61 cheats in five groups:</b> player, combat, vehicle spawns, environment and screen filters. The count comes from guide writers and is not confirmed by Rockstar.</li>
+    <li><b>There is a cost.</b> Using any cheat turns off trophies, achievements and saving until you quit that session.</li>
+    <li><b>New save, start again.</b> Unlocked cheats do not carry over to a fresh save file.</li>
+  </ul>
+  <p class="note">Many of the d-pad codes circulating are still marked "to be confirmed" by the guides that list them. We will add each code to a tested table here once it is checked. Sources: <a href="https://www.shacknews.com/article/151400/gta6-how-unlock-cheats" rel="noopener">Shacknews</a>, <a href="https://www.tweaktown.com/news/114769/gta-6-has-61-cheats-but-youll-have-to-beat-the-story-before-using-any-of-them/index.html" rel="noopener">TweakTown</a>, <a href="https://www.gtabase.com/gta-6/gta-6-cheats-xbox-series-xs-cheat-codes" rel="noopener">GTABase</a>.</p></section>
   {verified}
   {gta5_cheats()}"""
 
@@ -347,7 +357,7 @@ PAGES = [
     ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
     ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
-    ("/cheats/", "GTA 6 Cheat Codes for PS5, Xbox and PC (GTA V Codes to Try) | Leonida Logbook", "No GTA VI cheats are confirmed yet. All 34 GTA V cheat codes for PS5, Xbox and PC, with phone numbers, ready to test in GTA VI on November 19, 2026.", CHEATS),
+    ("/cheats/", "GTA 6 Cheat Codes: How They Unlock, Plus GTA V Codes | Leonida Logbook", "How GTA VI cheats unlock after the story, how to enter them on the phone and what they switch off, plus all 34 GTA V codes for PS5, Xbox and PC for reference.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
     ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),

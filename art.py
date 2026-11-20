@@ -203,3 +203,27 @@ def metascore():
     b += panel(400, 100, 340, 125) + t(570, 148, "PRAISED", 26, GOOD, font=L) + t(570, 196, "WORLD · DRIVING · STORY", 22, font=L)
     b += panel(400, 245, 340, 125) + t(570, 293, "CRITICISED", 26, SUN, font=L) + t(570, 341, "CONTROLS · 30 FPS · GUNS", 22, font=L)
     return fig(b, "GTA VI has a 99 Metascore on PS5 from an early sample of 98 reviews; critics praise the world, driving and story and criticise controls, the 30 fps cap and gunplay")
+
+
+def xbox_fps():
+    b = t(400, 62, "GTA VI ON XBOX, TESTED", 34)
+    rows = [("SERIES X", "1440p", "HOLDS 30", 1.0, GOOD), ("SERIES S", "720p", "OFTEN 25-28", 0.82, SUN), ("S, HEAVY ACTION", "720p", "ABOUT 20", 0.66, PINK)]
+    for i, (n, res, fps, frac, col) in enumerate(rows):
+        y = 96 + i * 86
+        b += panel(40, y, 720, 70)
+        b += t(64, y + 45, n, 26, INK, anchor="start", font=L)
+        b += t(328, y + 45, res, 24, MUTED, anchor="start", font=L)
+        b += f'<rect x="420" y="{y + 21}" width="{int(140 * frac)}" height="28" rx="14" fill="{col}" fill-opacity=".85"/>'
+        b += t(736, y + 45, fps, 24, col, anchor="end", font=L)
+    b += t(400, 380, "30 FPS TARGET ON EVERY CONSOLE · DIGITAL FOUNDRY TESTING", 18, MUTED, font=L)
+    return fig(b, "Chart: Digital Foundry found GTA VI holds 30 fps at about 1440p on Xbox Series X, while Series S renders at about 720p and often runs at 25 to 28 fps, dropping to about 20 in heavy action")
+
+
+def day_one_sales():
+    b = t(400, 62, "GTA VI DAY ONE, ESTIMATED", 34)
+    b += f'<rect x="40" y="100" width="340" height="250" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>'
+    b += f'<text x="210" y="248" font-family="{D}" font-size="120" fill="url(#aNum)" text-anchor="middle">24.6M</text>' + t(210, 300, "COPIES (ESTIMATE)", 24, font=L) + t(210, 332, "GTA V: ABOUT 11.2M", 22, MUTED, font=L)
+    b += panel(420, 100, 340, 250)
+    b += f'<text x="590" y="248" font-family="{D}" font-size="110" fill="{INK}" text-anchor="middle">$2.36B</text>' + t(590, 300, "REVENUE (ESTIMATE)", 24, font=L) + t(590, 332, "ABOUT 75% ON PS5", 22, MUTED, font=L)
+    b += t(400, 384, "SENSOR TOWER ESTIMATES · NOT CONFIRMED BY TAKE-TWO", 18, SUN, font=L)
+    return fig(b, "Sensor Tower estimates GTA VI sold about 24.6 million copies and earned about 2.36 billion dollars on day one, roughly 75 percent on PS5; Take-Two has not confirmed the figures")
