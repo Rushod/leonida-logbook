@@ -8,6 +8,59 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-day-one-sales-estimate",
+        date="2026-11-20",
+        title="GTA 6 sold an estimated 25 million copies on day one",
+        desc="Analyst firm Sensor Tower estimates GTA VI sold about 24.6 million copies and took about $2.36 billion in its first day. Take-Two has not confirmed any numbers yet.",
+        fig=art.day_one_sales,
+        body="""
+  <p>The first sales figures for GTA VI are in, but they are estimates, not official numbers. Market tracker Sensor Tower, which counts pre-orders and digital sales, puts the game at about 24.58 million copies sold by the end of launch day, worth roughly $2.36 billion.</p>
+  <h2>The numbers, as estimated</h2>
+  <ul>
+    <li><b>Copies:</b> about 24.6 million, including pre-orders.</li>
+    <li><b>Revenue:</b> about $2.36 billion.</li>
+    <li><b>By console:</b> around three quarters on PS5 (about 18.4 million), and about 6.2 million on Xbox Series X|S.</li>
+  </ul>
+  <h2>How that compares</h2>
+  <p>GTA V sold about 11.2 million copies and made over $815 million in its first day in 2013, then passed $1 billion in three days. If Sensor Tower is right, GTA VI more than doubled both in a single day, and out-earned the opening weekend of Avengers: Endgame.</p>
+  <h2>Why we call it an estimate</h2>
+  <p>Neither Rockstar nor Take-Two has released sales figures. As VGC puts it, the publisher has not "officially confirmed day one sales". Take-Two usually reports numbers with its quarterly results, so official figures may take a while. We will update this post when they arrive.</p>
+  <h2>What it means for players</h2>
+  <p>Very little day to day: the game is the same however many copies it sells. For what's in the game so far, see <a href="/news/gta-6-out-in-new-zealand/">our first look</a>, and for how it runs on your console, <a href="/news/gta-6-xbox-series-x-s-performance-tested/">our Xbox test round-up</a>.</p>""",
+        sources=[("VGC: GTA 6 sold around 25 million copies and made $2.36 billion in its first day, estimates suggest", "https://www.videogameschronicle.com/news/gta-6-sold-around-25-million-copies-and-made-2-36-billion-in-its-first-day-estimates-suggest/"),
+                 ("TweakTown: GTA 6 day one sales estimates break 24.5 million", "https://www.tweaktown.com/news/114795/gta-6-day-one-sales-estimates-break-24-5-million-with-dollars2-36-billion-earned/index.html"),
+                 ("Technology.org: GTA VI first-day sales hit an estimated $2.36B", "https://www.technology.org/2026/11/20/gta-vi-first-day-sales-2-36-billion-take-two-sensor-tower/")],
+    ),
+    dict(
+        slug="gta-6-xbox-series-x-s-performance-tested",
+        date="2026-11-20",
+        title="GTA 6 on Xbox, tested: Series X holds 30 fps, Series S struggles",
+        desc="Digital Foundry's Xbox tests are out. Series X runs much like a standard PS5 at about 1440p, while Series S drops to 720p and often falls below 30 fps.",
+        fig=art.xbox_fps,
+        body="""
+  <p>Digital Foundry has now tested GTA VI on Xbox, filling the gap left by its PS5 coverage. The short version: Series X is a solid way to play, and Series S is the weakest version of the game.</p>
+  <h2>Xbox Series X</h2>
+  <ul>
+    <li><b>Frame rate:</b> 30 fps, held through normal play and even busy shootouts. It dips in the heaviest chases and firefights.</li>
+    <li><b>Resolution:</b> a fairly fixed 1440p, so the image is a little soft next to PS5 Pro.</li>
+    <li><b>Versus PS5:</b> very close to the standard PS5. Digital Foundry found it slightly smoother on a 120Hz TV with variable refresh rate turned on.</li>
+  </ul>
+  <h2>Xbox Series S</h2>
+  <ul>
+    <li><b>Frame rate:</b> 30 fps is the target, but it slips under that for much of normal play. Driving and everyday combat sit in the mid to upper 20s, and the worst explosions drop it to about 20, briefly as low as 18 to 19.</li>
+    <li><b>Resolution:</b> about 720p inside the game, upscaled for your TV, with less precise lighting, softer reflections and messier shadows.</li>
+    <li><b>What still works:</b> ray-traced reflections and hair are kept, and walking around and cutscenes usually run fine.</li>
+  </ul>
+  <p>Digital Foundry summed it up this way: Series S "often lies in a 25-30fps no-man's-land".</p>
+  <h2>Which console is best?</h2>
+  <p>PS5 Pro, which holds 30 fps almost perfectly and has the sharpest picture and ray-traced shadows. Series X and the standard PS5 come next and are close. Every console is capped at 30 fps, with no performance mode. See our <a href="/frame-rate/">frame rate guide</a> for the full table.</p>
+  <h2>Will a patch fix Series S?</h2>
+  <p>Rockstar has not said. Digital Foundry hopes for improvements but is unsure how much is possible on the console. Treat any claim of an upcoming Series S fix as unconfirmed until Rockstar announces it.</p>""",
+        sources=[("VGC: GTA 6 Xbox Series S performance analysis admires the effort but says 'significant frame drops' are a problem", "https://www.videogameschronicle.com/news/gta-6-xbox-series-s-performance-analysis-admires-the-effort-but-says-significant-frame-drops-are-a-problem/"),
+                 ("Pure Xbox: Three big takeaways from Digital Foundry's GTA 6 analysis for Xbox Series X|S", "https://www.purexbox.com/news/2026/11/three-big-takeaways-from-digital-foundrys-gta-6-analysis-for-xbox-series-xs"),
+                 ("Kotaku: GTA 6 performance on PS5 and Xbox Series X|S", "https://kotaku.com/grand-theft-auto-6-gta6-performance-framerate-ps5-xbox-series-x-s-2000758096")],
+    ),
+    dict(
         slug="gta-6-out-in-new-zealand",
         date="2026-11-18",
         title="GTA 6 is out in New Zealand: what players are finding inside the game",
