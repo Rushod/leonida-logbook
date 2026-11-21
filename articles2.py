@@ -53,17 +53,19 @@ ONLINE = page("/online/", "Multiplayer", "Does GTA 6 have online at launch?",
   <p>Not in the way previews describe it. The teamwork shown so far is between the two story leads, Jason and Lucia, who you switch between. See <a href="/characters/">the characters guide</a>.</p>""")
 
 FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
-           "GTA VI runs at 30 frames per second on PS5, PS5 Pro and Xbox Series X|S. There is no 60 fps or 40 fps mode, not even on PS5 Pro.",
+           "GTA VI targets 30 frames per second on PS5, PS5 Pro and Xbox Series X|S, though Series S often falls short. There is no 60 fps or 40 fps mode, not even on PS5 Pro.",
            art.fps(), """
   <h2>By console</h2>
   <div class="scroll"><table>
     <tr><th>Console</th><th>What testing shows</th></tr>
     <tr><td><b>PS5 Pro</b></td><td>30 fps, held almost perfectly. Digital Foundry played for more than 50 hours without a noticeable dip. Renders at 1440p and upscales with PSSR for a sharper, near-4K look</td></tr>
     <tr><td><b>PS5</b></td><td>30 fps target with small dips throughout, and longer drops below 30 in heavy action such as big explosions. Renders at 1440p</td></tr>
-    <tr><td><b>Xbox Series X</b></td><td>30 fps target. Not yet tested by Digital Foundry</td></tr>
-    <tr><td><b>Xbox Series S</b></td><td>30 fps target. Resolution not detailed yet</td></tr>
+    <tr><td><b>Xbox Series X</b></td><td>30 fps most of the time, dipping into the upper 20s in busy chases and gunfights and to about 20 at crowded junctions. Renders at around 1440p. Similar to the standard PS5, and slightly smoother at 120Hz on a VRR display</td></tr>
+    <tr><td><b>Xbox Series S</b></td><td>Often 25 to 30 fps in normal play, down to about 20 when vehicles are being wrecked. Renders at 720p, output at 1080p. Keeps ray-traced lighting and reflections, with cuts to shadows, textures and draw distance</td></tr>
   </table></div>
-  <p class="note">PS5 and PS5 Pro results from Digital Foundry's launch testing, reported November 18, 2026. The 1440p figure is as reported by TweakTown. We will add Xbox results when they are published.</p>
+  <p class="note">Results from Digital Foundry's launch testing, reported November 18, 2026 by TweakTown, VGC and Pure Xbox. The PS5 1440p figure is as reported by TweakTown.</p>
+  <h2>Which console runs it best?</h2>
+  <p>PS5 Pro first, then Xbox Series X and the standard PS5, which are close. Series S is well behind: Digital Foundry advises playing elsewhere for now if you can. Details in <a href="/news/gta-6-xbox-series-x-s-digital-foundry/">our Xbox test round-up</a>.</p>
   <h2>How bad are the drops?</h2>
   <p>On PS5 Pro, the only drop Digital Foundry found was to 24 fps, and only when the tester deliberately set off huge numbers of explosions at once. On the standard PS5, the dips are minor in normal play but noticeable, and heavy fights can keep it below 30 until you leave the area. Some reviewers also mention frame rate dips in chases on PS5.</p>
   <h2>Why not 60?</h2>
@@ -74,6 +76,7 @@ FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
   <ul>
     <li><b>Switch your TV to Game Mode.</b> It cuts the delay between pressing a button and seeing the result.</li>
     <li><b>Turn off motion smoothing.</b> It adds delay and visual glitches in games.</li>
+    <li><b>On Xbox Series X, set 120Hz output</b> if your TV or monitor supports VRR. Digital Foundry found it a little smoother that way.</li>
     <li><b>Use an HDMI port that supports your TV's best features</b> if your set has only some ports marked for gaming.</li>
   </ul>
   <p>What critics made of the 30 fps cap: <a href="/news/gta-6-reviews-metacritic-99/">GTA 6 reviews round-up</a>.</p>""")
@@ -210,6 +213,7 @@ PLATFORMS = page("/platforms/", "Platforms", "Can you play GTA 6 on PS4, Xbox On
     <li><b>There is no disc.</b> Boxed copies contain a download code, so a console without a disc drive works fine.</li>
     <li><b>You need an internet connection</b> to download the game.</li>
     <li><b>Storage matters.</b> A 512 GB Xbox Series S has about 364 GB of usable space, and GTA VI can take 212 GB of it. See the <a href="/storage/">storage guide</a>.</li>
+    <li><b>Series S runs it worst.</b> Digital Foundry measured 720p and frequent dips below 30 fps. See the <a href="/frame-rate/">frame rate guide</a>.</li>
   </ul>
   <h2>Is it on Game Pass or PlayStation Plus?</h2>
   <p>We have found no announcement that GTA VI will be included with either subscription at launch. Plan on buying it. See <a href="/editions/">Standard vs Ultimate</a>.</p>""")
@@ -243,7 +247,7 @@ WANTED = page("/wanted-level/", "Gameplay", "GTA 6 wanted level: how it works an
 ARTICLES2 = [
     ("/pc-release/", "Is GTA 6 Coming to PC? Release Date Status" + BRAND, "GTA VI launches on PS5 and Xbox Series X|S only. What Take-Two has said about PC, how long GTA V and Red Dead 2 took, and whether to wait.", PC),
     ("/online/", "Does GTA 6 Have Online at Launch? Multiplayer Explained" + BRAND, "GTA VI is listed as single-player for November 19, 2026. What is confirmed about an online mode, what is only reported, and what happens to GTA Online.", ONLINE),
-    ("/frame-rate/", "Is GTA 6 30 or 60 FPS? PS5, PS5 Pro and Xbox Performance" + BRAND, "GTA VI runs at 30 fps on every console, with no 60 fps mode even on PS5 Pro. Tested results for PS5 and PS5 Pro, and what to expect on Xbox.", FPS),
+    ("/frame-rate/", "Is GTA 6 30 or 60 FPS? PS5, PS5 Pro and Xbox Performance" + BRAND, "GTA VI runs at 30 fps on every console, with no 60 fps mode even on PS5 Pro. Tested results for PS5, PS5 Pro, Xbox Series X and Series S.", FPS),
     ("/reviews/", "GTA 6 Reviews: Metacritic Score and What Critics Say" + BRAND, "GTA VI reviews went live on November 18. The early Metacritic score, the perfect scores, and the most common complaints.", REVIEWS),
     ("/story-length/", "How Long Is GTA 6? Story Length in Hours" + BRAND, "GTA VI's story took a Rockstar developer about 80 hours. Where that number comes from and how it compares with GTA V and Red Dead Redemption 2.", LENGTH),
     ("/radio-stations/", "GTA 6 Radio Stations: All Six Stations and Hosts" + BRAND, "The six GTA VI radio stations revealed so far, their genres and reported hosts, plus podcasts and listening on foot.", RADIO),

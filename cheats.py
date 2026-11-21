@@ -102,10 +102,12 @@ def render():
     total = sum(len(i) for _, i in GROUPS) + len(PHONE_ONLY)
     return f"""
   <div class="facts">
-    <div><span>GTA VI cheats confirmed</span><b>0 so far</b></div>
+    <div><span>GTA VI cheats unlock</span><b>After the story</b></div>
+    <div><span>Reported in GTA VI</span><b>61</b></div>
     <div><span>GTA V codes below</span><b>{total}</b></div>
-    <div><span>Launch</span><b>Nov 19, 2026</b></div>
   </div>
+  <h2>GTA V cheat codes, for comparison</h2>
+  <p class="note">These are GTA V codes, shown for reference. They are not GTA VI codes.</p>
   <div class="cheat-bar">
     <div class="seg" role="group" aria-label="Show buttons for">
       <button type="button" data-show="ps" aria-pressed="true">PS5</button><button type="button" data-show="xbox" aria-pressed="false">Xbox</button><button type="button" data-show="pc" aria-pressed="false">PC</button><button type="button" data-show="all" aria-pressed="false">All</button>

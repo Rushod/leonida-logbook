@@ -77,9 +77,9 @@ def online_status():
 def fps():
     b = t(400, 62, "GTA VI PERFORMANCE AT LAUNCH", 34)
     b += f'<text x="215" y="235" font-family="{D}" font-size="170" fill="url(#aNum)" text-anchor="middle">30</text>' + t(215, 280, "FPS, ALL CONSOLES", 26, font=L)
-    b += f'<text x="570" y="220" font-family="{D}" font-size="110" fill="url(#aNum)" text-anchor="middle">1440p</text>' + t(570, 280, "PS5 + PRO RENDER", 26, font=L)
+    b += f'<text x="570" y="220" font-family="{D}" font-size="110" fill="url(#aNum)" text-anchor="middle">1440p</text>' + t(570, 280, "PS5, PRO, SERIES X", 26, font=L)
     b += panel(140, 312, 520, 62, dashed=True) + t(400, 353, "NO 60 FPS MODE, EVEN ON PS5 PRO", 28, SUN, font=L)
-    return fig(b, "GTA VI runs at 30 frames per second on every console, renders internally at 1440p on PS5 and PS5 Pro, and has no 60 fps mode")
+    return fig(b, "GTA VI runs at 30 frames per second on every console, renders internally at about 1440p on PS5, PS5 Pro and Xbox Series X, and has no 60 fps mode")
 
 
 def reviews_cal():
@@ -203,3 +203,24 @@ def metascore():
     b += panel(400, 100, 340, 125) + t(570, 148, "PRAISED", 26, GOOD, font=L) + t(570, 196, "WORLD · DRIVING · STORY", 22, font=L)
     b += panel(400, 245, 340, 125) + t(570, 293, "CRITICISED", 26, SUN, font=L) + t(570, 341, "CONTROLS · 30 FPS · GUNS", 22, font=L)
     return fig(b, "GTA VI has a 99 Metascore on PS5 from an early sample of 98 reviews; critics praise the world, driving and story and criticise controls, the 30 fps cap and gunplay")
+
+
+def xbox_df():
+    b = t(400, 62, "GTA VI ON XBOX, TESTED", 34)
+    b += f'<rect x="60" y="100" width="320" height="270" rx="14" fill="{BG}" fill-opacity=".6" stroke="url(#aBar)" stroke-width="4"/>' + t(220, 148, "SERIES X", 30, SUN, font=L)
+    b += f'<text x="220" y="250" font-family="{D}" font-size="96" fill="url(#aNum)" text-anchor="middle">1440p</text>' + t(220, 300, "MOSTLY 30 FPS", 26, GOOD, font=L) + t(220, 340, "DIPS IN BUSY SCENES", 24, MUTED, font=L)
+    b += panel(420, 100, 320, 270) + t(580, 148, "SERIES S", 30, SUN, font=L)
+    b += f'<text x="580" y="250" font-family="{D}" font-size="96" fill="{INK}" text-anchor="middle">720p</text>' + t(580, 300, "OFTEN 25-30 FPS", 26, PINK, font=L) + t(580, 340, "INTERNAL RESOLUTION", 24, MUTED, font=L)
+    return fig(b, "Digital Foundry's tests: Xbox Series X renders around 1440p and mostly holds 30 fps; Series S renders at 720p and often runs between 25 and 30 fps")
+
+
+def cheats_unlock():
+    b = t(400, 62, "HOW GTA VI CHEATS UNLOCK", 34)
+    steps = [("1", "FINISH THE STORY"), ("2", "MEET EACH CHEAT'S GOAL"), ("3", "ENTER CODE ON PHONE")]
+    for i, (n, s) in enumerate(steps):
+        y = 100 + i * 82
+        b += panel(60, y, 680, 66)
+        b += f'<circle cx="104" cy="{y + 33}" r="22" fill="url(#aBar)"/>' + t(104, y + 43, n, 28)
+        b += t(150, y + 44, s, 30, anchor="start", font=L)
+    b += t(400, 372, "CHEATS DISABLE SAVING FOR THAT SESSION", 24, SUN, font=L)
+    return fig(b, "Steps: finish the story, meet each cheat's own unlock goal, then enter its code on the phone; using cheats disables saving for that session")

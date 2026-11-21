@@ -8,6 +8,76 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-xbox-series-x-s-digital-foundry",
+        date="2026-11-21",
+        title="GTA 6 on Xbox tested: 1440p on Series X, a 720p struggle on Series S",
+        desc="Digital Foundry has tested GTA VI on Xbox. Series X holds up close to the standard PS5, while Series S renders at 720p and often runs below 30 fps.",
+        fig=art.xbox_df,
+        body="""
+  <p>The last gap in the launch performance picture is filled. Digital Foundry's Oliver Mackenzie has tested GTA VI on both Xbox consoles, and the two get very different results.</p>
+  <h2>Xbox Series X: close to a standard PS5</h2>
+  <ul>
+    <li><b>Resolution:</b> around 1440p internally, and fairly steady.</li>
+    <li><b>Frame rate:</b> 30 fps most of the time. Busy chases, crashes and gunfights pull it into the upper 20s, and crowded junctions can drop it to about 20.</li>
+    <li><b>Versus PlayStation:</b> similar to the base PS5, which drops in the same kinds of scenes. PS5 Pro is still the best place to play.</li>
+    <li><b>120Hz and VRR:</b> with the console set to 120Hz on a TV or monitor with variable refresh rate, Digital Foundry found Series X slightly smoother than PS5.</li>
+  </ul>
+  <h2>Xbox Series S: impressive cuts, but it can't hold 30</h2>
+  <ul>
+    <li><b>Resolution:</b> 720p internally, upscaled to a 1080p output that looks better than the raw number suggests.</li>
+    <li><b>Frame rate:</b> below 30 for much of normal play. Slow driving sits in the mid-to-upper 20s, fights in the mid-20s, and smashing up vehicles can drop it to around 20 fps.</li>
+    <li><b>What was kept:</b> ray-traced lighting and reflections survive. Shadows, textures, clouds and water are cut back, and objects pop in more.</li>
+    <li><b>Why:</b> Mackenzie suspects the console's smaller, slower memory is a big part of the problem.</li>
+  </ul>
+  <p>His advice to Series S owners was blunt: "I'd advise players to play the game on other console platforms for now."</p>
+  <h2>Is there a performance mode?</h2>
+  <p>No. Neither Xbox has a graphics or performance toggle, the same as PlayStation. Rockstar has not said whether a patch will improve Series S.</p>
+  <h2>What it means for you</h2>
+  <ul>
+    <li><b>On Series X:</b> you are getting roughly the base PS5 experience. Turn on 120Hz in the console settings if your TV supports VRR.</li>
+    <li><b>On Series S:</b> it works, but expect a softer picture and choppier action. If you also own a PS5 or Series X, play there.</li>
+  </ul>
+  <p>Every console side by side is in our updated <a href="/frame-rate/">frame rate guide</a>.</p>""",
+        sources=[("VGC: GTA 6 Xbox Series S performance analysis admires the effort", "https://www.videogameschronicle.com/news/gta-6-xbox-series-s-performance-analysis-admires-the-effort-but-says-significant-frame-drops-are-a-problem/"),
+                 ("Pure Xbox: Three big takeaways from Digital Foundry's GTA 6 analysis for Xbox Series X|S", "https://www.purexbox.com/news/2026/11/three-big-takeaways-from-digital-foundrys-gta-6-analysis-for-xbox-series-xs"),
+                 ("TweakTown: GTA 6 drops to 720p and below 30 fps on one console", "https://www.tweaktown.com/news/114779/gta-6-drops-to-720p-and-below-30-fps-on-one-console-gamers-advised-to-play-elsewhere/index.html")],
+    ),
+    dict(
+        slug="gta-6-cheats-unlock-after-story",
+        date="2026-11-21",
+        title="GTA 6 does have cheats, but you have to finish the story first",
+        desc="GTA VI has cheat codes after all. They unlock only once the main story is done, each has its own goal, and using one stops you saving.",
+        fig=art.cheats_unlock,
+        body="""
+  <p>Good news and bad news for anyone hoping to spawn a tank on day one. GTA VI does have cheats, entered with button codes on the phone like in GTA V. But none of them work until you have finished the main story.</p>
+  <h2>How it works</h2>
+  <ul>
+    <li><b>Finish the story first.</b> Every main mission with Jason and Lucia has to be done. PC Gamer tried the codes on a save that had not finished the campaign, and they did nothing.</li>
+    <li><b>Then unlock each cheat.</b> Each one has its own goal, shown in a Cheats menu: open the map, go to the Progress tab and scroll all the way right. Locked cheats show a padlock.</li>
+    <li><b>Enter them on the phone.</b> Press Up on the D-pad to bring up the phone, hold L1 and R1 (LB and RB on Xbox), then put in the directional code.</li>
+    <li><b>Five groups:</b> player, combat, vehicle spawns, environment and screen filters.</li>
+  </ul>
+  <h2>The catch: no saving</h2>
+  <p>Using a cheat stops you saving for the rest of that session, according to both PC Gamer and Insider Gaming. Insider Gaming also says it switches off trophies and achievements. That is stricter than GTA V, where you could still save. Unlocks also belong to one save file, so starting a new game resets them.</p>
+  <h2>How many are there?</h2>
+  <p>Early guides, led by PowerPyx and reported by Insider Gaming, count <b>61 cheats</b>. Rockstar has not published a list, and some codes in those guides are still unconfirmed.</p>
+  <details class="spoiler">
+    <summary><b>Example unlock goals</b> (light spoilers for side content, tap to show)</summary>
+    <ul>
+      <li><b>$250,000 cash:</b> available once the story is done.</li>
+      <li><b>Body armor:</b> 100 workouts at the gym. See our <a href="/gym/">gym guide</a>.</li>
+      <li><b>Tank:</b> complete every survival challenge.</li>
+      <li><b>Inflatable flamingo:</b> destroy 50 cocaine flamingos.</li>
+      <li><b>"Golden Hour" screen filter:</b> spend four hours holding hands with a partner.</li>
+    </ul>
+  </details>
+  <h2>Is it worth the wait?</h2>
+  <p>For a first playthrough, it changes little: you were going to play the story anyway. Cheats here are a reward for the post-game sandbox, not a shortcut. Our <a href="/cheats/">cheats page</a> explains the system and adds codes to its verified table only once they are confirmed working.</p>""",
+        sources=[("TweakTown: GTA 6 has 61 cheats, but you'll have to beat the story first (citing Insider Gaming and PowerPyx)", "https://www.tweaktown.com/news/114769/gta-6-has-61-cheats-but-youll-have-to-beat-the-story-before-using-any-of-them/index.html"),
+                 ("Shacknews: How to unlock all cheats in GTA 6", "https://www.shacknews.com/article/151400/gta6-how-unlock-cheats"),
+                 ("Player.One: GTA 6 has 61 cheats, but players must finish the story (citing PC Gamer)", "https://www.player.one/gta-6-has-61-cheats-players-must-finish-story-before-they-can-use-them-164534")],
+    ),
+    dict(
         slug="gta-6-out-in-new-zealand",
         date="2026-11-18",
         title="GTA 6 is out in New Zealand: what players are finding inside the game",

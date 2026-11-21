@@ -239,7 +239,7 @@ GUIDE = f"""
     <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>900+ places across Leonida you can search and tick off.</span></a>
     <a class="tile" href="/characters/"><em>The story</em><h3>Who's who</h3><span>Jason, Lucia and the people around them.</span></a>
     <a class="tile" href="/activities/"><em>Things to do</em><h3>Activities</h3><span>All twelve reported side activities.</span></a>
-    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>GTA V's codes to try on November 19.</span></a>
+    <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>How cheats unlock after the story.</span></a>
   </div></div>
 """
 
@@ -279,7 +279,18 @@ else:
     verified = ''
 CHEATS = f"""
   <div class="stack"><span class="eyebrow">PS5 · Xbox · PC</span><h1>GTA 6 cheat codes</h1>
-  <p class="lede">No GTA VI cheats are confirmed yet. Below are all of GTA V's cheat codes, the most likely to return, with buttons for PS5 and Xbox, PC codes and phone numbers.</p></div>
+  <p class="lede">GTA VI has cheats, but they only unlock after you finish the main story. Here is how the system works. GTA V's codes for comparison are further down.</p></div>
+  <div class="prose">
+  <h2>How GTA VI cheats work</h2>
+  <ul>
+    <li><b>Finish the story.</b> No cheat works until every main mission with Jason and Lucia is complete. Codes entered on an unfinished save do nothing.</li>
+    <li><b>Unlock each cheat.</b> Each has its own goal, listed in the Cheats menu: open the map, go to the Progress tab and scroll all the way right. Locked cheats show a padlock.</li>
+    <li><b>Enter the code on the phone.</b> Press Up on the D-pad to bring up the phone, hold L1 + R1 (LB + RB on Xbox), then enter the directional code.</li>
+    <li><b>Saving is disabled</b> for the rest of the session once you use a cheat. Insider Gaming reports trophies and achievements are switched off too.</li>
+    <li><b>Unlocks are per save.</b> Starting a new game resets them.</li>
+  </ul>
+  <p>Early guides count 61 cheats in five groups: player, combat, vehicle spawns, environment and screen filters. Rockstar has not published a list, so we only add codes to the table below once they are confirmed. More in <a href="/news/gta-6-cheats-unlock-after-story/">our cheats news post</a>.</p>
+  </div>
   {verified}
   {gta5_cheats()}"""
 
@@ -347,7 +358,7 @@ PAGES = [
     ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and verified cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
     ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
-    ("/cheats/", "GTA 6 Cheat Codes for PS5, Xbox and PC (GTA V Codes to Try) | Leonida Logbook", "No GTA VI cheats are confirmed yet. All 34 GTA V cheat codes for PS5, Xbox and PC, with phone numbers, ready to test in GTA VI on November 19, 2026.", CHEATS),
+    ("/cheats/", "GTA 6 Cheat Codes: How to Unlock and Use Them on PS5 and Xbox | Leonida Logbook", "GTA VI cheats unlock only after you finish the story, and using one disables saving. How to enter them on PS5 and Xbox, plus GTA V's codes for comparison.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
     ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
