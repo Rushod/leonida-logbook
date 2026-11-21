@@ -1,7 +1,7 @@
 """Pre-launch guide articles. Each entry: (path, title, description, body_html).
 build.py imports ARTICLES and GUIDE_LINKS from here."""
 
-UPDATED = "Updated November 18, 2026"
+UPDATED = "Updated November 21, 2026"
 
 GUIDES = [
     ("/release-time/", "What time does GTA 6 unlock?", "What is confirmed about the unlock time, and how to check yours."),
