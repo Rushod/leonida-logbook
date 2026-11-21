@@ -42,7 +42,19 @@
     ["Raul Bautista", "Veteran bank robber."],
     ["Brian Heder", "Long-time smuggler in the Keys."]
   ],
-  "cheats": [],
+  "cheats": [
+    {"name": "$250,000", "code": "U R D L U L D R", "effect": "Gives you $250,000. The only money cheat.", "unlock": "Finish the story"},
+    {"name": "Unlimited Focus", "code": "D U U D U D U D U R", "effect": "Focus never runs out.", "unlock": "Finish the story"},
+    {"name": "Attack Force", "code": "D U L L R D D U D", "effect": "Bullets and melee hits launch targets.", "unlock": "Finish the story"},
+    {"name": "Infinite Ammo", "code": "D U R D L L U D D D", "effect": "Ammo never runs out.", "unlock": "25 Silver or better medals at shooting ranges"},
+    {"name": "Body Armor", "code": "D U L U U U U U D D", "effect": "Adds body armor.", "unlock": "Complete 100 workouts"},
+    {"name": "Exploding Balls", "code": "D U L L R D D U R", "effect": "Sports balls explode on impact.", "unlock": "Hit 20 enemies with explosive damage"},
+    {"name": "Vehicle Force", "code": "D U L L R D L U D", "effect": "Vehicle collisions launch targets.", "unlock": "Kill 25 people with a vehicle"},
+    {"name": "Raise Wanted Level", "code": "L D R D U R U", "effect": "Raises your Wanted Level.", "unlock": "Lose a 3-star Wanted Level 50 times"},
+    {"name": "Cycle Weather", "code": "D R U D R U R", "effect": "Changes the weather.", "unlock": "Guides differ"},
+    {"name": "Maibatsu Boomazoom", "code": "L U R D L L U L", "effect": "Spawns a Boomazoom.", "unlock": "Complete 5 shopping challenges"},
+    {"name": "Cataclysm filter", "code": "D D U R R U L L R R", "effect": "Fills the world with murky smoke.", "unlock": "Find a hidden vehicle listed in the Progress menu"}
+  ],
   "gear": [
     ["PS5 internal SSD, 1 TB or more", "Fits the PS5's M.2 expansion slot. Look for one with a heatsink.", "ps5 m.2 ssd heatsink 1tb"],
     ["Xbox storage expansion card", "Plugs into the back of Series X|S and runs games directly.", "xbox series storage expansion card"],

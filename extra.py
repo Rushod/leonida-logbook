@@ -29,6 +29,7 @@ ACTIVITIES = page("/activities/", "Things to do", "GTA 6 activities and mini-gam
       ("Fishing", "Listed in previews. Spots and catches are added at launch."),
       ("Shipwreck treasure hunt", "Search underwater wrecks for treasure."),
   ]) + """
+  <p class="note">The released game's trophy list counts 9 activity types for its "try each activity once" trophy (GamesRadar+, GTABase). Which of the twelve above are in that 9 isn't confirmed yet.</p>
   <h2>What is not a full mini-game</h2>
   <p>Previews say tennis, surfing and skateboarding are not included as full activities.</p>
   <h2>More to do in Leonida</h2>
@@ -109,40 +110,69 @@ WILDLIFE = page("/wildlife/", "The world", "GTA 6 animals, wildlife and the zoo"
     <li>You can pet dogs, scold them, or feed them treats bought at convenience stores.</li>
     <li>You can ask an owner for permission to pet their dog. Owners and dogs may react warmly, defensively or aggressively.</li>
   </ul>
+  <h2>How many animals are there?</h2>
+  <p>GTABase's 100% guide counts 255 animal studies in total. You need 100 of them for 100% completion, and studying animals also counts toward the trophy list. See <a href="/collectibles/">what counts toward 100%</a>.</p>
   <p>Animal locations get added to the <a href="/map/">interactive map</a> as they are found.</p>""")
 
 MISSIONS = page("/missions/", "The story", "GTA 6 missions list",
-                "The full GTA VI mission list goes live here once the game is out on November 19, 2026. This is what is known about the story's structure so far.", "", """
-  <div class="empty"><b>Mission list at launch</b>Every mission is added in order as it is played and verified.</div>
-  <h2>What is known</h2>
+                "GTA VI's main story has 91 missions split across five chapters. Here is how they are spread out, with no mission names or plot details.", "", """
+  <div class="facts">
+    <div><span>Story missions</span><b>91</b></div>
+    <div><span>Chapters</span><b>5</b></div>
+    <div><span>Replay single missions</span><b>No</b></div>
+  </div>
+  <h2>Missions per chapter</h2>
+  <div class="scroll"><table>
+    <tr><th>Chapter</th><th>Missions</th></tr>
+    <tr><td>Chapter 1</td><td class="n">22</td></tr>
+    <tr><td>Chapter 2</td><td class="n">11</td></tr>
+    <tr><td>Chapter 3</td><td class="n">26</td></tr>
+    <tr><td>Chapter 4</td><td class="n">25</td></tr>
+    <tr><td>Chapter 5</td><td class="n">7</td></tr>
+  </table></div>
+  <p class="note">Counts from the mission lists published by Dexerto and Red Bull Gaming on launch day, which agree. We leave out chapter and mission names to avoid spoilers.</p>
+  <h2>What else is known</h2>
   <ul>
-    <li>The story is split into chapters and took one Rockstar developer about 80 hours. See <a href="/story-length/">how long GTA 6 is</a>.</li>
-    <li>It opens in the Leonida Keys, near Jason's house, before the rest of the map opens up.</li>
-    <li>Previews describe missions as less restrictive than in GTA V, with more than one way to complete them.</li>
+    <li><b>Length:</b> Red Bull Gaming puts the main story at about 65 to 70 hours, and 90 to 100 with side content. Rockstar North's studio head took about 80. See <a href="/story-length/">how long GTA 6 is</a>.</li>
+    <li><b>No mission replays.</b> IGN's review notes you can't replay finished story missions one at a time, unlike GTA V.</li>
+    <li><b>Finishing the story unlocks cheats.</b> Every cheat stays locked until the last mission. See <a href="/cheats/">cheats</a>.</li>
+    <li>It opens with a prologue that doubles as the tutorial, then Jason's first mission in the Leonida Keys.</li>
     <li>You switch between Jason and Lucia in free roam and during missions.</li>
-    <li>Some tools arrive through the story. Certain cars stay locked until you have them.</li>
   </ul>
-  <h2>What each mission entry will include</h2>
-  <ul>
-    <li>Where it starts and how to unlock it</li>
-    <li>Objectives and any optional goals</li>
-    <li>Rewards</li>
-    <li>A tick box that saves to your <a href="/tracker/">progress tracker</a></li>
-  </ul>""")
+  <h2>Coming next</h2>
+  <p>Each mission will get an entry with where it starts, objectives, optional goals and rewards, plus a tick box that saves to your <a href="/tracker/">progress tracker</a>. We add them as we play and verify them.</p>""")
 
-COLLECTIBLES = page("/collectibles/", "Completion", "GTA 6 collectibles and hidden items",
-                    "Previews have not described a traditional collectibles set yet. Here is what is known about things to find, and how this page will work at launch.", "", """
-  <div class="empty"><b>Locations at launch</b>Collectibles are added with map positions as players find them.</div>
-  <h2>Things to find, from previews</h2>
+COLLECTIBLES = page("/collectibles/", "Completion", "GTA 6 collectibles and 100% completion",
+                    "GTA VI's trophy list shows what counts toward 100%: vehicle scans, animal studies, stunts, drone races, meditation spots and more. Here are the counts known so far.", "", """
+  <div class="facts">
+    <div><span>Trophies</span><b>55</b></div>
+    <div><span>Drone race locations</span><b>14</b></div>
+    <div><span>Meditation spots</span><b>18</b></div>
+  </div>
+  <h2>What counts toward 100%</h2>
+  <p>100% completion in GTA VI is built from scans, studies and activities around Leonida. The trophy column comes from the trophy list, as reported by GamesRadar+ and GTABase on November 18. The 100% and total columns come from GTABase's completion guide only, so treat them as early figures.</p>
+  <div class="scroll"><table>
+    <tr><th>Item</th><th>Trophy</th><th>100%</th><th>Total</th></tr>
+    <tr><td>Activity types</td><td class="n">All 9</td><td class="n">–</td><td class="n">9</td></tr>
+    <tr><td>Drone race locations</td><td class="n">All 14</td><td class="n">All</td><td class="n">14</td></tr>
+    <tr><td>Meditation spots</td><td class="n">All 18</td><td class="n">15</td><td class="n">18</td></tr>
+    <tr><td>Vehicles scanned</td><td class="n">100</td><td class="n">200</td><td class="n">277</td></tr>
+    <tr><td>Animals studied</td><td class="n">–</td><td class="n">100</td><td class="n">255</td></tr>
+    <tr><td>Stunts</td><td class="n">250</td><td class="n">300</td><td class="n">397</td></tr>
+    <tr><td>Bank vaults robbed</td><td class="n">5</td><td class="n">All</td><td class="n">8</td></tr>
+  </table></div>
+  <p class="note">Meditation: GTABase says one spot may be missable early in the story. That isn't confirmed yet.</p>
+  <h2>Other things to find</h2>
   <ul>
-    <li><b>Shipwreck treasure.</b> Underwater wrecks can be searched for treasure.</li>
+    <li><b>Underwater discoveries.</b> All of them count toward 100%, according to GTABase. Shipwrecks can be searched for treasure.</li>
     <li><b>Wildlife.</b> Every species can be studied for a checklist. See <a href="/wildlife/">wildlife</a>.</li>
     <li><b>Hidden areas.</b> Unexplored parts of the map stay hidden until you visit them.</li>
     <li><b>Hideouts.</b> In-game social media posts can reveal them.</li>
-    <li><b>Wearable finds.</b> You can pick up and wear items from the world, such as sunglasses dropped in a fight.</li>
   </ul>
-  <h2>How this page will work</h2>
-  <p>Each collectible gets a location on the <a href="/map/">interactive map</a> and a tick box in the <a href="/tracker/">progress tracker</a>. Nothing is listed until it has been found in the game.</p>""")
+  <h2>How long does 100% take?</h2>
+  <p>GTABase estimates about 200 hours for the platinum trophy, which needs 100% completion. See the <a href="/news/gta-6-trophy-list-platinum-100-percent/">full trophy list news</a> and the <a href="/story-length/">story length guide</a>.</p>
+  <h2>Locations</h2>
+  <div class="empty"><b>Map positions coming</b>We add each location to the <a href="/map/">interactive map</a> and the <a href="/tracker/">progress tracker</a> once it has been checked in the game.</div>""")
 
 # ---------------- databases ----------------
 VEHICLE_ROWS = [
@@ -971,8 +1001,8 @@ EXTRA = [
     ("/gym/", "GTA 6 Gym Guide: Workouts and How to Gain Strength" + BRAND, "How gym workouts work in GTA VI: three-exercise sessions, timing inputs, the three-day rule for strength and items that help.", GYM),
     ("/robberies/", "GTA 6 Robberies: How to Make Money" + BRAND, "How store robberies and bigger scores work in GTA VI: the Snap Gun, cameras, safes, marked banknotes, fences and payouts.", ROBBERIES),
     ("/wildlife/", "GTA 6 Animals, Wildlife Checklist and Zoo" + BRAND, "Every animal in GTA VI can be studied for a checklist. What is known about wildlife, the zoo, dogs, hunting and fishing.", WILDLIFE),
-    ("/missions/", "GTA 6 Missions List: All Story Missions" + BRAND, "The GTA VI mission list, added in order from launch day, plus what is known about chapters and story structure.", MISSIONS),
-    ("/collectibles/", "GTA 6 Collectibles and Hidden Items" + BRAND, "What there is to find in GTA VI so far: shipwreck treasure, wildlife, hidden areas and hideouts. Locations are added at launch.", COLLECTIBLES),
+    ("/missions/", "GTA 6 Missions: How Many Story Missions and Chapters" + BRAND, "GTA VI has 91 story missions in five chapters. Missions per chapter, story length and replay rules, without spoilers.", MISSIONS),
+    ("/collectibles/", "GTA 6 Collectibles and Hidden Items" + BRAND, "What counts toward 100% in GTA VI: vehicle scans, animal studies, stunts, drone races and meditation spots, with the counts from the trophy list.", COLLECTIBLES),
     ("/vehicles/", "GTA 6 Vehicles List: All Cars, Boats and Bikes" + BRAND, "Every GTA VI vehicle confirmed so far and how to get it, plus how fuel, garages, registration, trackers and mod shops work.", VEHICLES),
     ("/weapons/", "GTA 6 Weapons List and How Combat Works" + BRAND, "GTA VI weapons confirmed so far, the two-handgun and two-long-gun carry limit, Ammu-Nation lockers, Focus and non-lethal options.", WEAPONS),
 ]

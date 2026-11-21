@@ -60,10 +60,12 @@ FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
     <tr><th>Console</th><th>What testing shows</th></tr>
     <tr><td><b>PS5 Pro</b></td><td>30 fps, held almost perfectly. Digital Foundry played for more than 50 hours without a noticeable dip. Renders at 1440p and upscales with PSSR for a sharper, near-4K look</td></tr>
     <tr><td><b>PS5</b></td><td>30 fps target with small dips throughout, and longer drops below 30 in heavy action such as big explosions. Renders at 1440p</td></tr>
-    <tr><td><b>Xbox Series X</b></td><td>30 fps target. Not yet tested by Digital Foundry</td></tr>
-    <tr><td><b>Xbox Series S</b></td><td>30 fps target. Resolution not detailed yet</td></tr>
+    <tr><td><b>Xbox Series X</b></td><td>30 fps target it mostly holds, with dropped frames in especially busy chases and firefights. Renders at about 1440p. Close to the standard PS5</td></tr>
+    <tr><td><b>Xbox Series S</b></td><td>Often below 30: mid-to-upper 20s when driving, mid-20s in combat, about 20 fps in the hardest fights. Renders at 720p, output at 1080p</td></tr>
   </table></div>
-  <p class="note">PS5 and PS5 Pro results from Digital Foundry's launch testing, reported November 18, 2026. The 1440p figure is as reported by TweakTown. We will add Xbox results when they are published.</p>
+  <p class="note">All results from Digital Foundry's launch testing, reported November 18, 2026 by TweakTown (PS5), VGC and Pure Xbox (Xbox). Details: <a href="/news/gta-6-xbox-series-x-s-digital-foundry/">our Xbox test story</a>.</p>
+  <h2>Which console plays best?</h2>
+  <p>PS5 Pro first, then the standard PS5 and Xbox Series X, which are close. Series S is the weakest version by a clear margin: Digital Foundry advises playing on another console for now if you can.</p>
   <h2>How bad are the drops?</h2>
   <p>On PS5 Pro, the only drop Digital Foundry found was to 24 fps, and only when the tester deliberately set off huge numbers of explosions at once. On the standard PS5, the dips are minor in normal play but noticeable, and heavy fights can keep it below 30 until you leave the area. Some reviewers also mention frame rate dips in chases on PS5.</p>
   <h2>Why not 60?</h2>
@@ -90,6 +92,8 @@ REVIEWS = page("/reviews/", "Before you buy", "GTA 6 reviews: what critics say",
   <p>For comparison, GTA IV has a 98 and GTA V a 97.</p>
   <h2>In one line</h2>
   <p>Critics love the world, the driving and Jason and Lucia's story. The common complaints are fiddly controls, clunky small guns, slow later chapters and the 30 fps cap. Our <a href="/news/gta-6-reviews-metacritic-99/">full reviews round-up</a> has who said what.</p>
+  <h2>What about bugs?</h2>
+  <p>Players have posted plenty of clips of clipping, falls through the map and cars flying after crashes, and PlayStation Network had two outages in launch week. Rockstar hasn't released patch notes or commented yet. See <a href="/news/gta-6-launch-bugs-psn-outages/">what's been reported and what to do</a>.</p>
   <h2>Where to check the latest scores</h2>
   <ul>
     <li><b>Metacritic and OpenCritic</b> collect critic scores in one place. Look at how many reviews a score is based on.</li>
@@ -105,14 +109,14 @@ LENGTH = page("/story-length/", "The story", "How long is GTA 6?",
   <p>Rockstar North's Rob Nelson told The New York Times that his playthrough in February 2026 took about 80 hours. It covered the main story and some optional goals that affect the narrative. It did not include all the side content, which would add more.</p>
   <h2>How the story is built</h2>
   <ul>
-    <li>The story is split into chapters, and previews describe its length as comparable to Red Dead Redemption 2.</li>
+    <li>The story has 91 missions across five chapters, according to launch-day mission lists from Dexerto and Red Bull Gaming.</li>
     <li>It opens in the Leonida Keys, and the rest of the map opens up after the first missions.</li>
     <li>Previews say missions are less restrictive than in GTA V, with more than one way to approach them.</li>
   </ul>
   <h2>How many missions are there?</h2>
-  <p>Rockstar has not published a mission count. The <a href="/tracker/">progress tracker</a> gets the full mission list once the game is out and it can be verified.</p>
+  <p>91 story missions in five chapters. Red Bull Gaming estimates the main story at about 65 to 70 hours at a normal pace, shorter than Rob Nelson's 80, which included optional goals. See the <a href="/missions/">missions page</a> for the count per chapter.</p>
   <h2>How long for 100%?</h2>
-  <p>Unknown until players finish it. With a map about three times the size of Red Dead Redemption 2's, expect far more than 80 hours. See <a href="/map-size/">how big the map is</a>.</p>""")
+  <p>Red Bull Gaming's early estimate is 90 to 100 hours with side content and more than 200 for 100%. Treat that as a first guess until more players finish. GTABase estimates about 200 hours for the platinum trophy, which needs 100% completion. See the <a href="/news/gta-6-trophy-list-platinum-100-percent/">trophy list</a>. See <a href="/map-size/">how big the map is</a>.</p>""")
 
 RADIO = page("/radio-stations/", "Music", "GTA 6 radio stations and hosts",
              "Rockstar has revealed six GTA VI radio stations so far, with previews on its official music page. The full song list has not been published.",
@@ -243,7 +247,7 @@ WANTED = page("/wanted-level/", "Gameplay", "GTA 6 wanted level: how it works an
 ARTICLES2 = [
     ("/pc-release/", "Is GTA 6 Coming to PC? Release Date Status" + BRAND, "GTA VI launches on PS5 and Xbox Series X|S only. What Take-Two has said about PC, how long GTA V and Red Dead 2 took, and whether to wait.", PC),
     ("/online/", "Does GTA 6 Have Online at Launch? Multiplayer Explained" + BRAND, "GTA VI is listed as single-player for November 19, 2026. What is confirmed about an online mode, what is only reported, and what happens to GTA Online.", ONLINE),
-    ("/frame-rate/", "Is GTA 6 30 or 60 FPS? PS5, PS5 Pro and Xbox Performance" + BRAND, "GTA VI runs at 30 fps on every console, with no 60 fps mode even on PS5 Pro. Tested results for PS5 and PS5 Pro, and what to expect on Xbox.", FPS),
+    ("/frame-rate/", "Is GTA 6 30 or 60 FPS? PS5, PS5 Pro and Xbox Performance" + BRAND, "GTA VI runs at 30 fps on every console, with no 60 fps mode even on PS5 Pro. Digital Foundry results for PS5, PS5 Pro, Xbox Series X and Series S.", FPS),
     ("/reviews/", "GTA 6 Reviews: Metacritic Score and What Critics Say" + BRAND, "GTA VI reviews went live on November 18. The early Metacritic score, the perfect scores, and the most common complaints.", REVIEWS),
     ("/story-length/", "How Long Is GTA 6? Story Length in Hours" + BRAND, "GTA VI's story took a Rockstar developer about 80 hours. Where that number comes from and how it compares with GTA V and Red Dead Redemption 2.", LENGTH),
     ("/radio-stations/", "GTA 6 Radio Stations: All Six Stations and Hosts" + BRAND, "The six GTA VI radio stations revealed so far, their genres and reported hosts, plus podcasts and listening on foot.", RADIO),
