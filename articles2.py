@@ -92,6 +92,8 @@ REVIEWS = page("/reviews/", "Before you buy", "GTA 6 reviews: what critics say",
   <p>For comparison, GTA IV has a 98 and GTA V a 97.</p>
   <h2>In one line</h2>
   <p>Critics love the world, the driving and Jason and Lucia's story. The common complaints are fiddly controls, clunky small guns, slow later chapters and the 30 fps cap. Our <a href="/news/gta-6-reviews-metacritic-99/">full reviews round-up</a> has who said what.</p>
+  <h2>What about bugs?</h2>
+  <p>Players have posted plenty of clips of clipping, falls through the map and cars flying after crashes, and PlayStation Network had two outages in launch week. Rockstar hasn't released patch notes or commented yet. See <a href="/news/gta-6-launch-bugs-psn-outages/">what's been reported and what to do</a>.</p>
   <h2>Where to check the latest scores</h2>
   <ul>
     <li><b>Metacritic and OpenCritic</b> collect critic scores in one place. Look at how many reviews a score is based on.</li>

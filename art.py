@@ -252,3 +252,16 @@ def sales_estimate():
         b += t(200, y + 88, note, 22, MUTED, anchor="start", font=L)
     b += t(400, 376, "NO OFFICIAL GTA VI NUMBER YET", 24, PINK, font=L)
     return fig(b, "GTA V sold 11.2 million copies in its first 24 hours. Sensor Tower estimates GTA VI sold about 19.1 million by the morning of launch day. There is no official GTA VI figure yet")
+
+def launch_bugs():
+    b = t(400, 62, "GTA VI LAUNCH WEEK: BUG CHECK", 34)
+    cols = [("PLAYER CLIPS", "LOTS", ["CLIPPING AND", "MAP FALLS"]),
+            ("PSN OUTAGES", "2", ["NOV 18 AND", "NOV 19"]),
+            ("PATCH NOTES", "NONE", ["NO FIX", "ANNOUNCED YET"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 148, h, 26, SUN, font=L)
+        b += f'<text x="{cx}" y="262" font-family="{D}" font-size="{96 if len(big) < 3 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "Launch-week status: many player clips of bugs, two PlayStation Network outages on November 18 and 19, and no Rockstar patch notes or fix announcement yet")
