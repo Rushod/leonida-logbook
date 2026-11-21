@@ -8,6 +8,47 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-launch-bugs-psn-outages",
+        date="2026-11-21",
+        title="GTA 6 launch bugs: what players are hitting, and why there's no patch yet",
+        desc="Clipping, falls through the map, cars flying off and a couple of PSN outages. Here's what's actually been reported in GTA VI's first days, what's confirmed and what to do if it happens to you.",
+        fig=art.launch_bugs,
+        body="""
+  <p>A 99 Metascore doesn't mean a bug-free game. Since GTA VI unlocked on November 18 and 19, clips of it misbehaving have spread across X and Reddit. Some outlets have compared it to Cyberpunk 2077's launch, but the reports so far are mostly the odd, funny kind rather than anything that stops large numbers of people playing. Here's what we can stand behind.</p>
+  <h2>What players are seeing</h2>
+  <p>These come from player and streamer clips that several outlets picked up. None has been confirmed by Rockstar, and nobody knows how common each one is.</p>
+  <ul>
+    <li><b>Clipping:</b> Jason and police officers passing through walls and objects during arrests and shootouts.</li>
+    <li><b>Falling through the world:</b> Lucia dropping through the ground during a mission, and a reported phone glitch that sends Jason through the map until you restart.</li>
+    <li><b>Physics:</b> cars and even a truck launched into the air after crashes, and a boat behaving strangely near a bridge.</li>
+    <li><b>Pop-in:</b> a ship appearing late on a bridge, a plane passing through buildings and textures loading slowly in the opening.</li>
+    <li><b>NPCs:</b> pedestrians walking into walls, and people on a boat ignoring a speedboat ramming them.</li>
+  </ul>
+  <h2>The more serious reports</h2>
+  <p>Latin Times rounded up player complaints of crashes during the prologue, screen freezes, audio static and a softlock that stops progress in an early Lucia mission. These are individual reports, not a confirmed widespread problem, and Rockstar hasn't acknowledged them.</p>
+  <details class="spoiler">
+    <summary><b>One bug report mentions a prologue moment</b> (tap to show)</summary>
+    <p>Beebom's bug tracker lists clips of Lucia falling through the map right after the police taser her in the opening flashback.</p>
+  </details>
+  <h2>PlayStation Network went down twice</h2>
+  <p>This part is confirmed. Sony's PSN status page acknowledged a sign-in outage on November 18, as the game unlocked around the world, and a shorter disruption of about 24 minutes to gaming and social services from around 9:34pm Pacific on November 19. Sony didn't give a cause, and it never said GTA VI was to blame. GTA VI is single-player, so the outage mostly mattered for downloads, store access and signing in.</p>
+  <h2>Is there a patch?</h2>
+  <p>Not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
+  <h2>What to do if you hit one</h2>
+  <ul>
+    <li><b>Stuck in a mission:</b> retry from the last checkpoint first. If that doesn't clear it, close the game fully and reopen it.</li>
+    <li><b>Fell through the map:</b> players say a restart puts you back on solid ground.</li>
+    <li><b>Crashes:</b> check that you have the latest game version and console system software, and that your console has space around it so it doesn't overheat.</li>
+    <li><b>Report it:</b> Rockstar Support takes bug reports, and a video helps.</li>
+  </ul>
+  <p>Performance is a separate question from bugs. For tested frame rates on every console, see <a href="/frame-rate/">our frame rate guide</a>.</p>""",
+        sources=[("PC Guide: GTA 6 bugs draw comparisons to Cyberpunk 2077, but it's far from the same thing", "https://www.pcguide.com/news/gta-6-bugs-draw-comparisons-to-cyberpunk-2077s-messy-launch-but-its-far-from-the-same-thing/"),
+                 ("Latin Times: GTA 6 Metacritic record, launch bugs and PSN outage", "https://www.latintimes.com/gta-6-metacritic-record-launch-bugs-psn-outage-601565"),
+                 ("Gulf News: GTA 6 glitches go viral", "https://gulfnews.com/technology/gaming/gta-6-glitches-go-viral-flying-cars-disappearing-characters-and-police-encounter-issues-spark-cyberpunk-2077-comparisons-1.500752989"),
+                 ("Beebom: GTA 6 bugs tracker", "https://beebom.com/gta-6-bugs-tracker/"),
+                 ("Beebom: GTA 6 patch notes and updates tracker", "https://beebom.com/gta-6-patch-notes-updates-tracker/")],
+    ),
+    dict(
         slug="gta-6-out-in-new-zealand",
         date="2026-11-18",
         title="GTA 6 is out in New Zealand: what players are finding inside the game",
@@ -44,7 +85,7 @@ POSTS = [
     <li><b>Bans:</b> posts claim some accounts were suspended, but none has been confirmed. Separately, Twitch reportedly warned a German streamer that using the trick on stream could lead to a ban.</li>
   </ul>
   <h2>What we still don't know</h2>
-  <p>Proper performance tests on Xbox, how bad any launch bugs are, and whether a day-one patch changes anything. Critic reviews and Digital Foundry's PS5 test are already out: <a href="/news/gta-6-reviews-metacritic-99/">here is what they say</a>.</p>
+  <p>Proper performance tests on Xbox, how bad any launch bugs are (<a href="/news/gta-6-launch-bugs-psn-outages/">update: here's what players are reporting</a>), and whether a day-one patch changes anything. Critic reviews and Digital Foundry's PS5 test are already out: <a href="/news/gta-6-reviews-metacritic-99/">here is what they say</a>.</p>
   <h2>What we are updating</h2>
   <p>As GTA VI unlocks around the world, we are checking our <a href="/map/">map</a>, <a href="/cheats/">cheats</a>, <a href="/missions/">missions</a> and <a href="/collectibles/">collectibles</a> against the finished game. Anything we confirm gets marked as verified.</p>""",
         sources=[("PC Guide: GTA 6 launches in NZ, including an early plot surprise", "https://www.pcguide.com/news/gta-6-launches-in-nz-with-millions-of-viewers-tuning-in-to-discover-the-game-including-an-early-plot-surprise/"),

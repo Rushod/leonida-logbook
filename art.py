@@ -203,3 +203,18 @@ def metascore():
     b += panel(400, 100, 340, 125) + t(570, 148, "PRAISED", 26, GOOD, font=L) + t(570, 196, "WORLD · DRIVING · STORY", 22, font=L)
     b += panel(400, 245, 340, 125) + t(570, 293, "CRITICISED", 26, SUN, font=L) + t(570, 341, "CONTROLS · 30 FPS · GUNS", 22, font=L)
     return fig(b, "GTA VI has a 99 Metascore on PS5 from an early sample of 98 reviews; critics praise the world, driving and story and criticise controls, the 30 fps cap and gunplay")
+
+
+
+def launch_bugs():
+    b = t(400, 62, "GTA VI LAUNCH WEEK: BUG CHECK", 34)
+    cols = [("PLAYER CLIPS", "LOTS", ["CLIPPING AND", "MAP FALLS"]),
+            ("PSN OUTAGES", "2", ["NOV 18 AND", "NOV 19"]),
+            ("PATCH NOTES", "NONE", ["NO FIX", "ANNOUNCED YET"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 148, h, 26, SUN, font=L)
+        b += f'<text x="{cx}" y="262" font-family="{D}" font-size="{96 if len(big) < 3 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "Launch-week status: many player clips of bugs, two PlayStation Network outages on November 18 and 19, and no Rockstar patch notes or fix announcement yet")
