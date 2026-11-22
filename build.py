@@ -9,6 +9,7 @@ from articles2 import ARTICLES2
 from extra import EXTRA
 import news
 import walkthrough
+import howto
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -377,7 +378,7 @@ PAGES = [
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
 ]
 
-PAGES += walkthrough.PAGES + ARTICLES + ARTICLES2 + EXTRA + news.pages(" | Leonida Logbook")
+PAGES += walkthrough.PAGES + howto.PAGES + ARTICLES + ARTICLES2 + EXTRA + news.pages(" | Leonida Logbook")
 PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
 

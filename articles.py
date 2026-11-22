@@ -6,6 +6,12 @@ UPDATED = "Updated November 21, 2026"
 GUIDES = [
     ("/walkthrough/", "GTA 6 walkthrough", "All 91 story missions in order, with tick boxes and warnings."),
     ("/100-percent/", "GTA 6 100% checklist", "All 35 requirements with targets and tips. Nothing is missable."),
+    ("/make-money/", "How to make money", "The best earners in each chapter."),
+    ("/fast-travel/", "How to fast travel", "Paradise Taxi, RydeMe and the $100 skip."),
+    ("/switch-characters/", "How to switch characters", "The buttons, when it unlocks, and fixes."),
+    ("/register-cars/", "How to register and call cars", "Moses, Pay 'N' Spray, garages, Scooter Bros."),
+    ("/criminal-profile/", "Criminal Profile explained", "All five levels and how to change yours."),
+    ("/stats/", "How to train your stats", "Strength, Cardio and the fast Focus trick."),
     ("/release-time/", "What time does GTA 6 unlock?", "What is confirmed about the unlock time, and how to check yours."),
     ("/preload/", "GTA 6 preload guide", "Preload dates and the steps for PS5 and Xbox."),
     ("/storage/", "How much storage does GTA 6 need?", "The 212 GB requirement against every console."),
