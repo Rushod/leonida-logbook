@@ -152,13 +152,12 @@ function Markers({ locations, visible, found, hideFound, active, onToggleFound, 
 }
 
 /* ---------- controls ---------- */
-function ZoomWatch({ onZoom, maxZoom }) {
+function ZoomWatch({ onZoom }) {
   const map = useMap();
-  useEffect(() => { map.setMaxZoom(maxZoom); }, [map, maxZoom]);
   useEffect(() => {
     const h = () => onZoom(map.getZoom());
-    map.on("zoomend", h); h();
-    return () => map.off("zoomend", h);
+    map.on("zoom zoomend", h); h();
+    return () => map.off("zoom zoomend", h);
   }, [map, onZoom]);
   return null;
 }
@@ -313,13 +312,15 @@ function App({ dataUrl, tilesUrl, officialUrl }) {
   const [base, setBase] = useState(() => { try { return localStorage.getItem(BASE_KEY) || "official"; } catch (e) { return "official"; } });
   const pickBase = (b) => { setBase(b); try { localStorage.setItem(BASE_KEY, b); } catch (e) {} };
   const [zoom, setZoom] = useState(1);
+  /* The official file is sharp up to about zoom 3; past that, hand over to the community tiles. */
+  const officialOpacity = zoom <= 3 ? 1 : 0;
   const foundCount = Object.keys(found).filter((k) => k.startsWith("map-")).length;
 
   return (
     <div className={"lm-shell" + (fs ? " is-fs" : "")} ref={shellRef}>
       <MapContainer
         crs={CRS}
-        className={"lm-map" + (base === "official" ? " is-official" : "")}
+        className={"lm-map" + (base === "official" && officialOpacity > 0.5 ? " is-official" : "")}
         center={[0, -3000]}
         zoom={1}
         minZoom={0}
@@ -333,13 +334,6 @@ function App({ dataUrl, tilesUrl, officialUrl }) {
         attributionControl={true}
         preferCanvas={false}
       >
-        {base === "official" ? (
-          <ImageOverlay
-            url={officialUrl}
-            bounds={OFFICIAL_BOUNDS}
-            attribution='Map: official map of Leonida, &copy; Rockstar Games. Locations: <a href="https://map.gtadb.org" target="_blank" rel="noopener">GTA VI Mapping Community via gtadb.org</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.'
-          />
-        ) : (
         <TileLayer
           url={tilesUrl}
           tileSize={256}
@@ -351,19 +345,21 @@ function App({ dataUrl, tilesUrl, officialUrl }) {
           keepBuffer={4}
           attribution='Map &amp; data: <a href="https://map.gtadb.org" target="_blank" rel="noopener">GTA VI Mapping Community (YANIS v18) via gtadb.org</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Legend removed, data adapted.'
         />
+        {base === "official" && (
+          <ImageOverlay
+            url={officialUrl}
+            bounds={OFFICIAL_BOUNDS}
+            opacity={officialOpacity}
+            attribution='Map: official map of Leonida, &copy; Rockstar Games.'
+          />
         )}
         <Ready onReady={(m) => { mapRef.current = m; }} />
-        <ZoomWatch onZoom={setZoom} maxZoom={base === "official" ? 4.5 : 6} />
+        <ZoomWatch onZoom={setZoom} />
         {locations && <Markers locations={locations} visible={visible} found={found} hideFound={hideFound} active={active} onToggleFound={onToggleFound} registerOpen={(fn) => { openRef.current = fn; }} />}
         <Controls shellRef={shellRef} fs={fs} setFs={setFs} />
       </MapContainer>
       <Panel open={open} setOpen={setOpen} counts={counts} active={active} setActive={setActive} hideFound={hideFound} setHideFound={setHideFound}
         query={query} setQuery={setQuery} results={results} onPick={onPick} foundCount={foundCount} />
-      {base === "official" && zoom >= 3.5 && (
-        <button type="button" className="lm-hint" onPointerDown={(e) => e.stopPropagation()} onClick={() => pickBase("community")}>
-          Zoomed in close? <b>Community detail</b> stays sharp
-        </button>
-      )}
       <div className="lm-base" role="group" aria-label="Map style" onPointerDown={(e) => e.stopPropagation()}>
         <button type="button" aria-pressed={base === "official"} onClick={() => pickBase("official")}>Official map</button>
         <button type="button" aria-pressed={base === "community"} onClick={() => pickBase("community")}>Community detail</button>

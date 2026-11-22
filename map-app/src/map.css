@@ -116,3 +116,4 @@
 .lm-hint{position:absolute;z-index:700;left:50%;transform:translateX(-50%);bottom:84px;background:var(--ui);color:var(--ink);border:1px dashed #ffc35a;border-radius:99px;padding:8px 14px;font:13px/1.2 "Barlow",sans-serif;cursor:pointer;white-space:nowrap}
 .lm-hint b{color:#ffc35a}
 @media (max-width:899px){.lm-hint{bottom:92px;font-size:12px}}
+.lm-map .leaflet-image-layer{transition:opacity .3s ease}
