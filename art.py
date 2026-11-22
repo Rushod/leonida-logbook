@@ -265,3 +265,47 @@ def launch_bugs():
         for j, line in enumerate(sub):
             b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
     return fig(b, "Launch-week status: many player clips of bugs, two PlayStation Network outages on November 18 and 19, and no Rockstar patch notes or fix announcement yet")
+
+
+def sales_official():
+    b = t(400, 62, "DAY-ONE SALES, TAKE-TWO FIGURES", 34)
+    rows = [("GTA V", 0.8, "$0.8B", "FIRST DAY, SEPTEMBER 2013"), ("GTA VI", 3.79, "$3.79B", "TO END OF NOVEMBER 19, 2026")]
+    for i, (name, val, txt, note) in enumerate(rows):
+        y = 112 + i * 120
+        w = val * 105
+        b += t(40, y + 40, name, 32, anchor="start")
+        b += f'<rect x="200" y="{y}" width="{w:.0f}" height="56" rx="10" fill="url(#aBar)"/>'
+        b += t(200 + w + 14, y + 41, txt, 32, SUN, anchor="start")
+        b += t(200, y + 88, note, 22, MUTED, anchor="start", font=L)
+    b += t(400, 376, "PLUS 32.5 MILLION COPIES SOLD BEFORE RELEASE", 24, PINK, font=L)
+    return fig(b, "Take-Two says GTA VI made $3.79 billion in retail sales on day one, about five times GTA V's roughly $800 million first day in 2013, and sold 32.5 million copies before release")
+
+
+def easter_eggs():
+    b = t(400, 62, "LAUNCH-WEEK EASTER EGGS", 34)
+    cols = [("FAST & FURIOUS", "CAR", ["'95 ECLIPSE,", "VESPUCCI ISLE"], "2 OUTLETS"),
+            ("DEXTER", "FLAT", ["APARTMENT ON", "WASHINGTON IS."], "REPORTED"),
+            ("TOWER NEST", "EGG", ["THROW ONE FOR", "A CUTSCENE"], "PLAYER CLIP")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 22 if len(h) > 12 else 24, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="84" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 20, GOOD if tag == "2 OUTLETS" else PINK, font=L)
+    return fig(b, "Three launch-week GTA VI easter eggs: a Fast and Furious 1995 Eclipse on Vespucci Island, reported by two outlets; a Dexter-style apartment on Washington Island, reported; and a nest of eggs on a tower that triggers a cutscene, from a player clip")
+
+
+def dev_notes():
+    b = t(400, 62, "FROM ROCKSTAR'S DEVELOPER NOTES", 34)
+    cols = [("NPC ROUTINES", "1,000", ["ACTIVITY", "ANIMATION SETS"]),
+            ("ONE DOOR", "MONTHS", ["ON LUCIA'S", "HIP DOOR PUSH"]),
+            ("THE ASK", "NO", ["GUIDES OR", "CHECKLISTS"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 146, h, 24, SUN, font=L)
+        size = 84 if len(big) <= 3 else 62
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="{size}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 306 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "From Rockstar's GTA VI developer notes: about 1,000 activity animation sets for background characters, months of work on Lucia pushing a door open with her hip, and a hope that players set aside guides and checklists")
