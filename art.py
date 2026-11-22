@@ -265,3 +265,17 @@ def launch_bugs():
         for j, line in enumerate(sub):
             b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
     return fig(b, "Launch-week status: many player clips of bugs, two PlayStation Network outages on November 18 and 19, and no Rockstar patch notes or fix announcement yet")
+
+
+def sales_official():
+    b = t(400, 62, "DAY-ONE SALES, TAKE-TWO FIGURES", 34)
+    rows = [("GTA V", 0.8, "$0.8B", "FIRST DAY, SEPTEMBER 2013"), ("GTA VI", 3.79, "$3.79B", "TO END OF NOVEMBER 19, 2026")]
+    for i, (name, val, txt, note) in enumerate(rows):
+        y = 112 + i * 120
+        w = val * 105
+        b += t(40, y + 40, name, 32, anchor="start")
+        b += f'<rect x="200" y="{y}" width="{w:.0f}" height="56" rx="10" fill="url(#aBar)"/>'
+        b += t(200 + w + 14, y + 41, txt, 32, SUN, anchor="start")
+        b += t(200, y + 88, note, 22, MUTED, anchor="start", font=L)
+    b += t(400, 376, "PLUS 32.5 MILLION COPIES SOLD BEFORE RELEASE", 24, PINK, font=L)
+    return fig(b, "Take-Two says GTA VI made $3.79 billion in retail sales on day one, about five times GTA V's roughly $800 million first day in 2013, and sold 32.5 million copies before release")
