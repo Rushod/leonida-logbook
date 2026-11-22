@@ -203,7 +203,7 @@ WALKTHROUGH = f"""
   <h2>Why some lists show more than {MISSION_TOTAL}</h2>
   <p>The in-game story list also includes short tasks, such as moving money into savings or sending money to someone, between the real missions. Counting those gives about 109 entries. We list only the playable missions; the tasks pop up on your phone and are hard to miss.</p>
   <h2>Mission names and order</h2>
-  <p class="note">Mission names and order follow the launch-week mission lists published by KeenGamer, GTABase and VGC, which agree on the missions. A couple of mid-chapter missions swap places between lists because some can be played in either order. Chapters 1 to 3 and most of the first half of Chapter 4 have full step-by-step guides (tap <b>Step-by-step guide</b> under a mission); later chapters follow.</p>
+  <p class="note">Mission names and order follow the launch-week mission lists published by KeenGamer, GTABase and VGC, which agree on the missions. A couple of mid-chapter missions swap places between lists because some can be played in either order. Chapters 1 to 3 and most of Chapter 4 have full step-by-step guides (tap <b>Step-by-step guide</b> under a mission). Missions without a link don't have a complete public walkthrough to check against yet; we add them as soon as they do.</p>
   </div>
   {links("/walkthrough/")}"""
 
