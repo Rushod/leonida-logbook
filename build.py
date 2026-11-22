@@ -8,6 +8,7 @@ from articles import ARTICLES, GUIDE_LINKS, ALL_GUIDES, GUIDES_PAGE
 from articles2 import ARTICLES2
 from extra import EXTRA
 import news
+import walkthrough
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
@@ -160,7 +161,9 @@ HOME = f"""
     <div class="tiles" style="grid-template-columns:minmax(0,1fr)">
       <a class="tile" href="/map/"><em>Explore</em><h3>Interactive map</h3><span>The six regions of Leonida, with markers you can tick off.</span></a>
       <a class="tile" href="/launch/"><em>Before you buy</em><h3>Release date, price and preload</h3><span>Key dates, both editions and how much space you need.</span></a>
-      <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Regions and activities now. Missions and collectibles from launch day.</span></a>
+      <a class="tile" href="/walkthrough/"><em>Story</em><h3>Walkthrough: all 91 missions</h3><span>Every mission in order, with the points of no return flagged.</span></a>
+      <a class="tile" href="/100-percent/"><em>Completion</em><h3>100% checklist</h3><span>All 35 requirements with targets and tips, saved as you tick.</span></a>
+      <a class="tile" href="/tracker/"><em>Track</em><h3>Progress tracker</h3><span>Missions, 100% lines, regions and activities in one place.</span></a>
       <a class="tile" href="/cheats/"><em>Launch day</em><h3>Cheat codes</h3><span>The GTA VI codes found so far and how to unlock them.</span></a>
     </div>
   </div>"""
@@ -245,14 +248,16 @@ GUIDE = f"""
 
 groups = ""
 for g in D["track"]:
-    if "locked" in g:
+    if g["id"] == "missions":
+        groups += '<h2>Story missions</h2>' + walkthrough.chapter_groups(False) + '<p class="note">Same ticks as the <a href="/walkthrough/">walkthrough</a>.</p><h2>100% completion</h2>' + walkthrough.hundred_groups() + '<p class="note">Targets and tips on the <a href="/100-percent/">100% checklist</a>.</p><h2>Everything else</h2>'
+    elif "locked" in g:
         groups += f'<div class="panel"><div class="grouphead"><h3>{e(g["title"])}</h3><span class="tag">At launch</span></div><div class="locked" style="border-top:0">{e(g["locked"])}</div></div>'
     else:
         items = "".join(check(f'{g["id"]}-{i}', t) for i, t in enumerate(g["items"]))
         groups += f'<div class="panel" data-group="{g["id"]}"><div class="grouphead"><h3>{e(g["title"])}</h3><span class="count"></span></div><div class="bar"><i></i></div><ul class="check">{items}</ul></div>'
 TRACKER = f"""
   <div class="stack"><span class="eyebrow">Your save file, on paper</span><h1>GTA VI progress tracker</h1>
-  <p class="lede">Tick things off as you play. Missions, collectibles and wildlife lists go live once the game is out and the lists can be verified.</p></div>
+  <p class="lede">Tick things off as you play: all 91 story missions, the 35 lines of the 100% checklist, regions and activities. Collectible and wildlife lists follow once their locations are verified.</p></div>
   <div class="cols">
     <div class="stack">{groups}</div>
     <div class="stack">
@@ -365,14 +370,14 @@ LAUNCH += GUIDE_LINKS
 PAGES = [
     ("/", "GTA 6 Countdown, Guide and Progress Tracker | Leonida Logbook", "Live GTA VI launch countdown, release date and preload details, a guide to the new systems, a progress tracker and GTA VI cheat codes.", HOME),
     ("/launch/", "GTA 6 Release Date, Price, Preload and File Size | Leonida Logbook", "GTA VI releases November 19, 2026 on PS5 and Xbox Series X|S. Preload dates, edition prices, pre-order bonus and the 212 GB storage requirement.", LAUNCH),
-    ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off regions and activities now; missions, wildlife and collectibles are added at launch.", TRACKER),
+    ("/tracker/", "GTA 6 Progress Tracker and Checklist | Leonida Logbook", "Free GTA VI progress tracker. Tick off all 91 story missions, the 35 lines of the 100% checklist, regions and activities. Saves in your browser.", TRACKER),
     ("/cheats/", "GTA 6 Cheat Codes for PS5 and Xbox and How to Unlock Them | Leonida Logbook", "GTA VI has 61 cheats, entered on the phone with a D-pad code after you finish the story. The codes found so far, how to unlock each one, and what cheats switch off.", CHEATS),
     ("/gear/", "Storage Upgrades and Accessories for GTA 6 | Leonida Logbook", "GTA VI needs up to 212 GB. Storage upgrades for PS5 and Xbox Series X|S, plus controller docks and headsets.", GEAR),
     ("/about/", "About | Leonida Logbook", "Leonida Logbook is an independent, unofficial fan companion for Grand Theft Auto VI.", ABOUT),
     ("/privacy/", "Privacy Policy | Leonida Logbook", "What information Leonida Logbook handles when you visit, and the advertising and affiliate services it uses.", PRIVACY),
 ]
 
-PAGES += ARTICLES + ARTICLES2 + EXTRA + news.pages(" | Leonida Logbook")
+PAGES += walkthrough.PAGES + ARTICLES + ARTICLES2 + EXTRA + news.pages(" | Leonida Logbook")
 PAGES.append(("/guides/", "GTA 6 Guides: Launch, Gameplay and Platform Answers | Leonida Logbook", "Every Leonida Logbook guide in one place: release time, preload, storage, editions, PC, online, frame rate, map, characters and more.", GUIDES_PAGE))
 
 

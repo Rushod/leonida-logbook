@@ -24,7 +24,7 @@
       var pct = total ? Math.round(100 * done / total) : 0;
       $("totalPct").textContent = pct + "%";
       $("totalBar").style.width = pct + "%";
-      $("totalNote").textContent = done + " of " + total + " items ticked. More lists unlock at launch.";
+      $("totalNote").textContent = done + " of " + total + " items ticked. Saved in this browser.";
     }
   }
   document.addEventListener("change", function (e) {

@@ -140,7 +140,7 @@ MISSIONS = page("/missions/", "The story", "GTA 6 missions list",
     <li>You switch between Jason and Lucia in free roam and during missions.</li>
   </ul>
   <h2>Coming next</h2>
-  <p>Each mission will get an entry with where it starts, objectives, optional goals and rewards, plus a tick box that saves to your <a href="/tracker/">progress tracker</a>. We add them as we play and verify them.</p>""")
+  <p>The full list, with mission names, is on the <a href="/walkthrough/">walkthrough</a>, folded by chapter so you only see the chapter you're on. Tick missions off there and they show on your <a href="/tracker/">progress tracker</a>.</p>""")
 
 COLLECTIBLES = page("/collectibles/", "Completion", "GTA 6 collectibles and 100% completion",
                     "GTA VI's trophy list shows what counts toward 100%: vehicle scans, animal studies, stunts, drone races, meditation spots and more. Here are the counts known so far.", "", """
@@ -149,6 +149,7 @@ COLLECTIBLES = page("/collectibles/", "Completion", "GTA 6 collectibles and 100%
     <div><span>Drone race locations</span><b>14</b></div>
     <div><span>Meditation spots</span><b>18</b></div>
   </div>
+  <p class="panel">The full in-game list of 35 requirements, with targets, tips and tick boxes, is on the <a href="/100-percent/"><b>100% completion checklist</b></a>.</p>
   <h2>What counts toward 100%</h2>
   <p>100% completion in GTA VI is built from scans, studies and activities around Leonida. The trophy column comes from the trophy list, as reported by GamesRadar+ and GTABase on November 18. The 100% and total columns come from GTABase's completion guide only, so treat them as early figures.</p>
   <div class="scroll"><table>

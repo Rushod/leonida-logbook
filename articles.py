@@ -4,6 +4,8 @@ build.py imports ARTICLES and GUIDE_LINKS from here."""
 UPDATED = "Updated November 21, 2026"
 
 GUIDES = [
+    ("/walkthrough/", "GTA 6 walkthrough", "All 91 story missions in order, with tick boxes and warnings."),
+    ("/100-percent/", "GTA 6 100% checklist", "All 35 requirements with targets and tips. Nothing is missable."),
     ("/release-time/", "What time does GTA 6 unlock?", "What is confirmed about the unlock time, and how to check yours."),
     ("/preload/", "GTA 6 preload guide", "Preload dates and the steps for PS5 and Xbox."),
     ("/storage/", "How much storage does GTA 6 need?", "The 212 GB requirement against every console."),
@@ -47,7 +49,7 @@ GUIDE_LINKS = f'<div class="stack"><h2>Launch guides</h2><div class="tiles">{til
 ALL_GUIDES = f'<div class="stack"><h2>All guides</h2><div class="tiles">{tiles([p for p, _, _ in GUIDES])}</div></div>'
 GUIDES_PAGE = f"""
   <div class="stack"><span class="eyebrow">Guides</span><h1>GTA VI guides</h1>
-  <p class="lede">Short, checked answers to the questions players are asking before launch.</p></div>
+  <p class="lede">Walkthroughs, checklists and short, checked answers about GTA VI.</p></div>
   <div class="tiles">{tiles([p for p, _, _ in GUIDES])}</div>"""
 
 RELEASE_TIME = f"""
