@@ -71,6 +71,7 @@ def layout(path, title, desc, body, index=True):
         sky = f'<div class="sky sky-hero"><div class="wrap">{hero}</div>{SCENE}</div>'
     else:
         sky = f'<div class="sky" aria-hidden="true">{SCENE}</div>'
+    main = f'<main class="wrap"><div class="view">\n{body}\n</div></main>' if body.strip() else '<main></main>'
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -104,9 +105,7 @@ def layout(path, title, desc, body, index=True):
   <nav aria-label="Sections">{nav}</nav>
 </div></header>
 {sky}
-<main class="wrap"><div class="view">
-{body}
-</div></main>
+{main}
 <footer><div class="wrap stack">
   <nav aria-label="Site"><a href="/launch/">Launch details</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/gear/">Gear</a></nav>
   <p>Leonida Logbook is an unofficial fan site. It is not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto and all related names are trademarks of their owners.</p>

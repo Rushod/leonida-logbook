@@ -282,3 +282,4 @@ details.chap[open] summary{margin-bottom:8px}
 .tiles.mnav .tile{min-width:0}
 .tiles.mnav h3{overflow-wrap:anywhere;hyphens:auto}
 @media (max-width:520px){.tiles.mnav h3{font-size:18px}}
+main:empty{display:none}

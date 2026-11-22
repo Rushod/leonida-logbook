@@ -20,7 +20,7 @@ Do not edit files in `public/` by hand; the build overwrites them (except `og.pn
 ## Interactive map
 
 - `map-app/` is a small React Leaflet app. After changing it, run `cd map-app && npm install && npm run build`, then `python3 build.py`. The bundle in `map-app/dist/` is committed, so Cloudflare needs no build step.
-- Map tiles in `public/tiles/v18/` and landmark data come from the GTA VI Mapping Community (YANIS v18) via gtadb.org, licensed CC BY 4.0. Keep the credit on the map and on `/map/`.
+- Map tiles in `public/tiles/v18/` and landmark data come from the GTA VI Mapping Community (YANIS v18) via gtadb.org, licensed CC BY 4.0. Keep the credit in the map's attribution line (the /map/ page has no other text).
 - To refresh them: `git clone https://github.com/rolux/gtadb.org`, then
   - `python3 tools/prepare_tiles.py <checkout>/maps/tiles/6/yanis,18 public/tiles/v18` (removes the legend panel)
   - `python3 tools/import_gtadb.py <checkout>/map/data/6/landmarks.json` (writes `content/locations.json`)
