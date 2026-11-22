@@ -37,7 +37,7 @@ const CATS = [
 ];
 const CAT = Object.fromEntries(CATS.map((c) => [c.id, c]));
 const STATUS = {
-  speculative: { label: "Speculative", note: "Mapped by the community before release. Not checked in the game." },
+  speculative: { label: "Community", note: "From the GTA VI Mapping Community's map, updated with launch-day names. Not yet checked by us in the game." },
   official: { label: "Official", note: "Named or shown by Rockstar." },
   verified: { label: "Verified", note: "Checked in the released game." },
 };
@@ -232,7 +232,7 @@ function Panel({ open, setOpen, counts, active, setActive, hideFound, setHideFou
                   <input type="checkbox" checked={!!active[c.id] && n > 0} disabled={!n} onChange={() => toggle(c.id)} />
                   <span className="lm-ico" style={{ "--c": c.color }} dangerouslySetInnerHTML={{ __html: svg(c.id, 14) }} />
                   <span className="lm-name">{c.label}</span>
-                  <span className="lm-n">{n ? n : "Nov 19"}</span>
+                  <span className="lm-n">{n ? n : "Soon"}</span>
                 </label>
               </li>
             );
@@ -240,8 +240,8 @@ function Panel({ open, setOpen, counts, active, setActive, hideFound, setHideFou
         </ul>
         <label className="lm-opt"><input type="checkbox" checked={hideFound} onChange={(e) => setHideFound(e.target.checked)} /> Hide found ({foundCount})</label>
         <div className="lm-legend">
-          <p><span className="lm-status s-speculative">Speculative</span> Mapped by the community from trailers and screenshots before release. Every marker today is speculative.</p>
-          <p><span className="lm-status s-verified">Verified</span> Checked in the released game. Added from November 19.</p>
+          <p><span className="lm-status s-speculative">Community</span> From the GTA VI Mapping Community's map, traced before release and updated on launch day. We haven't checked these in the game ourselves yet.</p>
+          <p><span className="lm-status s-verified">Verified</span> Checked by us in the released game.</p>
         </div>
       </div>
     </div>
@@ -325,7 +325,7 @@ function App({ dataUrl, tilesUrl }) {
           bounds={TILE_BOUNDS}
           noWrap={true}
           keepBuffer={4}
-          attribution='Map &amp; data: <a href="https://map.gtadb.org" target="_blank" rel="noopener">GTA VI Mapping Community (YANIS v17) via gtadb.org</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Legend removed, data adapted.'
+          attribution='Map &amp; data: <a href="https://map.gtadb.org" target="_blank" rel="noopener">GTA VI Mapping Community (YANIS v18) via gtadb.org</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Legend removed, data adapted.'
         />
         <Ready onReady={(m) => { mapRef.current = m; }} />
         {locations && <Markers locations={locations} visible={visible} found={found} hideFound={hideFound} active={active} onToggleFound={onToggleFound} registerOpen={(fn) => { openRef.current = fn; }} />}
@@ -333,7 +333,7 @@ function App({ dataUrl, tilesUrl }) {
       </MapContainer>
       <Panel open={open} setOpen={setOpen} counts={counts} active={active} setActive={setActive} hideFound={hideFound} setHideFound={setHideFound}
         query={query} setQuery={setQuery} results={results} onPick={onPick} foundCount={foundCount} />
-      <div className="lm-badge" aria-hidden="true"><b>Pre-launch map</b> Community reconstruction · not official</div>
+      <div className="lm-badge" aria-hidden="true"><b>Community map</b> Updated for launch · not official</div>
       {!locations && !error && <div className="lm-loading">Loading locations…</div>}
       {error && <div className="lm-loading">Locations could not load. Refresh the page to try again.</div>}
     </div>

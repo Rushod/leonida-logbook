@@ -3,7 +3,7 @@
 removing the legend panel on the right of the tile set (it contains thumbnails of
 Rockstar trailer frames, which we do not republish).
 
-Usage:  python3 tools/prepare_tiles.py <gtadb checkout>/maps/tiles/6/yanis,17 public/tiles/v17
+Usage:  python3 tools/prepare_tiles.py <gtadb checkout>/maps/tiles/6/yanis,18 public/tiles/v18
 
 Tiles are 256 px, named {z}/{z},{y},{x}.jpg. At zoom z the world is 1024 * 2**z px wide and
 one game metre is 2**z / 32 px, with game x = 0 at 16384 / 32 * 2**z px.
