@@ -404,7 +404,7 @@ PHOTOS = {
     "/news/gta-6-preload-live/": ("vice-beach", "A crowded Vice Beach in GTA VI with hotels behind", 1200, 675),
     "/news/gta-6-leaked-cheats-explained/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 415),
     "/characters/": ("lucia-jason-car", "Lucia and Jason in a convertible in Vice City", 780, 438),
-    "/map-size/": ("vice-beach", "A crowded Vice Beach in GTA VI with hotels behind", 1200, 675),
+    "/map-size/": ("official-map", "Rockstar's official map of Leonida, showing Lummox, Kelly, Leonard, Vice-Dale and Mariana counties", 1078, 1498),
     "/activities/": ("dirt-bike-race", "A dirt bike race on a hill trail in GTA VI", 415, 415),
     "/wildlife/": ("airboat", "An airboat crossing a swamp channel in GTA VI with birds overhead", 415, 415),
     "/vehicles/": ("convertible-drive", "A red convertible driving down a palm-lined street", 1200, 675, "Image: shared online, source unconfirmed"),

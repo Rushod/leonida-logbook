@@ -28,7 +28,7 @@ GUIDES = [
     ("/reviews/", "GTA 6 reviews: what critics say", "Reviews are out: the Metascore and what critics said."),
     ("/story-length/", "How long is GTA 6?", "The 80-hour figure and how it compares."),
     ("/radio-stations/", "GTA 6 radio stations", "All six revealed stations, genres and hosts."),
-    ("/map-size/", "How big is the GTA 6 map?", "Leonida's size against GTA V and Red Dead 2."),
+    ("/map-size/", "GTA 6 official map and size", "Rockstar's map, the five counties and the size."),
     ("/characters/", "GTA 6 characters", "Jason, Lucia and the six characters around them."),
     ("/platforms/", "GTA 6 on PS4, Xbox One or PC?", "Which systems run the game at launch."),
     ("/wanted-level/", "GTA 6 wanted level", "How stars work and every way to lose the police."),

@@ -142,34 +142,36 @@ RADIO = page("/radio-stations/", "Music", "GTA 6 radio stations and hosts",
   <p>No. Rockstar has not published a track list, and more stations are expected. Song lists you see before launch are guesses or leaks.</p>""")
 
 MAP = page("/map-size/", "The world", "How big is the GTA 6 map?",
-           "The state of Leonida is reported to be about three times the size of Red Dead Redemption 2's map, which would make it Rockstar's largest world so far.",
-           art.map_size(), """
-  <h2>The numbers reported from previews</h2>
-  <ul>
-    <li><b>Whole map:</b> about 3 times the playable area of Red Dead Redemption 2.</li>
-    <li><b>Vice City:</b> about 2 times the size of GTA V's Los Santos.</li>
-    <li><b>Built-up land:</b> roughly 11 times the urban area of GTA V, counting the smaller towns.</li>
-    <li><b>Roads:</b> about 15% narrower than in GTA V.</li>
-  </ul>
-  <p>These figures were relayed by people who attended Rockstar preview events. Rockstar has not published official measurements.</p>
-  <h2>The six regions</h2>
+           "Leonida is Rockstar's biggest world so far: about 16 km from north to south and 10.9 km across, by PowerPyx's measurement of the in-game map, split into five counties. Rockstar's official map shows them all.",
+           "", """
+  <div class="facts">
+    <div><span>Size</span><b>About 175 km²</b></div>
+    <div><span>North to south</span><b>About 16 km</b></div>
+    <div><span>Counties</span><b>5</b></div>
+  </div>
+  <h2>The five counties</h2>
   <div class="scroll"><table>
-    <tr><th>Region</th><th>What it is</th></tr>
-    <tr><td><b>Vice City</b></td><td>The main city: beaches, downtown and neon</td></tr>
-    <tr><td><b>Leonida Keys</b></td><td>Island chain where the story begins</td></tr>
-    <tr><td><b>Grassrivers</b></td><td>Wetlands and swamp</td></tr>
-    <tr><td><b>Port Gellhorn</b></td><td>A worn coastal town</td></tr>
-    <tr><td><b>Ambrosia</b></td><td>Industrial heartland</td></tr>
-    <tr><td><b>Mount Kalaga</b></td><td>National park with forest and hills</td></tr>
+    <tr><th>County</th><th>Where</th><th>Main places</th></tr>
+    <tr><td><b>Vice-Dale</b></td><td>South-east</td><td>Vice City, Vice Beach, VCIA airport, Hamlet</td></tr>
+    <tr><td><b>Mariana</b></td><td>South and the Keys</td><td>Key Lento, Southwind, Grassrivers, Watson Bay, Capri</td></tr>
+    <tr><td><b>Kelly</b></td><td>West</td><td>Port Gellhorn, Draper Island, Manifest Canyon</td></tr>
+    <tr><td><b>Leonard</b></td><td>North-east</td><td>Ambrosia, Belville, Waning Sands, Lake Leonida</td></tr>
+    <tr><td><b>Lummox</b></td><td>North</td><td>Mount Kalaga National Park, Grayson, Bonanza, Millport</td></tr>
   </table></div>
+  <p>Rockstar's marketing before launch talked about six areas instead: Vice City, the Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga. They're all on the official map, inside the five counties.</p>
+  <h2>How it compares</h2>
+  <ul>
+    <li><b>Whole map:</b> people at Rockstar's preview events reported it at about three times Red Dead Redemption 2's playable area.</li>
+    <li><b>Vice City:</b> reported at about twice the size of GTA V's Los Santos.</li>
+    <li><b>Built-up land:</b> roughly 11 times GTA V's urban area, counting the smaller towns.</li>
+  </ul>
+  <p class="note">Rockstar hasn't published official measurements. The size figures come from PowerPyx's measurement of the in-game map and from preview reports.</p>
   <h2>How the map works in the game</h2>
   <ul>
-    <li>Areas you have not visited are hidden until you explore them.</li>
-    <li>The map screen uses satellite-style imagery.</li>
-    <li>Fast travel uses the RydeMe taxi app, buses and a working train line.</li>
-    <li>Previews report a very large number of buildings you can enter.</li>
-  </ul>
-  <p>Track which regions you have visited in the <a href="/tracker/">progress tracker</a>.</p>""")
+    <li>Areas you haven't visited stay hidden under fog. See <a href="/map-fog/">how to clear it fast</a>.</li>
+    <li>There's no map-menu teleport: you fast travel by taxi or RydeMe. See <a href="/fast-travel/">fast travel</a>.</li>
+    <li>Explore every location on our <a href="/map/">interactive map</a>, and tick off regions in the <a href="/tracker/">progress tracker</a>.</li>
+  </ul>""")
 
 CAST = page("/characters/", "The story", "GTA 6 characters: who's who",
             "GTA VI has two playable leads, Jason Duval and Lucia Caminos, and Rockstar has introduced six more characters around them.",
@@ -251,7 +253,7 @@ ARTICLES2 = [
     ("/reviews/", "GTA 6 Reviews: Metacritic Score and What Critics Say" + BRAND, "GTA VI reviews went live on November 18. The early Metacritic score, the perfect scores, and the most common complaints.", REVIEWS),
     ("/story-length/", "How Long Is GTA 6? Story Length in Hours" + BRAND, "GTA VI's story took a Rockstar developer about 80 hours. Where that number comes from and how it compares with GTA V and Red Dead Redemption 2.", LENGTH),
     ("/radio-stations/", "GTA 6 Radio Stations: All Six Stations and Hosts" + BRAND, "The six GTA VI radio stations revealed so far, their genres and reported hosts, plus podcasts and listening on foot.", RADIO),
-    ("/map-size/", "How Big Is the GTA 6 Map? Leonida Size and Regions" + BRAND, "The GTA VI map is reported at about three times Red Dead Redemption 2's. Size comparisons, the six regions of Leonida and how the map works.", MAP),
+    ("/map-size/", "GTA 6 Official Map and Size: Leonida's Five Counties" + BRAND, "Rockstar's official map of Leonida, the five counties and what's in each, and how big the GTA 6 map is: about 16 km by 10.9 km.", MAP),
     ("/characters/", "GTA 6 Characters: Jason, Lucia and the Full Cast" + BRAND, "Who's who in GTA VI: playable leads Jason Duval and Lucia Caminos and the six characters around them, plus what is known about the voice cast.", CAST),
     ("/platforms/", "Can You Play GTA 6 on PS4, Xbox One or PC?" + BRAND, "GTA VI launches on PS5 and Xbox Series X|S, and streams to Xbox One through Xbox Cloud Gaming. A console-by-console list.", PLATFORMS),
     ("/wanted-level/", "GTA 6 Wanted Level: How It Works and How to Lose It" + BRAND, "How GTA VI's six-star wanted level works, what hollow stars mean, and every reported way to lose the police.", WANTED),
