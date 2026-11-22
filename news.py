@@ -8,6 +8,30 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-official-sales-3-79-billion-day-one",
+        date="2026-11-22",
+        title="GTA 6 made $3.79 billion on day one, Take-Two confirms",
+        desc="Take-Two's first official GTA VI numbers: $3.79 billion in day-one retail sales and 32.5 million copies sold before release, both records. Here's what the figures do and don't include.",
+        fig=art.sales_official,
+        body="""
+  <p>We now have official numbers. On November 20, Take-Two said GTA VI brought in <b>$3.79 billion in retail sales</b> on its first day and sold <b>32.5 million copies before release</b>. The company calls the first figure a record for any entertainment launch, films included.</p>
+  <h2>What Take-Two announced</h2>
+  <ul>
+    <li><b>$3.79 billion</b> in day-one retail sales worldwide, based on company estimates up to the end of November 19.</li>
+    <li><b>32.5 million copies</b> sold before launch, which Take-Two says is a record on any platform.</li>
+    <li>The game is on sale through the PlayStation Store, the Microsoft Store, the Rockstar Games Store and shops. The announcement says nothing about a PC version or an online mode.</li>
+  </ul>
+  <h2>What the numbers mean</h2>
+  <p>The $3.79 billion is money spent by players at retail. It isn't Take-Two's revenue, since stores and platform holders take their cut. It's also the company's own estimate, not an audited result. The Hollywood Reporter, as cited by Make Tech Easier, says the total includes pre-orders. Take-Two didn't say how much came from digital and how much from boxed copies.</p>
+  <h2>How it compares</h2>
+  <p>In 2013, Take-Two said GTA V sold more than $800 million on its first day. That makes the GTA VI figure about five times bigger. Earlier this week we reported <a href="/news/gta-6-sales-19-million-estimate/">Sensor Tower's estimate</a> of about 19 million copies by launch morning. Take-Two's 32.5 million is well above that. That estimate was made before launch day ended and was built from market data rather than Take-Two's own sales records, so the two numbers measure different things.</p>
+  <h2>What's next</h2>
+  <p>Take-Two hasn't said when it will share an updated total, and Rockstar still hasn't announced a PC version, an online mode or the first post-launch patch. We'll report those when they're official. For what's in the game right now, see our <a href="/walkthrough/">mission walkthrough</a>.</p>""",
+        sources=[("Take-Two Interactive: Grand Theft Auto VI shatters entertainment box office records with $3.79 billion in day one retail sales", "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"),
+                 ("ABC News: GTA 6 breaks entertainment box office records with $3.79B in 1st-day sales", "https://abcnews.com/GMA/Culture/grand-theft-auto-vi-breaks-1st-day-sales-record/story?id=138328412"),
+                 ("Make Tech Easier: GTA 6 made $3.79 billion on its first day", "https://maketecheasier.com/gta-6-day-one-sales-record/")],
+    ),
+    dict(
         slug="gta-6-launch-bugs-psn-outages",
         date="2026-11-21",
         title="GTA 6 launch bugs: what players are hitting, and why there's no patch yet",
@@ -55,6 +79,7 @@ POSTS = [
         desc="Market data firm Sensor Tower puts GTA VI at about 19.1 million copies and $1.84 billion by the morning of November 19. Take-Two has not shared figures.",
         fig=art.sales_estimate,
         body="""
+  <p class="note"><b>Update, November 22:</b> Take-Two has now released official figures: $3.79 billion in day-one retail sales and 32.5 million copies sold before release. <a href="/news/gta-6-official-sales-3-79-billion-day-one/">Read our report on the official numbers.</a></p>
   <p>The first sales number for GTA VI is out, and it is not from Rockstar. Market data firm Sensor Tower estimates the game had sold about <b>19.1 million copies</b>, worth about <b>$1.84 billion</b>, by the morning of launch day. Reuters reported the figure first.</p>
   <h2>What the estimate says</h2>
   <ul>
@@ -67,7 +92,7 @@ POSTS = [
   <h2>How it compares with GTA V</h2>
   <p>GTA V sold 11.21 million copies and made $815.7 million in its first 24 hours in September 2013, a Guinness world record at the time. The GTA VI estimate is already well above that, but the two numbers are not measured the same way: GTA V's covers a full day of sales, while GTA VI's is mostly pre-orders counted before most of the world could play.</p>
   <h2>Why it matters</h2>
-  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. We will update this post when Take-Two shares its own numbers. Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
+  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. Take-Two has since shared its own numbers (<a href="/news/gta-6-official-sales-3-79-billion-day-one/">see the update above</a>). Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
         sources=[("Men's Journal: GTA 6 sold an estimated 19 million copies by launch day", "https://www.mensjournal.com/news/gta-6-sales-19-million-copies-gta-v-record"),
                  ("80 Level: Report says GTA 6 generated nearly $2B in sales by launch day", "https://80.lv/articles/report-gta-6-generated-nearly-usd2b-in-sales-by-launch-day")],
     ),
