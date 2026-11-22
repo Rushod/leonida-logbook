@@ -7,6 +7,14 @@ cross-checked between AlcastHQ and TheGamesWiki."""
 from html import escape as e
 from articles2 import BRAND
 from articles import links
+import re
+from missions_ch1 import CH1
+
+GUIDES = {1: CH1}
+
+
+def slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower().replace("'", "")).strip("-")
 
 UPDATED = "Updated November 21, 2026"
 J, L, B = "Jason", "Lucia", "Jason and Lucia"
@@ -80,8 +88,8 @@ def check(key, title, sub=None):
     return f'<li><label><input type="checkbox" id="c-{key}" data-key="{key}"><span>{e(title)}{small}</span></label></li>'
 
 
-def mission_sub(who, note):
-    bits = []
+def mission_sub(who, note, link=None):
+    bits = [f'<a href="{link}">Step-by-step guide</a>'] if link else []
     if who:
         bits.append(f"Play as {who}")
     if note:
@@ -93,7 +101,7 @@ def chapter_groups(collapsible):
     """One tick-box group per chapter. On the walkthrough they fold away to hide later mission names."""
     out = ""
     for ci, (num, name, blurb, missions) in enumerate(CHAPTERS, 1):
-        items = "".join(check(f"m{ci}-{mi}", m, mission_sub(w, n)) for mi, (m, w, n) in enumerate(missions))
+        items = "".join(check(f"m{ci}-{mi}", m, mission_sub(w, n, f"/walkthrough/{slug(m)}/" if m in GUIDES.get(ci, {}) else None)) for mi, (m, w, n) in enumerate(missions))
         head = f'<div class="grouphead"><h3>{num}: {e(name)}</h3><span class="count"></span></div><div class="bar"><i></i></div>'
         if collapsible:
             out += (f'<div class="panel" data-group="m{ci}">{head}'
@@ -192,7 +200,7 @@ WALKTHROUGH = f"""
   <h2>Why some lists show more than {MISSION_TOTAL}</h2>
   <p>The in-game story list also includes short tasks, such as moving money into savings or sending money to someone, between the real missions. Counting those gives about 109 entries. We list only the playable missions; the tasks pop up on your phone and are hard to miss.</p>
   <h2>Mission names and order</h2>
-  <p class="note">Mission names and order follow the launch-week mission lists published by KeenGamer, GTABase and VGC, which agree on the missions. A couple of mid-chapter missions swap places between lists because some can be played in either order. Step-by-step guides for single missions are added as we play them.</p>
+  <p class="note">Mission names and order follow the launch-week mission lists published by KeenGamer, GTABase and VGC, which agree on the missions. A couple of mid-chapter missions swap places between lists because some can be played in either order. Chapter 1 missions have full step-by-step guides (tap <b>Step-by-step guide</b> under a mission); later chapters follow.</p>
   </div>
   {links("/walkthrough/")}"""
 
@@ -227,7 +235,50 @@ HUNDRED_PAGE = f"""
   </div>
   {links("/100-percent/")}"""
 
-PAGES = [
+def mission_pages():
+    out = []
+    for ci, (num, cname, _, missions) in enumerate(CHAPTERS, 1):
+        g = GUIDES.get(ci, {})
+        for mi, (name, who, note) in enumerate(missions):
+            if name not in g:
+                continue
+            d = g[name]
+            prev = missions[mi - 1][0] if mi > 0 else None
+            nxt = missions[mi + 1][0] if mi + 1 < len(missions) else None
+            def nav(label, m):
+                if not m:
+                    return '<span></span>'
+                href = f"/walkthrough/{slug(m)}/" if m in g else "/walkthrough/"
+                return f'<a class="tile" href="{href}"><em>{label}</em><h3>{e(m)}</h3></a>'
+            li = lambda xs: "<ul>" + "".join(f"<li>{x}</li>" for x in xs) + "</ul>"
+            steps = "<ol class=\"steps\">" + "".join(f"<li>{x}</li>" for x in d["steps"]) + "</ol>"
+            warn = f'<div class="panel warn"><b>Before you start:</b> {d["warn"]}</div>' if d.get("warn") else ""
+            body = f"""
+  <div class="prose"><span class="eyebrow">{num} · Mission {mi + 1} of {len(missions)}</span><h1>GTA 6 {e(name)} walkthrough</h1>
+  <p class="note">{UPDATED} · <a href="/walkthrough/">All missions</a></p>
+  <p class="lede"><b>{e(name)}</b> is mission {mi + 1} of {len(missions)} in {num}: {e(cname)}.{f' You play as {who}.' if who else ''} Here's every step, the choices you can make and what to watch out for.</p>
+  <div class="facts">
+    <div><span>Chapter</span><b>{num[-1]}</b></div>
+    <div><span>Mission</span><b>{mi + 1} / {len(missions)}</b></div>
+    {f'<div><span>Character</span><b>{who}</b></div>' if who else ''}
+  </div>
+  {warn}
+  <h2>Where it starts</h2><p>{d.get("start", "")}</p>
+  <h2>Step by step</h2>{steps}
+  {('<h2>Choices</h2>' + li(d["choices"])) if d.get("choices") else ''}
+  {('<h2>Tips</h2>' + li(d["tips"])) if d.get("tips") else ''}
+  {('<h2>After the mission</h2><p>' + d["after"] + '</p>') if d.get("after") else ''}
+  <div class="panel"><ul class="check">{check(f"m{ci}-{mi}", f"I finished {name}", "Saved in this browser and on your progress tracker.")}</ul></div>
+  <p class="note">Buttons are shown PS5 / Xbox. Steps checked against launch-week walkthroughs from VGC and others; tell us if something plays differently for you.</p>
+  </div>
+  <div class="tiles mnav">{nav("Previous mission", prev)}{nav("Next mission", nxt)}</div>
+  <p><a class="btn ghost" href="/walkthrough/">Back to all missions</a></p>"""
+            desc = f"How to complete {name} in GTA 6 ({num}, mission {mi + 1}): every step in order, choices, tips{', door codes' if 'code' in str(d) else ''} and what happens after."
+            out.append((f"/walkthrough/{slug(name)}/", f"GTA 6 {name} Mission Walkthrough" + BRAND, desc, body))
+    return out
+
+
+PAGES = mission_pages() + [
     ("/walkthrough/", "GTA 6 Walkthrough: All 91 Story Missions in Order" + BRAND,
      "Every GTA VI main mission across all five chapters, in order, with tick boxes, points of no return and missable jobs. Spoiler-light.", WALKTHROUGH),
     ("/100-percent/", "GTA 6 100% Completion Checklist: All 35 Requirements" + BRAND,

@@ -274,3 +274,8 @@ details.chap .show{color:var(--sun);font-weight:600;white-space:nowrap}
 details.chap[open] .show{display:none}
 details.chap[open] summary{margin-bottom:8px}
 .check small b{color:var(--ink)}
+.prose ol.steps{max-width:66ch;padding-left:1.4em}
+.prose ol.steps li{margin:.45em 0;padding-left:.2em}
+.panel.warn{border-left:4px solid var(--sun);max-width:66ch}
+.tiles.mnav{grid-template-columns:repeat(2,minmax(0,1fr))}
+.check small a{color:var(--accent);text-decoration:underline}
