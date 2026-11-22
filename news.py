@@ -8,6 +8,63 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-easter-eggs-fast-furious-dexter",
+        date="2026-11-23",
+        title="GTA 6 easter eggs found so far: a Fast & Furious car, Dexter's flat and a literal egg",
+        desc="Players have spent launch week hunting Leonida for secrets. Here are the GTA VI easter eggs outlets have picked up, what's confirmed, and a first-person camera trick Rockstar didn't add on purpose.",
+        fig=art.easter_eggs,
+        body="""
+  <p>It took players less than a day to start finding Rockstar's in-jokes in Leonida. Most of what's circulating comes from clips on X and Reddit, so we've only listed the finds that outlets have reported, and we say how solid each one is. Rockstar hasn't commented on any of them.</p>
+  <h2>Brian O'Conner's 1995 Eclipse</h2>
+  <p>The best-supported find so far. GamesRadar and BGR both report that a green 1995 Mitsubishi Eclipse in the style of Paul Walker's car from the first Fast and Furious film sits in a garage on <b>Vespucci Island</b>. BGR, citing Vice, places it in a garage attached to a white house near the middle of the island. GamesRadar says you have to break into the garage to take it, and that it's in every version of the game. The in-game badge isn't Mitsubishi, since GTA uses its own brand names, and we haven't seen a reliable report of what the game calls it.</p>
+  <h2>A Dexter-style apartment</h2>
+  <p>GamesRadar reports an apartment complex on <b>Washington Island</b> in Vice Beach that recreates Dexter Morgan's home from the TV series, down to a boat called "Slice of Life" and tools on the roof. This one comes from a GamesRadar video and player posts, so treat the exact details as reported rather than tested by us.</p>
+  <h2>The egg on the tower</h2>
+  <p>IBTimes UK picked up a player video from November 18 showing a bird's nest full of coloured eggs at the top of a communications tower, reached after a climb of about seven minutes. Throw an egg and the game cuts to a short scene of it hitting a car windscreen below. The tower's location hasn't been pinned down, and IBTimes is clear that this is still a player report, not a documented feature.</p>
+  <h2>Comics and films</h2>
+  <ul>
+    <li><b>RX Men:</b> Reddit players spotted a comic called RX Men, with a Magneto-like villain called Dr. Placebo. GamesRadar reported it.</li>
+    <li><b>Hulk:</b> GamesRadar says a side quest about strawberries ends with a character turning into something very Hulk-like.</li>
+  </ul>
+  <details class="spoiler">
+    <summary><b>Film nods in later story missions</b> (tap to show)</summary>
+    <p>GamesRadar's writer compares some later missions to the heist and siege set pieces of Heat and Die Hard. That's the writer's own comparison, not something Rockstar has said.</p>
+  </details>
+  <h2>A first-person camera, by accident</h2>
+  <p>GTA VI has no first-person mode. GamesRadar reports a glitch that gives you one anyway: press the camera view button repeatedly while putting the phone away. It works better than you'd expect, with some visual glitches, but the only way back to the normal camera is to reload a save. Save first if you want to try it. GamesRadar also points out that GTA V only got its first-person mode in a later re-release, so a proper one could come later. Rockstar hasn't announced one.</p>
+  <h2>Found one?</h2>
+  <p>We'll add easter eggs to <a href="/map/">our map</a> once their locations are confirmed by more than one source. For now, the Eclipse garage is the only find with a location backed up by more than one outlet.</p>""",
+        sources=[("GamesRadar+: GTA 6 is a movie and TV goldmine, from Fast and Furious cars to Dexter's apartment", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-is-a-movie-and-tv-goldmine-as-players-discover-everything-from-fast-and-furious-cars-to-dexters-apartment/"),
+                 ("BGR: GTA 6 has a hidden Fast and Furious easter egg", "https://www.bgr.com/2322463/gta-6-hidden-fast-and-furious-paul-walker-car/"),
+                 ("IBTimes UK: GTA 6 easter egg is literally an egg", "https://www.ibtimes.co.uk/gta-6-player-discovers-literal-easter-egg-leonida-1833342"),
+                 ("GamesRadar+: GTA 6 glitch adds the first-person mode that Rockstar skipped", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-glitch-adds-the-first-person-mode-that-rockstar-skipped/")],
+    ),
+    dict(
+        slug="gta-6-rockstar-developer-notes-play-without-guides",
+        date="2026-11-23",
+        title="Rockstar's GTA 6 developer notes: 1,000 NPC routines, months on one door, and a plea to skip the guides",
+        desc="Rockstar gave press a packet of notes from more than 20 GTA VI developers. The highlights, including its design chief asking players to stop chasing completion percentages.",
+        fig=art.dev_notes,
+        body="""
+  <p>Alongside review copies, Rockstar sent press a set of notes in which named developers explain how GTA VI was made. InvenGlobal published a long summary on November 18, and Kotaku wrote about one part of it on November 21. These are Rockstar's own words, so this is about as official as behind-the-scenes detail gets.</p>
+  <h2>"Stop thinking in tasks"</h2>
+  <p>According to Kotaku, Stephen Donkin, Rockstar's vice president of design, says the team hopes players drop the habit of working through tasks, completion percentages and online guides, and instead "let the game unfold in front of them". Senior design director Ghyan Koehne talks about wanting players to feel a sense of wonder.</p>
+  <p>Yes, we see the irony of reporting that on a guide site. We agree with the spirit of it: on a first playthrough, wander off and don't worry about 100%. Our <a href="/walkthrough/">walkthrough</a> and <a href="/collectibles/">collectibles</a> pages will be here when you're stuck or want to clean up later.</p>
+  <h2>Other highlights</h2>
+  <ul>
+    <li><b>Background life:</b> the team made about 1,000 sets of activity animations for the routines of people in the world.</li>
+    <li><b>Small things take time:</b> gameplay animation director Mike Jones says the moment Lucia pushes a door open with her hip took months to get right.</li>
+    <li><b>Location scouting:</b> John Macpherson, lead director of world and population design, describes the team scouting real Florida locations.</li>
+    <li><b>The look of the UI:</b> the classic Pricedown font stays, and the phone is now held in the character's hand rather than floating on screen.</li>
+    <li><b>Music:</b> Rockstar's music team describes 1980s Miami influences for the regions of Leonida and a collaboration with French electronic duo Justice.</li>
+    <li><b>Cars:</b> physics technology director Ben Lyons says team members raced in the 24 Hours of Nürburgring after GTA V and took a class win.</li>
+    <li><b>Sound:</b> the audio team recorded in an anechoic chamber to get speakers and other sounds right.</li>
+  </ul>
+  <p>The notes also include a foreword from Rockstar founder Sam Houser. Neither summary says anything about a PC version or an online mode, which Rockstar still hasn't announced.</p>""",
+        sources=[("Kotaku: Rockstar dev tells GTA 6 players to stop thinking in tasks, completion percentages and online guides", "https://kotaku.com/rockstar-dev-tells-gta-6-players-to-stop-thinking-in-tasks-completion-percentages-online-guides-2000759151"),
+                 ("InvenGlobal: GTA 6 developers share insights on the creation of Vice City", "https://www.invenglobal.com/articles/28826/gta-6-developers-share-insights-on-the-creation-of-vice-city")],
+    ),
+    dict(
         slug="gta-6-official-sales-3-79-billion-day-one",
         date="2026-11-22",
         title="GTA 6 made $3.79 billion on day one, Take-Two confirms",
