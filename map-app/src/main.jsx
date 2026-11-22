@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import L from "leaflet";
 import "leaflet.markercluster";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, ImageOverlay, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "./map.css";
@@ -15,6 +15,9 @@ const ll = (l) => L.latLng(l.y, l.x);
 const ISLAND = L.latLngBounds([-8900, -9400], [9300, 2900]);
 const LIMITS = L.latLngBounds([-10500, -11000], [11000, 3400]);
 const TILE_BOUNDS = L.latLngBounds([-9216, -11008], [11008, 3300]);
+/* Rockstar's official map poster, aligned to game metres by matching its coastline to the community map. */
+const OFFICIAL_BOUNDS = L.latLngBounds([-9276, -10741], [10790, 3596]);
+const BASE_KEY = "leonida-map-base";
 
 /* ---------- categories ---------- */
 const ICONS = {
@@ -149,6 +152,17 @@ function Markers({ locations, visible, found, hideFound, active, onToggleFound, 
 }
 
 /* ---------- controls ---------- */
+function ZoomWatch({ onZoom, maxZoom }) {
+  const map = useMap();
+  useEffect(() => { map.setMaxZoom(maxZoom); }, [map, maxZoom]);
+  useEffect(() => {
+    const h = () => onZoom(map.getZoom());
+    map.on("zoomend", h); h();
+    return () => map.off("zoomend", h);
+  }, [map, onZoom]);
+  return null;
+}
+
 function Controls({ shellRef, fs, setFs }) {
   const map = useMap();
   useEffect(() => { setTimeout(() => map.invalidateSize(), 60); }, [fs, map]);
@@ -249,7 +263,7 @@ function Panel({ open, setOpen, counts, active, setActive, hideFound, setHideFou
 }
 
 /* ---------- app ---------- */
-function App({ dataUrl, tilesUrl }) {
+function App({ dataUrl, tilesUrl, officialUrl }) {
   const [locations, setLocations] = useState(null);
   const [error, setError] = useState(false);
   const [active, setActive] = useState(Object.fromEntries(CATS.map((c) => [c.id, true])));
@@ -296,13 +310,16 @@ function App({ dataUrl, tilesUrl }) {
     setTimeout(() => { if (openRef.current) openRef.current(l.id); }, 80);
   };
 
+  const [base, setBase] = useState(() => { try { return localStorage.getItem(BASE_KEY) || "official"; } catch (e) { return "official"; } });
+  const pickBase = (b) => { setBase(b); try { localStorage.setItem(BASE_KEY, b); } catch (e) {} };
+  const [zoom, setZoom] = useState(1);
   const foundCount = Object.keys(found).filter((k) => k.startsWith("map-")).length;
 
   return (
     <div className={"lm-shell" + (fs ? " is-fs" : "")} ref={shellRef}>
       <MapContainer
         crs={CRS}
-        className="lm-map"
+        className={"lm-map" + (base === "official" ? " is-official" : "")}
         center={[0, -3000]}
         zoom={1}
         minZoom={0}
@@ -316,6 +333,13 @@ function App({ dataUrl, tilesUrl }) {
         attributionControl={true}
         preferCanvas={false}
       >
+        {base === "official" ? (
+          <ImageOverlay
+            url={officialUrl}
+            bounds={OFFICIAL_BOUNDS}
+            attribution='Map: official map of Leonida, &copy; Rockstar Games. Locations: <a href="https://map.gtadb.org" target="_blank" rel="noopener">GTA VI Mapping Community via gtadb.org</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.'
+          />
+        ) : (
         <TileLayer
           url={tilesUrl}
           tileSize={256}
@@ -327,13 +351,23 @@ function App({ dataUrl, tilesUrl }) {
           keepBuffer={4}
           attribution='Map &amp; data: <a href="https://map.gtadb.org" target="_blank" rel="noopener">GTA VI Mapping Community (YANIS v18) via gtadb.org</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Legend removed, data adapted.'
         />
+        )}
         <Ready onReady={(m) => { mapRef.current = m; }} />
+        <ZoomWatch onZoom={setZoom} maxZoom={base === "official" ? 4.5 : 6} />
         {locations && <Markers locations={locations} visible={visible} found={found} hideFound={hideFound} active={active} onToggleFound={onToggleFound} registerOpen={(fn) => { openRef.current = fn; }} />}
         <Controls shellRef={shellRef} fs={fs} setFs={setFs} />
       </MapContainer>
       <Panel open={open} setOpen={setOpen} counts={counts} active={active} setActive={setActive} hideFound={hideFound} setHideFound={setHideFound}
         query={query} setQuery={setQuery} results={results} onPick={onPick} foundCount={foundCount} />
-      <div className="lm-badge" aria-hidden="true"><b>Community map</b> Updated for launch · not official</div>
+      {base === "official" && zoom >= 3.5 && (
+        <button type="button" className="lm-hint" onPointerDown={(e) => e.stopPropagation()} onClick={() => pickBase("community")}>
+          Zoomed in close? <b>Community detail</b> stays sharp
+        </button>
+      )}
+      <div className="lm-base" role="group" aria-label="Map style" onPointerDown={(e) => e.stopPropagation()}>
+        <button type="button" aria-pressed={base === "official"} onClick={() => pickBase("official")}>Official map</button>
+        <button type="button" aria-pressed={base === "community"} onClick={() => pickBase("community")}>Community detail</button>
+      </div>
       {!locations && !error && <div className="lm-loading">Loading locations…</div>}
       {error && <div className="lm-loading">Locations could not load. Refresh the page to try again.</div>}
     </div>
@@ -341,4 +375,4 @@ function App({ dataUrl, tilesUrl }) {
 }
 
 const el = document.getElementById("leonida-map");
-if (el) createRoot(el).render(<App dataUrl={el.dataset.src} tilesUrl={el.dataset.tiles} />);
+if (el) createRoot(el).render(<App dataUrl={el.dataset.src} tilesUrl={el.dataset.tiles} officialUrl={el.dataset.official} />);

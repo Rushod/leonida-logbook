@@ -106,3 +106,13 @@
   .lm-panel-body{max-height:calc(100% - 56px)}
   .lm-badge{bottom:40px;font-size:11.5px}
 }
+
+.lm-map.is-official{background:#01aac9}
+.lm-base{position:absolute;z-index:700;left:50%;transform:translateX(-50%);bottom:28px;display:flex;background:var(--ui);border:1px solid var(--line);border-radius:99px;padding:3px;gap:2px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.lm-base button{border:0;background:transparent;color:var(--muted);font:600 13px/1 "Barlow",sans-serif;letter-spacing:.04em;padding:9px 14px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.lm-base button[aria-pressed="true"]{background:linear-gradient(90deg,#ff4fa3,#ffb14a);color:#120824}
+.lm-base button:focus-visible{outline:3px solid #ffc35a;outline-offset:2px}
+@media (max-width:899px){.lm-base{bottom:40px}.lm-base button{font-size:12px;padding:8px 11px}}
+.lm-hint{position:absolute;z-index:700;left:50%;transform:translateX(-50%);bottom:84px;background:var(--ui);color:var(--ink);border:1px dashed #ffc35a;border-radius:99px;padding:8px 14px;font:13px/1.2 "Barlow",sans-serif;cursor:pointer;white-space:nowrap}
+.lm-hint b{color:#ffc35a}
+@media (max-width:899px){.lm-hint{bottom:92px;font-size:12px}}
