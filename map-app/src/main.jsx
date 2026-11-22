@@ -17,7 +17,6 @@ const LIMITS = L.latLngBounds([-10500, -11000], [11000, 3400]);
 const TILE_BOUNDS = L.latLngBounds([-9216, -11008], [11008, 3300]);
 /* Rockstar's official map poster, aligned to game metres by matching its coastline to the community map. */
 const OFFICIAL_BOUNDS = L.latLngBounds([-9276, -10741], [10790, 3596]);
-const BASE_KEY = "leonida-map-base";
 
 /* ---------- categories ---------- */
 const ICONS = {
@@ -309,8 +308,7 @@ function App({ dataUrl, tilesUrl, officialUrl }) {
     setTimeout(() => { if (openRef.current) openRef.current(l.id); }, 80);
   };
 
-  const [base, setBase] = useState(() => { try { return localStorage.getItem(BASE_KEY) || "official"; } catch (e) { return "official"; } });
-  const pickBase = (b) => { setBase(b); try { localStorage.setItem(BASE_KEY, b); } catch (e) {} };
+  const base = "official"; /* official map zoomed out, community detail tiles zoomed in */
   const [zoom, setZoom] = useState(1);
   /* The official file is sharp up to about zoom 3; past that, hand over to the community tiles. */
   const officialOpacity = zoom <= 3 ? 1 : 0;
@@ -360,10 +358,6 @@ function App({ dataUrl, tilesUrl, officialUrl }) {
       </MapContainer>
       <Panel open={open} setOpen={setOpen} counts={counts} active={active} setActive={setActive} hideFound={hideFound} setHideFound={setHideFound}
         query={query} setQuery={setQuery} results={results} onPick={onPick} foundCount={foundCount} />
-      <div className="lm-base" role="group" aria-label="Map style" onPointerDown={(e) => e.stopPropagation()}>
-        <button type="button" aria-pressed={base === "official"} onClick={() => pickBase("official")}>Official map</button>
-        <button type="button" aria-pressed={base === "community"} onClick={() => pickBase("community")}>Community detail</button>
-      </div>
       {!locations && !error && <div className="lm-loading">Loading locations…</div>}
       {error && <div className="lm-loading">Locations could not load. Refresh the page to try again.</div>}
     </div>
