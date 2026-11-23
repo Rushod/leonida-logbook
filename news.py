@@ -8,6 +8,116 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-first-patch-01-002-002",
+        date="2026-11-23",
+        title="GTA 6's first post-launch patch is out: update 01.002.002, with no patch notes yet",
+        desc="Rockstar has started rolling out GTA VI's first update since launch on PS5 and Xbox Series X|S. Here's the version, the download size, how the staged rollout works and what we know about what it fixes (not much).",
+        fig=art.first_patch,
+        body="""
+  <p>Four days after launch, GTA VI has its first post-launch update. It started rolling out on November 23 on PS5 and Xbox Series X|S, according to VICE, Geo News and LibertyCity. It's the third update overall, after the two pre-launch patches on November 13 and 16.</p>
+  <h2>The basics</h2>
+  <ul>
+    <li><b>Version:</b> 01.002.002 on PS5. VICE and LibertyCity report the Xbox version as 1.0.2.2.</li>
+    <li><b>Download size:</b> about 604 MB on PS5 and about 1.6 GB on Xbox Series X|S, as reported by VICE and LibertyCity. Geo notes it isn't clear whether the sizes are the same in every region.</li>
+    <li><b>Platforms:</b> PS5 and Xbox Series X|S. There's still no PC version, so there's no PC patch either.</li>
+  </ul>
+  <h2>Why you might not have it yet</h2>
+  <p>On PS5 the update is going out in waves, not to everyone at once. All three outlets describe the same schedule: about a third of players first, about two thirds roughly three hours later, and everyone about six hours after the start. The outlets think this is to spread the load on PlayStation and Xbox servers, but Rockstar hasn't said why. Reports disagree on whether Xbox is also staged: VICE says only PS5 is, while Geo says both are.</p>
+  <p>If it hasn't arrived on PS5, LibertyCity suggests checking by hand: highlight GTA VI on the home screen, press Options and choose Check for Update.</p>
+  <h2>What does it fix?</h2>
+  <p>We don't know, and neither does anyone outside Rockstar. As VICE put it, Rockstar "hasn't released patch notes" for this update, and it published none for the two pre-launch patches either. Rockstar Support (support.rockstargames.com) is where official notes would appear.</p>
+  <p>Geo lists launch-week problems the patch might target, including an Xbox Quick Resume glitch that reportedly unlocks the frame rate but speeds up the whole game, PS5 crash error CE-108255-1, HDR calibration problems and the accidental first-person camera. That's Geo's guess, not a confirmed changelog, so don't assume any of these are fixed until Rockstar says so or players test it. For the bugs reported so far and what to do about them, see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>.</p>
+  <h2>Should you install it?</h2>
+  <p>Yes. GTA VI is single-player and you'll need the latest version for future updates anyway. If you're mid-mission, finish it or reach a save point first, since the game has to close to apply the update. We'll update this post if Rockstar publishes notes.</p>""",
+        sources=[("VICE: GTA 6 patch update 01.002.002 is live on PS5 and Xbox Series X", "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/"),
+                 ("Geo News: GTA 6 update patch size revealed, 603 MB on PS5, 1.60 GB on Xbox", "https://www.geo.tv/latest/692298-gta-6-update-patch-size-revealed-603-mb-on-ps5-160-gb-on-xbox"),
+                 ("LibertyCity: Rockstar releases first post-launch GTA 6 patch", "https://libertycity.net/news/gta-6/10649-rockstar-releases-first-post-launch-gta.html")],
+    ),
+    dict(
+        slug="gta-6-easter-eggs-fast-furious-dexter",
+        date="2026-11-23",
+        title="GTA 6 easter eggs found so far: a Fast & Furious car, Dexter's flat and a literal egg",
+        desc="Players have spent launch week hunting Leonida for secrets. Here are the GTA VI easter eggs outlets have picked up, what's confirmed, and a first-person camera trick Rockstar didn't add on purpose.",
+        fig=art.easter_eggs,
+        body="""
+  <p>It took players less than a day to start finding Rockstar's in-jokes in Leonida. Most of what's circulating comes from clips on X and Reddit, so we've only listed the finds that outlets have reported, and we say how solid each one is. Rockstar hasn't commented on any of them.</p>
+  <h2>Brian O'Conner's 1995 Eclipse</h2>
+  <p>The best-supported find so far. GamesRadar and BGR both report that a green 1995 Mitsubishi Eclipse in the style of Paul Walker's car from the first Fast and Furious film sits in a garage on <b>Vespucci Island</b>. BGR, citing Vice, places it in a garage attached to a white house near the middle of the island. GamesRadar says you have to break into the garage to take it, and that it's in every version of the game. The in-game badge isn't Mitsubishi, since GTA uses its own brand names, and we haven't seen a reliable report of what the game calls it.</p>
+  <h2>A Dexter-style apartment</h2>
+  <p>GamesRadar reports an apartment complex on <b>Washington Island</b> in Vice Beach that recreates Dexter Morgan's home from the TV series, down to a boat called "Slice of Life" and tools on the roof. This one comes from a GamesRadar video and player posts, so treat the exact details as reported rather than tested by us.</p>
+  <h2>The egg on the tower</h2>
+  <p>IBTimes UK picked up a player video from November 18 showing a bird's nest full of coloured eggs at the top of a communications tower, reached after a climb of about seven minutes. Throw an egg and the game cuts to a short scene of it hitting a car windscreen below. The tower's location hasn't been pinned down, and IBTimes is clear that this is still a player report, not a documented feature.</p>
+  <h2>Two nods to George R.R. Martin</h2>
+  <p>GamesRadar reports two Game of Thrones jokes that players posted on X. A book on Jason's bedside table, "The Battle for Zantoroth" by "T.D.D. Ewell", has a cover in the style of Martin's novels. And a news ticker reports a man who died after drinking gas to "become a dragon", which GamesRadar links to a death in the Dunk and Egg stories. Both come from player posts that GamesRadar relayed, so they're reported, not tested by us.</p>
+  <h2>Comics and films</h2>
+  <ul>
+    <li><b>RX Men:</b> Reddit players spotted a comic called RX Men, with a Magneto-like villain called Dr. Placebo. GamesRadar reported it.</li>
+    <li><b>Hulk:</b> GamesRadar says a side quest about strawberries ends with a character turning into something very Hulk-like.</li>
+  </ul>
+  <details class="spoiler">
+    <summary><b>Film nods in later story missions</b> (tap to show)</summary>
+    <p>GamesRadar's writer compares some later missions to the heist and siege set pieces of Heat and Die Hard. That's the writer's own comparison, not something Rockstar has said.</p>
+  </details>
+  <h2>A first-person camera, by accident</h2>
+  <p>GTA VI has no first-person mode. GamesRadar reports a glitch that gives you one anyway: press the camera view button repeatedly while putting the phone away. It works better than you'd expect, with some visual glitches, but the only way back to the normal camera is to reload a save. Save first if you want to try it. GamesRadar also points out that GTA V only got its first-person mode in a later re-release, so a proper one could come later. Rockstar hasn't announced one.</p>
+  <h2>Found one?</h2>
+  <p>We'll add easter eggs to <a href="/map/">our map</a> once their locations are confirmed by more than one source. For now, the Eclipse garage is the only find with a location backed up by more than one outlet.</p>""",
+        sources=[("GamesRadar+: GTA 6 is a movie and TV goldmine, from Fast and Furious cars to Dexter's apartment", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-is-a-movie-and-tv-goldmine-as-players-discover-everything-from-fast-and-furious-cars-to-dexters-apartment/"),
+                 ("BGR: GTA 6 has a hidden Fast and Furious easter egg", "https://www.bgr.com/2322463/gta-6-hidden-fast-and-furious-paul-walker-car/"),
+                 ("IBTimes UK: GTA 6 easter egg is literally an egg", "https://www.ibtimes.co.uk/gta-6-player-discovers-literal-easter-egg-leonida-1833342"),
+                 ("GamesRadar+: GTA 6 features two shoutouts to George R.R. Martin", "https://www.gamesradar.com/entertainment/fantasy-shows/we-got-gta-6-before-winds-of-winter-and-now-the-game-features-two-shoutouts-to-game-of-thrones-creator-george-r-r-martin/"),
+                 ("GamesRadar+: GTA 6 glitch adds the first-person mode that Rockstar skipped","https://www.gamesradar.com/games/grand-theft-auto/gta-6-glitch-adds-the-first-person-mode-that-rockstar-skipped/")],
+    ),
+    dict(
+        slug="gta-6-rockstar-developer-notes-play-without-guides",
+        date="2026-11-23",
+        title="Rockstar's GTA 6 developer notes: 1,000 NPC routines, months on one door, and a plea to skip the guides",
+        desc="Rockstar gave press a packet of notes from more than 20 GTA VI developers. The highlights, including its design chief asking players to stop chasing completion percentages.",
+        fig=art.dev_notes,
+        body="""
+  <p>Alongside review copies, Rockstar sent press a set of notes in which named developers explain how GTA VI was made. InvenGlobal published a long summary on November 18, and Kotaku wrote about one part of it on November 21. These are Rockstar's own words, so this is about as official as behind-the-scenes detail gets.</p>
+  <h2>"Stop thinking in tasks"</h2>
+  <p>According to Kotaku, Stephen Donkin, Rockstar's vice president of design, says the team hopes players drop the habit of working through tasks, completion percentages and online guides, and instead "let the game unfold in front of them". Senior design director Ghyan Koehne talks about wanting players to feel a sense of wonder.</p>
+  <p>Yes, we see the irony of reporting that on a guide site. We agree with the spirit of it: on a first playthrough, wander off and don't worry about 100%. Our <a href="/walkthrough/">walkthrough</a> and <a href="/collectibles/">collectibles</a> pages will be here when you're stuck or want to clean up later.</p>
+  <h2>Other highlights</h2>
+  <ul>
+    <li><b>Background life:</b> the team made about 1,000 sets of activity animations for the routines of people in the world.</li>
+    <li><b>Small things take time:</b> gameplay animation director Mike Jones says the moment Lucia pushes a door open with her hip took months to get right.</li>
+    <li><b>Location scouting:</b> John Macpherson, lead director of world and population design, describes the team scouting real Florida locations.</li>
+    <li><b>The look of the UI:</b> the classic Pricedown font stays, and the phone is now held in the character's hand rather than floating on screen.</li>
+    <li><b>Music:</b> Rockstar's music team describes 1980s Miami influences for the regions of Leonida and a collaboration with French electronic duo Justice.</li>
+    <li><b>Cars:</b> physics technology director Ben Lyons says team members raced in the 24 Hours of Nürburgring after GTA V and took a class win.</li>
+    <li><b>Sound:</b> the audio team recorded in an anechoic chamber to get speakers and other sounds right.</li>
+  </ul>
+  <p>The notes also include a foreword from Rockstar founder Sam Houser. Neither summary says anything about a PC version or an online mode, which Rockstar still hasn't announced.</p>""",
+        sources=[("Kotaku: Rockstar dev tells GTA 6 players to stop thinking in tasks, completion percentages and online guides", "https://kotaku.com/rockstar-dev-tells-gta-6-players-to-stop-thinking-in-tasks-completion-percentages-online-guides-2000759151"),
+                 ("InvenGlobal: GTA 6 developers share insights on the creation of Vice City", "https://www.invenglobal.com/articles/28826/gta-6-developers-share-insights-on-the-creation-of-vice-city")],
+    ),
+    dict(
+        slug="gta-6-official-sales-3-79-billion-day-one",
+        date="2026-11-22",
+        title="GTA 6 made $3.79 billion on day one, Take-Two confirms",
+        desc="Take-Two's first official GTA VI numbers: $3.79 billion in day-one retail sales and 32.5 million copies sold before release, both records. Here's what the figures do and don't include.",
+        fig=art.sales_official,
+        body="""
+  <p>We now have official numbers. On November 20, Take-Two said GTA VI brought in <b>$3.79 billion in retail sales</b> on its first day and sold <b>32.5 million copies before release</b>. The company calls the first figure a record for any entertainment launch, films included.</p>
+  <h2>What Take-Two announced</h2>
+  <ul>
+    <li><b>$3.79 billion</b> in day-one retail sales worldwide, based on company estimates up to the end of November 19.</li>
+    <li><b>32.5 million copies</b> sold before launch, which Take-Two says is a record on any platform.</li>
+    <li>The game is on sale through the PlayStation Store, the Microsoft Store, the Rockstar Games Store and shops. The announcement says nothing about a PC version or an online mode.</li>
+  </ul>
+  <h2>What the numbers mean</h2>
+  <p>The $3.79 billion is money spent by players at retail. It isn't Take-Two's revenue, since stores and platform holders take their cut. It's also the company's own estimate, not an audited result. The Hollywood Reporter, as cited by Make Tech Easier, says the total includes pre-orders. Take-Two didn't say how much came from digital and how much from boxed copies.</p>
+  <h2>How it compares</h2>
+  <p>In 2013, Take-Two said GTA V sold more than $800 million on its first day. That makes the GTA VI figure about five times bigger. Earlier this week we reported <a href="/news/gta-6-sales-19-million-estimate/">Sensor Tower's estimate</a> of about 19 million copies by launch morning. Take-Two's 32.5 million is well above that. That estimate was made before launch day ended and was built from market data rather than Take-Two's own sales records, so the two numbers measure different things.</p>
+  <h2>What's next</h2>
+  <p>Take-Two hasn't said when it will share an updated total, and Rockstar still hasn't announced a PC version, an online mode or the first post-launch patch. We'll report those when they're official. For what's in the game right now, see our <a href="/walkthrough/">mission walkthrough</a>.</p>""",
+        sources=[("Take-Two Interactive: Grand Theft Auto VI shatters entertainment box office records with $3.79 billion in day one retail sales", "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"),
+                 ("ABC News: GTA 6 breaks entertainment box office records with $3.79B in 1st-day sales", "https://abcnews.com/GMA/Culture/grand-theft-auto-vi-breaks-1st-day-sales-record/story?id=138328412"),
+                 ("Make Tech Easier: GTA 6 made $3.79 billion on its first day", "https://maketecheasier.com/gta-6-day-one-sales-record/")],
+    ),
+    dict(
         slug="gta-6-launch-bugs-psn-outages",
         date="2026-11-21",
         title="GTA 6 launch bugs: what players are hitting, and why there's no patch yet",
@@ -33,7 +143,8 @@ POSTS = [
   <h2>PlayStation Network went down twice</h2>
   <p>This part is confirmed. Sony's PSN status page acknowledged a sign-in outage on November 18, as the game unlocked around the world, and a shorter disruption of about 24 minutes to gaming and social services from around 9:34pm Pacific on November 19. Sony didn't give a cause, and it never said GTA VI was to blame. GTA VI is single-player, so the outage mostly mattered for downloads, store access and signing in.</p>
   <h2>Is there a patch?</h2>
-  <p>Not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
+  <p class="note"><b>Update, November 23:</b> the first post-launch update, 01.002.002, is now rolling out on PS5 and Xbox Series X|S, still without patch notes. <a href="/news/gta-6-first-patch-01-002-002/">Read what we know about it.</a></p>
+  <p>As of November 21, not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
   <h2>What to do if you hit one</h2>
   <ul>
     <li><b>Stuck in a mission:</b> retry from the last checkpoint first. If that doesn't clear it, close the game fully and reopen it.</li>
@@ -55,6 +166,7 @@ POSTS = [
         desc="Market data firm Sensor Tower puts GTA VI at about 19.1 million copies and $1.84 billion by the morning of November 19. Take-Two has not shared figures.",
         fig=art.sales_estimate,
         body="""
+  <p class="note"><b>Update, November 22:</b> Take-Two has now released official figures: $3.79 billion in day-one retail sales and 32.5 million copies sold before release. <a href="/news/gta-6-official-sales-3-79-billion-day-one/">Read our report on the official numbers.</a></p>
   <p>The first sales number for GTA VI is out, and it is not from Rockstar. Market data firm Sensor Tower estimates the game had sold about <b>19.1 million copies</b>, worth about <b>$1.84 billion</b>, by the morning of launch day. Reuters reported the figure first.</p>
   <h2>What the estimate says</h2>
   <ul>
@@ -67,7 +179,7 @@ POSTS = [
   <h2>How it compares with GTA V</h2>
   <p>GTA V sold 11.21 million copies and made $815.7 million in its first 24 hours in September 2013, a Guinness world record at the time. The GTA VI estimate is already well above that, but the two numbers are not measured the same way: GTA V's covers a full day of sales, while GTA VI's is mostly pre-orders counted before most of the world could play.</p>
   <h2>Why it matters</h2>
-  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. We will update this post when Take-Two shares its own numbers. Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
+  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. Take-Two has since shared its own numbers (<a href="/news/gta-6-official-sales-3-79-billion-day-one/">see the update above</a>). Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
         sources=[("Men's Journal: GTA 6 sold an estimated 19 million copies by launch day", "https://www.mensjournal.com/news/gta-6-sales-19-million-copies-gta-v-record"),
                  ("80 Level: Report says GTA 6 generated nearly $2B in sales by launch day", "https://80.lv/articles/report-gta-6-generated-nearly-usd2b-in-sales-by-launch-day")],
     ),
