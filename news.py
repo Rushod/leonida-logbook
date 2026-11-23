@@ -8,6 +8,32 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-first-patch-01-002-002",
+        date="2026-11-23",
+        title="GTA 6's first post-launch patch is out: update 01.002.002, with no patch notes yet",
+        desc="Rockstar has started rolling out GTA VI's first update since launch on PS5 and Xbox Series X|S. Here's the version, the download size, how the staged rollout works and what we know about what it fixes (not much).",
+        fig=art.first_patch,
+        body="""
+  <p>Four days after launch, GTA VI has its first post-launch update. It started rolling out on November 23 on PS5 and Xbox Series X|S, according to VICE, Geo News and LibertyCity. It's the third update overall, after the two pre-launch patches on November 13 and 16.</p>
+  <h2>The basics</h2>
+  <ul>
+    <li><b>Version:</b> 01.002.002 on PS5. VICE and LibertyCity report the Xbox version as 1.0.2.2.</li>
+    <li><b>Download size:</b> about 604 MB on PS5 and about 1.6 GB on Xbox Series X|S, as reported by VICE and LibertyCity. Geo notes it isn't clear whether the sizes are the same in every region.</li>
+    <li><b>Platforms:</b> PS5 and Xbox Series X|S. There's still no PC version, so there's no PC patch either.</li>
+  </ul>
+  <h2>Why you might not have it yet</h2>
+  <p>On PS5 the update is going out in waves, not to everyone at once. All three outlets describe the same schedule: about a third of players first, about two thirds roughly three hours later, and everyone about six hours after the start. The outlets think this is to spread the load on PlayStation and Xbox servers, but Rockstar hasn't said why. Reports disagree on whether Xbox is also staged: VICE says only PS5 is, while Geo says both are.</p>
+  <p>If it hasn't arrived on PS5, LibertyCity suggests checking by hand: highlight GTA VI on the home screen, press Options and choose Check for Update.</p>
+  <h2>What does it fix?</h2>
+  <p>We don't know, and neither does anyone outside Rockstar. As VICE put it, Rockstar "hasn't released patch notes" for this update, and it published none for the two pre-launch patches either. Rockstar Support (support.rockstargames.com) is where official notes would appear.</p>
+  <p>Geo lists launch-week problems the patch might target, including an Xbox Quick Resume glitch that reportedly unlocks the frame rate but speeds up the whole game, PS5 crash error CE-108255-1, HDR calibration problems and the accidental first-person camera. That's Geo's guess, not a confirmed changelog, so don't assume any of these are fixed until Rockstar says so or players test it. For the bugs reported so far and what to do about them, see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>.</p>
+  <h2>Should you install it?</h2>
+  <p>Yes. GTA VI is single-player and you'll need the latest version for future updates anyway. If you're mid-mission, finish it or reach a save point first, since the game has to close to apply the update. We'll update this post if Rockstar publishes notes.</p>""",
+        sources=[("VICE: GTA 6 patch update 01.002.002 is live on PS5 and Xbox Series X", "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/"),
+                 ("Geo News: GTA 6 update patch size revealed, 603 MB on PS5, 1.60 GB on Xbox", "https://www.geo.tv/latest/692298-gta-6-update-patch-size-revealed-603-mb-on-ps5-160-gb-on-xbox"),
+                 ("LibertyCity: Rockstar releases first post-launch GTA 6 patch", "https://libertycity.net/news/gta-6/10649-rockstar-releases-first-post-launch-gta.html")],
+    ),
+    dict(
         slug="gta-6-easter-eggs-fast-furious-dexter",
         date="2026-11-23",
         title="GTA 6 easter eggs found so far: a Fast & Furious car, Dexter's flat and a literal egg",
@@ -21,6 +47,8 @@ POSTS = [
   <p>GamesRadar reports an apartment complex on <b>Washington Island</b> in Vice Beach that recreates Dexter Morgan's home from the TV series, down to a boat called "Slice of Life" and tools on the roof. This one comes from a GamesRadar video and player posts, so treat the exact details as reported rather than tested by us.</p>
   <h2>The egg on the tower</h2>
   <p>IBTimes UK picked up a player video from November 18 showing a bird's nest full of coloured eggs at the top of a communications tower, reached after a climb of about seven minutes. Throw an egg and the game cuts to a short scene of it hitting a car windscreen below. The tower's location hasn't been pinned down, and IBTimes is clear that this is still a player report, not a documented feature.</p>
+  <h2>Two nods to George R.R. Martin</h2>
+  <p>GamesRadar reports two Game of Thrones jokes that players posted on X. A book on Jason's bedside table, "The Battle for Zantoroth" by "T.D.D. Ewell", has a cover in the style of Martin's novels. And a news ticker reports a man who died after drinking gas to "become a dragon", which GamesRadar links to a death in the Dunk and Egg stories. Both come from player posts that GamesRadar relayed, so they're reported, not tested by us.</p>
   <h2>Comics and films</h2>
   <ul>
     <li><b>RX Men:</b> Reddit players spotted a comic called RX Men, with a Magneto-like villain called Dr. Placebo. GamesRadar reported it.</li>
@@ -37,7 +65,8 @@ POSTS = [
         sources=[("GamesRadar+: GTA 6 is a movie and TV goldmine, from Fast and Furious cars to Dexter's apartment", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-is-a-movie-and-tv-goldmine-as-players-discover-everything-from-fast-and-furious-cars-to-dexters-apartment/"),
                  ("BGR: GTA 6 has a hidden Fast and Furious easter egg", "https://www.bgr.com/2322463/gta-6-hidden-fast-and-furious-paul-walker-car/"),
                  ("IBTimes UK: GTA 6 easter egg is literally an egg", "https://www.ibtimes.co.uk/gta-6-player-discovers-literal-easter-egg-leonida-1833342"),
-                 ("GamesRadar+: GTA 6 glitch adds the first-person mode that Rockstar skipped", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-glitch-adds-the-first-person-mode-that-rockstar-skipped/")],
+                 ("GamesRadar+: GTA 6 features two shoutouts to George R.R. Martin", "https://www.gamesradar.com/entertainment/fantasy-shows/we-got-gta-6-before-winds-of-winter-and-now-the-game-features-two-shoutouts-to-game-of-thrones-creator-george-r-r-martin/"),
+                 ("GamesRadar+: GTA 6 glitch adds the first-person mode that Rockstar skipped","https://www.gamesradar.com/games/grand-theft-auto/gta-6-glitch-adds-the-first-person-mode-that-rockstar-skipped/")],
     ),
     dict(
         slug="gta-6-rockstar-developer-notes-play-without-guides",
@@ -114,7 +143,8 @@ POSTS = [
   <h2>PlayStation Network went down twice</h2>
   <p>This part is confirmed. Sony's PSN status page acknowledged a sign-in outage on November 18, as the game unlocked around the world, and a shorter disruption of about 24 minutes to gaming and social services from around 9:34pm Pacific on November 19. Sony didn't give a cause, and it never said GTA VI was to blame. GTA VI is single-player, so the outage mostly mattered for downloads, store access and signing in.</p>
   <h2>Is there a patch?</h2>
-  <p>Not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
+  <p class="note"><b>Update, November 23:</b> the first post-launch update, 01.002.002, is now rolling out on PS5 and Xbox Series X|S, still without patch notes. <a href="/news/gta-6-first-patch-01-002-002/">Read what we know about it.</a></p>
+  <p>As of November 21, not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
   <h2>What to do if you hit one</h2>
   <ul>
     <li><b>Stuck in a mission:</b> retry from the last checkpoint first. If that doesn't clear it, close the game fully and reopen it.</li>

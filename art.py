@@ -309,3 +309,17 @@ def dev_notes():
         for j, line in enumerate(sub):
             b += t(cx, 306 + j * 30, line, 22, MUTED, font=L)
     return fig(b, "From Rockstar's GTA VI developer notes: about 1,000 activity animation sets for background characters, months of work on Lucia pushing a door open with her hip, and a hope that players set aside guides and checklists")
+
+
+def first_patch():
+    b = t(400, 62, "FIRST POST-LAUNCH PATCH: 01.002.002", 34)
+    cols = [("PS5 SIZE", "604", ["MB, IN THREE", "ROLLOUT WAVES"]),
+            ("XBOX SIZE", "1.6", ["GB, SERIES X|S", "VERSION 1.0.2.2"]),
+            ("PATCH NOTES", "NONE", ["ROCKSTAR HASN'T", "LISTED FIXES"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 148, h, 23, SUN, font=L)
+        b += f'<text x="{cx}" y="262" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "GTA VI's first post-launch patch, 01.002.002, released November 23: about 604 MB on PS5 in three rollout waves, about 1.6 GB on Xbox Series X|S as version 1.0.2.2, and no official patch notes yet")
