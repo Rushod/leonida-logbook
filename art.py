@@ -315,11 +315,40 @@ def first_patch():
     b = t(400, 62, "FIRST POST-LAUNCH PATCH: 01.002.002", 34)
     cols = [("PS5 SIZE", "604", ["MB, IN THREE", "ROLLOUT WAVES"]),
             ("XBOX SIZE", "1.6", ["GB, SERIES X|S", "VERSION 1.0.2.2"]),
-            ("PATCH NOTES", "NONE", ["ROCKSTAR HASN'T", "LISTED FIXES"])]
+            ("PATCH NOTES", "7", ["FIXES, NOTES", "POSTED NOV 23"])]
     for i, (h, big, sub) in enumerate(cols):
         cx = 152 + i * 248
         b += panel(cx - 112, 100, 224, 270) + t(cx, 148, h, 23, SUN, font=L)
         b += f'<text x="{cx}" y="262" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
         for j, line in enumerate(sub):
             b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
-    return fig(b, "GTA VI's first post-launch patch, 01.002.002, released November 23: about 604 MB on PS5 in three rollout waves, about 1.6 GB on Xbox Series X|S as version 1.0.2.2, and no official patch notes yet")
+    return fig(b, "GTA VI's first post-launch patch, 01.002.002, released November 23: about 604 MB on PS5 in three rollout waves, about 1.6 GB on Xbox Series X|S as version 1.0.2.2, with Rockstar's notes listing seven fixes")
+
+
+def patch_notes():
+    b = t(400, 58, "PATCH 01.002.002: ROCKSTAR'S NOTES", 32)
+    b += panel(40, 86, 250, 290)
+    b += f'<text x="165" y="250" font-family="{D}" font-size="150" fill="url(#aNum)" text-anchor="middle">7</text>'
+    b += t(165, 300, "FIXES LISTED", 26, SUN, font=L)
+    b += t(165, 340, "NO FPS CHANGES", 22, PINK, font=L)
+    b += panel(310, 86, 450, 290)
+    fixes = ["CRASHES", "WEATHER STUCK", "AUTOSAVE", "STORY PHONE CALLS", "WANTED LEVEL", "GYM DEADLIFT BAR", "PARTNER BAG HANDOVER"]
+    for i, f in enumerate(fixes):
+        y = 128 + i * 36
+        b += f'<circle cx="344" cy="{y - 8}" r="7" fill="{GOOD}"/>' + t(364, y, f, 24, INK, anchor="start", font=L)
+    return fig(b, "Rockstar's notes for GTA VI update 01.002.002 list seven fixes: crashes, weather that stopped changing, autosave, story phone calls, wanted levels that could not be lost, the gym deadlift bar and partners not handing over bags. No frame rate or performance changes are listed")
+
+
+def side_secrets():
+    b = t(400, 62, "THREE SIDE SECRETS TO FIND", 34)
+    cols = [("OUT AT SEA", "DOG", ["COOL DOG'S", "JET SKI RESCUE"], "OUTLET TESTED"),
+            ("PORT GELLHORN", "3", ["MISSING PERSONS", "TO TRACK DOWN"], "OUTLET TESTED"),
+            ("BELVILLE", "SIM?", ["A GARAGE FULL", "OF RED STRING"], "PLAYER POST")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 24 if len(h) < 12 else 20, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 18, GOOD if "TESTED" in tag else PINK, font=L)
+    return fig(b, "Three GTA VI side secrets: Cool Dog, who rescues you on a jet ski if you drift far out to sea, tested by GamesRadar; three missing persons to find around Port Gellhorn, tested by GamesRadar; and a Belville garage covered in simulation-theory notes, from a player post")

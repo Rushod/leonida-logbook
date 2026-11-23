@@ -8,12 +8,85 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-patch-01-002-002-notes-seven-fixes",
+        date="2026-11-23",
+        title="GTA 6 patch 01.002.002 notes are out: seven fixes, nothing for performance",
+        desc="Rockstar has published notes for GTA VI's first post-launch update. It fixes crashes, autosave, stuck wanted levels, story phone calls and more, but nothing about frame rate or the Xbox Quick Resume glitch.",
+        fig=art.patch_notes,
+        body="""
+  <p>Earlier today we reported that GTA VI's first post-launch update, 01.002.002 on PS5 and 1.0.2.2 on Xbox Series X|S, was rolling out <a href="/news/gta-6-first-patch-01-002-002/">without any patch notes</a>. That's changed. Rockstar has now added the notes to its GTA VI launch updates page on Rockstar Support, dated November 23, and KeenGamer, Apple Scoop and others have reported the same seven fixes in the same order.</p>
+  <h2>What the update fixes</h2>
+  <p>All seven are listed under "General / Miscellaneous". In our words:</p>
+  <ul>
+    <li><b>Crashes:</b> several issues that could crash the game are fixed. Rockstar doesn't name any error codes.</li>
+    <li><b>Weather:</b> fixed weather that stayed the same for long stretches.</li>
+    <li><b>Autosave:</b> fixed the game not autosaving properly.</li>
+    <li><b>Phone calls:</b> fixed calls that didn't come through, including ones that move the story on or unlock missions. If your progress stalled waiting for a call, this is the fix to look for.</li>
+    <li><b>Wanted level:</b> fixed a bug where you couldn't lose the police.</li>
+    <li><b>Gym:</b> fixed the deadlift bar not being usable.</li>
+    <li><b>Loot bags:</b> fixed partners not handing over bags, which stopped you selling them to a fence.</li>
+  </ul>
+  <h2>What it doesn't mention</h2>
+  <p>As KeenGamer and Game News Plus point out, the notes list no performance, frame rate or graphics changes. That means nothing about:</p>
+  <ul>
+    <li><b>The Xbox Quick Resume trick.</b> Pure Xbox and GamesRadar reported a glitch where switching display modes and using Quick Resume lifts the 30 fps cap on Xbox Series X|S, but ties game speed to frame rate, so everything runs too fast. Rockstar hasn't said whether it will stay or go.</li>
+    <li><b>PS5 error CE-108255-1.</b> Some players say the update stops it, but the notes don't name it, so treat that as unconfirmed.</li>
+    <li><b>The accidental first-person camera</b> and the heavy screen vignetting some players have complained about. Neither is in the notes.</li>
+  </ul>
+  <p>There's still no 60 fps mode on any console, and Rockstar hasn't announced one. See <a href="/frame-rate/">our frame rate page</a> for the tested numbers.</p>
+  <h2>How to get it</h2>
+  <p>The PS5 version goes out in waves, so it can take up to about six hours to reach everyone. If you don't have it yet, highlight GTA VI on the home screen, press Options and choose Check for Update. Reported sizes are about 604 MB on PS5 and 1.6 GB on Xbox. For the rest of the launch problems players are reporting, see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>.</p>""",
+        sources=[("Rockstar Support: Grand Theft Auto VI launch updates (PS5, Xbox Series X|S)", "https://support.rockstargames.com/articles/sN5pEdFYZdlvijKXd6xpJ/grand-theft-auto-vi-launch-updates-ps5-xbox-series-x-or-s"),
+                 ("KeenGamer: GTA 6 gets new update on PS5 and Xbox, full patch notes revealed", "https://www.keengamer.com/articles/news/gta-6-gets-new-update-on-ps5-and-xbox-full-patch-notes-revealed/"),
+                 ("Apple Scoop: GTA 6 update 01.002.002 patch notes, size and known issues", "https://applescoop.org/story/gta-6-update-01-002-002-patch-notes-download-size-ps5-xbox"),
+                 ("Game News Plus: Rockstar confirms 7 fixes in GTA 6 update 01.002.002", "https://gamenewsplus.net/news/gta-6-update-01-002-002-patch-notes-rockstar-confirms-7-fixes-40140/"),
+                 ("Make Tech Easier: GTA 6 Xbox Quick Resume glitch hits 60fps, but runs gameplay at double speed", "https://maketecheasier.com/gta-6-quick-resume-framerate-glitch/"),
+                 ("Pure Xbox: GTA 6 glitch unlocks the FPS on Xbox Series X|S, but with drawbacks", "https://www.purexbox.com/news/2026/11/gta-6-glitch-unlocks-the-fps-on-xbox-series-xs-but-with-multiple-drawbacks")],
+    ),
+    dict(
+        slug="gta-6-cool-dog-missing-persons-simulation-npc",
+        date="2026-11-23",
+        title="GTA 6 side secrets: a jet ski dog, a missing persons case and an NPC who thinks he's in a game",
+        desc="Three GTA VI side secrets picked up by outlets this weekend: how to meet Cool Dog at sea, where to start the Missing Persons case in Port Gellhorn, and the Belville garage covered in simulation theories.",
+        fig=art.side_secrets,
+        body="""
+  <p>Launch week's <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">first batch of easter eggs</a> was mostly references to films and TV. The newest finds are things you can actually go and do. GamesRadar has tested the first two, and the third comes from a player post that VICE picked up.</p>
+  <h2>Cool Dog, the jet ski rescue</h2>
+  <p>Get stranded far out at sea, away from the coast and other boats, and you may be picked up by a dog on a jet ski. GamesRadar says the game calls him <b>Cool Dog</b>, and its writer found him by drifting out from <b>Leonida Bay</b>. Players report meeting him in other places too.</p>
+  <ul>
+    <li>Wait. It can take several minutes. You'll hear barking, then music as he arrives.</li>
+    <li>Press <b>Triangle / Y</b> to climb on. Holding <b>L2 / LT</b> lets you try to talk to him, though he doesn't say much.</li>
+    <li>He takes you to a beach where other dogs live. You can play fetch with a mini football and throw discs.</li>
+    <li>When you're done, Cool Dog knocks some branches off a boat and uncovers a wallet with over $1,200 in it, according to GamesRadar.</li>
+  </ul>
+  <h2>Missing Persons in Port Gellhorn</h2>
+  <p>This is a proper side case with three bodies to find, and GamesRadar has played it through. It opens in Chapter 2. Start at the reception of the <b>Starlet Motel</b> in Port Gellhorn, where there are three missing person posters, then look for a dome-shaped warehouse north-east of Moses' garage. Don't use the shutter. Crawl in through a gap on the north-east side, go through the trophy room, and check the three lockers for photos of the missing people.</p>
+  <ul>
+    <li><b>Susanne Keeble:</b> in the trunk of a pink car with the plate PRTTYGRL, in the junkyard behind the Port Gellhorn Pay 'N' Spray.</li>
+    <li><b>Patrick Murray:</b> under the floor of an abandoned trailer in the trailer park north of the water tower in north-east Port Gellhorn. A dog barks at the door.</li>
+    <li><b>Donald Miller:</b> in a sunken car in a lake by a tree stump, on the border of Port Gellhorn and Wild Hog Point, south-west of town.</li>
+  </ul>
+  <p>Report each one to the Kelly County Missing Persons Tip Line. GamesRadar's call back only came later, at night, after it had played on to the Chapter 2 mission Breakfast Run.</p>
+  <details class="spoiler">
+    <summary><b>How the case ends</b> (tap to show)</summary>
+    <p>The tip line caller asks you to meet at the warehouse. GamesRadar says the killer is <b>Alvan West</b>. If you go alone, he drugs and kidnaps you, and your partner has to rescue you from an old mine near the Kalaga Reservoir in Mount Kalaga National Park, then chase him down. If Jason and Lucia go together, you face him together instead. There's no cash reward, but it improves Jason and Lucia's relationship.</p>
+  </details>
+  <h2>The man who thinks he's in a simulation</h2>
+  <p>VICE reports a house in <b>Belville</b>, a small town near Lake Leonida, whose garage is covered in a corkboard with red string and notes such as "IT'S A SIMULATION" and "WHO IS L, WHO IS J?". Brochures suggest the owner wants to buy a boat and sail past Leonida's edge, which VICE links to Cool Dog. This comes from a player's post on X that VICE relayed. VICE gives no exact address, and we haven't checked it ourselves.</p>
+  <h2>On our map</h2>
+  <p>We're not adding pins for these yet. The Missing Persons spots are the best documented, and we'll add them once a second source confirms the exact positions. For the full list of things to do, see <a href="/activities/">activities</a>.</p>""",
+        sources=[("GamesRadar+: How to find Jet Ski Dog in GTA 6 and get rescued at sea", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-jet-ski-dog/"),
+                 ("GamesRadar+: All GTA 6 missing persons locations and how to find the serial killer", "https://www.gamesradar.com/games/grand-theft-auto/all-gta-6-missing-persons-locations-and-how-to-find-the-serial-killer/"),
+                 ("VICE: There's an NPC in GTA 6 who knows he's in a video game", "https://www.vice.com/en/article/theres-an-npc-in-gta-6-who-knows-hes-in-a-video-game-heres-how-to-find-his-house/")],
+    ),
+    dict(
         slug="gta-6-first-patch-01-002-002",
         date="2026-11-23",
         title="GTA 6's first post-launch patch is out: update 01.002.002, with no patch notes yet",
         desc="Rockstar has started rolling out GTA VI's first update since launch on PS5 and Xbox Series X|S. Here's the version, the download size, how the staged rollout works and what we know about what it fixes (not much).",
         fig=art.first_patch,
         body="""
+  <p class="note"><b>Update, November 23:</b> Rockstar has now published patch notes for this update. It lists seven fixes and no performance changes. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">Read the full list.</a></p>
   <p>Four days after launch, GTA VI has its first post-launch update. It started rolling out on November 23 on PS5 and Xbox Series X|S, according to VICE, Geo News and LibertyCity. It's the third update overall, after the two pre-launch patches on November 13 and 16.</p>
   <h2>The basics</h2>
   <ul>
@@ -28,7 +101,7 @@ POSTS = [
   <p>We don't know, and neither does anyone outside Rockstar. As VICE put it, Rockstar "hasn't released patch notes" for this update, and it published none for the two pre-launch patches either. Rockstar Support (support.rockstargames.com) is where official notes would appear.</p>
   <p>Geo lists launch-week problems the patch might target, including an Xbox Quick Resume glitch that reportedly unlocks the frame rate but speeds up the whole game, PS5 crash error CE-108255-1, HDR calibration problems and the accidental first-person camera. That's Geo's guess, not a confirmed changelog, so don't assume any of these are fixed until Rockstar says so or players test it. For the bugs reported so far and what to do about them, see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>.</p>
   <h2>Should you install it?</h2>
-  <p>Yes. GTA VI is single-player and you'll need the latest version for future updates anyway. If you're mid-mission, finish it or reach a save point first, since the game has to close to apply the update. We'll update this post if Rockstar publishes notes.</p>""",
+  <p>Yes. GTA VI is single-player and you'll need the latest version for future updates anyway. If you're mid-mission, finish it or reach a save point first, since the game has to close to apply the update. Rockstar has since published the notes: <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">here's what it fixes</a>.</p>""",
         sources=[("VICE: GTA 6 patch update 01.002.002 is live on PS5 and Xbox Series X", "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/"),
                  ("Geo News: GTA 6 update patch size revealed, 603 MB on PS5, 1.60 GB on Xbox", "https://www.geo.tv/latest/692298-gta-6-update-patch-size-revealed-603-mb-on-ps5-160-gb-on-xbox"),
                  ("LibertyCity: Rockstar releases first post-launch GTA 6 patch", "https://libertycity.net/news/gta-6/10649-rockstar-releases-first-post-launch-gta.html")],
@@ -143,7 +216,7 @@ POSTS = [
   <h2>PlayStation Network went down twice</h2>
   <p>This part is confirmed. Sony's PSN status page acknowledged a sign-in outage on November 18, as the game unlocked around the world, and a shorter disruption of about 24 minutes to gaming and social services from around 9:34pm Pacific on November 19. Sony didn't give a cause, and it never said GTA VI was to blame. GTA VI is single-player, so the outage mostly mattered for downloads, store access and signing in.</p>
   <h2>Is there a patch?</h2>
-  <p class="note"><b>Update, November 23:</b> the first post-launch update, 01.002.002, is now rolling out on PS5 and Xbox Series X|S, still without patch notes. <a href="/news/gta-6-first-patch-01-002-002/">Read what we know about it.</a></p>
+  <p class="note"><b>Update, November 23:</b> the first post-launch update, 01.002.002, is now rolling out on PS5 and Xbox Series X|S, and Rockstar has published its notes: seven fixes, including crashes, autosave, story phone calls and wanted levels you couldn't lose. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">See the full list.</a></p>
   <p>As of November 21, not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
   <h2>What to do if you hit one</h2>
   <ul>

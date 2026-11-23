@@ -93,7 +93,7 @@ REVIEWS = page("/reviews/", "Before you buy", "GTA 6 reviews: what critics say",
   <h2>In one line</h2>
   <p>Critics love the world, the driving and Jason and Lucia's story. The common complaints are fiddly controls, clunky small guns, slow later chapters and the 30 fps cap. Our <a href="/news/gta-6-reviews-metacritic-99/">full reviews round-up</a> has who said what.</p>
   <h2>What about bugs?</h2>
-  <p>Players have posted plenty of clips of clipping, falls through the map and cars flying after crashes, and PlayStation Network had two outages in launch week. The first post-launch update, 01.002.002, started rolling out on November 23, but Rockstar hasn't published patch notes, so it isn't known what it fixes. See <a href="/news/gta-6-first-patch-01-002-002/">what we know about the patch</a> and <a href="/news/gta-6-launch-bugs-psn-outages/">what's been reported and what to do</a>.</p>
+  <p>Players have posted plenty of clips of clipping, falls through the map and cars flying after crashes, and PlayStation Network had two outages in launch week. The first post-launch update, 01.002.002, started rolling out on November 23, and Rockstar's notes list seven fixes, among them crashes, autosave and story phone calls, but no performance changes. See <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">the patch notes</a> and <a href="/news/gta-6-launch-bugs-psn-outages/">what's been reported and what to do</a>.</p>
   <h2>Where to check the latest scores</h2>
   <ul>
     <li><b>Metacritic and OpenCritic</b> collect critic scores in one place. Look at how many reviews a score is based on.</li>
@@ -241,6 +241,7 @@ WANTED = page("/wanted-level/", "Gameplay", "GTA 6 wanted level: how it works an
     <li><b>Use Pay &amp; Spray</b> to repaint a car mid-chase.</li>
     <li><b>Split up.</b> Separating Jason and Lucia drops the active player's level by one star.</li>
   </ul>
+  <p class="note">If the police never stop searching however far you get, update the game. Patch 01.002.002 (November 23) fixed a bug where you couldn't lose your wanted level. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">Patch notes</a>.</p>
   <h2>Before the crime</h2>
   <p>Wearing a mask stops cameras and witnesses from identifying your face in the first place.</p>
   <h2>What happens if you are busted?</h2>
