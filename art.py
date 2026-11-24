@@ -265,3 +265,105 @@ def launch_bugs():
         for j, line in enumerate(sub):
             b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
     return fig(b, "Launch-week status: many player clips of bugs, two PlayStation Network outages on November 18 and 19, and no Rockstar patch notes or fix announcement yet")
+
+
+def sales_official():
+    b = t(400, 62, "DAY-ONE SALES, TAKE-TWO FIGURES", 34)
+    rows = [("GTA V", 0.8, "$0.8B", "FIRST DAY, SEPTEMBER 2013"), ("GTA VI", 3.79, "$3.79B", "TO END OF NOVEMBER 19, 2026")]
+    for i, (name, val, txt, note) in enumerate(rows):
+        y = 112 + i * 120
+        w = val * 105
+        b += t(40, y + 40, name, 32, anchor="start")
+        b += f'<rect x="200" y="{y}" width="{w:.0f}" height="56" rx="10" fill="url(#aBar)"/>'
+        b += t(200 + w + 14, y + 41, txt, 32, SUN, anchor="start")
+        b += t(200, y + 88, note, 22, MUTED, anchor="start", font=L)
+    b += t(400, 376, "PLUS 32.5 MILLION COPIES SOLD BEFORE RELEASE", 24, PINK, font=L)
+    return fig(b, "Take-Two says GTA VI made $3.79 billion in retail sales on day one, about five times GTA V's roughly $800 million first day in 2013, and sold 32.5 million copies before release")
+
+
+def easter_eggs():
+    b = t(400, 62, "LAUNCH-WEEK EASTER EGGS", 34)
+    cols = [("FAST & FURIOUS", "CAR", ["'95 ECLIPSE,", "VESPUCCI ISLE"], "2 OUTLETS"),
+            ("DEXTER", "FLAT", ["APARTMENT ON", "WASHINGTON IS."], "REPORTED"),
+            ("TOWER NEST", "EGG", ["THROW ONE FOR", "A CUTSCENE"], "PLAYER CLIP")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 22 if len(h) > 12 else 24, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="84" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 20, GOOD if tag == "2 OUTLETS" else PINK, font=L)
+    return fig(b, "Three launch-week GTA VI easter eggs: a Fast and Furious 1995 Eclipse on Vespucci Island, reported by two outlets; a Dexter-style apartment on Washington Island, reported; and a nest of eggs on a tower that triggers a cutscene, from a player clip")
+
+
+def dev_notes():
+    b = t(400, 62, "FROM ROCKSTAR'S DEVELOPER NOTES", 34)
+    cols = [("NPC ROUTINES", "1,000", ["ACTIVITY", "ANIMATION SETS"]),
+            ("ONE DOOR", "MONTHS", ["ON LUCIA'S", "HIP DOOR PUSH"]),
+            ("THE ASK", "NO", ["GUIDES OR", "CHECKLISTS"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 146, h, 24, SUN, font=L)
+        size = 84 if len(big) <= 3 else 62
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="{size}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 306 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "From Rockstar's GTA VI developer notes: about 1,000 activity animation sets for background characters, months of work on Lucia pushing a door open with her hip, and a hope that players set aside guides and checklists")
+
+
+def first_patch():
+    b = t(400, 62, "FIRST POST-LAUNCH PATCH: 01.002.002", 34)
+    cols = [("PS5 SIZE", "604", ["MB, IN THREE", "ROLLOUT WAVES"]),
+            ("XBOX SIZE", "1.6", ["GB, SERIES X|S", "VERSION 1.0.2.2"]),
+            ("PATCH NOTES", "7", ["FIXES, NOTES", "POSTED NOV 23"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 148, h, 23, SUN, font=L)
+        b += f'<text x="{cx}" y="262" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "GTA VI's first post-launch patch, 01.002.002, released November 23: about 604 MB on PS5 in three rollout waves, about 1.6 GB on Xbox Series X|S as version 1.0.2.2, with Rockstar's notes listing seven fixes")
+
+
+def patch_notes():
+    b = t(400, 58, "PATCH 01.002.002: ROCKSTAR'S NOTES", 32)
+    b += panel(40, 86, 250, 290)
+    b += f'<text x="165" y="250" font-family="{D}" font-size="150" fill="url(#aNum)" text-anchor="middle">7</text>'
+    b += t(165, 300, "FIXES LISTED", 26, SUN, font=L)
+    b += t(165, 340, "NO FPS CHANGES", 22, PINK, font=L)
+    b += panel(310, 86, 450, 290)
+    fixes = ["CRASHES", "WEATHER STUCK", "AUTOSAVE", "STORY PHONE CALLS", "WANTED LEVEL", "GYM DEADLIFT BAR", "PARTNER BAG HANDOVER"]
+    for i, f in enumerate(fixes):
+        y = 128 + i * 36
+        b += f'<circle cx="344" cy="{y - 8}" r="7" fill="{GOOD}"/>' + t(364, y, f, 24, INK, anchor="start", font=L)
+    return fig(b, "Rockstar's notes for GTA VI update 01.002.002 list seven fixes: crashes, weather that stopped changing, autosave, story phone calls, wanted levels that could not be lost, the gym deadlift bar and partners not handing over bags. No frame rate or performance changes are listed")
+
+
+def side_secrets():
+    b = t(400, 62, "THREE SIDE SECRETS TO FIND", 34)
+    cols = [("OUT AT SEA", "DOG", ["COOL DOG'S", "JET SKI RESCUE"], "OUTLET TESTED"),
+            ("PORT GELLHORN", "3", ["MISSING PERSONS", "TO TRACK DOWN"], "OUTLET TESTED"),
+            ("BELVILLE", "SIM?", ["A GARAGE FULL", "OF RED STRING"], "PLAYER POST")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 24 if len(h) < 12 else 20, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 18, GOOD if "TESTED" in tag else PINK, font=L)
+    return fig(b, "Three GTA VI side secrets: Cool Dog, who rescues you on a jet ski if you drift far out to sea, tested by GamesRadar; three missing persons to find around Port Gellhorn, tested by GamesRadar; and a Belville garage covered in simulation-theory notes, from a player post")
+
+
+def playstation_record():
+    b = t(400, 62, "PLAYSTATION'S BIGGEST LAUNCH", 34)
+    cols = [("UNIQUE PLAYERS", "39M+", ["ON PS5 IN", "FOUR DAYS"]),
+            ("HOURS PLAYED", "683M", ["ACROSS ALL", "PS5 PLAYERS"]),
+            ("PER PLAYER", "17.4", ["HOURS ON", "AVERAGE"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 250) + t(cx, 140, h, 20, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 378, "SONY FIGURES, NOVEMBER 19 TO 22, PS5 ONLY", 22, PINK, font=L)
+    return fig(b, "Sony says more than 39 million unique players played GTA VI on PS5 from November 19 to 22, for a total of 683 million hours, or 17.4 hours each on average. The figures cover PS5 only")
