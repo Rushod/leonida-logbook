@@ -352,3 +352,18 @@ def side_secrets():
             b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
         b += t(cx, 360, tag, 18, GOOD if "TESTED" in tag else PINK, font=L)
     return fig(b, "Three GTA VI side secrets: Cool Dog, who rescues you on a jet ski if you drift far out to sea, tested by GamesRadar; three missing persons to find around Port Gellhorn, tested by GamesRadar; and a Belville garage covered in simulation-theory notes, from a player post")
+
+
+def playstation_record():
+    b = t(400, 62, "PLAYSTATION'S BIGGEST LAUNCH", 34)
+    cols = [("UNIQUE PLAYERS", "39M+", ["ON PS5 IN", "FOUR DAYS"]),
+            ("HOURS PLAYED", "683M", ["ACROSS ALL", "PS5 PLAYERS"]),
+            ("PER PLAYER", "17.4", ["HOURS ON", "AVERAGE"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 250) + t(cx, 140, h, 20, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 378, "SONY FIGURES, NOVEMBER 19 TO 22, PS5 ONLY", 22, PINK, font=L)
+    return fig(b, "Sony says more than 39 million unique players played GTA VI on PS5 from November 19 to 22, for a total of 683 million hours, or 17.4 hours each on average. The figures cover PS5 only")

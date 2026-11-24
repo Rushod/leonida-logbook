@@ -8,6 +8,34 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-biggest-playstation-launch-39-million-players",
+        date="2026-11-24",
+        title="Sony: GTA 6 is the biggest launch in PlayStation history, with 39 million PS5 players",
+        desc="Sony says more than 39 million people played GTA VI on PS5 in its first four days, setting a new PlayStation record for players online at once. Here's what Sony announced, and how it fits with the 44.9 million copy estimate doing the rounds.",
+        fig=art.playstation_record,
+        body="""
+  <p>Sony has put its own numbers on GTA VI's launch. In a PlayStation Blog post on November 23, it called the game "the biggest launch in PlayStation history", ahead of every PlayStation launch across five console generations. The figures cover November 19 to 22 and were reported the next day by MP1st, Beebom and Inven Global.</p>
+  <h2>What Sony announced</h2>
+  <ul>
+    <li><b>More than 39 million unique players</b> on PS5 in those four days.</li>
+    <li><b>683 million hours</b> played, which works out at about <b>17.4 hours per player</b>.</li>
+    <li>The <b>most players online at the same time</b> in PlayStation history, beating every multiplayer, free-to-play and single-player game. Sony didn't give the peak number.</li>
+    <li>The biggest single day for newly connected PS5 consoles since the PS5 came out, leaving aside the end-of-year holidays.</li>
+    <li>GTA VI was the <b>first game played on 70%</b> of newly connected PS5s.</li>
+  </ul>
+  <h2>Players are not copies sold</h2>
+  <p>39 million is a count of PS5 accounts that played the game, not of copies sold. One copy can be played on more than one account, and the figure leaves out Xbox completely. Sony and Take-Two haven't given an updated sales total since Take-Two's <a href="/news/gta-6-official-sales-3-79-billion-day-one/">$3.79 billion day-one figure</a> and 32.5 million copies sold before release.</p>
+  <h2>The 44.9 million estimate</h2>
+  <p>You may also have seen a figure of 44.9 million copies. That comes from Rhys Elliott at the analytics firm Alinea Analytics, as reported by ComicBook and MP1st. Alinea estimates about 33.7 million copies on PS5 and 11.2 million on Xbox Series X|S over the launch weekend. It is an outside estimate built from market data, and neither Rockstar nor Take-Two has confirmed it. Treat it the way we treated <a href="/news/gta-6-sales-19-million-estimate/">Sensor Tower's pre-launch estimate</a>: a useful guide, not an official count.</p>
+  <h2>What it means for you</h2>
+  <p>Nothing changes in the game itself. Since GTA VI is single-player, a busy launch doesn't slow your game down, though PlayStation Network did have outages on launch night (see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>). If you're one of those 17-hour players looking for what to do next, try our <a href="/walkthrough/">mission walkthrough</a> or the <a href="/activities/">activities list</a>.</p>""",
+        sources=[("PlayStation Blog: Thank you for making Grand Theft Auto VI the biggest launch in PlayStation history", "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/"),
+                 ("MP1st: GTA 6 becomes the biggest launch in PlayStation history with over 39 million unique players", "https://mp1st.com/news/gta-6-biggest-launch-playstation-history"),
+                 ("Beebom: GTA 6 becomes biggest launch in PlayStation history with over 39 million players", "https://beebom.com/gta-6-becomes-biggest-launch-in-playstation-history/"),
+                 ("Inven Global: GTA 6 marks biggest launch in PlayStation history", "https://www.invenglobal.com/articles/29001/gta-6-marks-biggest-launch-in-playstation-history"),
+                 ("ComicBook: New GTA 6 sales report claims the game is rapidly nearing 50 million copies sold", "https://comicbook.com/gaming/news/gta-6-grand-theft-auto-vi-sales-45-million/")],
+    ),
+    dict(
         slug="gta-6-patch-01-002-002-notes-seven-fixes",
         date="2026-11-23",
         title="GTA 6 patch 01.002.002 notes are out: seven fixes, nothing for performance",
@@ -173,6 +201,7 @@ POSTS = [
         desc="Take-Two's first official GTA VI numbers: $3.79 billion in day-one retail sales and 32.5 million copies sold before release, both records. Here's what the figures do and don't include.",
         fig=art.sales_official,
         body="""
+  <p class="note"><b>Update, November 24:</b> Sony says more than 39 million people played GTA VI on PS5 in its first four days, the biggest launch in PlayStation history. <a href="/news/gta-6-biggest-playstation-launch-39-million-players/">Read what Sony announced.</a></p>
   <p>We now have official numbers. On November 20, Take-Two said GTA VI brought in <b>$3.79 billion in retail sales</b> on its first day and sold <b>32.5 million copies before release</b>. The company calls the first figure a record for any entertainment launch, films included.</p>
   <h2>What Take-Two announced</h2>
   <ul>
