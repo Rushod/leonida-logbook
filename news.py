@@ -8,6 +8,61 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-secret-vice-city-portal-easter-egg",
+        date="2026-11-24",
+        title="GTA 6's biggest secret so far: a power-line puzzle that opens a portal to 2002's Vice City",
+        desc="A YouTuber spent three days following power lines across Leonida and found a hidden portal back to a PS2-style Vice City. Here's what's known about the puzzle, how well it's confirmed, and what you get.",
+        fig=art.vice_portal,
+        body="""
+  <p>The <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">launch-week easter eggs</a> were mostly nods to films and TV. This one is different: a full hidden puzzle that ends in a trip back to the 2002 game <i>Grand Theft Auto: Vice City</i>. It was found by the YouTuber <b>Memeio</b>, who posted footage on X on November 23. Kotaku, Gizmodo, Nerdist, GGRecon and Mixed News covered it on November 24, and GGRecon says VGC and PCGamesN reported it too.</p>
+  <h2>How well is it confirmed?</h2>
+  <p>Every report we read is based on Memeio's own video, and none of the outlets says it has repeated the puzzle itself yet. Rockstar hasn't said anything about it either. The footage is detailed and widely covered, so we're treating it as real, but the exact steps may still change as more players try it. Memeio says it took him three days, and Gizmodo quotes him calling himself "the first person to ever crack this code".</p>
+  <h2>How the puzzle works (no full solution yet)</h2>
+  <ul>
+    <li>It runs across <b>12 substations</b> owned by <b>LPL</b>, Leonida's in-game power company. You follow the power lines between them, all over the map.</li>
+    <li>GGRecon says it starts at the <b>Badger radio tower in Key Lento</b>, and that you can't use fast travel or switch characters along the way. Nerdist adds that the substations have to be done in the right order.</li>
+    <li>The clues at the substations spell out a cheat code from the original Vice City. GGRecon and Gizmodo give the phrase; we've left it out here so you can work it out yourself.</li>
+    <li>When you finish, you get a text message telling you to go to the LPL power station at a set time. GGRecon says the portal opens <b>at night</b> in-game.</li>
+  </ul>
+  <p>Outlets don't agree on every detail. Nerdist names <b>Turtlehead Beach</b> as the last substation, while GGRecon describes the portal opening at a reactor at a power station. Nobody has published the exact order of the 12 substations from their own testing yet.</p>
+  <details class="spoiler">
+    <summary><b>What's on the other side</b> (tap to show)</summary>
+    <p>A glowing pink portal takes you to a deliberately retro, PS2-looking 1980s Vice City, with a visit to the <b>Malibu Club</b> and a meeting with <b>Kent Paul</b>, the British hanger-on from the 2002 game. GGRecon and Gizmodo say he's voiced by his original actor, Danny Dyer. When you come back to 2026, you keep <b>Tommy Vercetti's Hawaiian shirt and his motorbike</b>. Nerdist also says Kent Paul comes back with you. Mixed News points out that it's a themed scene, not the whole 2002 game running inside GTA VI.</p>
+  </details>
+  <h2>On our map</h2>
+  <p>We're not pinning the substations yet. Once outlets publish tested locations, we'll add them to the <a href="/map/">map</a>. Until then, more things to do are on the <a href="/activities/">activities</a> page.</p>""",
+        sources=[("Kotaku: GTA 6 contains a very hidden secret that teleports you back in time to Vice City on the PS2", "https://kotaku.com/gta-6-contains-a-very-hidden-secret-that-teleports-you-back-in-time-to-vice-city-on-the-ps2-2000759500"),
+                 ("Gizmodo: Grand Theft Auto VI player discovers portal back to 2002 game GTA Vice City", "https://gizmodo.com/grand-theft-auto-vi-player-discovers-portal-back-to-2002-game-gta-vice-city-2000844721"),
+                 ("GGRecon: GTA 6 has a secret portal back to the original Vice City", "https://www.ggrecon.com/articles/gta-6-vice-city-portal-easter-egg/"),
+                 ("Nerdist: A secret portal in GTA VI transports you back to the PS2 era", "https://nerdist.com/article/grand-theft-auto-vi-secret-portal-sends-you-to-vice-city-2002/"),
+                 ("Mixed News: GTA 6 player finds a hidden Vice City throwback after three days following power lines", "https://mixed-news.com/en/gta-6-hidden-vice-city-easter-egg-memeio-power-lines/")],
+    ),
+    dict(
+        slug="gta-6-panini-trading-cards-december",
+        date="2026-11-24",
+        title="GTA 6's in-game trading cards are becoming real Panini cards in December",
+        desc="Panini and Rockstar Games have announced an official GTA VI Sports Trading Card Collection based on the fictional athletes you collect in the game. Here's what's in a box, the rare parallels, and what isn't known yet.",
+        fig=art.trading_cards,
+        body="""
+  <p>The trading cards you find around Leonida are getting a physical version. On November 24, Panini America announced the <b>GTA VI: Sports Trading Card Collection</b>, made with Rockstar Games. It recreates the game's fictional sports stars and teams, and VGC calls it the first officially licensed Grand Theft Auto trading card set. The news came from Panini's blog and social accounts, which tag Rockstar. We haven't seen a separate Rockstar Newswire post.</p>
+  <h2>What's in a box</h2>
+  <ul>
+    <li><b>Four packs of four cards</b>, so 16 cards per box (Panini's product page, via RockstarINTEL and Heavy).</li>
+    <li>On average each box has <b>two Rookies, one Retro, one Illustrated and four Special Silvers</b>.</li>
+    <li>Colour parallels: <b>Silver, Pink, Teal and Light Blue</b>.</li>
+    <li>Numbered Legend parallels: <b>Bronze</b> (49 copies), <b>Silver</b> (25) and <b>Gold</b> (one of one).</li>
+    <li>Sample players named so far include Dartanyon Pearson, Carl Kasey and Maleek Rivers.</li>
+  </ul>
+  <h2>What isn't known yet</h2>
+  <p>Panini says the set comes out in <b>December 2026</b> but hasn't given an exact date, a price, pack odds or a list of shops. VGC notes that "there isn't currently a way to place a pre-order". Panini's product page lists it as coming soon. We'll update this post when pricing is out.</p>
+  <h2>The cards in the game</h2>
+  <p>In GTA VI, trading cards are one of the collectibles you pick up around the map, and rare ones can be sold at pawn shops. Dexerto reports 480 cards across 18 sets, covering sports stars, comic characters and nightclub dancers. The Panini set covers only the sports side. For other ways to make money from things you find, see our <a href="/fences/">fences guide</a>.</p>""",
+        sources=[("VGC: Official GTA 6 trading cards are coming next month", "https://www.videogameschronicle.com/news/official-gta-6-trading-cards-are-coming-next-month/"),
+                 ("RockstarINTEL: GTA VI official trading cards announced by Panini", "https://rockstarintel.com/gta-vi-official-trading-cards-announced-by-panini/"),
+                 ("Heavy: GTA 6 Panini trading cards, release date, parallels and details", "https://heavy.com/sports/cards/gta-6-panini-trading-cards/"),
+                 ("Dexerto: Rockstar is turning GTA 6's in-game trading cards into real collectibles", "https://www.dexerto.com/gta/rockstar-is-turning-gta-6s-in-game-trading-cards-into-real-collectibles-3431102/")],
+    ),
+    dict(
         slug="gta-6-biggest-playstation-launch-39-million-players",
         date="2026-11-24",
         title="Sony: GTA 6 is the biggest launch in PlayStation history, with 39 million PS5 players",

@@ -367,3 +367,36 @@ def playstation_record():
             b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
     b += t(400, 378, "SONY FIGURES, NOVEMBER 19 TO 22, PS5 ONLY", 22, PINK, font=L)
     return fig(b, "Sony says more than 39 million unique players played GTA VI on PS5 from November 19 to 22, for a total of 683 million hours, or 17.4 hours each on average. The figures cover PS5 only")
+
+
+def vice_portal():
+    b = t(400, 62, "THE SECRET VICE CITY PORTAL", 34)
+    cols = [("THE PUZZLE", "12", ["LPL POWER", "SUBSTATIONS"], "NO FAST TRAVEL"),
+            ("THE CLUE", "1986", ["SPELLS AN OLD", "VICE CITY CHEAT"], "FOUND NOV 23"),
+            ("THE TRIP", "2002", ["A PS2-STYLE", "VICE CITY SCENE"], "PLAYER VIDEO")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 22, SUN, font=L)
+        b += f'<ellipse cx="{cx}" cy="216" rx="92" ry="54" fill="none" stroke="{PINK}" stroke-opacity=".35" stroke-width="6"/>'
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="{84 if len(big) < 3 else 64}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 18, PINK, font=L)
+    return fig(b, "GTA VI's secret Vice City portal: a puzzle across 12 LPL power substations with no fast travel, a clue that spells a cheat from the 1986-set Vice City, and a trip to a PS2-style 2002 Vice City scene, shown so far in one player's video from November 23")
+
+
+def trading_cards():
+    b = t(400, 62, "GTA VI TRADING CARDS, FOR REAL", 34)
+    cols = [("EACH BOX", "16", ["FOUR PACKS OF", "FOUR CARDS"]),
+            ("RAREST", "1/1", ["GOLD LEGEND", "PARALLEL"]),
+            ("RELEASE", "DEC", ["2026, PRICE", "NOT ANNOUNCED"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 270)
+        b += f'<rect x="{cx - 46}" y="162" width="92" height="122" rx="8" fill="none" stroke="{SUN}" stroke-opacity=".35" stroke-width="3" transform="rotate(-8 {cx} 223)"/>'
+        b += t(cx, 140, h, 22, SUN, font=L)
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="84" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 306 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 390, "PANINI AMERICA WITH ROCKSTAR GAMES", 18, PINK, font=L)
+    return fig(b, "Panini's GTA VI Sports Trading Card Collection: four packs of four cards per box, numbered parallels down to a one-of-one Gold Legend, out in December 2026 with no price announced yet")
