@@ -400,3 +400,36 @@ def trading_cards():
             b += t(cx, 306 + j * 28, line, 20, MUTED, font=L)
     b += t(400, 390, "PANINI AMERICA WITH ROCKSTAR GAMES", 18, PINK, font=L)
     return fig(b, "Panini's GTA VI Sports Trading Card Collection: four packs of four cards per box, numbered parallels down to a one-of-one Gold Legend, out in December 2026 with no price announced yet")
+
+
+def hidden_hats():
+    b = t(400, 62, "TWO HATS WORTH HUNTING", 34)
+    cols = [("LUMMOX COUNTY", "J+L", ["A HIDDEN BLOCK,", "TWO PLUMBER CAPS"], "KOTAKU CONFIRMED", PINK),
+            ("PORT GELLHORN", "$35", ["A COWBOY HAT", "AT A YARD SALE"], "CHAPTER 2", SUN)]
+    for i, (h, big, sub, tag, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 284) + t(cx, 140, h, 24, SUN, font=L)
+        if i == 0:
+            b += f'<rect x="{cx - 52}" y="160" width="104" height="104" rx="10" fill="none" stroke="{SUN}" stroke-opacity=".35" stroke-width="4"/>'
+        else:
+            b += f'<path d="M{cx - 110} 236 Q{cx} 270 {cx + 110} 236 M{cx - 50} 236 Q{cx - 46} 168 {cx} 176 Q{cx + 46} 168 {cx + 50} 236" fill="none" stroke="{SUN}" stroke-opacity=".35" stroke-width="4"/>'
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 296 + j * 28, line, 21, MUTED, font=L)
+        b += t(cx, 362, tag, 19, GOOD if "CONFIRMED" in tag else col, font=L)
+    return fig(b, "Two wearable GTA VI easter eggs: a hidden block in Lummox County that drops J and L caps in the style of Mario and Luigi, confirmed by Kotaku, and a $35 cowboy hat like Arthur Morgan's at a Port Gellhorn yard sale in Chapter 2")
+
+
+def xbox_glitch():
+    b = t(400, 62, "THE XBOX 60 FPS GLITCH, TESTED", 34)
+    cols = [("BEST CASE", "60", ["FLYING HIGH,", "LOOKING AT SKY"], GOOD),
+            ("FIRST HOUR", "36", ["AVERAGE FPS,", "SERIES X"], SUN),
+            ("BUSY STREETS", "30s", ["BARELY ABOVE", "THE NORMAL CAP"], PINK)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 260) + t(cx, 140, h, 22, col, font=L)
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="88" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 296 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 386, "AND THE WHOLE GAME RUNS FASTER", 20, PINK, font=L)
+    return fig(b, "Digital Foundry's test of the Xbox Quick Resume glitch: about 60 fps only when flying high and looking at the sky, about 36 fps on average over the first hour on Series X, and barely above 30 in busy streets, while the whole game runs faster than normal")

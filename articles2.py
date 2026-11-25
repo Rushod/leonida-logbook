@@ -70,6 +70,8 @@ FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
   <p>On PS5 Pro, the only drop Digital Foundry found was to 24 fps, and only when the tester deliberately set off huge numbers of explosions at once. On the standard PS5, the dips are minor in normal play but noticeable, and heavy fights can keep it below 30 until you leave the area. Some reviewers also mention frame rate dips in chases on PS5.</p>
   <h2>Why not 60?</h2>
   <p>A world this dense leans on the processor, and the PS5 Pro has the same CPU as the standard PS5, so its stronger graphics chip does not lift that limit. Digital Foundry's John Linneman doubts 60 fps is possible in a game of this scope on current consoles.</p>
+  <h2>What about the Xbox "60 fps glitch"?</h2>
+  <p>A Quick Resume trick on Xbox Series X|S removes the 30 fps cap, but Digital Foundry's test found it averages only about 36 fps on Series X, reaches 60 only in very light scenes like flying with mostly sky in view, and makes the whole game run faster because game speed is tied to frame rate. It's an unintended glitch, not a mode. Details: <a href="/news/gta-6-xbox-60fps-glitch-digital-foundry-tested/">our story on the test</a>.</p>
   <h2>Could a 40 or 60 fps mode come later?</h2>
   <p>Nothing has been announced. Any site that promises a patch date is guessing.</p>
   <h2>Get the smoothest picture you can</h2>

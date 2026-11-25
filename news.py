@@ -8,6 +8,62 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-mario-luigi-caps-arthur-morgan-hat",
+        date="2026-11-25",
+        title="GTA 6 hides Mario and Luigi caps in Lummox County, and Arthur Morgan's hat is at a yard sale",
+        desc="Two of GTA VI's best hidden extras are things you can wear: a secret block in the hills that drops J and L plumber caps, and a $35 cowboy hat straight out of Red Dead Redemption 2. Here's where to find both.",
+        fig=art.hidden_hats,
+        body="""
+  <p>Not every GTA VI secret is a <a href="/news/gta-6-secret-vice-city-portal-easter-egg/">three-day puzzle</a>. Two of the nicest ones this week are simply hats, and both are easy enough to go and get yourself.</p>
+  <h2>The Mario and Luigi caps</h2>
+  <p>A player on X, <b>xGarbett</b>, found a Nintendo-style secret in the hills of <b>Lummox County</b> in northern Leonida. Kotaku's Zack Zwiezen then went there and confirmed it works, and TweakTown, Nintendo Life and Beebom have all covered it since. Here's how it works, going by those reports:</p>
+  <ul>
+    <li><b>Where:</b> a group of ruined brick and stone buildings at the end of a winding road past <b>Mount Kalaga</b> (Beebom places it south of Moreau). Look for a purple tarp in the ruins.</li>
+    <li><b>The trigger:</b> there's a bong on the tarp. Use it, then climb the ruins and stand in the plume of smoke rising from one of the columns. An invisible block appears above you.</li>
+    <li><b>Hit the block:</b> jump into it from below. A short tune plays and two caps pop out. xGarbett says he couldn't break it by jumping at first and shot it instead, so try that if jumping doesn't work for you.</li>
+    <li><b>The reward:</b> a <b>red cap with a "J"</b> for Jason and a <b>green cap with an "L"</b> for Lucia, a clear nod to Mario and Luigi. One outlet's image caption lists different colours, so don't be surprised if yours look slightly different.</li>
+  </ul>
+  <p>Nobody has said yet whether the caps join your wardrobe for good or only last until you change outfits. We'll update this when that's tested.</p>
+  <h2>Arthur Morgan's hat</h2>
+  <p>Red Dead Redemption 2 fans should check the yard sales. Gfinity and Beebom report that a <b>yard sale in southern Port Gellhorn</b> during <b>Chapter 2</b> sells a "Genuine Cowboy Hat" for <b>$35</b>, a lookalike of Arthur Morgan's. It's near the couch at the sale. If you buy it early in Chapter 2 only Lucia can wear it, and Jason can too once you're able to switch between them later in the chapter. It's an optional purchase, not part of a mission.</p>
+  <h2>More to find</h2>
+  <p>For the other secrets found so far, see our round-ups of <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">launch-week easter eggs</a> and <a href="/news/gta-6-cool-dog-missing-persons-simulation-npc/">side secrets</a>, or browse the <a href="/activities/">activities</a> page.</p>""",
+        sources=[("TweakTown: GTA 6 has a hidden Mario and Luigi easter egg that lets Jason and Lucia dress like Nintendo's plumbers", "https://www.tweaktown.com/news/114843/gta-6-has-a-hidden-mario-and-luigi-easter-egg-that-lets-jason-and-lucia-dress-like-nintendos-iconic-plumbers/index.html"),
+                 ("Nintendo Life: GTA 6 hides an adorable Mario and Luigi easter egg in its massive world", "https://www.nintendolife.com/news/2026/11/random-gta-6-hides-an-adorable-mario-and-luigi-easter-egg-in-its-massive-world"),
+                 ("Gfinity: How to find Arthur Morgan's hat in GTA 6", "https://www.gfinityesports.com/article/gta-6-how-to-find-arthur-morgans-hat-red-dead-redemption-2-easter-egg"),
+                 ("Beebom: All GTA 6 easter eggs so far", "https://beebom.com/gta-6-easter-eggs/")],
+    ),
+    dict(
+        slug="gta-6-xbox-60fps-glitch-digital-foundry-tested",
+        date="2026-11-25",
+        title="Digital Foundry tested GTA 6's Xbox '60 fps glitch': it averages about 36 fps and speeds the game up",
+        desc="A Quick Resume trick lifts GTA VI's 30 fps cap on Xbox Series X|S. Digital Foundry measured it: 60 fps only when you're flying and looking at the sky, about 36 fps on average, and a game that runs too fast. Here's what that means.",
+        fig=art.xbox_glitch,
+        body="""
+  <p>Earlier this week we mentioned an Xbox glitch that removes GTA VI's 30 fps cap (see <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">our patch notes story</a>). Digital Foundry has now measured it, and the short version is that it isn't the hidden 60 fps mode some clips made it look like.</p>
+  <h2>What the glitch is</h2>
+  <p>Reddit user <b>Meowwie64</b> found that switching the Xbox's video output between 60Hz and 120Hz while GTA VI is held in <b>Quick Resume</b> (and launching another game in between) brings the game back without its frame rate cap. You need a 120Hz display for it. It works on Series X and Series S.</p>
+  <h2>What Digital Foundry measured</h2>
+  <ul>
+    <li><b>About 36 to 37 fps on average</b> over the first hour of play on Series X, according to GamesRadar's report on the test.</li>
+    <li><b>60 fps only in the lightest scenes</b>, such as flying a plane high up with mostly sky in view. Quiet highways sit around 40 to 45 fps (TweakTown).</li>
+    <li><b>Barely above 30</b> in busy parts of the city, and into the 30s or lower in gunfights near lots of people (Club386).</li>
+    <li><b>Series S</b> reaches about 50 fps in simple scenes but gains little where it matters.</li>
+    <li>Controls do feel more responsive: Club386 reports input delay of about 120 ms at 40 fps against 170 to 180 ms at the normal 30 fps cap.</li>
+  </ul>
+  <h2>The catches</h2>
+  <ul>
+    <li><b>The game runs faster.</b> Gameplay speed is tied to frame rate, so animations and driving speed up as the frame rate climbs (cutscenes stay normal). That makes driving noticeably harder.</li>
+    <li><b>It can backfire.</b> Digital Foundry found that switching back from 120Hz to 60Hz while the game is suspended locked it to <b>15 fps</b>.</li>
+    <li><b>It's an unintended glitch.</b> Neither Rockstar nor Microsoft has commented, and it could stop working after an update. It wasn't in the fixes listed for patch 01.002.002.</li>
+  </ul>
+  <p>Digital Foundry's Richard Leadbetter concluded that the game "should probably be capped at 30fps", and GamesRadar's headline puts it more bluntly: Rockstar isn't keeping anything amazing from you. The bottleneck is the console's processor in busy scenes, which is the same reason there's no 60 fps mode in the first place. For the full picture by console, see <a href="/frame-rate/">is GTA 6 30 or 60 fps?</a></p>""",
+        sources=[("GamesRadar+: GTA 6 60fps glitch isn't all it's cracked up to be, tech analysis shows", "https://www.gamesradar.com/games/grand-theft-auto/rockstar-isnt-keeping-anything-amazing-from-you-gta-6-60fps-glitch-isnt-all-its-cracked-up-to-be-tech-analysis-shows/"),
+                 ("TweakTown: GTA VI can hit 60 FPS on Xbox Series X thanks to a Quick Resume bug, with a few catches", "https://www.tweaktown.com/news/114842/gta-vi-can-hit-60-fps-on-xbox-series-x-thanks-to-a-quick-resume-bug-though-with-a-few-catches/index.html"),
+                 ("Club386: GTA VI at 60fps on console is possible with this trick, but it breaks animation speed", "https://www.club386.com/gta-vi-60fps-console-trick/"),
+                 ("Pure Xbox: GTA 6 glitch unlocks the FPS on Xbox Series X|S, but with multiple drawbacks", "https://www.purexbox.com/news/2026/11/gta-6-glitch-unlocks-the-fps-on-xbox-series-xs-but-with-multiple-drawbacks")],
+    ),
+    dict(
         slug="gta-6-secret-vice-city-portal-easter-egg",
         date="2026-11-24",
         title="GTA 6's biggest secret so far: a power-line puzzle that opens a portal to 2002's Vice City",
@@ -112,7 +168,7 @@ POSTS = [
   <h2>What it doesn't mention</h2>
   <p>As KeenGamer and Game News Plus point out, the notes list no performance, frame rate or graphics changes. That means nothing about:</p>
   <ul>
-    <li><b>The Xbox Quick Resume trick.</b> Pure Xbox and GamesRadar reported a glitch where switching display modes and using Quick Resume lifts the 30 fps cap on Xbox Series X|S, but ties game speed to frame rate, so everything runs too fast. Rockstar hasn't said whether it will stay or go.</li>
+    <li><b>The Xbox Quick Resume trick.</b> Pure Xbox and GamesRadar reported a glitch where switching display modes and using Quick Resume lifts the 30 fps cap on Xbox Series X|S, but ties game speed to frame rate, so everything runs too fast. Rockstar hasn't said whether it will stay or go. <i>Update, November 25:</i> Digital Foundry has tested it; see <a href="/news/gta-6-xbox-60fps-glitch-digital-foundry-tested/">what it found</a>.</li>
     <li><b>PS5 error CE-108255-1.</b> Some players say the update stops it, but the notes don't name it, so treat that as unconfirmed.</li>
     <li><b>The accidental first-person camera</b> and the heavy screen vignetting some players have complained about. Neither is in the notes.</li>
   </ul>

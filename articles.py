@@ -1,7 +1,7 @@
 """Pre-launch guide articles. Each entry: (path, title, description, body_html).
 build.py imports ARTICLES and GUIDE_LINKS from here."""
 
-UPDATED = "Updated November 24, 2026"
+UPDATED = "Updated November 25, 2026"
 
 GUIDES = [
     ("/walkthrough/", "GTA 6 walkthrough", "All 91 story missions in order, with tick boxes and warnings."),
