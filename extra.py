@@ -138,7 +138,7 @@ MISSIONS = page("/missions/", "The story", "GTA 6 missions list",
   <h2>What else is known</h2>
   <ul>
     <li><b>Length:</b> Red Bull Gaming puts the main story at about 65 to 70 hours, and 90 to 100 with side content. Rockstar North's studio head took about 80. See <a href="/story-length/">how long GTA 6 is</a>.</li>
-    <li><b>No mission replays.</b> IGN's review notes you can't replay finished story missions one at a time, unlike GTA V.</li>
+    <li><b>No mission replays.</b> IGN's review notes you can't replay finished story missions one at a time, unlike GTA V. Rockstar's Scott Butchard told Kotaku replays were considered early on but felt at odds with the story (<a href="/news/gta-6-rockstar-explains-no-mission-replay-criminal-profile/">more</a>).</li>
     <li><b>Finishing the story unlocks cheats.</b> Every cheat stays locked until the last mission. See <a href="/cheats/">cheats</a>.</li>
     <li>It opens with a prologue that doubles as the tutorial, then Jason's first mission in the Leonida Keys.</li>
     <li>You switch between Jason and Lucia in free roam and during missions.</li>

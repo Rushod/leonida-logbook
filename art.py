@@ -433,3 +433,34 @@ def xbox_glitch():
             b += t(cx, 296 + j * 28, line, 20, MUTED, font=L)
     b += t(400, 386, "AND THE WHOLE GAME RUNS FASTER", 20, PINK, font=L)
     return fig(b, "Digital Foundry's test of the Xbox Quick Resume glitch: about 60 fps only when flying high and looking at the sky, about 36 fps on average over the first hour on Series X, and barely above 30 in busy streets, while the whole game runs faster than normal")
+
+
+def console_ranking():
+    b = t(400, 62, "DIGITAL FOUNDRY'S CONSOLE RANKING", 34)
+    rows = [("1", "PS5 PRO", "ROCK-SOLID 30", GOOD, 450),
+            ("2", "SERIES X", "FEWER DROPS + VRR", GOOD, 400),
+            ("3", "PS5", "MORE FREQUENT DROPS", SUN, 350),
+            ("4", "SERIES S", "720P, OFTEN BELOW 30", PINK, 280)]
+    for i, (n, name, note, col, w) in enumerate(rows):
+        y = 92 + i * 64
+        b += panel(60, y, 680, 52)
+        b += t(96, y + 38, n, 32, col)
+        b += f'<rect x="130" y="{y + 12}" width="{w - 130}" height="28" rx="6" fill="{col}" fill-opacity=".22"/>'
+        b += t(146, y + 34, name, 23, INK, anchor="start", font=L)
+        b += t(716, y + 33, note, 18, MUTED, anchor="end", font=L)
+    b += t(400, 370, "ALL FOUR ARE CAPPED AT 30 FPS", 20, SUN, font=L)
+    return fig(b, "Digital Foundry's GTA VI console ranking: PS5 Pro first with a rock-solid 30 fps, Xbox Series X second with fewer drops and VRR support, the standard PS5 third with more frequent drops, and Series S last at 720p and often below 30 fps. All four are capped at 30 fps")
+
+
+def design_choices():
+    b = t(400, 62, "WHY ROCKSTAR BUILT IT THIS WAY", 34)
+    cols = [("MISSION REPLAY", "NO", ["DROPPED: IT FELT AT", "ODDS WITH THE STORY"], "SCOTT BUTCHARD", PINK),
+            ("CRIMINAL PROFILE", "NPCs", ["NOTICE HOW YOU", "PLAY, NOT JUST GUNS"], "ROB NELSON", SUN)]
+    for i, (h, big, sub, tag, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 284) + t(cx, 140, h, 24, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 296 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 362, tag, 19, col, font=L)
+    return fig(b, "Two GTA VI design choices Rockstar has explained: no mission replay, which senior design director Scott Butchard says was dropped because it felt at odds with the story, and the Criminal Profile, which Rob Nelson says makes NPCs react to how you play rather than only to a drawn gun")

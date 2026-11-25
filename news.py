@@ -8,6 +8,58 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-digital-foundry-series-x-beats-ps5",
+        date="2026-11-25",
+        title="Digital Foundry's big GTA 6 console comparison: Xbox Series X runs it better than the standard PS5",
+        desc="Digital Foundry put GTA VI on all four consoles side by side. The PS5 Pro is still the best place to play, but the Xbox Series X beats the standard PS5 with fewer frame rate drops. Here's the full ranking.",
+        fig=art.console_ranking,
+        body="""
+  <p>At launch, Digital Foundry's first tests put the standard PS5 and the Xbox Series X <a href="/news/gta-6-xbox-series-x-s-digital-foundry/">roughly level</a>. Its full four-console comparison, published this week, is more decisive: the Series X comes out ahead of the standard PS5. Push Square, TweakTown, GGRecon and Kotaku have all reported the findings.</p>
+  <h2>The ranking</h2>
+  <ol>
+    <li><b>PS5 Pro.</b> Still the best version by some distance. It holds 30 fps almost perfectly, upscales a 1440p image with PSSR, and adds ray-traced shadows the standard PS5 doesn't get (TweakTown).</li>
+    <li><b>Xbox Series X.</b> Same 1440p resolution and matching settings to the standard PS5, but with noticeably fewer frame rate drops. It also supports <b>120Hz VRR</b>, which smooths over the small dips that remain.</li>
+    <li><b>PS5.</b> Digital Foundry found it "suffers substantially more frequent frame-rate drops than Series X". The drops show up most when driving fast and in crowded scenes such as the airport.</li>
+    <li><b>Xbox Series S.</b> Last, as before: 720p upscaled to 1080p, often below 30 fps when driving, down into the teens in heavy fights, plus brief audio cut-outs.</li>
+  </ol>
+  <p>Digital Foundry's Oliver Mackenzie called the Series X result "a little surprising". His explanation, as TweakTown reports it, is that both consoles use the same settings, and that asks more of the PS5's slightly smaller graphics chip. In the worst moments, GGRecon says both base consoles drop into the mid-to-upper 20s.</p>
+  <h2>Does this change anything for you?</h2>
+  <ul>
+    <li><b>Every version is still capped at 30 fps.</b> There's no 40 or 60 fps mode on any console, including the PS5 Pro.</li>
+    <li><b>If you're on Series X,</b> turn on VRR if your TV supports 120Hz. It's the reason small drops are less noticeable there.</li>
+    <li><b>If you're on standard PS5,</b> the difference is mostly in fast driving and dense crowds. It's not a reason to buy a second console, but it is the first area to watch if Rockstar patches performance.</li>
+  </ul>
+  <h2>No performance patch yet</h2>
+  <p>A post claiming Rockstar had apologised for stuttering and would patch it on <b>November 25</b> has been going around since November 20. PC Games Hardware and other fact-checks found no such announcement on Rockstar's Newswire or support site, and no patch arrived. The latest update is still <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">01.002.002</a>, which didn't touch performance. Gizmodo also reports that some PS5 players are still getting crashes, including error CE-108255-1, after that patch; Rockstar and Sony haven't commented.</p>
+  <p>For the per-console numbers, see <a href="/frame-rate/">is GTA 6 30 or 60 fps?</a></p>""",
+        sources=[("Push Square: GTA 6 performs better on Xbox Series X than base PS5", "https://www.pushsquare.com/news/2026/11/gta-6-performs-better-on-xbox-series-x-than-base-ps5-despite-all-of-sonys-marketing"),
+                 ("TweakTown: GTA 6 runs better on Xbox Series X than PS5", "https://www.tweaktown.com/news/114880/gta-6-runs-better-on-xbox-series-x-than-ps5-despite-sony-declaring-it-plays-best-on-ps5/index.html"),
+                 ("GGRecon: Digital Foundry says GTA 6 runs smoother on Series X than PS5", "https://www.ggrecon.com/articles/gta-6-series-x-vs-ps5-digital-foundry/"),
+                 ("Kotaku: GTA 6 runs better on Xbox Series X than PS5", "https://kotaku.com/grand-theft-auto-vi-gta-6-framerates-xbox-series-x-ps5-rockstar-2001000296"),
+                 ("PC Games Hardware: Where the rumor of a November 25 GTA 6 update comes from", "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/GTA-6-Is-a-new-update-to-fix-stuttering-coming-today-1561060/"),
+                 ("Gizmodo: GTA VI on PS5 is still crashing consoles even after updates", "https://gizmodo.com/gta-vi-crashing-ps5-2000845327")],
+    ),
+    dict(
+        slug="gta-6-rockstar-explains-no-mission-replay-criminal-profile",
+        date="2026-11-25",
+        title="Rockstar explains two GTA 6 design choices: why there's no mission replay, and what the Criminal Profile is for",
+        desc="GTA VI's story missions can't be replayed, and your Criminal Profile can lock you in as Irredeemable. Two Rockstar leads have now explained why the game works this way.",
+        fig=art.design_choices,
+        body="""
+  <p>Two of GTA VI's biggest changes from GTA V have come up again and again in player complaints and questions this week. Rockstar has now explained the thinking behind both.</p>
+  <h2>Why you can't replay missions</h2>
+  <p>GTA V let you replay any story mission and chase gold medals. GTA VI doesn't: once a mission is done, it's done. Kotaku asked Rockstar about it, and senior design director <b>Scott Butchard</b> said by email that replays were "looked at early on in development", but that the feature felt at odds with the story as the game came together. On adding it later, he said "we do not currently support it", which isn't a promise either way.</p>
+  <p>Replays first arrived in GTA IV's Ballad of Gay Tony and came back in GTA V with medals for optional goals. Kotaku sees GTA VI's missions as closer in spirit to Red Dead Redemption 2's slower, more role-playing style.</p>
+  <p><b>What it means for you:</b> manual saves are the only way back to an earlier point, so save before big missions. See <a href="/how-to-save/">how saving works</a> and <a href="/missions/">the missions overview</a>.</p>
+  <h2>Why the Criminal Profile exists</h2>
+  <p>Rockstar co-founder and development lead <b>Rob Nelson</b> told Eurogamer, in an interview GamesRadar relayed on November 25, that the <a href="/criminal-profile/">Criminal Profile</a> is GTA VI's answer to Red Dead Redemption 2's honour system. His point: in GTA V, people on the street barely reacted unless you pointed a gun at them, leaving you "just sort of this demigod stomping through the world". GTA VI's NPCs notice how you play, and Nelson says having choices other than violence is more fun over a long game.</p>
+  <p>That's why going on rampages pushes your rating toward Psycho and, if you keep it up, the permanent <b>Irredeemable</b> rating, which changes how people react to that character. The Brief's summary of the interview gives an example of the other side: threaten someone with a gun and they may simply do what you want, no beating needed.</p>
+  <p><b>What it means for you:</b> if you like causing chaos, mix in some calm play before your rating locks. Our <a href="/criminal-profile/">Criminal Profile guide</a> explains each rating and how to check it.</p>""",
+        sources=[("Kotaku: GTA 6 ditched mission replay because it felt at odds with the story", "https://kotaku.com/gta-6-ditched-mission-replay-because-it-felt-at-odds-with-the-story-2001000335"),
+                 ("GamesRadar+: GTA 6's honor system rewards empathy, Rockstar lead says", "https://www.gamesradar.com/games/grand-theft-auto/gta-6s-honor-system-rewards-empathy-because-being-a-demigod-stomping-through-the-world-is-only-fun-for-so-long-rockstar-lead-says/"),
+                 ("The Brief: Grand Theft Auto 6 adds Criminal Profile, a system Rockstar compares to an honour system", "https://www.thebrief.news/en/standard/article/47393/grand-theft-auto-6-adds-criminal-profile-a-system-rockstar-compares-to-an-honour-system")],
+    ),
+    dict(
         slug="gta-6-mario-luigi-caps-arthur-morgan-hat",
         date="2026-11-25",
         title="GTA 6 hides Mario and Luigi caps in Lummox County, and Arthur Morgan's hat is at a yard sale",
