@@ -56,6 +56,7 @@ SAVE = page("/how-to-save/", "How to", "How to save in GTA 6",
     <li>There's one autosave slot, and each autosave replaces the last.</li>
     <li>It's separate from your 15 manual slots, so it never overwrites them.</li>
     <li><b>Watch out:</b> loading an older manual save replaces your autosave. Make a manual save of where you are now before you load an older one.</li>
+    <li>At launch the game didn't always autosave properly. Patch 01.002.002 (November 23) fixed that, but manual saves are still the safe bet (<a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">patch notes</a>).</li>
   </ul>
   <h2>When to save</h2>
   <p>There's no mission replay, so manual saves are the only way back. Save before:</p>
@@ -98,6 +99,7 @@ FENCES = page("/fences/", "How to", "GTA 6 fence locations: where to sell stolen
     <li>Early in Chapter 1 you're paid in cash, left in the mailbox outside Jason's house. Once you have BuckMe, fences pay into your account.</li>
     <li>From Chapter 3 you can sell from your garage and pick the fence.</li>
     <li>Your partner can fence for you: put the bag in your car's trunk and tell them to <b>Fence Goods</b> (the option doesn't always show).</li>
+    <li>If your partner wouldn't hand over a bag so you could sell it, update the game. Patch 01.002.002 fixed that on November 23 (<a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">patch notes</a>).</li>
     <li>Loot bags are lost if you die, so sell big scores straight away.</li>
   </ul>
   <p>Fencing fills four lines of the <a href="/100-percent/">100% list</a>: narcotics and jewelry ($100,000 each), marked bills ($250,000) and vehicles ($200,000).</p>""")
