@@ -60,18 +60,20 @@ FPS = page("/frame-rate/", "Performance", "Is GTA 6 30 or 60 fps?",
     <tr><th>Console</th><th>What testing shows</th></tr>
     <tr><td><b>PS5 Pro</b></td><td>30 fps, held almost perfectly. Digital Foundry played for more than 50 hours without a noticeable dip. Renders at 1440p and upscales with PSSR for a sharper, near-4K look</td></tr>
     <tr><td><b>PS5</b></td><td>30 fps target with small dips throughout, and longer drops below 30 in heavy action such as big explosions. Renders at 1440p</td></tr>
-    <tr><td><b>Xbox Series X</b></td><td>30 fps target it mostly holds, with dropped frames in especially busy chases and firefights. Renders at about 1440p. Close to the standard PS5</td></tr>
+    <tr><td><b>Xbox Series X</b></td><td>30 fps target it mostly holds, with dropped frames in especially busy chases and firefights. Renders at about 1440p. Drops less often than the standard PS5, and supports 120Hz VRR</td></tr>
     <tr><td><b>Xbox Series S</b></td><td>Often below 30: mid-to-upper 20s when driving, mid-20s in combat, about 20 fps in the hardest fights. Renders at 720p, output at 1080p</td></tr>
   </table></div>
-  <p class="note">All results from Digital Foundry's launch testing, reported November 18, 2026 by TweakTown (PS5), VGC and Pure Xbox (Xbox). Details: <a href="/news/gta-6-xbox-series-x-s-digital-foundry/">our Xbox test story</a>.</p>
+  <p class="note">All results from Digital Foundry's launch testing, reported November 18, 2026 by TweakTown (PS5), VGC and Pure Xbox (Xbox). Details: <a href="/news/gta-6-xbox-series-x-s-digital-foundry/">our Xbox test story</a>. Updated November 25 with Digital Foundry's full four-console comparison: <a href="/news/gta-6-digital-foundry-series-x-beats-ps5/">our story</a>.</p>
   <h2>Which console plays best?</h2>
-  <p>PS5 Pro first, then the standard PS5 and Xbox Series X, which are close. Series S is the weakest version by a clear margin: Digital Foundry advises playing on another console for now if you can.</p>
+  <p>PS5 Pro first, then Xbox Series X, then the standard PS5. At launch the two looked close, but Digital Foundry's full comparison found the standard PS5 "suffers substantially more frequent frame-rate drops than Series X", mostly in fast driving and crowded scenes, and Series X can use 120Hz VRR to smooth small dips. Series S is the weakest version by a clear margin: Digital Foundry advises playing on another console for now if you can.</p>
   <h2>How bad are the drops?</h2>
   <p>On PS5 Pro, the only drop Digital Foundry found was to 24 fps, and only when the tester deliberately set off huge numbers of explosions at once. On the standard PS5, the dips are minor in normal play but noticeable, and heavy fights can keep it below 30 until you leave the area. Some reviewers also mention frame rate dips in chases on PS5.</p>
   <h2>Why not 60?</h2>
   <p>A world this dense leans on the processor, and the PS5 Pro has the same CPU as the standard PS5, so its stronger graphics chip does not lift that limit. Digital Foundry's John Linneman doubts 60 fps is possible in a game of this scope on current consoles.</p>
+  <h2>What about the Xbox "60 fps glitch"?</h2>
+  <p>A Quick Resume trick on Xbox Series X|S removes the 30 fps cap, but Digital Foundry's test found it averages only about 36 fps on Series X, reaches 60 only in very light scenes like flying with mostly sky in view, and makes the whole game run faster because game speed is tied to frame rate. It's an unintended glitch, not a mode. Details: <a href="/news/gta-6-xbox-60fps-glitch-digital-foundry-tested/">our story on the test</a>.</p>
   <h2>Could a 40 or 60 fps mode come later?</h2>
-  <p>Nothing has been announced. Any site that promises a patch date is guessing.</p>
+  <p>Nothing has been announced. Any site that promises a patch date is guessing: a widely shared claim of a November 25 performance patch turned out to have no Rockstar source, and no patch came.</p>
   <h2>Get the smoothest picture you can</h2>
   <ul>
     <li><b>Switch your TV to Game Mode.</b> It cuts the delay between pressing a button and seeing the result.</li>
@@ -93,7 +95,7 @@ REVIEWS = page("/reviews/", "Before you buy", "GTA 6 reviews: what critics say",
   <h2>In one line</h2>
   <p>Critics love the world, the driving and Jason and Lucia's story. The common complaints are fiddly controls, clunky small guns, slow later chapters and the 30 fps cap. Our <a href="/news/gta-6-reviews-metacritic-99/">full reviews round-up</a> has who said what.</p>
   <h2>What about bugs?</h2>
-  <p>Players have posted plenty of clips of clipping, falls through the map and cars flying after crashes, and PlayStation Network had two outages in launch week. Rockstar hasn't released patch notes or commented yet. See <a href="/news/gta-6-launch-bugs-psn-outages/">what's been reported and what to do</a>.</p>
+  <p>Players have posted plenty of clips of clipping, falls through the map and cars flying after crashes, and PlayStation Network had two outages in launch week. The first post-launch update, 01.002.002, started rolling out on November 23, and Rockstar's notes list seven fixes, among them crashes, autosave and story phone calls, but no performance changes. See <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">the patch notes</a> and <a href="/news/gta-6-launch-bugs-psn-outages/">what's been reported and what to do</a>.</p>
   <h2>Where to check the latest scores</h2>
   <ul>
     <li><b>Metacritic and OpenCritic</b> collect critic scores in one place. Look at how many reviews a score is based on.</li>
@@ -241,6 +243,7 @@ WANTED = page("/wanted-level/", "Gameplay", "GTA 6 wanted level: how it works an
     <li><b>Use Pay &amp; Spray</b> to repaint a car mid-chase.</li>
     <li><b>Split up.</b> Separating Jason and Lucia drops the active player's level by one star.</li>
   </ul>
+  <p class="note">If the police never stop searching however far you get, update the game. Patch 01.002.002 (November 23) fixed a bug where you couldn't lose your wanted level. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">Patch notes</a>.</p>
   <h2>Before the crime</h2>
   <p>Wearing a mask stops cameras and witnesses from identifying your face in the first place.</p>
   <h2>What happens if you are busted?</h2>
