@@ -38,6 +38,9 @@ ACTIVITIES = page("/activities/", "Things to do", "GTA 6 activities and mini-gam
     <li><b>Time together.</b> Dates and shared activities improve how well Jason and Lucia work together during robberies.</li>
     <li><b>Random events.</b> Examples from previews include a stranger daring you to jump off a bridge and a suspect escaping from a police car.</li>
     <li><b>Livestream events.</b> In-game social media shows events as they happen, and you can travel to where the streamer is.</li>
+    <li><b>Side secrets.</b> Cool Dog's jet ski rescue at sea and the Missing Persons case in Port Gellhorn. See <a href="/news/gta-6-cool-dog-missing-persons-simulation-npc/">how to find them</a>.</li>
+    <li><b>The Vice City portal.</b> A hidden puzzle across 12 LPL power substations that ends in a trip to a PS2-style Vice City. See <a href="/news/gta-6-secret-vice-city-portal-easter-egg/">what's known so far</a>.</li>
+    <li><b>Hidden hats.</b> A secret block in Lummox County drops Mario and Luigi-style caps for Jason and Lucia, and a Port Gellhorn yard sale sells an Arthur Morgan-style cowboy hat. See <a href="/news/gta-6-mario-luigi-caps-arthur-morgan-hat/">where to find them</a>.</li>
     <li><b>Eating out.</b> Burger Shot and Cluckin' Bell have drive-thrus, or you can walk inside.</li>
   </ul>
   <p>Tick activities off as you try them in the <a href="/tracker/">progress tracker</a>.</p>""")
@@ -51,6 +54,7 @@ GYM = page("/gym/", "Activities", "GTA 6 gym guide: how workouts work",
     <li>Poor timing drains extra stamina.</li>
     <li>Gyms have changing rooms and vending machines.</li>
   </ul>
+  <p class="note">Couldn't use the deadlift bar? Patch 01.002.002 (November 23) fixed it. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">Patch notes</a>.</p>
   <h2>How to gain strength</h2>
   <p>Strength goes up after training on three consecutive in-game days. A single session is not enough.</p>
   <h2>Food and items that help</h2>
@@ -134,7 +138,7 @@ MISSIONS = page("/missions/", "The story", "GTA 6 missions list",
   <h2>What else is known</h2>
   <ul>
     <li><b>Length:</b> Red Bull Gaming puts the main story at about 65 to 70 hours, and 90 to 100 with side content. Rockstar North's studio head took about 80. See <a href="/story-length/">how long GTA 6 is</a>.</li>
-    <li><b>No mission replays.</b> IGN's review notes you can't replay finished story missions one at a time, unlike GTA V.</li>
+    <li><b>No mission replays.</b> IGN's review notes you can't replay finished story missions one at a time, unlike GTA V. Rockstar's Scott Butchard told Kotaku replays were considered early on but felt at odds with the story (<a href="/news/gta-6-rockstar-explains-no-mission-replay-criminal-profile/">more</a>).</li>
     <li><b>Finishing the story unlocks cheats.</b> Every cheat stays locked until the last mission. See <a href="/cheats/">cheats</a>.</li>
     <li>It opens with a prologue that doubles as the tutorial, then Jason's first mission in the Leonida Keys.</li>
     <li>You switch between Jason and Lucia in free roam and during missions.</li>
