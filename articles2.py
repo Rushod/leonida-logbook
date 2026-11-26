@@ -219,6 +219,8 @@ PLATFORMS = page("/platforms/", "Platforms", "Can you play GTA 6 on PS4, Xbox On
     <li><b>You need an internet connection</b> to download the game.</li>
     <li><b>Storage matters.</b> A 512 GB Xbox Series S has about 364 GB of usable space, and GTA VI can take 212 GB of it. See the <a href="/storage/">storage guide</a>.</li>
   </ul>
+  <h2>Is the game the same in every country?</h2>
+  <p>Not quite. The Japanese release (rated CERO Z) removes nudity, tones down blood and has fewer language options, and copies sold elsewhere don't include Japanese subtitles. The missions and map are the same. <a href="/news/gta-6-japan-version-censored-cero-z/">What's different in Japan</a>.</p>
   <h2>Is it on Game Pass or PlayStation Plus?</h2>
   <p>We have found no announcement that GTA VI will be included with either subscription at launch. Plan on buying it. See <a href="/editions/">Standard vs Ultimate</a>.</p>""")
 

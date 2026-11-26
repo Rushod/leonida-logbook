@@ -8,6 +8,62 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-uk-launch-week-retail-142-million",
+        date="2026-11-26",
+        title="GTA 6 doubled UK games retail sales in launch week, but it isn't GTA V in the shops",
+        desc="NielsenIQ's UK figures for GTA VI's launch week: £142 million of games retail, £32 million of boxed GTA VI copies, and a rush on controllers and SSDs. Why the boxed number ranks only 17th all-time.",
+        fig=art.uk_retail,
+        body="""
+  <p>The first UK sales data for GTA VI is in. NielsenIQ, which tracks what UK shops sell, published its launch-week numbers on November 26, covering <b>November 19 to 21</b>. They only count boxed games, consoles and accessories sold at retail. PlayStation Store and Xbox Store downloads aren't included.</p>
+  <h2>The numbers</h2>
+  <ul>
+    <li><b>£142 million</b> spent on games retail in the UK that week, <b>up 99%</b> on the week before.</li>
+    <li><b>£43 million</b> of that was boxed games, up 409% and the biggest week for physical games since Christmas 2018.</li>
+    <li><b>£32 million</b> was boxed GTA VI, about <b>74%</b> of all boxed game sales that week. <b>88%</b> of it sold on launch day.</li>
+    <li>GTA VI also went straight to <b>No.1 on the UK all-formats boxed chart</b>, according to Games Asylum, ahead of EA Sports FC 27.</li>
+  </ul>
+  <h2>Why it's "only" 17th</h2>
+  <p>GTA VI's first week of boxed sales ranks <b>17th</b> among all UK game launches since 1995. GTA V is still first, and GTA IV is 11th. That isn't a sign the game is selling badly. Most people now buy digitally, and NielsenIQ's Dorian Bloch points out that boxed games were half of games retail spending in 2008 but only about 15% so far in 2026. GTA VI's boxed copy also contains just a download code. Even so, Bloch says "GTA VI has still made a huge impact."</p>
+  <p>For the worldwide picture, Take-Two reported <a href="/news/gta-6-official-sales-3-79-billion-day-one/">$3.79 billion in day-one sales</a> and Sony counted <a href="/news/gta-6-biggest-playstation-launch-39-million-players/">39 million PS5 players</a> in four days.</p>
+  <h2>Consoles and controllers</h2>
+  <ul>
+    <li><b>Console sales</b> were up 38% on the week before: PS5 up 46%, Xbox Series up 75%.</li>
+    <li><b>Accessories</b> made £21 million, up 123%. Controllers were up 194% (PS5 controllers up 355%), headsets up 94%, and external SSDs up 30%, their best week of 2026.</li>
+  </ul>
+  <p>The SSD jump makes sense: GTA VI takes up to 212 GB. If you're short on space, see our <a href="/storage/">storage guide</a>.</p>""",
+        sources=[("MCV/DEVELOP: GTA VI sends UK games retail sales soaring 99% to £142m in launch week (NielsenIQ)", "https://mcvuk.com/business-news/industry-news-gta-vi-sends-uk-games-retail-sales-soaring-99-to-142m-in-launch-week/"),
+                 ("Games Asylum: GTA VI tops the UK retail chart", "https://www.gamesasylum.com/2026/11/24/gta-vi-tops-the-uk-retail-chart-while-black-friday-deals-push-first-party-ps5-releases/")],
+    ),
+    dict(
+        slug="gta-6-japan-version-censored-cero-z",
+        date="2026-11-26",
+        title="GTA 6 in Japan is a censored version: no nudity, less blood and fewer languages",
+        desc="GTA VI's Japanese release covers up nudity, tones down blood and has fewer language options than the global version. What players in Japan have found, and what stays the same.",
+        fig=art.japan_version,
+        body="""
+  <p>GTA VI is rated CERO Z (18+ only) in Japan, and the Japanese release isn't the same game everyone else is playing. Kotaku and VGC both reported the differences on launch day, based on screenshots, clips and streams from players in Japan and a breakdown by Japanese site GameSpark. Rockstar hadn't announced any regional changes before launch and hasn't commented since.</p>
+  <h2>What's different</h2>
+  <ul>
+    <li><b>No nudity.</b> Jason and Lucia shower in underwear or swimwear, and extra clothing is added to beach and sex scenes. Kotaku says some scenes are cut entirely.</li>
+    <li><b>Less blood.</b> There's less of it, it fades faster, and unlike other regions there's no setting to turn it up. VGC, citing GameSpark, says decapitations are removed too.</li>
+    <li><b>Fewer languages.</b> According to Kotaku, Japanese copies offer English voices with English or Japanese subtitles. Copies sold outside Japan don't include Japanese subtitles at all.</li>
+  </ul>
+  <h2>What stays the same</h2>
+  <p>VGC describes the changes as cosmetic: the missions, the map and how violent the gameplay is all match the international release.</p>
+  <h2>The smaller download was the clue</h2>
+  <p>Before launch, Automaton reported that the Japanese download was about <b>1.2 GB smaller</b> (208.7 GB against roughly 209.9 GB on PS5), and that Japan's rating listed violence and crime but not sexual content. Kotaku now says the missing data "turns out to be mostly made up of nudity".</p>
+  <h2>If you're buying in Japan</h2>
+  <ul>
+    <li><b>Japanese boxed copies</b> contain a download code that, according to Kotaku, has to be redeemed within <b>170 days</b>.</li>
+    <li><b>Need Japanese text?</b> Going by Kotaku's report, only the Japanese version has Japanese subtitles, so a copy bought abroad won't help.</li>
+  </ul>
+  <p>For everything else about which version to buy, see <a href="/platforms/">platforms</a> and <a href="/editions/">Standard vs Ultimate</a>.</p>""",
+        sources=[("Kotaku: Japanese GTA 6 players can't see nudity, and take showers in their underpants", "https://kotaku.com/gta-6-japan-censored-showers-nudity-blood-violence-rockstar-2000758211"),
+                 ("VGC: Japan censors GTA 6's violence and nudity, including Jason in the shower", "https://www.videogameschronicle.com/news/japan-censors-gta-6s-violence-and-nudity-including-jason-in-the-shower/"),
+                 ("Automaton: GTA 6's smaller file size in Japan raises concerns about regional censorship", "https://automaton-media.com/en/news/gta-6s-smaller-file-size-and-lack-of-sexual-content-disclaimer-in-japan-raises-concerns-about-possible-regional-censorship/"),
+                 ("Cybernews: Censored versions upset GTA 6 fans in Japan", "https://cybernews.com/news/gta6-japan-censorship/")],
+    ),
+    dict(
         slug="gta-6-digital-foundry-series-x-beats-ps5",
         date="2026-11-25",
         title="Digital Foundry's big GTA 6 console comparison: Xbox Series X runs it better than the standard PS5",
@@ -364,6 +420,7 @@ POSTS = [
         desc="Take-Two's first official GTA VI numbers: $3.79 billion in day-one retail sales and 32.5 million copies sold before release, both records. Here's what the figures do and don't include.",
         fig=art.sales_official,
         body="""
+  <p class="note"><b>Update, November 26:</b> NielsenIQ says boxed GTA VI copies made £32 million in the UK in launch week, as total UK games retail spending doubled. <a href="/news/gta-6-uk-launch-week-retail-142-million/">See the UK figures.</a></p>
   <p class="note"><b>Update, November 24:</b> Sony says more than 39 million people played GTA VI on PS5 in its first four days, the biggest launch in PlayStation history. <a href="/news/gta-6-biggest-playstation-launch-39-million-players/">Read what Sony announced.</a></p>
   <p>We now have official numbers. On November 20, Take-Two said GTA VI brought in <b>$3.79 billion in retail sales</b> on its first day and sold <b>32.5 million copies before release</b>. The company calls the first figure a record for any entertainment launch, films included.</p>
   <h2>What Take-Two announced</h2>

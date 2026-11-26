@@ -464,3 +464,31 @@ def design_choices():
             b += t(cx, 296 + j * 28, line, 20, MUTED, font=L)
         b += t(cx, 362, tag, 19, col, font=L)
     return fig(b, "Two GTA VI design choices Rockstar has explained: no mission replay, which senior design director Scott Butchard says was dropped because it felt at odds with the story, and the Criminal Profile, which Rob Nelson says makes NPCs react to how you play rather than only to a drawn gun")
+
+
+def uk_retail():
+    b = t(400, 62, "UK GAMES RETAIL, LAUNCH WEEK", 34)
+    cols = [("GAMES RETAIL", "£142M", ["UP 99% ON THE", "WEEK BEFORE"]),
+            ("GTA VI BOXED", "£32M", ["ABOUT 74% OF", "BOXED GAMES"]),
+            ("ACCESSORIES", "£21M", ["UP 123%", "PADS UP 194%"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 145 + i * 255
+        b += panel(cx - 120, 96, 240, 220) + t(cx, 138, h, 21, SUN, font=L)
+        b += f'<text x="{cx}" y="232" font-family="{D}" font-size="64" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 274 + j * 24, line, 17, MUTED, font=L)
+    b += t(400, 362, "NIELSENIQ, PHYSICAL RETAIL ONLY, NOVEMBER 19-21", 20, SUN, font=L)
+    return fig(b, "UK games retail in GTA VI's launch week, according to NielsenIQ: 142 million pounds across all games retail, up 99 percent on the week before; 32 million pounds of boxed GTA VI copies, about 74 percent of boxed game sales; and 21 million pounds of accessories, up 123 percent, with controllers up 194 percent. Physical retail only, November 19 to 21")
+
+
+def japan_version():
+    b = t(400, 62, "THE JAPANESE VERSION (CERO Z)", 34)
+    cols = [("WHAT CHANGES", ["NO NUDITY", "LESS BLOOD", "FEWER LANGUAGES"], PINK),
+            ("WHAT DOESN'T", ["SAME MISSIONS", "SAME MAP", "SAME GAMEPLAY"], GOOD)]
+    for i, (h, rows, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 230) + t(cx, 140, h, 26, SUN, font=L)
+        for j, line in enumerate(rows):
+            b += t(cx, 200 + j * 46, line, 30, col)
+    b += t(400, 368, "1.2 GB SMALLER DOWNLOAD. NO WORD FROM ROCKSTAR", 19, MUTED, font=L)
+    return fig(b, "The Japanese CERO Z version of GTA VI: no nudity, less blood and fewer language options, but the same missions, map and gameplay. The download is about 1.2 GB smaller and Rockstar hasn't commented")
