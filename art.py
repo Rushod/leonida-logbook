@@ -492,3 +492,18 @@ def japan_version():
             b += t(cx, 200 + j * 46, line, 30, col)
     b += t(400, 368, "1.2 GB SMALLER DOWNLOAD. NO WORD FROM ROCKSTAR", 19, MUTED, font=L)
     return fig(b, "The Japanese CERO Z version of GTA VI: no nudity, less blood and fewer language options, but the same missions, map and gameplay. The download is about 1.2 GB smaller and Rockstar hasn't commented")
+
+
+def music_releases():
+    b = t(400, 62, "TWO GTA VI ALBUMS", 34)
+    cols = [("THE ALBUM", "34", ["LICENSED SONGS", "OUT NOW (NOV 20)"], GOOD),
+            ("ORIGINAL SCORE", "30", ["COMPOSED BY JUSTICE", "OUT DECEMBER 11"], PINK)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 230) + t(cx, 140, h, 26, SUN, font=L)
+        b += f'<text x="{cx}" y="228" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        b += t(cx, 256, "TRACKS", 18, MUTED, font=L)
+        for j, line in enumerate(sub):
+            b += t(cx, 284 + j * 26, line, 19, col, font=L)
+    b += t(400, 366, "SCORE: VINYL, CD AND DIGITAL, PLUS BONUS TRACKS", 19, MUTED, font=L)
+    return fig(b, "GTA VI's two music releases: The Album, 34 licensed songs released November 20 with Atlantic Records, and the Original Score by Justice, 30 tracks plus bonus digital tracks, out December 11 on vinyl, CD and digital")

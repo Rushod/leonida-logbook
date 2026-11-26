@@ -141,7 +141,7 @@ RADIO = page("/radio-stations/", "Music", "GTA 6 radio stations and hosts",
     <li><b>Streamer-safe music.</b> Previews describe a toggle for copyright-free music, made for people who record or stream.</li>
   </ul>
   <h2>Is the full soundtrack out?</h2>
-  <p>No. Rockstar has not published a track list, and more stations are expected. Song lists you see before launch are guesses or leaks.</p>""")
+  <p>Not as a full radio track list. Rockstar released <b>Grand Theft Auto VI: The Album</b>, 34 songs made with Atlantic Records, on November 20. Justice's <b>Original Score</b> (30 tracks plus a three-hour bonus suite) follows on December 11. See <a href="/news/gta-6-justice-original-score-december-11/">our post on both albums</a>.</p>""")
 
 MAP = page("/map-size/", "The world", "How big is the GTA 6 map?",
            "Leonida is Rockstar's biggest world so far: about 16 km from north to south and 10.9 km across, by PowerPyx's measurement of the in-game map, split into five counties. Rockstar's official map shows them all.",

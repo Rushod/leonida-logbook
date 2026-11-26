@@ -8,6 +8,32 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-justice-original-score-december-11",
+        date="2026-11-26",
+        title="GTA 6's original score by Justice comes out December 11, after The Album's 34 songs",
+        desc="Justice's Grand Theft Auto VI: Original Score arrives December 11 with 30 tracks and a three-hour suite of bonus music. Here's how it differs from GTA VI: The Album, the 34-song soundtrack that's already out.",
+        fig=art.music_releases,
+        body="""
+  <p>GTA VI now has two official albums. One is already out, and Rockstar has put the second up for pre-order: <b>Grand Theft Auto VI: Original Score by Justice</b>, out on <b>December 11, 2026</b>.</p>
+  <h2>The score: Justice, December 11</h2>
+  <p>The French electronic duo Justice worked on GTA VI's music with Rockstar, and this album is the music they made for the game itself, not radio songs. Rockstar's store says it "features 30 tracks and a number of bonus digital tracks comprising a 3 hour-long suite of material from the game."</p>
+  <ul>
+    <li><b>Formats:</b> triple black vinyl (Rockstar Store), a limited triple crystal clear vinyl, a double CD and a digital album. Justice's Bandcamp lists pre-orders at €45, €17 and €11 for the clear vinyl, CD and digital album. Prices elsewhere vary by store and region.</li>
+    <li><b>Streaming:</b> Game Rant reports the full score also goes to streaming services on December 11.</li>
+    <li><b>Tracks you may know:</b> it includes "Flower in a Hurricane", featuring Tame Impala, SZA and King Gizzard &amp; the Lizard Wizard, and "Pusher", featuring Gesaffelstein. Both came out as singles in October.</li>
+  </ul>
+  <h2>The Album: 34 songs, out now</h2>
+  <p><b>Grand Theft Auto VI: The Album</b> came out on <b>November 20</b>, the day after launch, made with Atlantic Records. It's 34 tracks from artists including Travis Scott, Dua Lipa, Lana Del Rey, Cardi B, JENNIE and Burna Boy, with two Justice tracks among them (KeenGamer).</p>
+  <p>You may have seen a claim that it broke Spotify's soundtrack record with <b>29.85 million streams</b> on its first day. That figure comes from third-party chart trackers. Spotify, Rockstar and Atlantic haven't confirmed it, so treat it as unofficial.</p>
+  <h2>Which one has the radio songs?</h2>
+  <p>Neither album is the full in-game radio. The Album is a selection of songs, and the score is Justice's music for the game. For the stations and hosts, see our <a href="/radio-stations/">radio stations guide</a>.</p>""",
+        sources=[("Rockstar Store: Grand Theft Auto VI: Original Score by Justice (Triple Black Vinyl)", "https://store.rockstargames.com/merchandise/buy-gta-vi-original-score-by-justice-triple-black-vinyl"),
+                 ("Justice on Bandcamp: Grand Theft Auto VI: Original Score by Justice", "https://etjusticepourtous.bandcamp.com/album/grand-theft-auto-vi-original-score-by-justice"),
+                 ("Game Rant: December 11 is suddenly an exciting day for GTA 6 players", "https://gamerant.com/gta-6-original-score-release-december-11-2026/"),
+                 ("KeenGamer: GTA 6: The Album is out now with 34 songs from major artists", "https://www.keengamer.com/articles/news/gta-6-the-album-is-out-now-with-34-songs-from-major-artists/"),
+                 ("God is a Geek: GTA 6 album posts reported Spotify soundtrack record", "https://godisageek.com/2026/11/gta-6-album-spotify-record/")],
+    ),
+    dict(
         slug="gta-6-uk-launch-week-retail-142-million",
         date="2026-11-26",
         title="GTA 6 doubled UK games retail sales in launch week, but it isn't GTA V in the shops",
