@@ -111,6 +111,8 @@ STATS = page("/stats/", "How to", "How to train Strength, Cardio and Focus in GT
     <li>Golf, pool and fishing also raise it.</li>
     <li>Your <a href="/criminal-profile/">Criminal Profile</a> decides which combat actions build Focus: stealth takedowns if you're Professional or Hardened, headshots if you're Violent or worse.</li>
   </ul>
+  <h2>Shortcut: stat boost missions</h2>
+  <p>Some hidden side missions give a permanent boost when you finish them. The alien abduction mission raises max health, stamina and Focus at once. The Final Flush and the mushroom obstacle course raise stamina, Circles of Hell raises health, and the iguana shooting bet raises Focus. See <a href="/news/gta-6-hidden-stat-boost-missions/">all six and how to start them</a>.</p>
   <h2>Tips</h2>
   <ul>
     <li>Have a protein shake or bar after working out to recover faster.</li>

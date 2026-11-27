@@ -8,6 +8,58 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-hidden-stat-boost-missions",
+        date="2026-11-28",
+        title="GTA 6's hidden stat boost missions: six side missions that permanently raise health, stamina and Focus",
+        desc="Gyms aren't the only way to get stronger in GTA VI. Six hidden side missions give a permanent boost to max health, stamina or Focus, and one raises all three. How to start each one, and what you get.",
+        fig=art.stat_missions,
+        body="""
+  <p>Our <a href="/stats/">stats guide</a> covers the slow way to train Jason and Lucia: gyms, running and the shooting range. There's also a quicker way. A handful of hidden side missions give a <b>permanent</b> boost to max health, stamina or Focus when you finish them. None of them has a map marker until you trigger it, so most players find them by accident.</p>
+  <p>GamesRadar+ has played through six of them and published a list on November 27. Windows Central and GTABase have separately written up The Final Flush. Here's how to start each one. We've kept the endings inside spoiler boxes.</p>
+  <h2>The six missions</h2>
+  <table>
+    <tr><th>Mission</th><th>Boost</th><th>Where it starts</th></tr>
+    <tr><td>Alien abduction</td><td>Health, stamina and Focus</td><td>An abandoned roadside car at night</td></tr>
+    <tr><td>The Final Flush</td><td>Stamina</td><td>A QR poster in a public restroom</td></tr>
+    <tr><td>Crop dusting</td><td>Stamina</td><td>A poster at a motel, Chapter 2</td></tr>
+    <tr><td>Circles of Hell</td><td>Health</td><td>A red-lit garage in Port Gellhorn, around midnight</td></tr>
+    <tr><td>Mushroom obstacle course</td><td>Stamina, plus a tattoo</td><td>A yellow shipping crate at Lake Tallaloko</td></tr>
+    <tr><td>Iguana shooting</td><td>Focus, plus $250</td><td>Gunfire in the woods by a road construction site</td></tr>
+  </table>
+  <h2>Alien abduction: all three stats</h2>
+  <p>This is the best one. At night, look for a car by the road with its doors open and lights flashing. GamesRadar says it can appear in more than one place, and its writer found one near Port Gellhorn. Follow the trail from the car, use Focus to spot a light in the trees, pick up the item there, then go back to the car. You'll be abducted and wake up by the road. The car gets impounded at the nearest police station, so don't use one you care about.</p>
+  <p>To finish it, sleep with the same character for a day or two until the dreams start.</p>
+  <details class="spoiler"><summary>Spoiler: how the abduction mission ends</summary>
+  <p>The dreams are a set of puzzles: a keypad code (random each time, so write yours down) and a four-light panel. Avoid the middle door. Back in the real world, go to the radio tower above Shoeless Keys, enter the code from your dream, solve the light panel again and finish the rescue. Move quickly near the end, because gas drains your health. The permanent health, stamina and Focus boost comes when the rescue is done, not when you wake up.</p>
+  </details>
+  <h2>The Final Flush: stamina</h2>
+  <p>Find a "Stop, Don't Flush!" poster in a public restroom and scan its QR code with the WAiNK app. GTABase lists three spots: the men's room at the Corsair Key restroom block (the easiest early on), the Watson Bay campground restrooms, and the ladies' room at the Nine1Nine club in Vice City. Reply to the message, then go to Frank's Waffles in Tequesta at <b>night</b>. During the day the icon shows a padlock. GTABase says only one of the two protagonists can do it, and the stamina boost goes to whoever does.</p>
+  <details class="spoiler"><summary>Spoiler: what happens in The Final Flush</summary>
+  <p>The man at the diner, Dr. Merle, drives you to a sewage plant on Gloriana Key. You get inside, set three lights to green on a control panel to open a staircase, and reach the chamber he's after. The plant's alarm gives you a one-star wanted level, and you wake up at your safehouse.</p>
+  </details>
+  <h2>Crop dusting: stamina</h2>
+  <p>In Chapter 2, scan the crop-dusting poster outside the reception of the motel. It sends you to McKittrick Farm. Dust the crops, then come back later when the farm asks you to collect chemicals.</p>
+  <details class="spoiler"><summary>Spoiler: how it ends</summary>
+  <p>You eat one of the mutated strawberries. This is the "Hulk-like" side quest in our <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">easter eggs roundup</a>.</p>
+  </details>
+  <h2>Circles of Hell: health</h2>
+  <p>Around midnight, look for an open garage in Port Gellhorn lit up in red. Go inside with the people there. As well as the health boost, you get a shotgun and a T-shirt.</p>
+  <details class="spoiler"><summary>Spoiler: what's in the garage</summary>
+  <p>The mission ends with a fight against "the devil".</p>
+  </details>
+  <h2>Mushroom obstacle course: stamina and a tattoo</h2>
+  <p>Go to the logging yard at Lake Tallaloko, north of Milliport, and climb into the yellow shipping crate. GamesRadar's writer found it open, but says a reader needed a cutting tool to get in. Finishing the course gives a stamina boost and a new tattoo.</p>
+  <h2>Iguana shooting: Focus and $250</h2>
+  <p>In the same area as GamesRadar's abduction car, follow the sound of gunfire into the woods next to a road construction site. Win the $250 bet. You'll get your money back plus $250 and a permanent Focus boost. GamesRadar recommends the Duke 556 assault rifle.</p>
+  <h2>How sure is this?</h2>
+  <p>GamesRadar's writer played each mission and describes the rewards first-hand. The Final Flush also matches Windows Central's and GTABase's walkthroughs. Rockstar hasn't published a list, and GamesRadar expects to find more, so there may be other stat boost missions. Meditation spots also raise Focus, and they're on our <a href="/collectibles/">collectibles page</a>.</p>
+  <p>For the rest of what there is to do, see the <a href="/activities/">activities list</a>.</p>""",
+        sources=[("GamesRadar+: All the GTA 6 stat boost missions we've found", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-increase-stats-missions/"),
+                 ("GamesRadar+: GTA 6 alien abduction mission", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-alien-mission-abduction/"),
+                 ("Windows Central: How to start and complete The Final Flush hidden side mission in GTA 6", "https://www.windowscentral.com/gaming/how-to-start-and-complete-the-final-flush-hidden-side-mission-in-gta-6-and-get-a-permanent-stamina-increase"),
+                 ("GTABase: The Final Flush", "https://www.gtabase.com/gta-6/strangers/the-final-flush")],
+    ),
+    dict(
         slug="gta-6-rockstar-uk-union-vote-result",
         date="2026-11-27",
         title="Rockstar's UK staff vote against union recognition, a week after GTA 6's launch",
@@ -323,13 +375,15 @@ POSTS = [
   <p>39 million is a count of PS5 accounts that played the game, not of copies sold. One copy can be played on more than one account, and the figure leaves out Xbox completely. Sony and Take-Two haven't given an updated sales total since Take-Two's <a href="/news/gta-6-official-sales-3-79-billion-day-one/">$3.79 billion day-one figure</a> and 32.5 million copies sold before release.</p>
   <h2>The 44.9 million estimate</h2>
   <p>You may also have seen a figure of 44.9 million copies. That comes from Rhys Elliott at the analytics firm Alinea Analytics, as reported by ComicBook and MP1st. Alinea estimates about 33.7 million copies on PS5 and 11.2 million on Xbox Series X|S over the launch weekend. It is an outside estimate built from market data, and neither Rockstar nor Take-Two has confirmed it. Treat it the way we treated <a href="/news/gta-6-sales-19-million-estimate/">Sensor Tower's pre-launch estimate</a>: a useful guide, not an official count.</p>
+  <p class="note"><b>Update, November 28:</b> Alinea's Rhys Elliott has raised the estimate to about <b>53 million copies</b> and $4.7 billion after the first week, with roughly 40 million on PS5 and 13 million on Xbox Series X|S. He also estimates that 7 million players have already passed 50 hours. GamesRadar+ notes that 53 million would put GTA VI around 13th on the list of best-selling games ever. This is still an outside estimate that Rockstar and Take-Two haven't confirmed.</p>
   <h2>What it means for you</h2>
   <p>Nothing changes in the game itself. Since GTA VI is single-player, a busy launch doesn't slow your game down, though PlayStation Network did have outages on launch night (see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>). If you're one of those 17-hour players looking for what to do next, try our <a href="/walkthrough/">mission walkthrough</a> or the <a href="/activities/">activities list</a>.</p>""",
         sources=[("PlayStation Blog: Thank you for making Grand Theft Auto VI the biggest launch in PlayStation history", "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/"),
                  ("MP1st: GTA 6 becomes the biggest launch in PlayStation history with over 39 million unique players", "https://mp1st.com/news/gta-6-biggest-launch-playstation-history"),
                  ("Beebom: GTA 6 becomes biggest launch in PlayStation history with over 39 million players", "https://beebom.com/gta-6-becomes-biggest-launch-in-playstation-history/"),
                  ("Inven Global: GTA 6 marks biggest launch in PlayStation history", "https://www.invenglobal.com/articles/29001/gta-6-marks-biggest-launch-in-playstation-history"),
-                 ("ComicBook: New GTA 6 sales report claims the game is rapidly nearing 50 million copies sold", "https://comicbook.com/gaming/news/gta-6-grand-theft-auto-vi-sales-45-million/")],
+                 ("ComicBook: New GTA 6 sales report claims the game is rapidly nearing 50 million copies sold", "https://comicbook.com/gaming/news/gta-6-grand-theft-auto-vi-sales-45-million/"),
+                 ("GamesRadar+: GTA 6 sales estimates place it above Cyberpunk 2077, The Sims and the first Pokemon games as the 13th best-selling game ever", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-sales-estimates-place-it-above-cyberpunk-2077-the-sims-and-the-first-pokemon-games-as-the-13th-best-selling-game-ever/")],
     ),
     dict(
         slug="gta-6-patch-01-002-002-notes-seven-fixes",

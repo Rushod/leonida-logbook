@@ -535,3 +535,18 @@ def hidden_playlists():
             b += t(cx, 264 + j * 26, line, 18, col, font=L)
     b += t(400, 366, "BOTH COUNT TOWARD 100% COMPLETION", 20, MUTED, font=L)
     return fig(b, "GTA VI's two hidden playlists: The Sniper of La Perle, unlocked by scanning four posters in La Perle and Crosstown, and The Vault, unlocked by scanning one poster inside a Downtown nightclub. Both count toward 100 percent completion")
+
+
+def stat_missions():
+    b = t(400, 62, "HIDDEN STAT BOOST MISSIONS", 34)
+    cols = [("HEALTH", "2", ["ABDUCTION", "CIRCLES OF HELL"], PINK),
+            ("STAMINA", "4", ["ABDUCTION, FLUSH", "CROPS, MUSHROOMS"], GOOD),
+            ("FOCUS", "2", ["ABDUCTION", "IGUANA SHOOT"], SUN)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 145 + i * 255
+        b += panel(cx - 115, 96, 230, 230) + t(cx, 140, h, 24, SUN, font=L)
+        b += f'<text x="{cx}" y="228" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 266 + j * 26, line, 16, col, font=L)
+    b += t(400, 366, "SIX MISSIONS, PERMANENT BOOSTS, NO MAP MARKERS", 19, MUTED, font=L)
+    return fig(b, "GTA VI's six hidden stat boost missions by stat: two raise max health (the alien abduction and Circles of Hell), four raise stamina (the abduction, The Final Flush, crop dusting and the mushroom obstacle course) and two raise Focus (the abduction and the iguana shooting bet)")
