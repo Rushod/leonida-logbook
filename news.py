@@ -8,6 +8,57 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-rockstar-uk-union-vote-result",
+        date="2026-11-27",
+        title="Rockstar's UK staff vote against union recognition, a week after GTA 6's launch",
+        desc="Rockstar's UK developers rejected a recognition deal with the IWGB union by about three to one, on a 93% turnout. The numbers, what Rockstar and the union said, and the tribunal case still waiting on a ruling.",
+        fig=art.union_vote,
+        body="""
+  <p>The ballot ran across GTA VI's launch, and the result came in on <b>November 26</b>: Rockstar's UK staff voted against formally recognising the <b>IWGB Rockstar Game Workers Union</b>.</p>
+  <h2>The numbers</h2>
+  <ul>
+    <li><b>1,163 against</b> (75.3%) and <b>381 for</b> (24.7%), out of 1,544 votes (IGN).</li>
+    <li><b>Turnout:</b> 93.2%.</li>
+    <li><b>Who voted:</b> staff at Rockstar's five UK studios in Edinburgh, Leeds, Lincoln, Dundee and London. The ballot ran for two weeks (Engadget).</li>
+  </ul>
+  <h2>What it means</h2>
+  <p>Without a recognition agreement, Rockstar doesn't have to negotiate with the union or hold regular meetings with its representatives, Engadget explains. The union still exists, and staff can still join it.</p>
+  <h2>What both sides said</h2>
+  <p>Jennifer Kolbe, Rockstar's head of publishing, said in a statement to IGN and the Press Association that the result reflects the team's support for keeping "direct relationships, collaboration and open dialogue". Before the vote she had told Bloomberg that if staff wanted a union, they would have one.</p>
+  <p>The IWGB said the result "isn't a sign to retreat" and that it will keep organising for pay transparency, paid overtime written into contracts, and protections against AI and layoffs.</p>
+  <h2>The tribunal case</h2>
+  <p>The campaign grew after Rockstar fired a group of UK workers in October 2025. Rockstar says they shared confidential details about the game and made disparaging comments. The union says they were fired over union activity. Outlets give different numbers for how many workers were fired: IGN says 31, and The Herald says 23 former workers are part of the case. An employment tribunal in Glasgow heard closing submissions this month, and it hasn't ruled yet. We'll update this post when it does.</p>
+  <p class="note">This doesn't change anything in the game, its patches or its support. We're reporting it because it's news from the studio that made GTA VI.</p>""",
+        sources=[("IGN via Yahoo: Rockstar Games issues statement as union vote fails", "https://www.yahoo.com/news/politics/articles/rockstar-games-issues-statement-union-152212046.html"),
+                 ("Engadget: Workers at GTA 6 studio Rockstar Games vote overwhelmingly against union recognition", "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"),
+                 ("The Herald via Yahoo UK: 'A sign to double down': Rockstar's UK staff vote against union recognition ballot", "https://uk.news.yahoo.com/sign-double-down-rockstars-uk-162826826.html"),
+                 ("Game*Spark: Rockstar union vote rejected with 75% against", "https://en.gamespark.jp/article/2026/11/27/2730.html")],
+    ),
+    dict(
+        slug="gta-6-hidden-playlists-sniper-of-la-perle-the-vault",
+        date="2026-11-27",
+        title="GTA 6's two hidden playlists: how to unlock The Sniper of La Perle and The Vault",
+        desc="GTA VI has two secret playlists you unlock by scanning posters, and you need both for 100% completion. Where the five posters are, and how to listen once you've found them.",
+        fig=art.hidden_playlists,
+        body="""
+  <p>GTA VI's 100% checklist has a line called <b>Unique playlists</b>, and it isn't obvious how to get them: they don't appear in the radio menu until you find them. There are two, and you unlock both by scanning posters with your phone. Your progress is under Progress, then Collections, then Exploration, then Unique Playlists.</p>
+  <h2>The Sniper of La Perle: four posters</h2>
+  <p>This one is a 22-track playlist made up mostly of Haitian and Creole-language music. VICE reports it's hosted by Florida rapper Kodak Black, and it includes several of his songs. Scan all four posters (locations from PowerPyx's guide):</p>
+  <ol>
+    <li><b>Aunt Zola's Soul Food</b>, La Perle: inside the restaurant, by the cashier.</li>
+    <li><b>TWA Ponya Tattoo</b>, La Perle: on the table next to the entrance.</li>
+    <li><b>Drip Drops</b>, La Perle: on the counter next to the clerk in the clothing store.</li>
+    <li><b>Jack of Hearts</b>, Crosstown: on a crate in the eastern recording booth on the club's second floor.</li>
+  </ol>
+  <p>The game doesn't show which posters you've already scanned, so if it hasn't unlocked after four, go back and scan each one again. When it unlocks, you'll find it under <b>On Demand</b>, in a car or on Jason or Lucia's earbuds.</p>
+  <h2>The Vault: one poster</h2>
+  <p>Go to <b>The Vault</b> nightclub in Downtown Vice City and scan the red poster just inside the entrance. The playlist then appears in the radio list as The Vault.</p>
+  <p class="note">The poster locations come from PowerPyx's collectibles guide, which was updated November 23. VICE gives the same four locations for The Sniper of La Perle. Rockstar hasn't published an official list.</p>
+  <p>For the regular stations, see our <a href="/radio-stations/">radio stations guide</a>. For everything else on the checklist, see the <a href="/100-percent/">100% guide</a>.</p>""",
+        sources=[("PowerPyx: GTA 6 All Unique Playlist Collectible Locations", "https://www.powerpyx.com/gta-6-all-unique-playlist-collectible-locations/"),
+                 ("VICE: GTA 6 players discover secret radio station hosted by Florida rap star Kodak Black", "https://www.vice.com/en/article/gta-6-players-discover-secret-radio-station-hosted-by-florida-rap-star-kodak-black/")],
+    ),
+    dict(
         slug="gta-6-justice-original-score-december-11",
         date="2026-11-26",
         title="GTA 6's original score by Justice comes out December 11, after The Album's 34 songs",

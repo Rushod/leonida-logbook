@@ -140,6 +140,8 @@ RADIO = page("/radio-stations/", "Music", "GTA 6 radio stations and hosts",
     <li><b>Podcasts on demand.</b> The radio menu has a podcast section you can play whenever you like.</li>
     <li><b>Streamer-safe music.</b> Previews describe a toggle for copyright-free music, made for people who record or stream.</li>
   </ul>
+  <h2>Are there hidden stations?</h2>
+  <p>Yes, two hidden playlists that you unlock by scanning posters: <b>The Sniper of La Perle</b> (four posters in La Perle and Crosstown; VICE reports Kodak Black hosts it) and <b>The Vault</b> (one poster inside the Downtown nightclub). Both count toward 100% completion. See <a href="/news/gta-6-hidden-playlists-sniper-of-la-perle-the-vault/">where the posters are</a>.</p>
   <h2>Is the full soundtrack out?</h2>
   <p>Not as a full radio track list. Rockstar released <b>Grand Theft Auto VI: The Album</b>, 34 songs made with Atlantic Records, on November 20. Justice's <b>Original Score</b> (30 tracks plus a three-hour bonus suite) follows on December 11. See <a href="/news/gta-6-justice-original-score-december-11/">our post on both albums</a>.</p>""")
 

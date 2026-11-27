@@ -507,3 +507,31 @@ def music_releases():
             b += t(cx, 284 + j * 26, line, 19, col, font=L)
     b += t(400, 366, "SCORE: VINYL, CD AND DIGITAL, PLUS BONUS TRACKS", 19, MUTED, font=L)
     return fig(b, "GTA VI's two music releases: The Album, 34 licensed songs released November 20 with Atlantic Records, and the Original Score by Justice, 30 tracks plus bonus digital tracks, out December 11 on vinyl, CD and digital")
+
+
+def union_vote():
+    b = t(400, 62, "ROCKSTAR UK UNION BALLOT", 34)
+    cols = [("AGAINST", "1,163", ["75.3% OF VOTES"], PINK),
+            ("FOR", "381", ["24.7% OF VOTES"], GOOD)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 220) + t(cx, 140, h, 26, SUN, font=L)
+        b += f'<text x="{cx}" y="232" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 276 + j * 26, line, 20, col, font=L)
+    b += t(400, 362, "93.2% TURNOUT, FIVE UK STUDIOS, RESULT NOV 26", 19, MUTED, font=L)
+    return fig(b, "Result of the Rockstar UK union recognition ballot announced November 26, 2026: 1,163 votes against recognition (75.3 percent) and 381 for (24.7 percent), on a 93.2 percent turnout across five UK studios")
+
+
+def hidden_playlists():
+    b = t(400, 62, "TWO HIDDEN PLAYLISTS", 34)
+    cols = [("SNIPER OF LA PERLE", "4", ["POSTERS TO SCAN", "LA PERLE + CROSSTOWN"], PINK),
+            ("THE VAULT", "1", ["POSTER TO SCAN", "DOWNTOWN CLUB"], GOOD)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 230) + t(cx, 140, h, 22, SUN, font=L)
+        b += f'<text x="{cx}" y="228" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 264 + j * 26, line, 18, col, font=L)
+    b += t(400, 366, "BOTH COUNT TOWARD 100% COMPLETION", 20, MUTED, font=L)
+    return fig(b, "GTA VI's two hidden playlists: The Sniper of La Perle, unlocked by scanning four posters in La Perle and Crosstown, and The Vault, unlocked by scanning one poster inside a Downtown nightclub. Both count toward 100 percent completion")
