@@ -265,3 +265,288 @@ def launch_bugs():
         for j, line in enumerate(sub):
             b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
     return fig(b, "Launch-week status: many player clips of bugs, two PlayStation Network outages on November 18 and 19, and no Rockstar patch notes or fix announcement yet")
+
+
+def sales_official():
+    b = t(400, 62, "DAY-ONE SALES, TAKE-TWO FIGURES", 34)
+    rows = [("GTA V", 0.8, "$0.8B", "FIRST DAY, SEPTEMBER 2013"), ("GTA VI", 3.79, "$3.79B", "TO END OF NOVEMBER 19, 2026")]
+    for i, (name, val, txt, note) in enumerate(rows):
+        y = 112 + i * 120
+        w = val * 105
+        b += t(40, y + 40, name, 32, anchor="start")
+        b += f'<rect x="200" y="{y}" width="{w:.0f}" height="56" rx="10" fill="url(#aBar)"/>'
+        b += t(200 + w + 14, y + 41, txt, 32, SUN, anchor="start")
+        b += t(200, y + 88, note, 22, MUTED, anchor="start", font=L)
+    b += t(400, 376, "PLUS 32.5 MILLION COPIES SOLD BEFORE RELEASE", 24, PINK, font=L)
+    return fig(b, "Take-Two says GTA VI made $3.79 billion in retail sales on day one, about five times GTA V's roughly $800 million first day in 2013, and sold 32.5 million copies before release")
+
+
+def easter_eggs():
+    b = t(400, 62, "LAUNCH-WEEK EASTER EGGS", 34)
+    cols = [("FAST & FURIOUS", "CAR", ["'95 ECLIPSE,", "VESPUCCI ISLE"], "2 OUTLETS"),
+            ("DEXTER", "FLAT", ["APARTMENT ON", "WASHINGTON IS."], "REPORTED"),
+            ("TOWER NEST", "EGG", ["THROW ONE FOR", "A CUTSCENE"], "PLAYER CLIP")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 22 if len(h) > 12 else 24, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="84" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 20, GOOD if tag == "2 OUTLETS" else PINK, font=L)
+    return fig(b, "Three launch-week GTA VI easter eggs: a Fast and Furious 1995 Eclipse on Vespucci Island, reported by two outlets; a Dexter-style apartment on Washington Island, reported; and a nest of eggs on a tower that triggers a cutscene, from a player clip")
+
+
+def dev_notes():
+    b = t(400, 62, "FROM ROCKSTAR'S DEVELOPER NOTES", 34)
+    cols = [("NPC ROUTINES", "1,000", ["ACTIVITY", "ANIMATION SETS"]),
+            ("ONE DOOR", "MONTHS", ["ON LUCIA'S", "HIP DOOR PUSH"]),
+            ("THE ASK", "NO", ["GUIDES OR", "CHECKLISTS"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 146, h, 24, SUN, font=L)
+        size = 84 if len(big) <= 3 else 62
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="{size}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 306 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "From Rockstar's GTA VI developer notes: about 1,000 activity animation sets for background characters, months of work on Lucia pushing a door open with her hip, and a hope that players set aside guides and checklists")
+
+
+def first_patch():
+    b = t(400, 62, "FIRST POST-LAUNCH PATCH: 01.002.002", 34)
+    cols = [("PS5 SIZE", "604", ["MB, IN THREE", "ROLLOUT WAVES"]),
+            ("XBOX SIZE", "1.6", ["GB, SERIES X|S", "VERSION 1.0.2.2"]),
+            ("PATCH NOTES", "7", ["FIXES, NOTES", "POSTED NOV 23"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 100, 224, 270) + t(cx, 148, h, 23, SUN, font=L)
+        b += f'<text x="{cx}" y="262" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 314 + j * 30, line, 22, MUTED, font=L)
+    return fig(b, "GTA VI's first post-launch patch, 01.002.002, released November 23: about 604 MB on PS5 in three rollout waves, about 1.6 GB on Xbox Series X|S as version 1.0.2.2, with Rockstar's notes listing seven fixes")
+
+
+def patch_notes():
+    b = t(400, 58, "PATCH 01.002.002: ROCKSTAR'S NOTES", 32)
+    b += panel(40, 86, 250, 290)
+    b += f'<text x="165" y="250" font-family="{D}" font-size="150" fill="url(#aNum)" text-anchor="middle">7</text>'
+    b += t(165, 300, "FIXES LISTED", 26, SUN, font=L)
+    b += t(165, 340, "NO FPS CHANGES", 22, PINK, font=L)
+    b += panel(310, 86, 450, 290)
+    fixes = ["CRASHES", "WEATHER STUCK", "AUTOSAVE", "STORY PHONE CALLS", "WANTED LEVEL", "GYM DEADLIFT BAR", "PARTNER BAG HANDOVER"]
+    for i, f in enumerate(fixes):
+        y = 128 + i * 36
+        b += f'<circle cx="344" cy="{y - 8}" r="7" fill="{GOOD}"/>' + t(364, y, f, 24, INK, anchor="start", font=L)
+    return fig(b, "Rockstar's notes for GTA VI update 01.002.002 list seven fixes: crashes, weather that stopped changing, autosave, story phone calls, wanted levels that could not be lost, the gym deadlift bar and partners not handing over bags. No frame rate or performance changes are listed")
+
+
+def side_secrets():
+    b = t(400, 62, "THREE SIDE SECRETS TO FIND", 34)
+    cols = [("OUT AT SEA", "DOG", ["COOL DOG'S", "JET SKI RESCUE"], "OUTLET TESTED"),
+            ("PORT GELLHORN", "3", ["MISSING PERSONS", "TO TRACK DOWN"], "OUTLET TESTED"),
+            ("BELVILLE", "SIM?", ["A GARAGE FULL", "OF RED STRING"], "PLAYER POST")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 24 if len(h) < 12 else 20, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="{96 if len(big) < 4 else 80}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 18, GOOD if "TESTED" in tag else PINK, font=L)
+    return fig(b, "Three GTA VI side secrets: Cool Dog, who rescues you on a jet ski if you drift far out to sea, tested by GamesRadar; three missing persons to find around Port Gellhorn, tested by GamesRadar; and a Belville garage covered in simulation-theory notes, from a player post")
+
+
+def playstation_record():
+    b = t(400, 62, "PLAYSTATION'S BIGGEST LAUNCH", 34)
+    cols = [("UNIQUE PLAYERS", "39M+", ["ON PS5 IN", "FOUR DAYS"]),
+            ("HOURS PLAYED", "683M", ["ACROSS ALL", "PS5 PLAYERS"]),
+            ("PER PLAYER", "17.4", ["HOURS ON", "AVERAGE"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 250) + t(cx, 140, h, 20, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 378, "SONY FIGURES, NOVEMBER 19 TO 22, PS5 ONLY", 22, PINK, font=L)
+    return fig(b, "Sony says more than 39 million unique players played GTA VI on PS5 from November 19 to 22, for a total of 683 million hours, or 17.4 hours each on average. The figures cover PS5 only")
+
+
+def vice_portal():
+    b = t(400, 62, "THE SECRET VICE CITY PORTAL", 34)
+    cols = [("THE PUZZLE", "12", ["LPL POWER", "SUBSTATIONS"], "NO FAST TRAVEL"),
+            ("THE CLUE", "1986", ["SPELLS AN OLD", "VICE CITY CHEAT"], "FOUND NOV 23"),
+            ("THE TRIP", "2002", ["A PS2-STYLE", "VICE CITY SCENE"], "PLAYER VIDEO")]
+    for i, (h, big, sub, tag) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 284) + t(cx, 140, h, 22, SUN, font=L)
+        b += f'<ellipse cx="{cx}" cy="216" rx="92" ry="54" fill="none" stroke="{PINK}" stroke-opacity=".35" stroke-width="6"/>'
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="{84 if len(big) < 3 else 64}" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 290 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 360, tag, 18, PINK, font=L)
+    return fig(b, "GTA VI's secret Vice City portal: a puzzle across 12 LPL power substations with no fast travel, a clue that spells a cheat from the 1986-set Vice City, and a trip to a PS2-style 2002 Vice City scene, shown so far in one player's video from November 23")
+
+
+def trading_cards():
+    b = t(400, 62, "GTA VI TRADING CARDS, FOR REAL", 34)
+    cols = [("EACH BOX", "16", ["FOUR PACKS OF", "FOUR CARDS"]),
+            ("RAREST", "1/1", ["GOLD LEGEND", "PARALLEL"]),
+            ("RELEASE", "DEC", ["2026, PRICE", "NOT ANNOUNCED"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 270)
+        b += f'<rect x="{cx - 46}" y="162" width="92" height="122" rx="8" fill="none" stroke="{SUN}" stroke-opacity=".35" stroke-width="3" transform="rotate(-8 {cx} 223)"/>'
+        b += t(cx, 140, h, 22, SUN, font=L)
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="84" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 306 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 390, "PANINI AMERICA WITH ROCKSTAR GAMES", 18, PINK, font=L)
+    return fig(b, "Panini's GTA VI Sports Trading Card Collection: four packs of four cards per box, numbered parallels down to a one-of-one Gold Legend, out in December 2026 with no price announced yet")
+
+
+def hidden_hats():
+    b = t(400, 62, "TWO HATS WORTH HUNTING", 34)
+    cols = [("LUMMOX COUNTY", "J+L", ["A HIDDEN BLOCK,", "TWO PLUMBER CAPS"], "KOTAKU CONFIRMED", PINK),
+            ("PORT GELLHORN", "$35", ["A COWBOY HAT", "AT A YARD SALE"], "CHAPTER 2", SUN)]
+    for i, (h, big, sub, tag, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 284) + t(cx, 140, h, 24, SUN, font=L)
+        if i == 0:
+            b += f'<rect x="{cx - 52}" y="160" width="104" height="104" rx="10" fill="none" stroke="{SUN}" stroke-opacity=".35" stroke-width="4"/>'
+        else:
+            b += f'<path d="M{cx - 110} 236 Q{cx} 270 {cx + 110} 236 M{cx - 50} 236 Q{cx - 46} 168 {cx} 176 Q{cx + 46} 168 {cx + 50} 236" fill="none" stroke="{SUN}" stroke-opacity=".35" stroke-width="4"/>'
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 296 + j * 28, line, 21, MUTED, font=L)
+        b += t(cx, 362, tag, 19, GOOD if "CONFIRMED" in tag else col, font=L)
+    return fig(b, "Two wearable GTA VI easter eggs: a hidden block in Lummox County that drops J and L caps in the style of Mario and Luigi, confirmed by Kotaku, and a $35 cowboy hat like Arthur Morgan's at a Port Gellhorn yard sale in Chapter 2")
+
+
+def xbox_glitch():
+    b = t(400, 62, "THE XBOX 60 FPS GLITCH, TESTED", 34)
+    cols = [("BEST CASE", "60", ["FLYING HIGH,", "LOOKING AT SKY"], GOOD),
+            ("FIRST HOUR", "36", ["AVERAGE FPS,", "SERIES X"], SUN),
+            ("BUSY STREETS", "30s", ["BARELY ABOVE", "THE NORMAL CAP"], PINK)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 152 + i * 248
+        b += panel(cx - 112, 96, 224, 260) + t(cx, 140, h, 22, col, font=L)
+        b += f'<text x="{cx}" y="250" font-family="{D}" font-size="88" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 296 + j * 28, line, 20, MUTED, font=L)
+    b += t(400, 386, "AND THE WHOLE GAME RUNS FASTER", 20, PINK, font=L)
+    return fig(b, "Digital Foundry's test of the Xbox Quick Resume glitch: about 60 fps only when flying high and looking at the sky, about 36 fps on average over the first hour on Series X, and barely above 30 in busy streets, while the whole game runs faster than normal")
+
+
+def console_ranking():
+    b = t(400, 62, "DIGITAL FOUNDRY'S CONSOLE RANKING", 34)
+    rows = [("1", "PS5 PRO", "ROCK-SOLID 30", GOOD, 450),
+            ("2", "SERIES X", "FEWER DROPS + VRR", GOOD, 400),
+            ("3", "PS5", "MORE FREQUENT DROPS", SUN, 350),
+            ("4", "SERIES S", "720P, OFTEN BELOW 30", PINK, 280)]
+    for i, (n, name, note, col, w) in enumerate(rows):
+        y = 92 + i * 64
+        b += panel(60, y, 680, 52)
+        b += t(96, y + 38, n, 32, col)
+        b += f'<rect x="130" y="{y + 12}" width="{w - 130}" height="28" rx="6" fill="{col}" fill-opacity=".22"/>'
+        b += t(146, y + 34, name, 23, INK, anchor="start", font=L)
+        b += t(716, y + 33, note, 18, MUTED, anchor="end", font=L)
+    b += t(400, 370, "ALL FOUR ARE CAPPED AT 30 FPS", 20, SUN, font=L)
+    return fig(b, "Digital Foundry's GTA VI console ranking: PS5 Pro first with a rock-solid 30 fps, Xbox Series X second with fewer drops and VRR support, the standard PS5 third with more frequent drops, and Series S last at 720p and often below 30 fps. All four are capped at 30 fps")
+
+
+def design_choices():
+    b = t(400, 62, "WHY ROCKSTAR BUILT IT THIS WAY", 34)
+    cols = [("MISSION REPLAY", "NO", ["DROPPED: IT FELT AT", "ODDS WITH THE STORY"], "SCOTT BUTCHARD", PINK),
+            ("CRIMINAL PROFILE", "NPCs", ["NOTICE HOW YOU", "PLAY, NOT JUST GUNS"], "ROB NELSON", SUN)]
+    for i, (h, big, sub, tag, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 284) + t(cx, 140, h, 24, SUN, font=L)
+        b += f'<text x="{cx}" y="244" font-family="{D}" font-size="80" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 296 + j * 28, line, 20, MUTED, font=L)
+        b += t(cx, 362, tag, 19, col, font=L)
+    return fig(b, "Two GTA VI design choices Rockstar has explained: no mission replay, which senior design director Scott Butchard says was dropped because it felt at odds with the story, and the Criminal Profile, which Rob Nelson says makes NPCs react to how you play rather than only to a drawn gun")
+
+
+def uk_retail():
+    b = t(400, 62, "UK GAMES RETAIL, LAUNCH WEEK", 34)
+    cols = [("GAMES RETAIL", "£142M", ["UP 99% ON THE", "WEEK BEFORE"]),
+            ("GTA VI BOXED", "£32M", ["ABOUT 74% OF", "BOXED GAMES"]),
+            ("ACCESSORIES", "£21M", ["UP 123%", "PADS UP 194%"])]
+    for i, (h, big, sub) in enumerate(cols):
+        cx = 145 + i * 255
+        b += panel(cx - 120, 96, 240, 220) + t(cx, 138, h, 21, SUN, font=L)
+        b += f'<text x="{cx}" y="232" font-family="{D}" font-size="64" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 274 + j * 24, line, 17, MUTED, font=L)
+    b += t(400, 362, "NIELSENIQ, PHYSICAL RETAIL ONLY, NOVEMBER 19-21", 20, SUN, font=L)
+    return fig(b, "UK games retail in GTA VI's launch week, according to NielsenIQ: 142 million pounds across all games retail, up 99 percent on the week before; 32 million pounds of boxed GTA VI copies, about 74 percent of boxed game sales; and 21 million pounds of accessories, up 123 percent, with controllers up 194 percent. Physical retail only, November 19 to 21")
+
+
+def japan_version():
+    b = t(400, 62, "THE JAPANESE VERSION (CERO Z)", 34)
+    cols = [("WHAT CHANGES", ["NO NUDITY", "LESS BLOOD", "FEWER LANGUAGES"], PINK),
+            ("WHAT DOESN'T", ["SAME MISSIONS", "SAME MAP", "SAME GAMEPLAY"], GOOD)]
+    for i, (h, rows, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 230) + t(cx, 140, h, 26, SUN, font=L)
+        for j, line in enumerate(rows):
+            b += t(cx, 200 + j * 46, line, 30, col)
+    b += t(400, 368, "1.2 GB SMALLER DOWNLOAD. NO WORD FROM ROCKSTAR", 19, MUTED, font=L)
+    return fig(b, "The Japanese CERO Z version of GTA VI: no nudity, less blood and fewer language options, but the same missions, map and gameplay. The download is about 1.2 GB smaller and Rockstar hasn't commented")
+
+
+def music_releases():
+    b = t(400, 62, "TWO GTA VI ALBUMS", 34)
+    cols = [("THE ALBUM", "34", ["LICENSED SONGS", "OUT NOW (NOV 20)"], GOOD),
+            ("ORIGINAL SCORE", "30", ["COMPOSED BY JUSTICE", "OUT DECEMBER 11"], PINK)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 230) + t(cx, 140, h, 26, SUN, font=L)
+        b += f'<text x="{cx}" y="228" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        b += t(cx, 256, "TRACKS", 18, MUTED, font=L)
+        for j, line in enumerate(sub):
+            b += t(cx, 284 + j * 26, line, 19, col, font=L)
+    b += t(400, 366, "SCORE: VINYL, CD AND DIGITAL, PLUS BONUS TRACKS", 19, MUTED, font=L)
+    return fig(b, "GTA VI's two music releases: The Album, 34 licensed songs released November 20 with Atlantic Records, and the Original Score by Justice, 30 tracks plus bonus digital tracks, out December 11 on vinyl, CD and digital")
+
+
+def union_vote():
+    b = t(400, 62, "ROCKSTAR UK UNION BALLOT", 34)
+    cols = [("AGAINST", "1,163", ["75.3% OF VOTES"], PINK),
+            ("FOR", "381", ["24.7% OF VOTES"], GOOD)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 220) + t(cx, 140, h, 26, SUN, font=L)
+        b += f'<text x="{cx}" y="232" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 276 + j * 26, line, 20, col, font=L)
+    b += t(400, 362, "93.2% TURNOUT, FIVE UK STUDIOS, RESULT NOV 26", 19, MUTED, font=L)
+    return fig(b, "Result of the Rockstar UK union recognition ballot announced November 26, 2026: 1,163 votes against recognition (75.3 percent) and 381 for (24.7 percent), on a 93.2 percent turnout across five UK studios")
+
+
+def hidden_playlists():
+    b = t(400, 62, "TWO HIDDEN PLAYLISTS", 34)
+    cols = [("SNIPER OF LA PERLE", "4", ["POSTERS TO SCAN", "LA PERLE + CROSSTOWN"], PINK),
+            ("THE VAULT", "1", ["POSTER TO SCAN", "DOWNTOWN CLUB"], GOOD)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 210 + i * 380
+        b += panel(cx - 170, 96, 340, 230) + t(cx, 140, h, 22, SUN, font=L)
+        b += f'<text x="{cx}" y="228" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 264 + j * 26, line, 18, col, font=L)
+    b += t(400, 366, "BOTH COUNT TOWARD 100% COMPLETION", 20, MUTED, font=L)
+    return fig(b, "GTA VI's two hidden playlists: The Sniper of La Perle, unlocked by scanning four posters in La Perle and Crosstown, and The Vault, unlocked by scanning one poster inside a Downtown nightclub. Both count toward 100 percent completion")
+
+
+def stat_missions():
+    b = t(400, 62, "HIDDEN STAT BOOST MISSIONS", 34)
+    cols = [("HEALTH", "2", ["ABDUCTION", "CIRCLES OF HELL"], PINK),
+            ("STAMINA", "4", ["ABDUCTION, FLUSH", "CROPS, MUSHROOMS"], GOOD),
+            ("FOCUS", "2", ["ABDUCTION", "IGUANA SHOOT"], SUN)]
+    for i, (h, big, sub, col) in enumerate(cols):
+        cx = 145 + i * 255
+        b += panel(cx - 115, 96, 230, 230) + t(cx, 140, h, 24, SUN, font=L)
+        b += f'<text x="{cx}" y="228" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">{big}</text>'
+        for j, line in enumerate(sub):
+            b += t(cx, 266 + j * 26, line, 16, col, font=L)
+    b += t(400, 366, "SIX MISSIONS, PERMANENT BOOSTS, NO MAP MARKERS", 19, MUTED, font=L)
+    return fig(b, "GTA VI's six hidden stat boost missions by stat: two raise max health (the alien abduction and Circles of Hell), four raise stamina (the abduction, The Final Flush, crop dusting and the mushroom obstacle course) and two raise Focus (the abduction and the iguana shooting bet)")
