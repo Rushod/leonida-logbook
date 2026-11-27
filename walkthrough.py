@@ -139,7 +139,7 @@ HUNDRED = [
         ("Magazines, books & comics", "30", 34, "Includes book swaps. Duplicates don't count."),
         ("Meditation spots", "15", 18, "Jason and Lucia each meditate at the spots, so each location counts twice."),
         ("Cocaine flamingos destroyed", "100", 125, "Shoot the ones with black and white beaks. Yellow-beaked flamingos don't count."),
-        ("Unique playlists", "2", 2, "Scan the posters that unlock them."),
+        ("Unique playlists", "2", 2, "Scan four posters in La Perle and Crosstown, and one inside The Vault club."),
         ("Discovered styles", "70", 79, "Scan tattoo magazines with WAiNK. Luxury watches count too."),
         ("Unique races won", "30", 40, "Blue race icons on the map. Any 30 wins."),
         ("Race challenge gold medals", "10", 13, "Pick the ten you find easiest."),
