@@ -8,6 +8,592 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-deep-roots-memorial-developer-tributes",
+        date="2026-11-28",
+        title="GTA 6's Deep Roots memorial: Rockstar developers left the names of lost family members in Leonida",
+        desc="North of Hamlet there's a quiet memorial wall called the Deep Roots Memorial Sanctuary. Three Rockstar developers have now said that plaques on it honour their own family. Where it is, and what we know.",
+        fig=art.deep_roots,
+        body="""
+  <p>Not every secret in Leonida is a joke or a film reference. In free roam, just north of Hamlet in Vice-Dale, there's a place called the <b>Deep Roots Memorial Sanctuary</b>: a wall covered in names on small plaques. This week, Rockstar developers started telling the stories behind some of them.</p>
+  <h2>What the developers have shared</h2>
+  <ul>
+    <li><b>Bradley Stone</b> posted a clip on X on November 27 showing Jason at a plaque for his daughter, who he and his wife lost in 2023. He wrote that he hopes "everyone finds this place in Leonida."</li>
+    <li><b>Matt Green</b>, credited in the game's testing team, shared on Instagram that one plaque, dated March 2026, honours his mother.</li>
+    <li><b>Terrance Radcliff</b>, a production designer, posted on X about plaques for his father and his daughter.</li>
+  </ul>
+  <p>PlayStation LifeStyle reported Stone's post on November 27. Rockstar Report rounded up all three a day earlier.</p>
+  <h2>Is every name a developer's relative?</h2>
+  <p>We don't know. The wall holds many more names than the handful that have been identified, and Rockstar hasn't said anything about the sanctuary. Rockstar Report points out there's no evidence that every plaque belongs to a staff member's family. So far, only the names the developers themselves have pointed to are confirmed.</p>
+  <h2>How to find it</h2>
+  <p>No outlet has published exact directions yet, only that it's a short way north of Hamlet and open in free roam, with no mission or time of day needed. We haven't added it to our <a href="/map/">map</a> as a verified location until there's a confirmed position. If you visit, it's worth remembering that these are real people.</p>
+  <p>For lighter finds, see our <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">easter eggs roundup</a> and the <a href="/activities/">activities list</a>.</p>""",
+        sources=[("PlayStation LifeStyle: GTA 6: Rockstar Employee Shares Story Behind Game's Hidden Heartbreaking Tribute", "https://www.playstationlifestyle.net/2026/11/27/gta-6-hidden-heartbreaking-tribute-rockstar-developer"),
+                 ("Rockstar Report: GTA 6's Deep Roots Memorial Honors Developers' Families", "https://rockstarreport.com/news/gta-6-memorial-rockstar-developers-families")],
+    ),
+    dict(
+        slug="gta-6-hidden-stat-boost-missions",
+        date="2026-11-28",
+        title="GTA 6's hidden stat boost missions: six side missions that permanently raise health, stamina and Focus",
+        desc="Gyms aren't the only way to get stronger in GTA VI. Six hidden side missions give a permanent boost to max health, stamina or Focus, and one raises all three. How to start each one, and what you get.",
+        fig=art.stat_missions,
+        body="""
+  <p>Our <a href="/stats/">stats guide</a> covers the slow way to train Jason and Lucia: gyms, running and the shooting range. There's also a quicker way. A handful of hidden side missions give a <b>permanent</b> boost to max health, stamina or Focus when you finish them. None of them has a map marker until you trigger it, so most players find them by accident.</p>
+  <p>GamesRadar+ has played through six of them and published a list on November 27. Windows Central and GTABase have separately written up The Final Flush. Here's how to start each one. We've kept the endings inside spoiler boxes.</p>
+  <h2>The six missions</h2>
+  <table>
+    <tr><th>Mission</th><th>Boost</th><th>Where it starts</th></tr>
+    <tr><td>Alien abduction</td><td>Health, stamina and Focus</td><td>An abandoned roadside car at night</td></tr>
+    <tr><td>The Final Flush</td><td>Stamina</td><td>A QR poster in a public restroom</td></tr>
+    <tr><td>Crop dusting</td><td>Stamina</td><td>A poster at a motel, Chapter 2</td></tr>
+    <tr><td>Circles of Hell</td><td>Health</td><td>A red-lit garage in Port Gellhorn, around midnight</td></tr>
+    <tr><td>Mushroom obstacle course</td><td>Stamina, plus a tattoo</td><td>A yellow shipping crate at Lake Tallaloko</td></tr>
+    <tr><td>Iguana shooting</td><td>Focus, plus $250</td><td>Gunfire in the woods by a road construction site</td></tr>
+  </table>
+  <h2>Alien abduction: all three stats</h2>
+  <p>This is the best one. At night, look for a car by the road with its doors open and lights flashing. GamesRadar says it can appear in more than one place, and its writer found one near Port Gellhorn. Follow the trail from the car, use Focus to spot a light in the trees, pick up the item there, then go back to the car. You'll be abducted and wake up by the road. The car gets impounded at the nearest police station, so don't use one you care about.</p>
+  <p>To finish it, sleep with the same character for a day or two until the dreams start.</p>
+  <details class="spoiler"><summary>Spoiler: how the abduction mission ends</summary>
+  <p>The dreams are a set of puzzles: a keypad code (random each time, so write yours down) and a four-light panel. Avoid the middle door. Back in the real world, go to the radio tower above Shoeless Keys, enter the code from your dream, solve the light panel again and finish the rescue. Move quickly near the end, because gas drains your health. The permanent health, stamina and Focus boost comes when the rescue is done, not when you wake up.</p>
+  </details>
+  <h2>The Final Flush: stamina</h2>
+  <p>Find a "Stop, Don't Flush!" poster in a public restroom and scan its QR code with the WAiNK app. GTABase lists three spots: the men's room at the Corsair Key restroom block (the easiest early on), the Watson Bay campground restrooms, and the ladies' room at the Nine1Nine club in Vice City. Reply to the message, then go to Frank's Waffles in Tequesta at <b>night</b>. During the day the icon shows a padlock. GTABase says only one of the two protagonists can do it, and the stamina boost goes to whoever does.</p>
+  <details class="spoiler"><summary>Spoiler: what happens in The Final Flush</summary>
+  <p>The man at the diner, Dr. Merle, drives you to a sewage plant on Gloriana Key. You get inside, set three lights to green on a control panel to open a staircase, and reach the chamber he's after. The plant's alarm gives you a one-star wanted level, and you wake up at your safehouse.</p>
+  </details>
+  <h2>Crop dusting: stamina</h2>
+  <p>In Chapter 2, scan the crop-dusting poster outside the reception of the motel. It sends you to McKittrick Farm. Dust the crops, then come back later when the farm asks you to collect chemicals.</p>
+  <details class="spoiler"><summary>Spoiler: how it ends</summary>
+  <p>You eat one of the mutated strawberries. This is the "Hulk-like" side quest in our <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">easter eggs roundup</a>.</p>
+  </details>
+  <h2>Circles of Hell: health</h2>
+  <p>Around midnight, look for an open garage in Port Gellhorn lit up in red. Go inside with the people there. As well as the health boost, you get a shotgun and a T-shirt.</p>
+  <details class="spoiler"><summary>Spoiler: what's in the garage</summary>
+  <p>The mission ends with a fight against "the devil".</p>
+  </details>
+  <h2>Mushroom obstacle course: stamina and a tattoo</h2>
+  <p>Go to the logging yard at Lake Tallaloko, north of Milliport, and climb into the yellow shipping crate. GamesRadar's writer found it open, but says a reader needed a cutting tool to get in. Finishing the course gives a stamina boost and a new tattoo.</p>
+  <h2>Iguana shooting: Focus and $250</h2>
+  <p>In the same area as GamesRadar's abduction car, follow the sound of gunfire into the woods next to a road construction site. Win the $250 bet. You'll get your money back plus $250 and a permanent Focus boost. GamesRadar recommends the Duke 556 assault rifle.</p>
+  <h2>How sure is this?</h2>
+  <p>GamesRadar's writer played each mission and describes the rewards first-hand. The Final Flush also matches Windows Central's and GTABase's walkthroughs. Rockstar hasn't published a list, and GamesRadar expects to find more, so there may be other stat boost missions. Meditation spots also raise Focus, and they're on our <a href="/collectibles/">collectibles page</a>.</p>
+  <p>For the rest of what there is to do, see the <a href="/activities/">activities list</a>.</p>""",
+        sources=[("GamesRadar+: All the GTA 6 stat boost missions we've found", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-increase-stats-missions/"),
+                 ("GamesRadar+: GTA 6 alien abduction mission", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-alien-mission-abduction/"),
+                 ("Windows Central: How to start and complete The Final Flush hidden side mission in GTA 6", "https://www.windowscentral.com/gaming/how-to-start-and-complete-the-final-flush-hidden-side-mission-in-gta-6-and-get-a-permanent-stamina-increase"),
+                 ("GTABase: The Final Flush", "https://www.gtabase.com/gta-6/strangers/the-final-flush")],
+    ),
+    dict(
+        slug="gta-6-rockstar-uk-union-vote-result",
+        date="2026-11-27",
+        title="Rockstar's UK staff vote against union recognition, a week after GTA 6's launch",
+        desc="Rockstar's UK developers rejected a recognition deal with the IWGB union by about three to one, on a 93% turnout. The numbers, what Rockstar and the union said, and the tribunal case still waiting on a ruling.",
+        fig=art.union_vote,
+        body="""
+  <p>The ballot ran across GTA VI's launch, and the result came in on <b>November 26</b>: Rockstar's UK staff voted against formally recognising the <b>IWGB Rockstar Game Workers Union</b>.</p>
+  <h2>The numbers</h2>
+  <ul>
+    <li><b>1,163 against</b> (75.3%) and <b>381 for</b> (24.7%), out of 1,544 votes (IGN).</li>
+    <li><b>Turnout:</b> 93.2%.</li>
+    <li><b>Who voted:</b> staff at Rockstar's five UK studios in Edinburgh, Leeds, Lincoln, Dundee and London. The ballot ran for two weeks (Engadget).</li>
+  </ul>
+  <h2>What it means</h2>
+  <p>Without a recognition agreement, Rockstar doesn't have to negotiate with the union or hold regular meetings with its representatives, Engadget explains. The union still exists, and staff can still join it.</p>
+  <h2>What both sides said</h2>
+  <p>Jennifer Kolbe, Rockstar's head of publishing, said in a statement to IGN and the Press Association that the result reflects the team's support for keeping "direct relationships, collaboration and open dialogue". Before the vote she had told Bloomberg that if staff wanted a union, they would have one.</p>
+  <p>The IWGB said the result "isn't a sign to retreat" and that it will keep organising for pay transparency, paid overtime written into contracts, and protections against AI and layoffs.</p>
+  <h2>The tribunal case</h2>
+  <p>The campaign grew after Rockstar fired a group of UK workers in October 2025. Rockstar says they shared confidential details about the game and made disparaging comments. The union says they were fired over union activity. Outlets give different numbers for how many workers were fired: IGN says 31, and The Herald says 23 former workers are part of the case. An employment tribunal in Glasgow heard closing submissions this month, and it hasn't ruled yet. We'll update this post when it does.</p>
+  <p class="note">This doesn't change anything in the game, its patches or its support. We're reporting it because it's news from the studio that made GTA VI.</p>""",
+        sources=[("IGN via Yahoo: Rockstar Games issues statement as union vote fails", "https://www.yahoo.com/news/politics/articles/rockstar-games-issues-statement-union-152212046.html"),
+                 ("Engadget: Workers at GTA 6 studio Rockstar Games vote overwhelmingly against union recognition", "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"),
+                 ("The Herald via Yahoo UK: 'A sign to double down': Rockstar's UK staff vote against union recognition ballot", "https://uk.news.yahoo.com/sign-double-down-rockstars-uk-162826826.html"),
+                 ("Game*Spark: Rockstar union vote rejected with 75% against", "https://en.gamespark.jp/article/2026/11/27/2730.html")],
+    ),
+    dict(
+        slug="gta-6-hidden-playlists-sniper-of-la-perle-the-vault",
+        date="2026-11-27",
+        title="GTA 6's two hidden playlists: how to unlock The Sniper of La Perle and The Vault",
+        desc="GTA VI has two secret playlists you unlock by scanning posters, and you need both for 100% completion. Where the five posters are, and how to listen once you've found them.",
+        fig=art.hidden_playlists,
+        body="""
+  <p>GTA VI's 100% checklist has a line called <b>Unique playlists</b>, and it isn't obvious how to get them: they don't appear in the radio menu until you find them. There are two, and you unlock both by scanning posters with your phone. Your progress is under Progress, then Collections, then Exploration, then Unique Playlists.</p>
+  <h2>The Sniper of La Perle: four posters</h2>
+  <p>This one is a 22-track playlist made up mostly of Haitian and Creole-language music. VICE reports it's hosted by Florida rapper Kodak Black, and it includes several of his songs. Scan all four posters (locations from PowerPyx's guide):</p>
+  <ol>
+    <li><b>Aunt Zola's Soul Food</b>, La Perle: inside the restaurant, by the cashier.</li>
+    <li><b>TWA Ponya Tattoo</b>, La Perle: on the table next to the entrance.</li>
+    <li><b>Drip Drops</b>, La Perle: on the counter next to the clerk in the clothing store.</li>
+    <li><b>Jack of Hearts</b>, Crosstown: on a crate in the eastern recording booth on the club's second floor.</li>
+  </ol>
+  <p>The game doesn't show which posters you've already scanned, so if it hasn't unlocked after four, go back and scan each one again. When it unlocks, you'll find it under <b>On Demand</b>, in a car or on Jason or Lucia's earbuds.</p>
+  <h2>The Vault: one poster</h2>
+  <p>Go to <b>The Vault</b> nightclub in Downtown Vice City and scan the red poster just inside the entrance. The playlist then appears in the radio list as The Vault.</p>
+  <p class="note">The poster locations come from PowerPyx's collectibles guide, which was updated November 23. VICE gives the same four locations for The Sniper of La Perle. Rockstar hasn't published an official list.</p>
+  <p>For the regular stations, see our <a href="/radio-stations/">radio stations guide</a>. For everything else on the checklist, see the <a href="/100-percent/">100% guide</a>.</p>""",
+        sources=[("PowerPyx: GTA 6 All Unique Playlist Collectible Locations", "https://www.powerpyx.com/gta-6-all-unique-playlist-collectible-locations/"),
+                 ("VICE: GTA 6 players discover secret radio station hosted by Florida rap star Kodak Black", "https://www.vice.com/en/article/gta-6-players-discover-secret-radio-station-hosted-by-florida-rap-star-kodak-black/")],
+    ),
+    dict(
+        slug="gta-6-justice-original-score-december-11",
+        date="2026-11-26",
+        title="GTA 6's original score by Justice comes out December 11, after The Album's 34 songs",
+        desc="Justice's Grand Theft Auto VI: Original Score arrives December 11 with 30 tracks and a three-hour suite of bonus music. Here's how it differs from GTA VI: The Album, the 34-song soundtrack that's already out.",
+        fig=art.music_releases,
+        body="""
+  <p>GTA VI now has two official albums. One is already out, and Rockstar has put the second up for pre-order: <b>Grand Theft Auto VI: Original Score by Justice</b>, out on <b>December 11, 2026</b>.</p>
+  <h2>The score: Justice, December 11</h2>
+  <p>The French electronic duo Justice worked on GTA VI's music with Rockstar, and this album is the music they made for the game itself, not radio songs. Rockstar's store says it "features 30 tracks and a number of bonus digital tracks comprising a 3 hour-long suite of material from the game."</p>
+  <ul>
+    <li><b>Formats:</b> triple black vinyl (Rockstar Store), a limited triple crystal clear vinyl, a double CD and a digital album. Justice's Bandcamp lists pre-orders at €45, €17 and €11 for the clear vinyl, CD and digital album. Prices elsewhere vary by store and region.</li>
+    <li><b>Streaming:</b> Game Rant reports the full score also goes to streaming services on December 11.</li>
+    <li><b>Tracks you may know:</b> it includes "Flower in a Hurricane", featuring Tame Impala, SZA and King Gizzard &amp; the Lizard Wizard, and "Pusher", featuring Gesaffelstein. Both came out as singles in October.</li>
+  </ul>
+  <h2>The Album: 34 songs, out now</h2>
+  <p><b>Grand Theft Auto VI: The Album</b> came out on <b>November 20</b>, the day after launch, made with Atlantic Records. It's 34 tracks from artists including Travis Scott, Dua Lipa, Lana Del Rey, Cardi B, JENNIE and Burna Boy, with two Justice tracks among them (KeenGamer).</p>
+  <p>You may have seen a claim that it broke Spotify's soundtrack record with <b>29.85 million streams</b> on its first day. That figure comes from third-party chart trackers. Spotify, Rockstar and Atlantic haven't confirmed it, so treat it as unofficial.</p>
+  <h2>Which one has the radio songs?</h2>
+  <p>Neither album is the full in-game radio. The Album is a selection of songs, and the score is Justice's music for the game. For the stations and hosts, see our <a href="/radio-stations/">radio stations guide</a>.</p>""",
+        sources=[("Rockstar Store: Grand Theft Auto VI: Original Score by Justice (Triple Black Vinyl)", "https://store.rockstargames.com/merchandise/buy-gta-vi-original-score-by-justice-triple-black-vinyl"),
+                 ("Justice on Bandcamp: Grand Theft Auto VI: Original Score by Justice", "https://etjusticepourtous.bandcamp.com/album/grand-theft-auto-vi-original-score-by-justice"),
+                 ("Game Rant: December 11 is suddenly an exciting day for GTA 6 players", "https://gamerant.com/gta-6-original-score-release-december-11-2026/"),
+                 ("KeenGamer: GTA 6: The Album is out now with 34 songs from major artists", "https://www.keengamer.com/articles/news/gta-6-the-album-is-out-now-with-34-songs-from-major-artists/"),
+                 ("God is a Geek: GTA 6 album posts reported Spotify soundtrack record", "https://godisageek.com/2026/11/gta-6-album-spotify-record/")],
+    ),
+    dict(
+        slug="gta-6-uk-launch-week-retail-142-million",
+        date="2026-11-26",
+        title="GTA 6 doubled UK games retail sales in launch week, but it isn't GTA V in the shops",
+        desc="NielsenIQ's UK figures for GTA VI's launch week: £142 million of games retail, £32 million of boxed GTA VI copies, and a rush on controllers and SSDs. Why the boxed number ranks only 17th all-time.",
+        fig=art.uk_retail,
+        body="""
+  <p>The first UK sales data for GTA VI is in. NielsenIQ, which tracks what UK shops sell, published its launch-week numbers on November 26, covering <b>November 19 to 21</b>. They only count boxed games, consoles and accessories sold at retail. PlayStation Store and Xbox Store downloads aren't included.</p>
+  <h2>The numbers</h2>
+  <ul>
+    <li><b>£142 million</b> spent on games retail in the UK that week, <b>up 99%</b> on the week before.</li>
+    <li><b>£43 million</b> of that was boxed games, up 409% and the biggest week for physical games since Christmas 2018.</li>
+    <li><b>£32 million</b> was boxed GTA VI, about <b>74%</b> of all boxed game sales that week. <b>88%</b> of it sold on launch day.</li>
+    <li>GTA VI also went straight to <b>No.1 on the UK all-formats boxed chart</b>, according to Games Asylum, ahead of EA Sports FC 27.</li>
+  </ul>
+  <h2>Why it's "only" 17th</h2>
+  <p>GTA VI's first week of boxed sales ranks <b>17th</b> among all UK game launches since 1995. GTA V is still first, and GTA IV is 11th. That isn't a sign the game is selling badly. Most people now buy digitally, and NielsenIQ's Dorian Bloch points out that boxed games were half of games retail spending in 2008 but only about 15% so far in 2026. GTA VI's boxed copy also contains just a download code. Even so, Bloch says "GTA VI has still made a huge impact."</p>
+  <p>For the worldwide picture, Take-Two reported <a href="/news/gta-6-official-sales-3-79-billion-day-one/">$3.79 billion in day-one sales</a> and Sony counted <a href="/news/gta-6-biggest-playstation-launch-39-million-players/">39 million PS5 players</a> in four days.</p>
+  <h2>Consoles and controllers</h2>
+  <ul>
+    <li><b>Console sales</b> were up 38% on the week before: PS5 up 46%, Xbox Series up 75%.</li>
+    <li><b>Accessories</b> made £21 million, up 123%. Controllers were up 194% (PS5 controllers up 355%), headsets up 94%, and external SSDs up 30%, their best week of 2026.</li>
+  </ul>
+  <p>The SSD jump makes sense: GTA VI takes up to 212 GB. If you're short on space, see our <a href="/storage/">storage guide</a>.</p>""",
+        sources=[("MCV/DEVELOP: GTA VI sends UK games retail sales soaring 99% to £142m in launch week (NielsenIQ)", "https://mcvuk.com/business-news/industry-news-gta-vi-sends-uk-games-retail-sales-soaring-99-to-142m-in-launch-week/"),
+                 ("Games Asylum: GTA VI tops the UK retail chart", "https://www.gamesasylum.com/2026/11/24/gta-vi-tops-the-uk-retail-chart-while-black-friday-deals-push-first-party-ps5-releases/")],
+    ),
+    dict(
+        slug="gta-6-japan-version-censored-cero-z",
+        date="2026-11-26",
+        title="GTA 6 in Japan is a censored version: no nudity, less blood and fewer languages",
+        desc="GTA VI's Japanese release covers up nudity, tones down blood and has fewer language options than the global version. What players in Japan have found, and what stays the same.",
+        fig=art.japan_version,
+        body="""
+  <p>GTA VI is rated CERO Z (18+ only) in Japan, and the Japanese release isn't the same game everyone else is playing. Kotaku and VGC both reported the differences on launch day, based on screenshots, clips and streams from players in Japan and a breakdown by Japanese site GameSpark. Rockstar hadn't announced any regional changes before launch and hasn't commented since.</p>
+  <h2>What's different</h2>
+  <ul>
+    <li><b>No nudity.</b> Jason and Lucia shower in underwear or swimwear, and extra clothing is added to beach and sex scenes. Kotaku says some scenes are cut entirely.</li>
+    <li><b>Less blood.</b> There's less of it, it fades faster, and unlike other regions there's no setting to turn it up. VGC, citing GameSpark, says decapitations are removed too.</li>
+    <li><b>Fewer languages.</b> According to Kotaku, Japanese copies offer English voices with English or Japanese subtitles. Copies sold outside Japan don't include Japanese subtitles at all.</li>
+  </ul>
+  <h2>What stays the same</h2>
+  <p>VGC describes the changes as cosmetic: the missions, the map and how violent the gameplay is all match the international release.</p>
+  <h2>The smaller download was the clue</h2>
+  <p>Before launch, Automaton reported that the Japanese download was about <b>1.2 GB smaller</b> (208.7 GB against roughly 209.9 GB on PS5), and that Japan's rating listed violence and crime but not sexual content. Kotaku now says the missing data "turns out to be mostly made up of nudity".</p>
+  <h2>If you're buying in Japan</h2>
+  <ul>
+    <li><b>Japanese boxed copies</b> contain a download code that, according to Kotaku, has to be redeemed within <b>170 days</b>.</li>
+    <li><b>Need Japanese text?</b> Going by Kotaku's report, only the Japanese version has Japanese subtitles, so a copy bought abroad won't help.</li>
+  </ul>
+  <p>For everything else about which version to buy, see <a href="/platforms/">platforms</a> and <a href="/editions/">Standard vs Ultimate</a>.</p>""",
+        sources=[("Kotaku: Japanese GTA 6 players can't see nudity, and take showers in their underpants", "https://kotaku.com/gta-6-japan-censored-showers-nudity-blood-violence-rockstar-2000758211"),
+                 ("VGC: Japan censors GTA 6's violence and nudity, including Jason in the shower", "https://www.videogameschronicle.com/news/japan-censors-gta-6s-violence-and-nudity-including-jason-in-the-shower/"),
+                 ("Automaton: GTA 6's smaller file size in Japan raises concerns about regional censorship", "https://automaton-media.com/en/news/gta-6s-smaller-file-size-and-lack-of-sexual-content-disclaimer-in-japan-raises-concerns-about-possible-regional-censorship/"),
+                 ("Cybernews: Censored versions upset GTA 6 fans in Japan", "https://cybernews.com/news/gta6-japan-censorship/")],
+    ),
+    dict(
+        slug="gta-6-digital-foundry-series-x-beats-ps5",
+        date="2026-11-25",
+        title="Digital Foundry's big GTA 6 console comparison: Xbox Series X runs it better than the standard PS5",
+        desc="Digital Foundry put GTA VI on all four consoles side by side. The PS5 Pro is still the best place to play, but the Xbox Series X beats the standard PS5 with fewer frame rate drops. Here's the full ranking.",
+        fig=art.console_ranking,
+        body="""
+  <p>At launch, Digital Foundry's first tests put the standard PS5 and the Xbox Series X <a href="/news/gta-6-xbox-series-x-s-digital-foundry/">roughly level</a>. Its full four-console comparison, published this week, is more decisive: the Series X comes out ahead of the standard PS5. Push Square, TweakTown, GGRecon and Kotaku have all reported the findings.</p>
+  <h2>The ranking</h2>
+  <ol>
+    <li><b>PS5 Pro.</b> Still the best version by some distance. It holds 30 fps almost perfectly, upscales a 1440p image with PSSR, and adds ray-traced shadows the standard PS5 doesn't get (TweakTown).</li>
+    <li><b>Xbox Series X.</b> Same 1440p resolution and matching settings to the standard PS5, but with noticeably fewer frame rate drops. It also supports <b>120Hz VRR</b>, which smooths over the small dips that remain.</li>
+    <li><b>PS5.</b> Digital Foundry found it "suffers substantially more frequent frame-rate drops than Series X". The drops show up most when driving fast and in crowded scenes such as the airport.</li>
+    <li><b>Xbox Series S.</b> Last, as before: 720p upscaled to 1080p, often below 30 fps when driving, down into the teens in heavy fights, plus brief audio cut-outs.</li>
+  </ol>
+  <p>Digital Foundry's Oliver Mackenzie called the Series X result "a little surprising". His explanation, as TweakTown reports it, is that both consoles use the same settings, and that asks more of the PS5's slightly smaller graphics chip. In the worst moments, GGRecon says both base consoles drop into the mid-to-upper 20s.</p>
+  <h2>Does this change anything for you?</h2>
+  <ul>
+    <li><b>Every version is still capped at 30 fps.</b> There's no 40 or 60 fps mode on any console, including the PS5 Pro.</li>
+    <li><b>If you're on Series X,</b> turn on VRR if your TV supports 120Hz. It's the reason small drops are less noticeable there.</li>
+    <li><b>If you're on standard PS5,</b> the difference is mostly in fast driving and dense crowds. It's not a reason to buy a second console, but it is the first area to watch if Rockstar patches performance.</li>
+  </ul>
+  <h2>No performance patch yet</h2>
+  <p>A post claiming Rockstar had apologised for stuttering and would patch it on <b>November 25</b> has been going around since November 20. PC Games Hardware and other fact-checks found no such announcement on Rockstar's Newswire or support site, and no patch arrived. The latest update is still <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">01.002.002</a>, which didn't touch performance. Gizmodo also reports that some PS5 players are still getting crashes, including error CE-108255-1, after that patch; Rockstar and Sony haven't commented.</p>
+  <p>For the per-console numbers, see <a href="/frame-rate/">is GTA 6 30 or 60 fps?</a></p>""",
+        sources=[("Push Square: GTA 6 performs better on Xbox Series X than base PS5", "https://www.pushsquare.com/news/2026/11/gta-6-performs-better-on-xbox-series-x-than-base-ps5-despite-all-of-sonys-marketing"),
+                 ("TweakTown: GTA 6 runs better on Xbox Series X than PS5", "https://www.tweaktown.com/news/114880/gta-6-runs-better-on-xbox-series-x-than-ps5-despite-sony-declaring-it-plays-best-on-ps5/index.html"),
+                 ("GGRecon: Digital Foundry says GTA 6 runs smoother on Series X than PS5", "https://www.ggrecon.com/articles/gta-6-series-x-vs-ps5-digital-foundry/"),
+                 ("Kotaku: GTA 6 runs better on Xbox Series X than PS5", "https://kotaku.com/grand-theft-auto-vi-gta-6-framerates-xbox-series-x-ps5-rockstar-2001000296"),
+                 ("PC Games Hardware: Where the rumor of a November 25 GTA 6 update comes from", "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/GTA-6-Is-a-new-update-to-fix-stuttering-coming-today-1561060/"),
+                 ("Gizmodo: GTA VI on PS5 is still crashing consoles even after updates", "https://gizmodo.com/gta-vi-crashing-ps5-2000845327")],
+    ),
+    dict(
+        slug="gta-6-rockstar-explains-no-mission-replay-criminal-profile",
+        date="2026-11-25",
+        title="Rockstar explains two GTA 6 design choices: why there's no mission replay, and what the Criminal Profile is for",
+        desc="GTA VI's story missions can't be replayed, and your Criminal Profile can lock you in as Irredeemable. Two Rockstar leads have now explained why the game works this way.",
+        fig=art.design_choices,
+        body="""
+  <p>Two of GTA VI's biggest changes from GTA V have come up again and again in player complaints and questions this week. Rockstar has now explained the thinking behind both.</p>
+  <h2>Why you can't replay missions</h2>
+  <p>GTA V let you replay any story mission and chase gold medals. GTA VI doesn't: once a mission is done, it's done. Kotaku asked Rockstar about it, and senior design director <b>Scott Butchard</b> said by email that replays were "looked at early on in development", but that the feature felt at odds with the story as the game came together. On adding it later, he said "we do not currently support it", which isn't a promise either way.</p>
+  <p>Replays first arrived in GTA IV's Ballad of Gay Tony and came back in GTA V with medals for optional goals. Kotaku sees GTA VI's missions as closer in spirit to Red Dead Redemption 2's slower, more role-playing style.</p>
+  <p><b>What it means for you:</b> manual saves are the only way back to an earlier point, so save before big missions. See <a href="/how-to-save/">how saving works</a> and <a href="/missions/">the missions overview</a>.</p>
+  <h2>Why the Criminal Profile exists</h2>
+  <p>Rockstar co-founder and development lead <b>Rob Nelson</b> told Eurogamer, in an interview GamesRadar relayed on November 25, that the <a href="/criminal-profile/">Criminal Profile</a> is GTA VI's answer to Red Dead Redemption 2's honour system. His point: in GTA V, people on the street barely reacted unless you pointed a gun at them, leaving you "just sort of this demigod stomping through the world". GTA VI's NPCs notice how you play, and Nelson says having choices other than violence is more fun over a long game.</p>
+  <p>That's why going on rampages pushes your rating toward Psycho and, if you keep it up, the permanent <b>Irredeemable</b> rating, which changes how people react to that character. The Brief's summary of the interview gives an example of the other side: threaten someone with a gun and they may simply do what you want, no beating needed.</p>
+  <p><b>What it means for you:</b> if you like causing chaos, mix in some calm play before your rating locks. Our <a href="/criminal-profile/">Criminal Profile guide</a> explains each rating and how to check it.</p>""",
+        sources=[("Kotaku: GTA 6 ditched mission replay because it felt at odds with the story", "https://kotaku.com/gta-6-ditched-mission-replay-because-it-felt-at-odds-with-the-story-2001000335"),
+                 ("GamesRadar+: GTA 6's honor system rewards empathy, Rockstar lead says", "https://www.gamesradar.com/games/grand-theft-auto/gta-6s-honor-system-rewards-empathy-because-being-a-demigod-stomping-through-the-world-is-only-fun-for-so-long-rockstar-lead-says/"),
+                 ("The Brief: Grand Theft Auto 6 adds Criminal Profile, a system Rockstar compares to an honour system", "https://www.thebrief.news/en/standard/article/47393/grand-theft-auto-6-adds-criminal-profile-a-system-rockstar-compares-to-an-honour-system")],
+    ),
+    dict(
+        slug="gta-6-mario-luigi-caps-arthur-morgan-hat",
+        date="2026-11-25",
+        title="GTA 6 hides Mario and Luigi caps in Lummox County, and Arthur Morgan's hat is at a yard sale",
+        desc="Two of GTA VI's best hidden extras are things you can wear: a secret block in the hills that drops J and L plumber caps, and a $35 cowboy hat straight out of Red Dead Redemption 2. Here's where to find both.",
+        fig=art.hidden_hats,
+        body="""
+  <p>Not every GTA VI secret is a <a href="/news/gta-6-secret-vice-city-portal-easter-egg/">three-day puzzle</a>. Two of the nicest ones this week are simply hats, and both are easy enough to go and get yourself.</p>
+  <h2>The Mario and Luigi caps</h2>
+  <p>A player on X, <b>xGarbett</b>, found a Nintendo-style secret in the hills of <b>Lummox County</b> in northern Leonida. Kotaku's Zack Zwiezen then went there and confirmed it works, and TweakTown, Nintendo Life and Beebom have all covered it since. Here's how it works, going by those reports:</p>
+  <ul>
+    <li><b>Where:</b> a group of ruined brick and stone buildings at the end of a winding road past <b>Mount Kalaga</b> (Beebom places it south of Moreau). Look for a purple tarp in the ruins.</li>
+    <li><b>The trigger:</b> there's a bong on the tarp. Use it, then climb the ruins and stand in the plume of smoke rising from one of the columns. An invisible block appears above you.</li>
+    <li><b>Hit the block:</b> jump into it from below. A short tune plays and two caps pop out. xGarbett says he couldn't break it by jumping at first and shot it instead, so try that if jumping doesn't work for you.</li>
+    <li><b>The reward:</b> a <b>red cap with a "J"</b> for Jason and a <b>green cap with an "L"</b> for Lucia, a clear nod to Mario and Luigi. One outlet's image caption lists different colours, so don't be surprised if yours look slightly different.</li>
+  </ul>
+  <p>Nobody has said yet whether the caps join your wardrobe for good or only last until you change outfits. We'll update this when that's tested.</p>
+  <h2>Arthur Morgan's hat</h2>
+  <p>Red Dead Redemption 2 fans should check the yard sales. Gfinity and Beebom report that a <b>yard sale in southern Port Gellhorn</b> during <b>Chapter 2</b> sells a "Genuine Cowboy Hat" for <b>$35</b>, a lookalike of Arthur Morgan's. It's near the couch at the sale. If you buy it early in Chapter 2 only Lucia can wear it, and Jason can too once you're able to switch between them later in the chapter. It's an optional purchase, not part of a mission.</p>
+  <h2>More to find</h2>
+  <p>For the other secrets found so far, see our round-ups of <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">launch-week easter eggs</a> and <a href="/news/gta-6-cool-dog-missing-persons-simulation-npc/">side secrets</a>, or browse the <a href="/activities/">activities</a> page.</p>""",
+        sources=[("TweakTown: GTA 6 has a hidden Mario and Luigi easter egg that lets Jason and Lucia dress like Nintendo's plumbers", "https://www.tweaktown.com/news/114843/gta-6-has-a-hidden-mario-and-luigi-easter-egg-that-lets-jason-and-lucia-dress-like-nintendos-iconic-plumbers/index.html"),
+                 ("Nintendo Life: GTA 6 hides an adorable Mario and Luigi easter egg in its massive world", "https://www.nintendolife.com/news/2026/11/random-gta-6-hides-an-adorable-mario-and-luigi-easter-egg-in-its-massive-world"),
+                 ("Gfinity: How to find Arthur Morgan's hat in GTA 6", "https://www.gfinityesports.com/article/gta-6-how-to-find-arthur-morgans-hat-red-dead-redemption-2-easter-egg"),
+                 ("Beebom: All GTA 6 easter eggs so far", "https://beebom.com/gta-6-easter-eggs/")],
+    ),
+    dict(
+        slug="gta-6-xbox-60fps-glitch-digital-foundry-tested",
+        date="2026-11-25",
+        title="Digital Foundry tested GTA 6's Xbox '60 fps glitch': it averages about 36 fps and speeds the game up",
+        desc="A Quick Resume trick lifts GTA VI's 30 fps cap on Xbox Series X|S. Digital Foundry measured it: 60 fps only when you're flying and looking at the sky, about 36 fps on average, and a game that runs too fast. Here's what that means.",
+        fig=art.xbox_glitch,
+        body="""
+  <p>Earlier this week we mentioned an Xbox glitch that removes GTA VI's 30 fps cap (see <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">our patch notes story</a>). Digital Foundry has now measured it, and the short version is that it isn't the hidden 60 fps mode some clips made it look like.</p>
+  <h2>What the glitch is</h2>
+  <p>Reddit user <b>Meowwie64</b> found that switching the Xbox's video output between 60Hz and 120Hz while GTA VI is held in <b>Quick Resume</b> (and launching another game in between) brings the game back without its frame rate cap. You need a 120Hz display for it. It works on Series X and Series S.</p>
+  <h2>What Digital Foundry measured</h2>
+  <ul>
+    <li><b>About 36 to 37 fps on average</b> over the first hour of play on Series X, according to GamesRadar's report on the test.</li>
+    <li><b>60 fps only in the lightest scenes</b>, such as flying a plane high up with mostly sky in view. Quiet highways sit around 40 to 45 fps (TweakTown).</li>
+    <li><b>Barely above 30</b> in busy parts of the city, and into the 30s or lower in gunfights near lots of people (Club386).</li>
+    <li><b>Series S</b> reaches about 50 fps in simple scenes but gains little where it matters.</li>
+    <li>Controls do feel more responsive: Club386 reports input delay of about 120 ms at 40 fps against 170 to 180 ms at the normal 30 fps cap.</li>
+  </ul>
+  <h2>The catches</h2>
+  <ul>
+    <li><b>The game runs faster.</b> Gameplay speed is tied to frame rate, so animations and driving speed up as the frame rate climbs (cutscenes stay normal). That makes driving noticeably harder.</li>
+    <li><b>It can backfire.</b> Digital Foundry found that switching back from 120Hz to 60Hz while the game is suspended locked it to <b>15 fps</b>.</li>
+    <li><b>It's an unintended glitch.</b> Neither Rockstar nor Microsoft has commented, and it could stop working after an update. It wasn't in the fixes listed for patch 01.002.002.</li>
+  </ul>
+  <p>Digital Foundry's Richard Leadbetter concluded that the game "should probably be capped at 30fps", and GamesRadar's headline puts it more bluntly: Rockstar isn't keeping anything amazing from you. The bottleneck is the console's processor in busy scenes, which is the same reason there's no 60 fps mode in the first place. For the full picture by console, see <a href="/frame-rate/">is GTA 6 30 or 60 fps?</a></p>""",
+        sources=[("GamesRadar+: GTA 6 60fps glitch isn't all it's cracked up to be, tech analysis shows", "https://www.gamesradar.com/games/grand-theft-auto/rockstar-isnt-keeping-anything-amazing-from-you-gta-6-60fps-glitch-isnt-all-its-cracked-up-to-be-tech-analysis-shows/"),
+                 ("TweakTown: GTA VI can hit 60 FPS on Xbox Series X thanks to a Quick Resume bug, with a few catches", "https://www.tweaktown.com/news/114842/gta-vi-can-hit-60-fps-on-xbox-series-x-thanks-to-a-quick-resume-bug-though-with-a-few-catches/index.html"),
+                 ("Club386: GTA VI at 60fps on console is possible with this trick, but it breaks animation speed", "https://www.club386.com/gta-vi-60fps-console-trick/"),
+                 ("Pure Xbox: GTA 6 glitch unlocks the FPS on Xbox Series X|S, but with multiple drawbacks", "https://www.purexbox.com/news/2026/11/gta-6-glitch-unlocks-the-fps-on-xbox-series-xs-but-with-multiple-drawbacks")],
+    ),
+    dict(
+        slug="gta-6-secret-vice-city-portal-easter-egg",
+        date="2026-11-24",
+        title="GTA 6's biggest secret so far: a power-line puzzle that opens a portal to 2002's Vice City",
+        desc="A YouTuber spent three days following power lines across Leonida and found a hidden portal back to a PS2-style Vice City. Here's what's known about the puzzle, how well it's confirmed, and what you get.",
+        fig=art.vice_portal,
+        body="""
+  <p>The <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">launch-week easter eggs</a> were mostly nods to films and TV. This one is different: a full hidden puzzle that ends in a trip back to the 2002 game <i>Grand Theft Auto: Vice City</i>. It was found by the YouTuber <b>Memeio</b>, who posted footage on X on November 23. Kotaku, Gizmodo, Nerdist, GGRecon and Mixed News covered it on November 24, and GGRecon says VGC and PCGamesN reported it too.</p>
+  <h2>How well is it confirmed?</h2>
+  <p>Every report we read is based on Memeio's own video, and none of the outlets says it has repeated the puzzle itself yet. Rockstar hasn't said anything about it either. The footage is detailed and widely covered, so we're treating it as real, but the exact steps may still change as more players try it. Memeio says it took him three days, and Gizmodo quotes him calling himself "the first person to ever crack this code".</p>
+  <h2>How the puzzle works (no full solution yet)</h2>
+  <ul>
+    <li>It runs across <b>12 substations</b> owned by <b>LPL</b>, Leonida's in-game power company. You follow the power lines between them, all over the map.</li>
+    <li>GGRecon says it starts at the <b>Badger radio tower in Key Lento</b>, and that you can't use fast travel or switch characters along the way. Nerdist adds that the substations have to be done in the right order.</li>
+    <li>The clues at the substations spell out a cheat code from the original Vice City. GGRecon and Gizmodo give the phrase; we've left it out here so you can work it out yourself.</li>
+    <li>When you finish, you get a text message telling you to go to the LPL power station at a set time. GGRecon says the portal opens <b>at night</b> in-game.</li>
+  </ul>
+  <p>Outlets don't agree on every detail. Nerdist names <b>Turtlehead Beach</b> as the last substation, while GGRecon describes the portal opening at a reactor at a power station. Nobody has published the exact order of the 12 substations from their own testing yet.</p>
+  <details class="spoiler">
+    <summary><b>What's on the other side</b> (tap to show)</summary>
+    <p>A glowing pink portal takes you to a deliberately retro, PS2-looking 1980s Vice City, with a visit to the <b>Malibu Club</b> and a meeting with <b>Kent Paul</b>, the British hanger-on from the 2002 game. GGRecon and Gizmodo say he's voiced by his original actor, Danny Dyer. When you come back to 2026, you keep <b>Tommy Vercetti's Hawaiian shirt and his motorbike</b>. Nerdist also says Kent Paul comes back with you. Mixed News points out that it's a themed scene, not the whole 2002 game running inside GTA VI.</p>
+  </details>
+  <h2>On our map</h2>
+  <p>We're not pinning the substations yet. Once outlets publish tested locations, we'll add them to the <a href="/map/">map</a>. Until then, more things to do are on the <a href="/activities/">activities</a> page.</p>""",
+        sources=[("Kotaku: GTA 6 contains a very hidden secret that teleports you back in time to Vice City on the PS2", "https://kotaku.com/gta-6-contains-a-very-hidden-secret-that-teleports-you-back-in-time-to-vice-city-on-the-ps2-2000759500"),
+                 ("Gizmodo: Grand Theft Auto VI player discovers portal back to 2002 game GTA Vice City", "https://gizmodo.com/grand-theft-auto-vi-player-discovers-portal-back-to-2002-game-gta-vice-city-2000844721"),
+                 ("GGRecon: GTA 6 has a secret portal back to the original Vice City", "https://www.ggrecon.com/articles/gta-6-vice-city-portal-easter-egg/"),
+                 ("Nerdist: A secret portal in GTA VI transports you back to the PS2 era", "https://nerdist.com/article/grand-theft-auto-vi-secret-portal-sends-you-to-vice-city-2002/"),
+                 ("Mixed News: GTA 6 player finds a hidden Vice City throwback after three days following power lines", "https://mixed-news.com/en/gta-6-hidden-vice-city-easter-egg-memeio-power-lines/")],
+    ),
+    dict(
+        slug="gta-6-panini-trading-cards-december",
+        date="2026-11-24",
+        title="GTA 6's in-game trading cards are becoming real Panini cards in December",
+        desc="Panini and Rockstar Games have announced an official GTA VI Sports Trading Card Collection based on the fictional athletes you collect in the game. Here's what's in a box, the rare parallels, and what isn't known yet.",
+        fig=art.trading_cards,
+        body="""
+  <p>The trading cards you find around Leonida are getting a physical version. On November 24, Panini America announced the <b>GTA VI: Sports Trading Card Collection</b>, made with Rockstar Games. It recreates the game's fictional sports stars and teams, and VGC calls it the first officially licensed Grand Theft Auto trading card set. The news came from Panini's blog and social accounts, which tag Rockstar. We haven't seen a separate Rockstar Newswire post.</p>
+  <h2>What's in a box</h2>
+  <ul>
+    <li><b>Four packs of four cards</b>, so 16 cards per box (Panini's product page, via RockstarINTEL and Heavy).</li>
+    <li>On average each box has <b>two Rookies, one Retro, one Illustrated and four Special Silvers</b>.</li>
+    <li>Colour parallels: <b>Silver, Pink, Teal and Light Blue</b>.</li>
+    <li>Numbered Legend parallels: <b>Bronze</b> (49 copies), <b>Silver</b> (25) and <b>Gold</b> (one of one).</li>
+    <li>Sample players named so far include Dartanyon Pearson, Carl Kasey and Maleek Rivers.</li>
+  </ul>
+  <h2>What isn't known yet</h2>
+  <p>Panini says the set comes out in <b>December 2026</b> but hasn't given an exact date, a price, pack odds or a list of shops. VGC notes that "there isn't currently a way to place a pre-order". Panini's product page lists it as coming soon. We'll update this post when pricing is out.</p>
+  <h2>The cards in the game</h2>
+  <p>In GTA VI, trading cards are one of the collectibles you pick up around the map, and rare ones can be sold at pawn shops. Dexerto reports 480 cards across 18 sets, covering sports stars, comic characters and nightclub dancers. The Panini set covers only the sports side. For other ways to make money from things you find, see our <a href="/fences/">fences guide</a>.</p>""",
+        sources=[("VGC: Official GTA 6 trading cards are coming next month", "https://www.videogameschronicle.com/news/official-gta-6-trading-cards-are-coming-next-month/"),
+                 ("RockstarINTEL: GTA VI official trading cards announced by Panini", "https://rockstarintel.com/gta-vi-official-trading-cards-announced-by-panini/"),
+                 ("Heavy: GTA 6 Panini trading cards, release date, parallels and details", "https://heavy.com/sports/cards/gta-6-panini-trading-cards/"),
+                 ("Dexerto: Rockstar is turning GTA 6's in-game trading cards into real collectibles", "https://www.dexerto.com/gta/rockstar-is-turning-gta-6s-in-game-trading-cards-into-real-collectibles-3431102/")],
+    ),
+    dict(
+        slug="gta-6-biggest-playstation-launch-39-million-players",
+        date="2026-11-24",
+        title="Sony: GTA 6 is the biggest launch in PlayStation history, with 39 million PS5 players",
+        desc="Sony says more than 39 million people played GTA VI on PS5 in its first four days, setting a new PlayStation record for players online at once. Here's what Sony announced, and how it fits with the 44.9 million copy estimate doing the rounds.",
+        fig=art.playstation_record,
+        body="""
+  <p>Sony has put its own numbers on GTA VI's launch. In a PlayStation Blog post on November 23, it called the game "the biggest launch in PlayStation history", ahead of every PlayStation launch across five console generations. The figures cover November 19 to 22 and were reported the next day by MP1st, Beebom and Inven Global.</p>
+  <h2>What Sony announced</h2>
+  <ul>
+    <li><b>More than 39 million unique players</b> on PS5 in those four days.</li>
+    <li><b>683 million hours</b> played, which works out at about <b>17.4 hours per player</b>.</li>
+    <li>The <b>most players online at the same time</b> in PlayStation history, beating every multiplayer, free-to-play and single-player game. Sony didn't give the peak number.</li>
+    <li>The biggest single day for newly connected PS5 consoles since the PS5 came out, leaving aside the end-of-year holidays.</li>
+    <li>GTA VI was the <b>first game played on 70%</b> of newly connected PS5s.</li>
+  </ul>
+  <h2>Players are not copies sold</h2>
+  <p>39 million is a count of PS5 accounts that played the game, not of copies sold. One copy can be played on more than one account, and the figure leaves out Xbox completely. Sony and Take-Two haven't given an updated sales total since Take-Two's <a href="/news/gta-6-official-sales-3-79-billion-day-one/">$3.79 billion day-one figure</a> and 32.5 million copies sold before release.</p>
+  <h2>The 44.9 million estimate</h2>
+  <p>You may also have seen a figure of 44.9 million copies. That comes from Rhys Elliott at the analytics firm Alinea Analytics, as reported by ComicBook and MP1st. Alinea estimates about 33.7 million copies on PS5 and 11.2 million on Xbox Series X|S over the launch weekend. It is an outside estimate built from market data, and neither Rockstar nor Take-Two has confirmed it. Treat it the way we treated <a href="/news/gta-6-sales-19-million-estimate/">Sensor Tower's pre-launch estimate</a>: a useful guide, not an official count.</p>
+  <p class="note"><b>Update, November 28:</b> Alinea's Rhys Elliott has raised the estimate to about <b>53 million copies</b> and $4.7 billion after the first week, with roughly 40 million on PS5 and 13 million on Xbox Series X|S. He also estimates that 7 million players have already passed 50 hours. GamesRadar+ notes that 53 million would put GTA VI around 13th on the list of best-selling games ever. This is still an outside estimate that Rockstar and Take-Two haven't confirmed.</p>
+  <h2>What it means for you</h2>
+  <p>Nothing changes in the game itself. Since GTA VI is single-player, a busy launch doesn't slow your game down, though PlayStation Network did have outages on launch night (see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>). If you're one of those 17-hour players looking for what to do next, try our <a href="/walkthrough/">mission walkthrough</a> or the <a href="/activities/">activities list</a>.</p>""",
+        sources=[("PlayStation Blog: Thank you for making Grand Theft Auto VI the biggest launch in PlayStation history", "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/"),
+                 ("MP1st: GTA 6 becomes the biggest launch in PlayStation history with over 39 million unique players", "https://mp1st.com/news/gta-6-biggest-launch-playstation-history"),
+                 ("Beebom: GTA 6 becomes biggest launch in PlayStation history with over 39 million players", "https://beebom.com/gta-6-becomes-biggest-launch-in-playstation-history/"),
+                 ("Inven Global: GTA 6 marks biggest launch in PlayStation history", "https://www.invenglobal.com/articles/29001/gta-6-marks-biggest-launch-in-playstation-history"),
+                 ("ComicBook: New GTA 6 sales report claims the game is rapidly nearing 50 million copies sold", "https://comicbook.com/gaming/news/gta-6-grand-theft-auto-vi-sales-45-million/"),
+                 ("GamesRadar+: GTA 6 sales estimates place it above Cyberpunk 2077, The Sims and the first Pokemon games as the 13th best-selling game ever", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-sales-estimates-place-it-above-cyberpunk-2077-the-sims-and-the-first-pokemon-games-as-the-13th-best-selling-game-ever/")],
+    ),
+    dict(
+        slug="gta-6-patch-01-002-002-notes-seven-fixes",
+        date="2026-11-23",
+        title="GTA 6 patch 01.002.002 notes are out: seven fixes, nothing for performance",
+        desc="Rockstar has published notes for GTA VI's first post-launch update. It fixes crashes, autosave, stuck wanted levels, story phone calls and more, but nothing about frame rate or the Xbox Quick Resume glitch.",
+        fig=art.patch_notes,
+        body="""
+  <p>Earlier today we reported that GTA VI's first post-launch update, 01.002.002 on PS5 and 1.0.2.2 on Xbox Series X|S, was rolling out <a href="/news/gta-6-first-patch-01-002-002/">without any patch notes</a>. That's changed. Rockstar has now added the notes to its GTA VI launch updates page on Rockstar Support, dated November 23, and KeenGamer, Apple Scoop and others have reported the same seven fixes in the same order.</p>
+  <h2>What the update fixes</h2>
+  <p>All seven are listed under "General / Miscellaneous". In our words:</p>
+  <ul>
+    <li><b>Crashes:</b> several issues that could crash the game are fixed. Rockstar doesn't name any error codes.</li>
+    <li><b>Weather:</b> fixed weather that stayed the same for long stretches.</li>
+    <li><b>Autosave:</b> fixed the game not autosaving properly.</li>
+    <li><b>Phone calls:</b> fixed calls that didn't come through, including ones that move the story on or unlock missions. If your progress stalled waiting for a call, this is the fix to look for.</li>
+    <li><b>Wanted level:</b> fixed a bug where you couldn't lose the police.</li>
+    <li><b>Gym:</b> fixed the deadlift bar not being usable.</li>
+    <li><b>Loot bags:</b> fixed partners not handing over bags, which stopped you selling them to a fence.</li>
+  </ul>
+  <h2>What it doesn't mention</h2>
+  <p>As KeenGamer and Game News Plus point out, the notes list no performance, frame rate or graphics changes. That means nothing about:</p>
+  <ul>
+    <li><b>The Xbox Quick Resume trick.</b> Pure Xbox and GamesRadar reported a glitch where switching display modes and using Quick Resume lifts the 30 fps cap on Xbox Series X|S, but ties game speed to frame rate, so everything runs too fast. Rockstar hasn't said whether it will stay or go. <i>Update, November 25:</i> Digital Foundry has tested it; see <a href="/news/gta-6-xbox-60fps-glitch-digital-foundry-tested/">what it found</a>.</li>
+    <li><b>PS5 error CE-108255-1.</b> Some players say the update stops it, but the notes don't name it, so treat that as unconfirmed.</li>
+    <li><b>The accidental first-person camera</b> and the heavy screen vignetting some players have complained about. Neither is in the notes.</li>
+  </ul>
+  <p>There's still no 60 fps mode on any console, and Rockstar hasn't announced one. See <a href="/frame-rate/">our frame rate page</a> for the tested numbers.</p>
+  <h2>How to get it</h2>
+  <p>The PS5 version goes out in waves, so it can take up to about six hours to reach everyone. If you don't have it yet, highlight GTA VI on the home screen, press Options and choose Check for Update. Reported sizes are about 604 MB on PS5 and 1.6 GB on Xbox. For the rest of the launch problems players are reporting, see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>.</p>""",
+        sources=[("Rockstar Support: Grand Theft Auto VI launch updates (PS5, Xbox Series X|S)", "https://support.rockstargames.com/articles/sN5pEdFYZdlvijKXd6xpJ/grand-theft-auto-vi-launch-updates-ps5-xbox-series-x-or-s"),
+                 ("KeenGamer: GTA 6 gets new update on PS5 and Xbox, full patch notes revealed", "https://www.keengamer.com/articles/news/gta-6-gets-new-update-on-ps5-and-xbox-full-patch-notes-revealed/"),
+                 ("Apple Scoop: GTA 6 update 01.002.002 patch notes, size and known issues", "https://applescoop.org/story/gta-6-update-01-002-002-patch-notes-download-size-ps5-xbox"),
+                 ("Game News Plus: Rockstar confirms 7 fixes in GTA 6 update 01.002.002", "https://gamenewsplus.net/news/gta-6-update-01-002-002-patch-notes-rockstar-confirms-7-fixes-40140/"),
+                 ("Make Tech Easier: GTA 6 Xbox Quick Resume glitch hits 60fps, but runs gameplay at double speed", "https://maketecheasier.com/gta-6-quick-resume-framerate-glitch/"),
+                 ("Pure Xbox: GTA 6 glitch unlocks the FPS on Xbox Series X|S, but with drawbacks", "https://www.purexbox.com/news/2026/11/gta-6-glitch-unlocks-the-fps-on-xbox-series-xs-but-with-multiple-drawbacks")],
+    ),
+    dict(
+        slug="gta-6-cool-dog-missing-persons-simulation-npc",
+        date="2026-11-23",
+        title="GTA 6 side secrets: a jet ski dog, a missing persons case and an NPC who thinks he's in a game",
+        desc="Three GTA VI side secrets picked up by outlets this weekend: how to meet Cool Dog at sea, where to start the Missing Persons case in Port Gellhorn, and the Belville garage covered in simulation theories.",
+        fig=art.side_secrets,
+        body="""
+  <p>Launch week's <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">first batch of easter eggs</a> was mostly references to films and TV. The newest finds are things you can actually go and do. GamesRadar has tested the first two, and the third comes from a player post that VICE picked up.</p>
+  <h2>Cool Dog, the jet ski rescue</h2>
+  <p>Get stranded far out at sea, away from the coast and other boats, and you may be picked up by a dog on a jet ski. GamesRadar says the game calls him <b>Cool Dog</b>, and its writer found him by drifting out from <b>Leonida Bay</b>. Players report meeting him in other places too.</p>
+  <ul>
+    <li>Wait. It can take several minutes. You'll hear barking, then music as he arrives.</li>
+    <li>Press <b>Triangle / Y</b> to climb on. Holding <b>L2 / LT</b> lets you try to talk to him, though he doesn't say much.</li>
+    <li>He takes you to a beach where other dogs live. You can play fetch with a mini football and throw discs.</li>
+    <li>When you're done, Cool Dog knocks some branches off a boat and uncovers a wallet with over $1,200 in it, according to GamesRadar.</li>
+  </ul>
+  <h2>Missing Persons in Port Gellhorn</h2>
+  <p>This is a proper side case with three bodies to find, and GamesRadar has played it through. It opens in Chapter 2. Start at the reception of the <b>Starlet Motel</b> in Port Gellhorn, where there are three missing person posters, then look for a dome-shaped warehouse north-east of Moses' garage. Don't use the shutter. Crawl in through a gap on the north-east side, go through the trophy room, and check the three lockers for photos of the missing people.</p>
+  <ul>
+    <li><b>Susanne Keeble:</b> in the trunk of a pink car with the plate PRTTYGRL, in the junkyard behind the Port Gellhorn Pay 'N' Spray.</li>
+    <li><b>Patrick Murray:</b> under the floor of an abandoned trailer in the trailer park north of the water tower in north-east Port Gellhorn. A dog barks at the door.</li>
+    <li><b>Donald Miller:</b> in a sunken car in a lake by a tree stump, on the border of Port Gellhorn and Wild Hog Point, south-west of town.</li>
+  </ul>
+  <p>Report each one to the Kelly County Missing Persons Tip Line. GamesRadar's call back only came later, at night, after it had played on to the Chapter 2 mission Breakfast Run.</p>
+  <details class="spoiler">
+    <summary><b>How the case ends</b> (tap to show)</summary>
+    <p>The tip line caller asks you to meet at the warehouse. GamesRadar says the killer is <b>Alvan West</b>. If you go alone, he drugs and kidnaps you, and your partner has to rescue you from an old mine near the Kalaga Reservoir in Mount Kalaga National Park, then chase him down. If Jason and Lucia go together, you face him together instead. There's no cash reward, but it improves Jason and Lucia's relationship.</p>
+  </details>
+  <h2>The man who thinks he's in a simulation</h2>
+  <p>VICE reports a house in <b>Belville</b>, a small town near Lake Leonida, whose garage is covered in a corkboard with red string and notes such as "IT'S A SIMULATION" and "WHO IS L, WHO IS J?". Brochures suggest the owner wants to buy a boat and sail past Leonida's edge, which VICE links to Cool Dog. This comes from a player's post on X that VICE relayed. VICE gives no exact address, and we haven't checked it ourselves.</p>
+  <h2>On our map</h2>
+  <p>We're not adding pins for these yet. The Missing Persons spots are the best documented, and we'll add them once a second source confirms the exact positions. For the full list of things to do, see <a href="/activities/">activities</a>.</p>""",
+        sources=[("GamesRadar+: How to find Jet Ski Dog in GTA 6 and get rescued at sea", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-jet-ski-dog/"),
+                 ("GamesRadar+: All GTA 6 missing persons locations and how to find the serial killer", "https://www.gamesradar.com/games/grand-theft-auto/all-gta-6-missing-persons-locations-and-how-to-find-the-serial-killer/"),
+                 ("VICE: There's an NPC in GTA 6 who knows he's in a video game", "https://www.vice.com/en/article/theres-an-npc-in-gta-6-who-knows-hes-in-a-video-game-heres-how-to-find-his-house/")],
+    ),
+    dict(
+        slug="gta-6-first-patch-01-002-002",
+        date="2026-11-23",
+        title="GTA 6's first post-launch patch is out: update 01.002.002, with no patch notes yet",
+        desc="Rockstar has started rolling out GTA VI's first update since launch on PS5 and Xbox Series X|S. Here's the version, the download size, how the staged rollout works and what we know about what it fixes (not much).",
+        fig=art.first_patch,
+        body="""
+  <p class="note"><b>Update, November 23:</b> Rockstar has now published patch notes for this update. It lists seven fixes and no performance changes. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">Read the full list.</a></p>
+  <p>Four days after launch, GTA VI has its first post-launch update. It started rolling out on November 23 on PS5 and Xbox Series X|S, according to VICE, Geo News and LibertyCity. It's the third update overall, after the two pre-launch patches on November 13 and 16.</p>
+  <h2>The basics</h2>
+  <ul>
+    <li><b>Version:</b> 01.002.002 on PS5. VICE and LibertyCity report the Xbox version as 1.0.2.2.</li>
+    <li><b>Download size:</b> about 604 MB on PS5 and about 1.6 GB on Xbox Series X|S, as reported by VICE and LibertyCity. Geo notes it isn't clear whether the sizes are the same in every region.</li>
+    <li><b>Platforms:</b> PS5 and Xbox Series X|S. There's still no PC version, so there's no PC patch either.</li>
+  </ul>
+  <h2>Why you might not have it yet</h2>
+  <p>On PS5 the update is going out in waves, not to everyone at once. All three outlets describe the same schedule: about a third of players first, about two thirds roughly three hours later, and everyone about six hours after the start. The outlets think this is to spread the load on PlayStation and Xbox servers, but Rockstar hasn't said why. Reports disagree on whether Xbox is also staged: VICE says only PS5 is, while Geo says both are.</p>
+  <p>If it hasn't arrived on PS5, LibertyCity suggests checking by hand: highlight GTA VI on the home screen, press Options and choose Check for Update.</p>
+  <h2>What does it fix?</h2>
+  <p>We don't know, and neither does anyone outside Rockstar. As VICE put it, Rockstar "hasn't released patch notes" for this update, and it published none for the two pre-launch patches either. Rockstar Support (support.rockstargames.com) is where official notes would appear.</p>
+  <p>Geo lists launch-week problems the patch might target, including an Xbox Quick Resume glitch that reportedly unlocks the frame rate but speeds up the whole game, PS5 crash error CE-108255-1, HDR calibration problems and the accidental first-person camera. That's Geo's guess, not a confirmed changelog, so don't assume any of these are fixed until Rockstar says so or players test it. For the bugs reported so far and what to do about them, see <a href="/news/gta-6-launch-bugs-psn-outages/">our launch bugs report</a>.</p>
+  <h2>Should you install it?</h2>
+  <p>Yes. GTA VI is single-player and you'll need the latest version for future updates anyway. If you're mid-mission, finish it or reach a save point first, since the game has to close to apply the update. Rockstar has since published the notes: <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">here's what it fixes</a>.</p>""",
+        sources=[("VICE: GTA 6 patch update 01.002.002 is live on PS5 and Xbox Series X", "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/"),
+                 ("Geo News: GTA 6 update patch size revealed, 603 MB on PS5, 1.60 GB on Xbox", "https://www.geo.tv/latest/692298-gta-6-update-patch-size-revealed-603-mb-on-ps5-160-gb-on-xbox"),
+                 ("LibertyCity: Rockstar releases first post-launch GTA 6 patch", "https://libertycity.net/news/gta-6/10649-rockstar-releases-first-post-launch-gta.html")],
+    ),
+    dict(
+        slug="gta-6-easter-eggs-fast-furious-dexter",
+        date="2026-11-23",
+        title="GTA 6 easter eggs found so far: a Fast & Furious car, Dexter's flat and a literal egg",
+        desc="Players have spent launch week hunting Leonida for secrets. Here are the GTA VI easter eggs outlets have picked up, what's confirmed, and a first-person camera trick Rockstar didn't add on purpose.",
+        fig=art.easter_eggs,
+        body="""
+  <p>It took players less than a day to start finding Rockstar's in-jokes in Leonida. Most of what's circulating comes from clips on X and Reddit, so we've only listed the finds that outlets have reported, and we say how solid each one is. Rockstar hasn't commented on any of them.</p>
+  <h2>Brian O'Conner's 1995 Eclipse</h2>
+  <p>The best-supported find so far. GamesRadar and BGR both report that a green 1995 Mitsubishi Eclipse in the style of Paul Walker's car from the first Fast and Furious film sits in a garage on <b>Vespucci Island</b>. BGR, citing Vice, places it in a garage attached to a white house near the middle of the island. GamesRadar says you have to break into the garage to take it, and that it's in every version of the game. The in-game badge isn't Mitsubishi, since GTA uses its own brand names, and we haven't seen a reliable report of what the game calls it.</p>
+  <h2>A Dexter-style apartment</h2>
+  <p>GamesRadar reports an apartment complex on <b>Washington Island</b> in Vice Beach that recreates Dexter Morgan's home from the TV series, down to a boat called "Slice of Life" and tools on the roof. This one comes from a GamesRadar video and player posts, so treat the exact details as reported rather than tested by us.</p>
+  <h2>The egg on the tower</h2>
+  <p>IBTimes UK picked up a player video from November 18 showing a bird's nest full of coloured eggs at the top of a communications tower, reached after a climb of about seven minutes. Throw an egg and the game cuts to a short scene of it hitting a car windscreen below. The tower's location hasn't been pinned down, and IBTimes is clear that this is still a player report, not a documented feature.</p>
+  <h2>Two nods to George R.R. Martin</h2>
+  <p>GamesRadar reports two Game of Thrones jokes that players posted on X. A book on Jason's bedside table, "The Battle for Zantoroth" by "T.D.D. Ewell", has a cover in the style of Martin's novels. And a news ticker reports a man who died after drinking gas to "become a dragon", which GamesRadar links to a death in the Dunk and Egg stories. Both come from player posts that GamesRadar relayed, so they're reported, not tested by us.</p>
+  <h2>Comics and films</h2>
+  <ul>
+    <li><b>RX Men:</b> Reddit players spotted a comic called RX Men, with a Magneto-like villain called Dr. Placebo. GamesRadar reported it.</li>
+    <li><b>Hulk:</b> GamesRadar says a side quest about strawberries ends with a character turning into something very Hulk-like.</li>
+  </ul>
+  <details class="spoiler">
+    <summary><b>Film nods in later story missions</b> (tap to show)</summary>
+    <p>GamesRadar's writer compares some later missions to the heist and siege set pieces of Heat and Die Hard. That's the writer's own comparison, not something Rockstar has said.</p>
+  </details>
+  <h2>A first-person camera, by accident</h2>
+  <p>GTA VI has no first-person mode. GamesRadar reports a glitch that gives you one anyway: press the camera view button repeatedly while putting the phone away. It works better than you'd expect, with some visual glitches, but the only way back to the normal camera is to reload a save. Save first if you want to try it. GamesRadar also points out that GTA V only got its first-person mode in a later re-release, so a proper one could come later. Rockstar hasn't announced one.</p>
+  <h2>Found one?</h2>
+  <p>We'll add easter eggs to <a href="/map/">our map</a> once their locations are confirmed by more than one source. For now, the Eclipse garage is the only find with a location backed up by more than one outlet.</p>""",
+        sources=[("GamesRadar+: GTA 6 is a movie and TV goldmine, from Fast and Furious cars to Dexter's apartment", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-is-a-movie-and-tv-goldmine-as-players-discover-everything-from-fast-and-furious-cars-to-dexters-apartment/"),
+                 ("BGR: GTA 6 has a hidden Fast and Furious easter egg", "https://www.bgr.com/2322463/gta-6-hidden-fast-and-furious-paul-walker-car/"),
+                 ("IBTimes UK: GTA 6 easter egg is literally an egg", "https://www.ibtimes.co.uk/gta-6-player-discovers-literal-easter-egg-leonida-1833342"),
+                 ("GamesRadar+: GTA 6 features two shoutouts to George R.R. Martin", "https://www.gamesradar.com/entertainment/fantasy-shows/we-got-gta-6-before-winds-of-winter-and-now-the-game-features-two-shoutouts-to-game-of-thrones-creator-george-r-r-martin/"),
+                 ("GamesRadar+: GTA 6 glitch adds the first-person mode that Rockstar skipped","https://www.gamesradar.com/games/grand-theft-auto/gta-6-glitch-adds-the-first-person-mode-that-rockstar-skipped/")],
+    ),
+    dict(
+        slug="gta-6-rockstar-developer-notes-play-without-guides",
+        date="2026-11-23",
+        title="Rockstar's GTA 6 developer notes: 1,000 NPC routines, months on one door, and a plea to skip the guides",
+        desc="Rockstar gave press a packet of notes from more than 20 GTA VI developers. The highlights, including its design chief asking players to stop chasing completion percentages.",
+        fig=art.dev_notes,
+        body="""
+  <p>Alongside review copies, Rockstar sent press a set of notes in which named developers explain how GTA VI was made. InvenGlobal published a long summary on November 18, and Kotaku wrote about one part of it on November 21. These are Rockstar's own words, so this is about as official as behind-the-scenes detail gets.</p>
+  <h2>"Stop thinking in tasks"</h2>
+  <p>According to Kotaku, Stephen Donkin, Rockstar's vice president of design, says the team hopes players drop the habit of working through tasks, completion percentages and online guides, and instead "let the game unfold in front of them". Senior design director Ghyan Koehne talks about wanting players to feel a sense of wonder.</p>
+  <p>Yes, we see the irony of reporting that on a guide site. We agree with the spirit of it: on a first playthrough, wander off and don't worry about 100%. Our <a href="/walkthrough/">walkthrough</a> and <a href="/collectibles/">collectibles</a> pages will be here when you're stuck or want to clean up later.</p>
+  <h2>Other highlights</h2>
+  <ul>
+    <li><b>Background life:</b> the team made about 1,000 sets of activity animations for the routines of people in the world.</li>
+    <li><b>Small things take time:</b> gameplay animation director Mike Jones says the moment Lucia pushes a door open with her hip took months to get right.</li>
+    <li><b>Location scouting:</b> John Macpherson, lead director of world and population design, describes the team scouting real Florida locations.</li>
+    <li><b>The look of the UI:</b> the classic Pricedown font stays, and the phone is now held in the character's hand rather than floating on screen.</li>
+    <li><b>Music:</b> Rockstar's music team describes 1980s Miami influences for the regions of Leonida and a collaboration with French electronic duo Justice.</li>
+    <li><b>Cars:</b> physics technology director Ben Lyons says team members raced in the 24 Hours of Nürburgring after GTA V and took a class win.</li>
+    <li><b>Sound:</b> the audio team recorded in an anechoic chamber to get speakers and other sounds right.</li>
+  </ul>
+  <p>The notes also include a foreword from Rockstar founder Sam Houser. Neither summary says anything about a PC version or an online mode, which Rockstar still hasn't announced.</p>""",
+        sources=[("Kotaku: Rockstar dev tells GTA 6 players to stop thinking in tasks, completion percentages and online guides", "https://kotaku.com/rockstar-dev-tells-gta-6-players-to-stop-thinking-in-tasks-completion-percentages-online-guides-2000759151"),
+                 ("InvenGlobal: GTA 6 developers share insights on the creation of Vice City", "https://www.invenglobal.com/articles/28826/gta-6-developers-share-insights-on-the-creation-of-vice-city")],
+    ),
+    dict(
+        slug="gta-6-official-sales-3-79-billion-day-one",
+        date="2026-11-22",
+        title="GTA 6 made $3.79 billion on day one, Take-Two confirms",
+        desc="Take-Two's first official GTA VI numbers: $3.79 billion in day-one retail sales and 32.5 million copies sold before release, both records. Here's what the figures do and don't include.",
+        fig=art.sales_official,
+        body="""
+  <p class="note"><b>Update, November 26:</b> NielsenIQ says boxed GTA VI copies made £32 million in the UK in launch week, as total UK games retail spending doubled. <a href="/news/gta-6-uk-launch-week-retail-142-million/">See the UK figures.</a></p>
+  <p class="note"><b>Update, November 24:</b> Sony says more than 39 million people played GTA VI on PS5 in its first four days, the biggest launch in PlayStation history. <a href="/news/gta-6-biggest-playstation-launch-39-million-players/">Read what Sony announced.</a></p>
+  <p>We now have official numbers. On November 20, Take-Two said GTA VI brought in <b>$3.79 billion in retail sales</b> on its first day and sold <b>32.5 million copies before release</b>. The company calls the first figure a record for any entertainment launch, films included.</p>
+  <h2>What Take-Two announced</h2>
+  <ul>
+    <li><b>$3.79 billion</b> in day-one retail sales worldwide, based on company estimates up to the end of November 19.</li>
+    <li><b>32.5 million copies</b> sold before launch, which Take-Two says is a record on any platform.</li>
+    <li>The game is on sale through the PlayStation Store, the Microsoft Store, the Rockstar Games Store and shops. The announcement says nothing about a PC version or an online mode.</li>
+  </ul>
+  <h2>What the numbers mean</h2>
+  <p>The $3.79 billion is money spent by players at retail. It isn't Take-Two's revenue, since stores and platform holders take their cut. It's also the company's own estimate, not an audited result. The Hollywood Reporter, as cited by Make Tech Easier, says the total includes pre-orders. Take-Two didn't say how much came from digital and how much from boxed copies.</p>
+  <h2>How it compares</h2>
+  <p>In 2013, Take-Two said GTA V sold more than $800 million on its first day. That makes the GTA VI figure about five times bigger. Earlier this week we reported <a href="/news/gta-6-sales-19-million-estimate/">Sensor Tower's estimate</a> of about 19 million copies by launch morning. Take-Two's 32.5 million is well above that. That estimate was made before launch day ended and was built from market data rather than Take-Two's own sales records, so the two numbers measure different things.</p>
+  <h2>What's next</h2>
+  <p>Take-Two hasn't said when it will share an updated total, and Rockstar still hasn't announced a PC version, an online mode or the first post-launch patch. We'll report those when they're official. For what's in the game right now, see our <a href="/walkthrough/">mission walkthrough</a>.</p>""",
+        sources=[("Take-Two Interactive: Grand Theft Auto VI shatters entertainment box office records with $3.79 billion in day one retail sales", "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"),
+                 ("ABC News: GTA 6 breaks entertainment box office records with $3.79B in 1st-day sales", "https://abcnews.com/GMA/Culture/grand-theft-auto-vi-breaks-1st-day-sales-record/story?id=138328412"),
+                 ("Make Tech Easier: GTA 6 made $3.79 billion on its first day", "https://maketecheasier.com/gta-6-day-one-sales-record/")],
+    ),
+    dict(
         slug="gta-6-launch-bugs-psn-outages",
         date="2026-11-21",
         title="GTA 6 launch bugs: what players are hitting, and why there's no patch yet",
@@ -33,7 +619,8 @@ POSTS = [
   <h2>PlayStation Network went down twice</h2>
   <p>This part is confirmed. Sony's PSN status page acknowledged a sign-in outage on November 18, as the game unlocked around the world, and a shorter disruption of about 24 minutes to gaming and social services from around 9:34pm Pacific on November 19. Sony didn't give a cause, and it never said GTA VI was to blame. GTA VI is single-player, so the outage mostly mattered for downloads, store access and signing in.</p>
   <h2>Is there a patch?</h2>
-  <p>Not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
+  <p class="note"><b>Update, November 23:</b> the first post-launch update, 01.002.002, is now rolling out on PS5 and Xbox Series X|S, and Rockstar has published its notes: seven fixes, including crashes, autosave, story phone calls and wanted levels you couldn't lose. <a href="/news/gta-6-patch-01-002-002-notes-seven-fixes/">See the full list.</a></p>
+  <p>As of November 21, not yet. GTA VI got two updates before launch, version 01.002.000 on November 13 and 01.002.001 on November 16, and Rockstar published no patch notes for either. Up to November 19, outlets said Rockstar had not commented on any of the launch bugs, and we haven't found a fix announcement since. We'll report the first post-launch update and what it fixes as soon as it's out.</p>
   <h2>What to do if you hit one</h2>
   <ul>
     <li><b>Stuck in a mission:</b> retry from the last checkpoint first. If that doesn't clear it, close the game fully and reopen it.</li>
@@ -55,6 +642,7 @@ POSTS = [
         desc="Market data firm Sensor Tower puts GTA VI at about 19.1 million copies and $1.84 billion by the morning of November 19. Take-Two has not shared figures.",
         fig=art.sales_estimate,
         body="""
+  <p class="note"><b>Update, November 22:</b> Take-Two has now released official figures: $3.79 billion in day-one retail sales and 32.5 million copies sold before release. <a href="/news/gta-6-official-sales-3-79-billion-day-one/">Read our report on the official numbers.</a></p>
   <p>The first sales number for GTA VI is out, and it is not from Rockstar. Market data firm Sensor Tower estimates the game had sold about <b>19.1 million copies</b>, worth about <b>$1.84 billion</b>, by the morning of launch day. Reuters reported the figure first.</p>
   <h2>What the estimate says</h2>
   <ul>
@@ -67,7 +655,7 @@ POSTS = [
   <h2>How it compares with GTA V</h2>
   <p>GTA V sold 11.21 million copies and made $815.7 million in its first 24 hours in September 2013, a Guinness world record at the time. The GTA VI estimate is already well above that, but the two numbers are not measured the same way: GTA V's covers a full day of sales, while GTA VI's is mostly pre-orders counted before most of the world could play.</p>
   <h2>Why it matters</h2>
-  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. We will update this post when Take-Two shares its own numbers. Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
+  <p>If the estimate is close, GTA VI already had the biggest launch on record before most countries had even reached their unlock time. Take-Two has since shared its own numbers (<a href="/news/gta-6-official-sales-3-79-billion-day-one/">see the update above</a>). Still deciding on a console? See <a href="/platforms/">which consoles run GTA VI</a>.</p>""",
         sources=[("Men's Journal: GTA 6 sold an estimated 19 million copies by launch day", "https://www.mensjournal.com/news/gta-6-sales-19-million-copies-gta-v-record"),
                  ("80 Level: Report says GTA 6 generated nearly $2B in sales by launch day", "https://80.lv/articles/report-gta-6-generated-nearly-usd2b-in-sales-by-launch-day")],
     ),
