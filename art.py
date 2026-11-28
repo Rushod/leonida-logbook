@@ -550,3 +550,23 @@ def stat_missions():
             b += t(cx, 266 + j * 26, line, 16, col, font=L)
     b += t(400, 366, "SIX MISSIONS, PERMANENT BOOSTS, NO MAP MARKERS", 19, MUTED, font=L)
     return fig(b, "GTA VI's six hidden stat boost missions by stat: two raise max health (the alien abduction and Circles of Hell), four raise stamina (the abduction, The Final Flush, crop dusting and the mushroom obstacle course) and two raise Focus (the abduction and the iguana shooting bet)")
+
+
+def deep_roots():
+    b = t(400, 62, "DEEP ROOTS MEMORIAL SANCTUARY", 34)
+    b += panel(60, 92, 440, 250)
+    # a wall of small plaques; a few are lit to show the names developers have shared
+    lit = {(0, 1), (1, 3), (2, 0), (3, 2)}
+    for r in range(4):
+        for c in range(5):
+            x, y = 88 + c * 82, 112 + r * 56
+            on = (r, c) in lit
+            fill = SUN if on else "#ffffff"
+            op = ".85" if on else ".14"
+            b += f'<rect x="{x}" y="{y}" width="66" height="40" rx="6" fill="{fill}" fill-opacity="{op}"/>'
+    b += panel(530, 92, 210, 250)
+    b += f'<text x="635" y="190" font-family="{D}" font-size="72" fill="url(#aNum)" text-anchor="middle">4</text>'
+    for j, line in enumerate(["NAMES SHARED", "BY DEVELOPERS", "SO FAR"]):
+        b += t(635, 232 + j * 26, line, 18, PINK if j < 2 else MUTED, font=L)
+    b += t(400, 372, "FREE ROAM, NORTH OF HAMLET, MANY MORE NAMES ON THE WALL", 18, MUTED, font=L)
+    return fig(b, "Illustration of the memorial wall at GTA VI's Deep Roots Memorial Sanctuary north of Hamlet: a wall of many plaques, four of which have been identified publicly by Rockstar developers as honouring their own family members")

@@ -8,6 +8,29 @@ AUTHOR_BIO = "Adrian R writes the news for Leonida Logbook and has been playing 
 
 POSTS = [
     dict(
+        slug="gta-6-deep-roots-memorial-developer-tributes",
+        date="2026-11-28",
+        title="GTA 6's Deep Roots memorial: Rockstar developers left the names of lost family members in Leonida",
+        desc="North of Hamlet there's a quiet memorial wall called the Deep Roots Memorial Sanctuary. Three Rockstar developers have now said that plaques on it honour their own family. Where it is, and what we know.",
+        fig=art.deep_roots,
+        body="""
+  <p>Not every secret in Leonida is a joke or a film reference. In free roam, just north of Hamlet in Vice-Dale, there's a place called the <b>Deep Roots Memorial Sanctuary</b>: a wall covered in names on small plaques. This week, Rockstar developers started telling the stories behind some of them.</p>
+  <h2>What the developers have shared</h2>
+  <ul>
+    <li><b>Bradley Stone</b> posted a clip on X on November 27 showing Jason at a plaque for his daughter, who he and his wife lost in 2023. He wrote that he hopes "everyone finds this place in Leonida."</li>
+    <li><b>Matt Green</b>, credited in the game's testing team, shared on Instagram that one plaque, dated March 2026, honours his mother.</li>
+    <li><b>Terrance Radcliff</b>, a production designer, posted on X about plaques for his father and his daughter.</li>
+  </ul>
+  <p>PlayStation LifeStyle reported Stone's post on November 27. Rockstar Report rounded up all three a day earlier.</p>
+  <h2>Is every name a developer's relative?</h2>
+  <p>We don't know. The wall holds many more names than the handful that have been identified, and Rockstar hasn't said anything about the sanctuary. Rockstar Report points out there's no evidence that every plaque belongs to a staff member's family. So far, only the names the developers themselves have pointed to are confirmed.</p>
+  <h2>How to find it</h2>
+  <p>No outlet has published exact directions yet, only that it's a short way north of Hamlet and open in free roam, with no mission or time of day needed. We haven't added it to our <a href="/map/">map</a> as a verified location until there's a confirmed position. If you visit, it's worth remembering that these are real people.</p>
+  <p>For lighter finds, see our <a href="/news/gta-6-easter-eggs-fast-furious-dexter/">easter eggs roundup</a> and the <a href="/activities/">activities list</a>.</p>""",
+        sources=[("PlayStation LifeStyle: GTA 6: Rockstar Employee Shares Story Behind Game's Hidden Heartbreaking Tribute", "https://www.playstationlifestyle.net/2026/11/27/gta-6-hidden-heartbreaking-tribute-rockstar-developer"),
+                 ("Rockstar Report: GTA 6's Deep Roots Memorial Honors Developers' Families", "https://rockstarreport.com/news/gta-6-memorial-rockstar-developers-families")],
+    ),
+    dict(
         slug="gta-6-hidden-stat-boost-missions",
         date="2026-11-28",
         title="GTA 6's hidden stat boost missions: six side missions that permanently raise health, stamina and Focus",
